@@ -1,0 +1,16 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/dubai/dubai.html",
+      "destination": "/digital-marketing-strategist-dubai/",
+      "statusCode": 301
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/digital-marketing-strategist-dubai/",
+      "destination": "/dubai/dubai.html"
+    }
+  ]
+}
