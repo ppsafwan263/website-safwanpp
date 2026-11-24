@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Freelance website design in Kannur and across Kerala. Safwan PP builds fast, mobile-friendly websites for shops, clinics, schools and small businesses.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Website Design in Kannur &amp; Kerala | Safwan PP</title>
+  <link rel="canonical" href="https://ppsafwan.com/website-design-services-kannur/">
+  <meta property="og:url" content="https://ppsafwan.com/website-design-services-kannur/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #101114;
+      --muted: #656a73;
+      --blue: #2451e6;
+      --green: #22b653;
+      --line: #e8e9ec;
+      --paper: #fff;
+      --soft: #f7f8fb;
+      --dark: #0b0b0d;
+      --content: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: "Raleway", sans-serif; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    img, svg { max-width: 100%; }
+    .container { width: min(var(--content), calc(100% - 48px)); margin-inline: auto; }
+    .section { padding: 92px 0; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--blue); font-size: .73rem; font-weight: 850; letter-spacing: .13em; text-transform: uppercase; }
+    .eyebrow::before { width: 20px; height: 2px; background: currentColor; content: ""; }
+    .section-heading { max-width: 720px; margin: 0 auto 43px; text-align: center; }
+    .section-heading h2 { margin: 12px 0; font-size: clamp(2rem, 4.2vw, 3.25rem); line-height: 1.08; letter-spacing: -.065em; font-weight: 850; }
+    .section-heading p { max-width: 630px; margin: 0 auto; color: var(--muted); }
+
+    .site-header { position: sticky; z-index: 20; top: 0; border-bottom: 1px solid rgba(232,233,236,.85); background: rgba(255,255,255,.94); backdrop-filter: blur(16px); }
+    .nav { position: relative; min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .site-header .nav { width: min(1120px, calc(100% - 48px)); }
+    .brand { display: inline-flex; align-items: center; }
+    .site-logo { display: block; width: 78px; height: auto; filter: brightness(0); }
+    .nav-links { display: flex; align-items: center; gap: 25px; color: #464a52; font-size: .82rem; font-weight: 750; }
+    .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--blue); }
+    .nav-cta { padding: 10px 16px; border: 1px solid var(--line); border-radius: 999px; font-size: .8rem; font-weight: 850; }
+    .menu-toggle { display: none; padding: 9px 12px; border: 1px solid var(--line); border-radius: 10px; background: #fff; font-weight: 800; cursor: pointer; }
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-head { display: flex; align-items: center; gap: 3px; }
+    .nav-dropdown-toggle { display: grid; width: 23px; height: 30px; place-items: center; padding: 0; border: 0; color: inherit; background: transparent; cursor: pointer; }
+    .nav-dropdown-toggle svg { width: 12px; height: 12px; transition: transform .18s ease; }
+    .nav-dropdown:hover .nav-dropdown-toggle svg, .nav-dropdown.is-open .nav-dropdown-toggle svg { transform: rotate(180deg); }
+    .nav-dropdown::after { position: absolute; top: 100%; left: 0; width: 100%; height: 17px; content: ""; }
+    .nav-dropdown-menu { position: absolute; z-index: 22; top: calc(100% + 17px); left: -16px; display: none; width: 190px; overflow: hidden; padding: 6px; border: 1px solid var(--line); border-radius: 12px; color: var(--ink); background: #fff; box-shadow: 0 16px 36px rgba(16,17,20,.12); }
+    .nav-dropdown-menu a { display: block; padding: 12px; border-radius: 7px; color: var(--ink); font-size: .74rem; font-weight: 750; line-height: 1.4; }
+    .nav-dropdown-menu a:hover, .nav-dropdown-menu a:focus-visible { color: var(--blue); background: #f1f4ff; }
+    .nav-dropdown:hover .nav-dropdown-menu, .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+
+    .button { display: inline-flex; min-height: 49px; align-items: center; justify-content: center; gap: 10px; padding: 0 19px; border: 1px solid var(--line); border-radius: 999px; background: #fff; font-size: .83rem; font-weight: 800; transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
+    .button:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(20,32,60,.1); }
+    .button-primary { border-color: var(--blue); color: #fff; background: var(--blue); }
+    .button-primary:hover { background: #193fc2; }
+    .button-green { border-color: var(--green); color: #fff; background: var(--green); }
+    .button-green:hover { background: #189d45; }
+    .button-arrow { display: grid; width: 29px; height: 29px; place-items: center; border-radius: 50%; color: var(--blue); background: #fff; }
+    .hero { position: relative; overflow: hidden; padding: 76px 0 65px; background-image: linear-gradient(rgba(16,17,20,.026) 1px, transparent 1px),linear-gradient(90deg,rgba(16,17,20,.026) 1px,transparent 1px); background-size: 48px 48px; }
+    .hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 55px; }
+    .hero-copy { position: relative; z-index: 1; }
+    .hero h1 { max-width: 650px; margin: 17px 0 21px; font-size: clamp(3.2rem, 6.8vw, 5.45rem); line-height: .96; letter-spacing: -.085em; font-weight: 900; }
+    .hero h1 em { color: var(--blue); font-style: normal; }
+    .hero-copy > p { max-width: 565px; margin: 0; color: #575d67; font-size: 1.02rem; line-height: 1.8; }
+    .hero-copy > p + p { margin-top: 10px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 11px; margin-top: 26px; }
+    .hero-note { display: flex; align-items: center; gap: 9px; margin-top: 22px; color: #565c66; font-size: .76rem; font-weight: 700; }
+    .hero-note::before { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 5px rgba(34,182,83,.12); content: ""; }
+    .site-preview { position: relative; width: min(100%, 475px); justify-self: end; padding: 13px; border: 1px solid #e6e8ed; border-radius: 23px; background: #fff; box-shadow: 0 25px 70px rgba(16,17,20,.13); transform: rotate(1.2deg); animation: float-panel 5.5s ease-in-out infinite; }
+    .preview-browser { display: flex; align-items: center; gap: 6px; height: 28px; padding: 0 5px 10px; }
+    .preview-browser i { width: 7px; height: 7px; border-radius: 50%; background: #d7d9de; }
+    .preview-url { width: 46%; height: 15px; margin: 0 auto; border-radius: 10px; background: #f0f1f3; }
+    .mock-site { overflow: hidden; border-radius: 14px; background: #f5f7fc; }
+    .mock-nav { display: flex; min-height: 42px; align-items: center; justify-content: space-between; padding: 0 15px; background: #fff; }
+    .mock-brand { width: 68px; height: 10px; border-radius: 8px; background: var(--ink); }
+    .mock-menu { display: flex; gap: 9px; }
+    .mock-menu i { width: 25px; height: 5px; border-radius: 5px; background: #d5d8df; }
+    .mock-hero { position: relative; min-height: 230px; display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: 10px; padding: 23px 20px; color: #fff; background: #111318; }
+    .mock-hero::after { position: absolute; right: -40px; bottom: -96px; width: 245px; height: 245px; border: 1px solid rgba(255,255,255,.16); border-radius: 50%; box-shadow: 0 0 0 25px rgba(255,255,255,.025),0 0 0 52px rgba(255,255,255,.025); content: ""; animation: ring-pulse 6s ease-in-out infinite; }
+    .mock-copy { position: relative; z-index: 1; }
+    .mock-copy small { color: #a9bbff; font-size: .42rem; font-weight: 850; letter-spacing: .1em; }
+    .mock-copy strong { display: block; max-width: 160px; margin: 8px 0 10px; font-size: clamp(1.1rem, 3vw, 1.8rem); line-height: .98; letter-spacing: -.07em; }
+    .mock-copy span { display: inline-block; padding: 7px 10px; border-radius: 20px; color: #fff; background: var(--blue); font-size: .4rem; font-weight: 800; animation: button-glow 4s ease-in-out infinite; }
+    .mock-art { position: relative; z-index: 1; width: 100%; height: 150px; }
+    .mock-art::before { position: absolute; top: 14px; right: 12px; width: 112px; height: 112px; border: 1px solid rgba(255,255,255,.65); border-radius: 50%; content: ""; }
+    .mock-art::after { position: absolute; top: 42px; right: 41px; width: 55px; height: 55px; border-radius: 17px; background: linear-gradient(135deg,#829aff,#2451e6); box-shadow: 0 14px 28px rgba(36,81,230,.38); content: ""; transform: rotate(-12deg); }
+    .mock-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; padding: 12px; background: #fff; }
+    .mock-cards span { height: 48px; border-radius: 8px; background: linear-gradient(135deg,#e9ecf4,#cfd6e9); }
+    .mock-cards span:nth-child(2) { background: linear-gradient(135deg,#e5e9f4,#b9c5e8); }
+    .mock-cards span:nth-child(3) { background: linear-gradient(135deg,#e9ecf4,#d8dced); }
+    .preview-tag { position: absolute; right: -20px; bottom: 30px; display: flex; align-items: center; gap: 10px; padding: 12px 15px; border: 1px solid var(--line); border-radius: 15px; background: #fff; box-shadow: 0 12px 35px rgba(16,17,20,.1); transform: rotate(-2deg); animation: tag-float 4.5s ease-in-out infinite; }
+    .preview-tag span { display: grid; width: 30px; height: 30px; place-items: center; border-radius: 10px; color: #fff; background: var(--blue); font-size: .8rem; font-weight: 900; box-shadow: 0 0 0 8px rgba(36,81,230,.08); }
+    .preview-tag strong { display: block; font-size: .69rem; }
+    .preview-tag small { display: block; color: var(--muted); font-size: .58rem; }
+    .hero-facts { display: grid; grid-template-columns: repeat(3,1fr); overflow: hidden; margin-top: 54px; border: 1px solid var(--line); border-radius: 18px; background: #fff; }
+    .hero-fact { padding: 17px 21px; transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease, background .22s ease; }
+    .hero-fact + .hero-fact { border-left: 1px solid var(--line); }
+    .hero-fact:hover { transform: translateY(-4px); border-color: #d7dffa; background: #f9faff; box-shadow: 0 10px 24px rgba(16,17,20,.06); }
+    .hero-fact strong { display: block; font-size: .9rem; }
+    .hero-fact span { color: var(--muted); font-size: .72rem; }
+
+    .why-section { padding: 80px 0; color: #fff; background: var(--dark); }
+    .why-heading { display: grid; grid-template-columns: 1.1fr .9fr; align-items: end; gap: 48px; margin-bottom: 36px; }
+    .why-heading .eyebrow { color: #91a8ff; }
+    .why-heading h2 { margin: 12px 0 0; font-size: clamp(2.3rem, 4.7vw, 3.8rem); line-height: .99; letter-spacing: -.08em; }
+    .why-heading > p { margin: 0 0 4px; color: #c5c7ce; line-height: 1.8; }
+    .benefit-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 11px; }
+    .benefit { min-height: 186px; padding: 19px; border: 1px solid #303034; border-radius: 17px; background: #171719; transition: transform .2s ease,border-color .2s ease,background .2s ease; }
+    .benefit:hover { transform: translateY(-4px); border-color: #667dce; background: #1d1d20; }
+    .benefit-num { color: #91a8ff; font-size: .68rem; font-weight: 900; letter-spacing: .1em; }
+    .benefit h3 { margin: 18px 0 7px; font-size: .96rem; letter-spacing: -.035em; }
+    .benefit p { margin: 0; color: #c5c7ce; font-size: .75rem; line-height: 1.65; }
+
+    .trust-grid { display: grid; grid-template-columns: .88fr 1.12fr; align-items: start; gap: 65px; }
+    .trust-copy h2 { margin: 13px 0 15px; font-size: clamp(2.3rem,4.4vw,3.55rem); line-height: 1; letter-spacing: -.075em; }
+    .trust-copy > p { margin: 0; color: var(--muted); }
+    .trust-list { display: grid; border-top: 1px solid var(--line); }
+    .trust-item { display: grid; grid-template-columns: 39px 1fr; gap: 17px; padding: 17px 0; border-bottom: 1px solid var(--line); }
+    .trust-item > span { color: var(--blue); font-size: .75rem; font-weight: 900; }
+    .trust-item strong { display: block; margin-bottom: 2px; font-size: .9rem; }
+    .trust-item p { margin: 0; color: var(--muted); font-size: .8rem; line-height: 1.7; }
+    .stats-strip { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 23px; }
+    .stats-strip span { padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px; background: #fff; font-size: .7rem; font-weight: 750; }
+    .stats-strip strong { color: var(--blue); }
+
+    .services-section { background: var(--soft); }
+    .services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 13px; }
+    .service-card { position: relative; min-height: 206px; overflow: hidden; padding: 23px; border: 1px solid var(--line); border-radius: 18px; background: #fff; transition: transform .2s ease,border-color .2s ease,box-shadow .2s ease; }
+    .service-card:hover { transform: translateY(-4px); border-color: #cdd7ff; box-shadow: 0 14px 30px rgba(16,17,20,.07); }
+    .service-card > span { display: grid; width: 37px; height: 37px; place-items: center; border-radius: 12px; color: #fff; background: var(--blue); font-size: .7rem; font-weight: 900; }
+    .service-card h3 { margin: 18px 0 7px; font-size: 1.03rem; letter-spacing: -.04em; }
+    .service-card p { margin: 0; color: var(--muted); font-size: .79rem; line-height: 1.7; }
+    .included-section { padding: 82px 0; }
+    .included-layout { display: grid; grid-template-columns: .75fr 1.25fr; gap: 65px; align-items: start; }
+    .included-intro { position: sticky; top: 110px; }
+    .included-intro h2 { margin: 13px 0; font-size: clamp(2.3rem,4.4vw,3.5rem); line-height: 1; letter-spacing: -.075em; }
+    .included-intro p { margin: 0; color: var(--muted); }
+    .included-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 10px; }
+    .included-item { display: flex; align-items: flex-start; gap: 12px; min-height: 84px; padding: 16px; border: 1px solid var(--line); border-radius: 15px; background: #fff; transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease, background .22s ease; }
+    .included-item:hover { transform: translateY(-4px); border-color: #d7dffa; background: #f9faff; box-shadow: 0 12px 28px rgba(16,17,20,.06); }
+    .included-item > span { display: grid; width: 25px; height: 25px; flex: 0 0 25px; place-items: center; border-radius: 8px; color: var(--blue); background: #edf1ff; font-size: .75rem; font-weight: 900; }
+    .included-item strong { display: block; margin-bottom: 3px; font-size: .8rem; }
+    .included-item small { display: block; color: var(--muted); font-size: .7rem; line-height: 1.5; }
+
+    .process-section { color: #fff; background: var(--dark); }
+    .process-section .eyebrow { color: #91a8ff; }
+    .process-section .section-heading p { color: #c5c7ce; }
+    .process-list { display: grid; grid-template-columns: repeat(4,1fr); gap: 11px; counter-reset: step; }
+    .process-card { position: relative; min-height: 205px; padding: 21px; border: 1px solid #303034; border-radius: 18px; background: #171719; counter-increment: step; transition: transform .2s ease,border-color .2s ease; }
+    .process-card:hover { transform: translateY(-4px); border-color: #667dce; }
+    .process-card::before { content: "0" counter(step); color: #91a8ff; font-size: .72rem; font-weight: 900; letter-spacing: .1em; }
+    .process-card h3 { margin: 20px 0 7px; font-size: 1rem; }
+    .process-card p { margin: 0; color: #c5c7ce; font-size: .78rem; line-height: 1.7; }
+
+    .price-band { padding: 78px 0; background: #f3f5ff; }
+    .price-panel { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 35px; padding: clamp(27px,5vw,52px); border-radius: 24px; color: #fff; background: var(--blue); }
+    .price-panel .eyebrow { color: #dbe3ff; }
+    .price-panel h2 { margin: 12px 0 9px; font-size: clamp(2rem,4vw,3.15rem); line-height: 1.03; letter-spacing: -.07em; }
+    .price-panel p { max-width: 630px; margin: 0; color: #e2e8ff; font-size: .9rem; }
+    .price-points { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 0; padding: 0; list-style: none; }
+    .price-points li { padding: 7px 10px; border: 1px solid rgba(255,255,255,.28); border-radius: 999px; color: #fff; font-size: .69rem; font-weight: 700; }
+    .price-start { min-width: 190px; padding: 20px; border: 1px solid rgba(255,255,255,.3); border-radius: 17px; background: rgba(13,32,105,.18); text-align: center; }
+    .price-start small { display: block; color: #dbe3ff; font-size: .7rem; font-weight: 750; }
+    .price-start strong { display: block; margin: 7px 0 13px; font-size: 1.25rem; letter-spacing: -.05em; }
+    .price-start .button { min-height: 42px; padding: 0 15px; color: var(--ink); font-size: .73rem; white-space: nowrap; }
+
+    .location-intro { display: grid; grid-template-columns: .8fr 1.2fr; gap: 55px; align-items: start; margin-bottom: 36px; }
+    .location-intro h2 { margin: 12px 0 0; font-size: clamp(2.2rem,4.5vw,3.5rem); line-height: 1; letter-spacing: -.075em; }
+    .location-intro p { margin: 7px 0 0; color: var(--muted); line-height: 1.8; }
+    .town-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+    .town-list span { padding: 8px 11px; border: 1px solid var(--line); border-radius: 999px; color: #434852; background: #fff; font-size: .72rem; font-weight: 700; transition: transform .2s ease, color .2s ease, border-color .2s ease, background .2s ease, box-shadow .2s ease; }
+    .town-list span:hover { transform: translateY(-2px); border-color: #cdd7ff; color: var(--blue); background: #f4f6ff; box-shadow: 0 7px 16px rgba(36,81,230,.09); }
+    .district-section { padding-top: 0; }
+    .district-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 9px; }
+    .district-card { min-height: 105px; padding: 15px; border: 1px solid var(--line); border-radius: 15px; background: #fff; transition: transform .2s ease,border-color .2s ease; }
+    .district-card:hover { transform: translateY(-3px); border-color: #cdd7ff; }
+    .district-card strong { display: block; margin-bottom: 3px; font-size: .82rem; }
+    .district-card span { color: var(--muted); font-size: .69rem; line-height: 1.5; }
+    .kerala-note { margin: 20px 0 0; color: var(--muted); font-size: .83rem; text-align: center; }
+
+    .audience-section { padding-top: 0; }
+    .audience-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 10px; }
+    .audience { display: flex; min-height: 68px; align-items: center; gap: 10px; padding: 13px; border: 1px solid var(--line); border-radius: 14px; background: #fff; font-size: .77rem; font-weight: 750; transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease, background .22s ease; }
+    .audience:hover { transform: translateY(-4px); border-color: #d7dffa; background: #f9faff; box-shadow: 0 12px 28px rgba(16,17,20,.06); }
+    .audience span { color: var(--blue); font-size: 1rem; transition: transform .22s ease; }
+    .audience:hover span { transform: translate(2px, -2px); }
+
+    .brands-section { overflow: hidden; padding: 42px 0 50px; background: #fff; }
+    .brands-title { display: flex; align-items: center; justify-content: center; gap: 15px; margin: 0 0 29px; color: var(--muted); font-size: .7rem; font-weight: 800; letter-spacing: .11em; text-align: center; text-transform: uppercase; }
+    .brands-title::before, .brands-title::after { width: min(14vw,150px); height: 1px; background: #d8dadd; content: ""; }
+    .brand-marquee { overflow: hidden; width: 100%; padding: 4px 0 10px; }
+    .brand-track { display: flex; width: max-content; animation: brand-scroll 42s linear infinite; }
+    .brand-marquee:hover .brand-track { animation-play-state: paused; }
+    .brand-group { display: flex; flex: 0 0 auto; align-items: center; gap: 16px; padding: 0 8px; }
+    .brand-logo { display: grid; width: 180px; height: 104px; flex: 0 0 180px; place-items: center; padding: 18px; border: 1px solid var(--line); border-radius: 17px; background: #fff; object-fit: contain; transition: border-color .2s ease,box-shadow .2s ease,transform .2s ease; }
+    img.brand-logo { display: block; }
+    .brand-logo:hover { transform: translateY(-3px); border-color: #d3d9ee; box-shadow: 0 10px 24px rgba(20,32,60,.08); }
+    .brand-name { color: var(--ink); font-size: 1rem; font-weight: 900; letter-spacing: -.06em; text-align: center; }
+    @keyframes brand-scroll { to { transform: translateX(-50%); } }
+    @keyframes float-panel { 0%, 100% { transform: rotate(1.2deg) translateY(0); } 50% { transform: rotate(1.2deg) translateY(-8px); } }
+    @keyframes tag-float { 0%, 100% { transform: rotate(-2deg) translateY(0); } 50% { transform: rotate(-2deg) translateY(-6px); } }
+    @keyframes ring-pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.04); opacity: .82; } }
+    @keyframes button-glow { 0%, 100% { box-shadow: 0 0 0 rgba(36,81,230,0); } 50% { box-shadow: 0 0 0 7px rgba(36,81,230,.12); } }
+    @media (prefers-reduced-motion: reduce) { .brand-track { animation: none; } .site-preview, .preview-tag, .mock-hero::after, .mock-copy span { animation: none; } .brand-group[aria-hidden="true"] { display: none; } }
+
+    .testimonials-section { background: var(--soft); }
+    .testimonial-layout { display: grid; grid-template-columns: .78fr 1.22fr; align-items: center; gap: 68px; }
+    .testimonials-heading h2 { margin: 0; font-size: clamp(2.5rem,4.5vw,3.5rem); line-height: 1.05; letter-spacing: -.07em; }
+    .testimonials-heading p { max-width: 340px; color: var(--muted); font-size: .85rem; }
+    .testimonial-controls { display: flex; align-items: center; gap: 10px; margin-top: 25px; }
+    .testimonial-control { display: grid; width: 44px; height: 44px; place-items: center; border: 1px solid var(--line); border-radius: 50%; color: var(--ink); background: #fff; cursor: pointer; transition: border-color .2s ease,color .2s ease,background .2s ease; }
+    .testimonial-control:hover { border-color: var(--blue); color: #fff; background: var(--blue); }
+    .testimonial-dots { display: flex; align-items: center; gap: 2px; margin-left: 4px; }
+    .testimonial-dot { display: grid; width: 31px; height: 36px; place-items: center; padding: 0; border: 0; background: transparent; cursor: pointer; }
+    .testimonial-dot::before { width: 9px; height: 9px; border-radius: 999px; background: #d9dce4; content: ""; transition: width .2s ease,background .2s ease; }
+    .testimonial-dot[aria-current="true"]::before { width: 24px; background: var(--blue); }
+    .testimonial-count { color: var(--muted); font-size: .72rem; font-weight: 750; white-space: nowrap; }
+    .testimonial { min-width: 0; padding: 26px 30px; border: 1px solid var(--line); border-radius: 20px; background: #fff; }
+    .quote-mark { display: block; height: 47px; color: var(--blue); font-size: 4.5rem; font-weight: 900; line-height: 1; }
+    .testimonial blockquote { margin: 5px 0 23px; font-size: clamp(1.05rem,2vw,1.42rem); font-weight: 600; line-height: 1.5; letter-spacing: -.04em; }
+    .person { display: flex; align-items: center; gap: 12px; }
+    .avatar { display: grid; width: 42px; height: 42px; place-items: center; border-radius: 50%; color: #fff; background: var(--blue); font-size: .73rem; font-weight: 850; }
+    .person strong { display: block; font-size: .82rem; }
+    .person small { display: block; color: var(--muted); font-size: .7rem; }
+
+    .more-section { padding-top: 15px; }
+    .more-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 10px; }
+    .more-link { display: flex; min-height: 102px; flex-direction: column; justify-content: space-between; padding: 15px; border: 1px solid var(--line); border-radius: 15px; background: #fff; font-size: .78rem; font-weight: 800; transition: transform .2s ease,border-color .2s ease; }
+    .more-link:hover { transform: translateY(-3px); border-color: #b9c8ff; }
+    .more-link span { color: var(--blue); font-size: 1.05rem; }
+    .faq-section { background: var(--soft); }
+    .faq-list { max-width: 850px; margin: auto; border-top: 1px solid var(--line); }
+    .faq-list details { border-bottom: 1px solid var(--line); }
+    .faq-list summary { position: relative; padding: 18px 42px 18px 0; font-size: .91rem; font-weight: 800; list-style: none; cursor: pointer; }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary::after { position: absolute; top: 16px; right: 5px; color: var(--blue); content: "+"; font-family: "Inter",sans-serif; font-size: 1.35rem; font-weight: 400; }
+    .faq-list details[open] summary::after { content: "−"; }
+    .faq-list details p { max-width: 760px; margin: -4px 0 18px; color: var(--muted); font-size: .84rem; }
+
+    .final-cta { padding: 0; background: var(--dark); }
+    .final-cta .container { width: 100%; max-width: none; }
+    .cta-panel { position: relative; display: flex; min-height: 100vh; flex-direction: column; align-items: flex-start; justify-content: center; overflow: hidden; padding: clamp(32px,8vw,120px) max(24px,calc((100vw - var(--content)) / 2 + 55px)); border-radius: 0; color: #fff; background: var(--dark); }
+    .cta-panel::after { position: absolute; top: -90px; right: -65px; width: 280px; height: 280px; border: 1px solid rgba(255,255,255,.13); border-radius: 50%; box-shadow: 0 0 0 35px rgba(255,255,255,.025),0 0 0 70px rgba(255,255,255,.02); content: ""; }
+    .cta-panel > * { position: relative; z-index: 1; }
+    .cta-panel .eyebrow { color: #91a8ff; }
+    .cta-panel h2 { max-width: 700px; margin: 12px 0; font-size: clamp(2.3rem,5vw,4rem); line-height: 1.01; letter-spacing: -.075em; }
+    .cta-panel p { max-width: 610px; color: #c5c7ce; }
+    .cta-actions { display: flex; flex-wrap: wrap; gap: 11px; margin-top: 23px; }
+    .cta-panel .button:not(.button-primary) { color: var(--ink); }
+
+    .site-footer, .site-footer * { font-family: "Inter",sans-serif; }
+    .site-footer { padding: 58px 0 20px; color: #fff; background: #0b0b0d; font-size: 16px; font-weight: 400; }
+    .footer-grid { display: grid; grid-template-columns: minmax(220px,1.7fr) repeat(4,minmax(0,1fr)); gap: clamp(24px,4vw,56px); padding-bottom: 48px; }
+    .footer-brand .brand { display: inline-flex; margin-bottom: 16px; color: #fff; }
+    .footer-brand .site-logo { width: 112px; filter: brightness(0) invert(1); }
+    .footer-brand p { max-width: 290px; margin: 0; color: #fff; font-size: 16px; line-height: 1.75; }
+    .footer-socials { display: flex; align-items: center; gap: 22px; margin-top: 20px; }
+    .footer-socials a, .footer-socials span { display: grid; width: 22px; height: 22px; place-items: center; color: #fff; }
+    .footer-socials svg { width: 20px; height: 20px; fill: none; }
+    .footer-socials .facebook-icon { fill: currentColor; }
+    .footer-column h2 { margin: 5px 0 16px; color: #fff; font-size: 16px; font-weight: 850; letter-spacing: .04em; text-transform: uppercase; }
+    .footer-column ul { display: grid; gap: 11px; margin: 0; padding: 0; list-style: none; }
+    .footer-column li, .footer-column a { color: #fff; font-size: 16px; line-height: 1.5; }
+    .footer-column a, .footer-top-link { transition: color .18s ease; }
+    .footer-column a:hover, .footer-top-link:hover { color: #8da5ff; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 18px; border-top: 1px solid #292a30; color: #fff; font-size: 15px; }
+    .footer-bottom p { margin: 0; }
+    .footer-top-link { color: #fff; }
+    .whatsapp-float { position: fixed; z-index: 15; right: 22px; bottom: 20px; display: grid; width: 58px; height: 58px; place-items: center; border-radius: 50%; color: #fff; background: #25d366; box-shadow: 0 8px 20px rgba(0,0,0,.24); transition: transform .2s ease,background .2s ease; }
+    .whatsapp-float:hover { transform: translateY(-3px); background: #20bd5a; }
+    .whatsapp-float svg { width: 31px; height: 31px; }
+
+    @media (max-width: 1050px) {
+      .hero-grid { gap: 32px; }
+      .benefit-grid { grid-template-columns: repeat(3,1fr); }
+      .district-grid { grid-template-columns: repeat(3,1fr); }
+      .audience-grid { grid-template-columns: repeat(3,1fr); }
+      .more-grid { grid-template-columns: repeat(3,1fr); }
+      .footer-grid { grid-template-columns: repeat(4,minmax(0,1fr)); }
+      .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 720px) {
+      .container { width: min(100% - 36px,var(--content)); }
+      .section { padding: 72px 0; }
+      .site-header .nav { width: min(100% - 36px,1120px); min-height: 66px; }
+      .menu-toggle { display: inline-flex; }
+      .nav-cta { display: none; }
+      .nav-links { position: absolute; top: 65px; right: 0; left: 0; display: none; align-items: stretch; gap: 0; padding: 8px 16px; border: 1px solid var(--line); border-radius: 16px; background: #fff; box-shadow: 0 18px 35px rgba(16,17,20,.1); }
+      .nav-links.is-open { display: flex; flex-direction: column; }
+      .nav-links > a { padding: 12px 2px; border-bottom: 1px solid var(--line); }
+      .nav-dropdown { width: 100%; }
+      .nav-dropdown::after { display: none; }
+      .nav-dropdown-head { min-height: 45px; }
+      .nav-dropdown-head > a { flex: 1; padding: 12px 2px; }
+      .nav-dropdown-toggle { width: 42px; height: 42px; border-bottom: 1px solid var(--line); }
+      .nav-dropdown-menu { position: static; width: 100%; margin-bottom: 8px; padding: 4px; border-radius: 10px; box-shadow: none; }
+      .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+      .hero { padding: 56px 0 48px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+      .hero h1 { font-size: clamp(3.15rem,13vw,5rem); }
+      .site-preview { justify-self: center; width: min(100% - 12px,475px); }
+      .preview-tag { right: -8px; }
+      .hero-facts { margin-top: 35px; }
+      .hero-fact { padding: 14px 12px; }
+      .hero-fact strong { font-size: .8rem; }
+      .hero-fact span { font-size: .65rem; }
+      .why-heading,.trust-grid,.included-layout,.location-intro { grid-template-columns: 1fr; gap: 20px; }
+      .benefit-grid { grid-template-columns: repeat(2,1fr); }
+      .services-grid { grid-template-columns: repeat(2,1fr); }
+      .included-intro { position: static; }
+      .process-list { grid-template-columns: repeat(2,1fr); }
+      .price-panel { grid-template-columns: 1fr; }
+      .price-start { justify-self: start; }
+      .district-grid { grid-template-columns: repeat(2,1fr); }
+      .audience-grid { grid-template-columns: repeat(2,1fr); }
+      .testimonial-layout { grid-template-columns: 1fr; gap: 25px; }
+      .more-grid { grid-template-columns: repeat(2,1fr); }
+      .footer-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 30px 22px; padding-bottom: 34px; }
+      .footer-brand { grid-column: 1 / -1; }
+      .footer-bottom { align-items: flex-start; flex-direction: column; }
+      .brand-logo { width: 156px; height: 92px; flex-basis: 156px; padding: 15px; border-radius: 15px; }
+      .brand-group { gap: 12px; }
+    }
+    @media (max-width: 480px) {
+      .services-grid,.benefit-grid,.process-list { grid-template-columns: 1fr; }
+      .service-card { min-height: 175px; }
+      .included-grid { grid-template-columns: 1fr; }
+      .district-card { min-height: 95px; }
+      .audience-grid { grid-template-columns: 1fr 1fr; }
+      .hero-fact { padding: 12px 8px; }
+      .hero-fact strong { font-size: .72rem; }
+      .hero-fact span { font-size: .59rem; }
+      .testimonial { padding: 22px; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *,*::before,*::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+      .brand-track { animation: none; }
+    }
+  </style>
+  <link rel="stylesheet" href="../style.css">
+  <meta property="og:title" content="Website Design in Kannur &amp; Kerala | Safwan PP">
+  <meta property="og:description" content="Freelance website design in Kannur and across Kerala. Safwan PP builds fast, mobile-friendly websites for shops, clinics, schools and small businesses.">
+  <meta property="og:site_name" content="Safwan PP">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Website Design in Kannur &amp; Kerala | Safwan PP">
+  <meta name="twitter:description" content="Freelance website design in Kannur and across Kerala. Safwan PP builds fast, mobile-friendly websites for shops, clinics, schools and small businesses.">
+  <meta property="og:type" content="website">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="../#home" aria-label="Safwan PP home"><img class="site-logo" src="../home/safwan-logo.png" alt="Safwan" decoding="async" width="1408" height="727"></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="../#home">Home</a>
+        <a href="../about-me/">About</a>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-head">
+            <a href="../digital-marketing-services-kannur/">Services</a>
+            <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="service-submenu" aria-label="Show service links">
+              <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="m2 4.5 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </button>
+          </div>
+          <div class="nav-dropdown-menu" id="service-submenu">
+            <a href="../seo-services-kannur/">SEO Services</a>
+            <a href="../google-ads-services-kannur/">Google Ads</a>
+            <a href="../website-design-services-kannur/" aria-current="page">Web Design</a>
+            <a href="../shopify-development-services-kannur/#home">Shopify Development</a>
+            <a href="../meta-ads-services-kannur/">Meta Ads</a>
+            <a href="../social-media-marketing-kannur/">Social Media Marketing</a>
+          </div>
+        </div>
+        <a href="../blogs/">Blogs</a>
+        <a href="../contact/">Contact</a>
+      </div>
+      <a class="nav-cta" href="../contact/#contact">Let's talk <span aria-hidden="true">&#8599;</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Website design · Kannur &amp; Kerala</span>
+            <h1>Freelance Web Designer Kannur &amp; Kerala</h1>
+            <p><strong>Hi, I'm Safwan. I build websites for shops, clinics, schools and small businesses in Kannur and all over Kerala.</strong></p>
+            <p>A website is your shop on the internet. It stays open day and night, helps people find you on Google, and makes it easy to call or message you. I make websites that are simple, fast and work well on phones. You talk directly to the person building your site.</p>
+            <div class="hero-actions">
+              <a class="button button-green" href="https://wa.me/919895325388?text=Hi%20Safwan%2C%20I%27d%20like%20to%20talk%20about%20a%20website." target="_blank" rel="noopener noreferrer">Chat on WhatsApp <span class="button-arrow" aria-hidden="true">↗</span></a>
+              <a class="button button-primary" href="#contact">Get a free quote <span class="button-arrow" aria-hidden="true">→</span></a>
+            </div>
+            <div class="hero-note">Based in Narath, Kannur · Working across Kerala</div>
+          </div>
+          <div class="site-preview" role="img" aria-label="Preview illustration of a clean, mobile-friendly small business website">
+            <div class="preview-browser"><i></i><i></i><i></i><span class="preview-url"></span></div>
+            <div class="mock-site">
+              <div class="mock-nav"><span class="mock-brand"></span><span class="mock-menu"><i></i><i></i><i></i></span></div>
+              <div class="mock-hero">
+                <div class="mock-copy"><small>YOUR BUSINESS, ONLINE</small><strong>A website that brings customers closer.</strong><span>GET IN TOUCH &nbsp; →</span></div>
+                <div class="mock-art"></div>
+              </div>
+              <div class="mock-cards"><span></span><span></span><span></span></div>
+            </div>
+            <div class="preview-tag"><div><strong>Ready for every screen</strong><small>Phone · tablet · desktop</small></div></div>
+          </div>
+        </div>
+        <div class="hero-facts" aria-label="Website design at a glance">
+          <div class="hero-fact"><strong>Made for mobile</strong><span>Easy to use on every phone</span></div>
+          <div class="hero-fact"><strong>Built for Google</strong><span>Search ready from day one</span></div>
+          <div class="hero-fact"><strong>Direct support</strong><span>Work with me, not a sales team</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-section">
+      <div class="container">
+        <div class="why-heading">
+          <div><span class="eyebrow">A useful tool for your business</span><h2>Why your business needs a website in 2026</h2></div>
+          <p>Most people look on their phone before they buy anything. If they can't find your business online, they may choose someone else. A good website gives customers one clear place to learn about you and get in touch.</p>
+        </div>
+        <div class="benefit-grid">
+          <article class="benefit"><span class="benefit-num">01 / FINDABLE</span><h3>Show up on Google</h3><p>Help people searching for your service find your business online.</p></article>
+          <article class="benefit"><span class="benefit-num">02 / TRUSTED</span><h3>Look professional</h3><p>Give new customers a clear, trustworthy first impression.</p></article>
+          <article class="benefit"><span class="benefit-num">03 / CONNECTED</span><h3>Get more enquiries</h3><p>Make calls, WhatsApp messages and contact forms one tap away.</p></article>
+          <article class="benefit"><span class="benefit-num">04 / CLEAR</span><h3>Show what you offer</h3><p>Share your services, prices, photos and work in one place.</p></article>
+          <article class="benefit"><span class="benefit-num">05 / ALWAYS ON</span><h3>Work around the clock</h3><p>Your website stays open even when your shop is closed.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container trust-grid">
+        <div class="trust-copy">
+          <span class="eyebrow">A personal, practical approach</span>
+          <h2>Why work with me?</h2>
+          <p>There are many web design companies in Kerala. I keep the process personal: you speak directly with the freelancer planning and building your website.</p>
+          <div class="stats-strip"><span><strong>25+</strong> projects</span><span><strong>18+</strong> campaigns</span><span><strong>250+</strong> leads generated</span></div>
+        </div>
+        <div class="trust-list">
+          <article class="trust-item"><span>01</span><div><strong>You talk to the person who builds your site</strong><p>No account managers or handoffs. Message me and I'll handle the work.</p></div></article>
+          <article class="trust-item"><span>02</span><div><strong>I learned this properly</strong><p>BSc in Computer Science; digital marketing studies at HACA; internship experience at Haris &amp; Co.; Google Ads, Google Analytics, Google Display, HubSpot SEO and SEMrush Academy certifications.</p></div></article>
+          <article class="trust-item"><span>03</span><div><strong>Designed with Google in mind</strong><p>I also work in SEO, so I build pages with clear structure and basic search setup from day one.</p></div></article>
+          <article class="trust-item"><span>04</span><div><strong>Real work, real people</strong><p>I've worked on 25+ projects and 18+ marketing campaigns that generated more than 250 leads for businesses.</p></div></article>
+          <article class="trust-item"><span>05</span><div><strong>Local to Kannur</strong><p>I live and work in Narath. I understand how businesses in Kerala work and can meet nearby clients in person.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services-section" id="web-services">
+      <div class="container">
+        <div class="section-heading"><span class="eyebrow">Websites built around your needs</span><h2>My website design services</h2><p>Start with the kind of website that fits your business. We'll plan the pages and features together before work begins.</p></div>
+        <div class="services-grid">
+          <article class="service-card"><span>01</span><h3>Business Websites</h3><p>A simple, clean site for your shop, office or service that explains what you do and how customers can reach you.</p></article>
+          <article class="service-card"><span>02</span><h3>WordPress Websites</h3><p>Manage your own text and photos later with WordPress. I'll show you how to make everyday updates.</p></article>
+          <article class="service-card"><span>03</span><h3>Online Store Websites</h3><p>Sell online with Shopify or WordPress. Set up a store where people in Kerala and across India can order from you.</p></article>
+          <article class="service-card"><span>04</span><h3>Portfolio Websites</h3><p>Show your work and help new clients reach you as a photographer, designer, doctor, teacher or freelancer.</p></article>
+          <article class="service-card"><span>05</span><h3>Landing Pages for Ads</h3><p>Focused one page sites that turn Google Ads and Instagram ad visits into calls and enquiries.</p></article>
+          <article class="service-card"><span>06</span><h3>Website Redesign</h3><p>Replace a slow or dated site with a modern design that loads quickly and works well on phones.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section included-section">
+      <div class="container included-layout">
+        <div class="included-intro"><span class="eyebrow">The important details, covered</span><h2>What every website comes with</h2><p>Each site is built to be easy to use, easy to find and easy for customers to act on.</p></div>
+        <div class="included-grid">
+          <div class="included-item"><div><strong>Mobile friendly design</strong><small>Clear and usable on phones, tablets and desktops.</small></div></div>
+          <div class="included-item"><div><strong>Fast loading</strong><small>A lightweight experience that doesn't keep visitors waiting.</small></div></div>
+          <div class="included-item"><div><strong>Basic SEO setup</strong><small>Page titles, descriptions and Google ready page structure.</small></div></div>
+          <div class="included-item"><div><strong>WhatsApp and call buttons</strong><small>Customers can reach you in one tap.</small></div></div>
+          <div class="included-item"><div><strong>Contact form</strong><small>Enquiries can go straight to your email.</small></div></div>
+          <div class="included-item"><div><strong>Google Maps</strong><small>Help customers find your business location.</small></div></div>
+          <div class="included-item"><div><strong>SSL security</strong><small>The browser lock icon helps keep your site trusted.</small></div></div>
+          <div class="included-item"><div><strong>Google Business Profile help</strong><small>Support setting up your presence on Google Maps.</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process-section">
+      <div class="container">
+        <div class="section-heading"><span class="eyebrow">Straightforward from start to launch</span><h2>How I build your website</h2><p>You'll know what's happening at every step, and we'll check the finished site together before it goes live.</p></div>
+        <div class="process-list">
+          <article class="process-card"><h3>We talk</h3><p>Tell me about your business and what you need in a call or WhatsApp chat.</p></article>
+          <article class="process-card"><h3>I plan</h3><p>We agree on the pages, useful features and content your site needs.</p></article>
+          <article class="process-card"><h3>I design</h3><p>I'll share the design direction and make changes based on your feedback.</p></article>
+          <article class="process-card"><h3>I build</h3><p>I develop the website and make it work across phones and computers.</p></article>
+          <article class="process-card"><h3>We check</h3><p>We test links, forms and page layouts together before launch.</p></article>
+          <article class="process-card"><h3>Go live</h3><p>Your website goes online, and I'll help you get started on Google.</p></article>
+          <article class="process-card"><h3>I'm here to help</h3><p>After launch, you can still contact me when you need support.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="price-band" id="pricing">
+      <div class="container">
+        <div class="price-panel">
+          <div><span class="eyebrow">Clear pricing, no surprises</span><h2>Low cost website design in Kerala</h2><p>A good website doesn't need to cost a lot. I work with small businesses, explain the full price before I start and make sure you own your website and domain.</p><ul class="price-points"><li>Full price before work begins</li><li>You own your site and domain</li><li>Free, no pressure quote</li></ul></div>
+          <div class="price-start"><small>Website packages</small><strong>Priced for your needs</strong><a class="button" href="https://wa.me/919895325388?text=Hi%20Safwan%2C%20could%20I%20get%20a%20free%20website%20quote%3F" target="_blank" rel="noopener noreferrer">Ask for a free quote <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section location-section" id="locations">
+      <div class="container">
+        <div class="location-intro">
+          <div><span class="eyebrow">Based in North Kerala</span><h2>Web design in Kannur, my home town</h2></div>
+          <div><p>Kannur is where I live and work, and many of my clients are from here. If you're searching for a web design company or web designer in Kannur, we can meet in person if you're nearby, or just chat on WhatsApp.</p><div class="town-list" aria-label="Kannur service areas"><span>Kannur town</span><span>Thalassery</span><span>Payyanur</span><span>Taliparamba</span><span>Iritty</span><span>Mattannur</span><span>Kuthuparamba</span><span>Panoor</span><span>Sreekandapuram</span><span>Anthoor</span><span>Pazhayangadi</span><span>Valapattanam</span><span>Narath</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section district-section">
+      <div class="container">
+        <div class="section-heading"><span class="eyebrow">From North Kerala to the south</span><h2>Website design across all of Kerala</h2><p>You don't need to live in Kannur to work with me. We can plan and build your website over WhatsApp, phone and Google Meet.</p></div>
+        <div class="district-grid">
+          <article class="district-card"><strong>Kasaragod</strong><span>Shops and businesses in Kasaragod and Kanhangad</span></article>
+          <article class="district-card"><strong>Wayanad</strong><span>Resorts, homestays and tour operators</span></article>
+          <article class="district-card"><strong>Kozhikode (Calicut)</strong><span>Shops, clinics and startups</span></article>
+          <article class="district-card"><strong>Malappuram</strong><span>Manjeri, Tirur and Perinthalmanna businesses</span></article>
+          <article class="district-card"><strong>Palakkad</strong><span>Local businesses and traders</span></article>
+          <article class="district-card"><strong>Thrissur</strong><span>Jewellery shops, textile stores and schools</span></article>
+          <article class="district-card"><strong>Ernakulam (Kochi)</strong><span>Websites for businesses across Kochi</span></article>
+          <article class="district-card"><strong>Idukki</strong><span>Resorts, plantations and Munnar homestays</span></article>
+          <article class="district-card"><strong>Kottayam</strong><span>Schools, clinics and local businesses</span></article>
+          <article class="district-card"><strong>Alappuzha</strong><span>Houseboats and backwater tourism</span></article>
+          <article class="district-card"><strong>Pathanamthitta</strong><span>Local shops and services</span></article>
+          <article class="district-card"><strong>Kollam</strong><span>Cashew traders, shops and clinics</span></article>
+          <article class="district-card"><strong>Thiruvananthapuram</strong><span>Trivandrum businesses and startups</span></article>
+        </div>
+        <p class="kerala-note">From North Kerala and Malabar down to the south, I build websites that help Kerala businesses grow online.</p>
+      </div>
+    </section>
+
+    <section class="section audience-section">
+      <div class="container">
+        <div class="section-heading"><span class="eyebrow">For local businesses and beyond</span><h2>Who I build websites for</h2></div>
+        <div class="audience-grid">
+          <div class="audience"><span>↗</span>Shops and retail stores</div>
+          <div class="audience"><span>↗</span>Clinics, doctors and dentists</div>
+          <div class="audience"><span>↗</span>Schools and tuition centres</div>
+          <div class="audience"><span>↗</span>Hotels, resorts and homestays</div>
+          <div class="audience"><span>↗</span>Tour and travel agencies</div>
+          <div class="audience"><span>↗</span>Jewellery and textile shops</div>
+          <div class="audience"><span>↗</span>Real estate businesses</div>
+          <div class="audience"><span>↗</span>Restaurants and bakeries</div>
+          <div class="audience"><span>↗</span>Startups and freelancers</div>
+          <div class="audience"><span>↗</span>NRIs and Gulf businesses</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="brands-section" aria-label="Brands Safwan has worked with">
+      <div class="container"><h2 class="brands-title">Brands I've Worked With</h2></div>
+      <div class="brand-marquee" aria-label="Client logos, scrolling automatically">
+        <div class="brand-track">
+          <div class="brand-group" role="list">
+            <img class="brand-logo" src="../home/client-logos/skytime.png" alt="Sky Time Tours &amp; Expeditions" role="listitem" decoding="async" loading="lazy" width="709" height="417">
+            <img class="brand-logo" src="../home/client-logos/glowra.png" alt="Glowra Jewellery" role="listitem" decoding="async" loading="lazy" width="2010" height="468">
+            <img class="brand-logo" src="../home/client-logos/takees-estates.png" alt="Takees Estates" role="listitem" decoding="async" loading="lazy" width="2653" height="586">
+            <img class="brand-logo" src="../home/client-logos/bosq.png" alt="BOSQ" role="listitem" decoding="async" loading="lazy" width="324" height="486">
+            <img class="brand-logo" src="../home/client-logos/first-driving-centre.png" alt="First Driving Centre" role="listitem" decoding="async" loading="lazy" width="163" height="232">
+            <div class="brand-logo brand-name" role="listitem">AFYUN</div>
+            <img class="brand-logo" src="../home/client-logos/crafty-xa-tale.png" alt="Crafty XA Tale" role="listitem" decoding="async" loading="lazy" width="1014" height="734">
+          </div>
+          <div class="brand-group" aria-hidden="true">
+            <img class="brand-logo" src="../home/client-logos/skytime.png" alt="" decoding="async" loading="lazy" width="709" height="417">
+            <img class="brand-logo" src="../home/client-logos/glowra.png" alt="" decoding="async" loading="lazy" width="2010" height="468">
+            <img class="brand-logo" src="../home/client-logos/takees-estates.png" alt="" decoding="async" loading="lazy" width="2653" height="586">
+            <img class="brand-logo" src="../home/client-logos/bosq.png" alt="" decoding="async" loading="lazy" width="324" height="486">
+            <img class="brand-logo" src="../home/client-logos/first-driving-centre.png" alt="" decoding="async" loading="lazy" width="163" height="232">
+            <div class="brand-logo brand-name">AFYUN</div>
+            <img class="brand-logo" src="../home/client-logos/crafty-xa-tale.png" alt="" decoding="async" loading="lazy" width="1014" height="734">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials-section" id="testimonials">
+      <div class="container testimonial-layout">
+        <div class="testimonials-heading">
+          <span class="eyebrow">Kind words</span><h2>What others say about me</h2>
+          <p>Feedback shared by people I've worked with.</p>
+          <div class="testimonial-controls" aria-label="Testimonial controls">
+            <button class="testimonial-control" type="button" data-testimonial-prev aria-label="Previous testimonial">←</button>
+            <button class="testimonial-control" type="button" data-testimonial-next aria-label="Next testimonial">→</button>
+            <div class="testimonial-dots" aria-label="Choose a testimonial">
+              <button class="testimonial-dot" type="button" data-testimonial-dot="0" aria-label="Show testimonial 1"></button>
+              <button class="testimonial-dot" type="button" data-testimonial-dot="1" aria-label="Show testimonial 2" aria-current="true"></button>
+              <button class="testimonial-dot" type="button" data-testimonial-dot="2" aria-label="Show testimonial 3"></button>
+            </div>
+            <span class="testimonial-count" data-testimonial-count aria-live="polite">02 / 03</span>
+          </div>
+        </div>
+        <div class="testimonial-slides" aria-live="polite">
+          <article class="testimonial" data-testimonial-slide hidden><span class="quote-mark" aria-hidden="true">“</span><blockquote>Working with Safwan was smooth and effective. His digital marketing strategy was thoughtfully planned and produced meaningful business outcomes.</blockquote><div class="person"><span class="avatar" aria-hidden="true">MH</span><span><strong>Muhammed Hisham</strong><small>Advio Agency</small></span></div></article>
+          <article class="testimonial" data-testimonial-slide><span class="quote-mark" aria-hidden="true">“</span><blockquote>Safwan is a very reliable digital marketing strategist in Kannur. He creates clean designs and focuses on performance. This makes him a great partner for any business.</blockquote><div class="person"><span class="avatar" aria-hidden="true">NM</span><span><strong>Nadheem Muhammed</strong><small>Digital Marketing Strategist</small></span></div></article>
+          <article class="testimonial" data-testimonial-slide hidden><span class="quote-mark" aria-hidden="true">“</span><blockquote>Safwan is someone you can trust when it comes to digital marketing. He combines creativity with data driven strategies, helping businesses improve their online presence and generate better results.</blockquote><div class="person"><span class="avatar" aria-hidden="true">MN</span><span><strong>Muhammed Najash</strong><small>SEO Expert</small></span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section more-section">
+      <div class="container">
+        <div class="section-heading"><span class="eyebrow">Make your website work harder</span><h2>More than just a website</h2><p>A website works best when people can find it. I can help with the rest of your online growth too.</p></div>
+        <div class="more-grid">
+          <a class="more-link" href="../seo-services-kannur/">SEO Services in Kannur <span aria-hidden="true">↗</span></a>
+          <a class="more-link" href="../digital-marketing-services-kannur/#services">Google Ads <span aria-hidden="true">↗</span></a>
+          <a class="more-link" href="../meta-ads-services-kannur/">Meta Ads <span aria-hidden="true">↗</span></a>
+          <a class="more-link" href="../shopify-development-services-kannur/#home">Shopify Development <span aria-hidden="true">↗</span></a>
+          <a class="more-link" href="../digital-marketing-services-kannur/#services">Social Media Marketing <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        <div class="section-heading"><span class="eyebrow">Questions, answered</span><h2>Frequently asked questions</h2><p>Still have a question? Send me a message and I'll be happy to help.</p></div>
+        <div class="faq-list">
+          <details><summary>How much does website design cost in Kerala?</summary><p>It depends on how many pages you need and what your website must do. A simple business website usually costs less than an online store. Message me for a free quote and I'll share the full price before work starts.</p></details>
+          <details><summary>How long does it take to build a website?</summary><p>A simple business website usually takes about 1 to 2 weeks. An online store can take longer. I'll give you a clear timeline before we start.</p></details>
+          <details><summary>Are you a web design company or a freelancer?</summary><p>I'm a freelance web designer in Kerala. You work directly with the person building your website, often at a lower price than a large web design company.</p></details>
+          <details><summary>Do you only work in Kannur?</summary><p>No. I'm based in Kannur, but I make websites for businesses in every district of Kerala, from Kasaragod to Thiruvananthapuram.</p></details>
+          <details><summary>Will my website work on mobile phones?</summary><p>Yes. Every website I build is mobile friendly. Many of your customers will visit from their phone.</p></details>
+          <details><summary>Will my website show up on Google?</summary><p>I build every site with basic SEO so Google can read it. To reach the top of Google for competitive searches, you may also need an ongoing SEO service.</p></details>
+          <details><summary>Can I change the website myself later?</summary><p>Yes. If you choose WordPress, I'll show you how to update your own text and photos.</p></details>
+          <details><summary>Do I own my website?</summary><p>Yes. Your website and domain name belong to you.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta" id="contact">
+      <div class="container">
+        <div class="cta-panel">
+          <span class="eyebrow">Your next step starts here</span>
+          <h2>Let's build a website for your business.</h2>
+          <p>Whether you're in Kannur or anywhere in Kerala, I'm one message away. Tell me what you need and I'll get back to you with a free quote.</p>
+          <div class="cta-actions">
+            <a class="button button-green" href="https://wa.me/919895325388?text=Hi%20Safwan%2C%20I%27d%20like%20a%20free%20quote%20for%20a%20website." target="_blank" rel="noopener noreferrer">Chat on WhatsApp <span class="button-arrow" aria-hidden="true">↗</span></a>
+            <a class="button" href="tel:+919895325388">Call +91 98953 25388</a>
+            <a class="button" href="../#home">Go to Home Page</a>
+          </div>
+          <p><a href="mailto:ppsafwan263@gmail.com">ppsafwan263@gmail.com</a> · Narath, Kannur, Kerala</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="../#home" aria-label="Safwan PP home"><img class="site-logo" src="../home/safwan-logo.png" alt="Safwan" decoding="async" width="1408" height="727"></a>
+          <p>Freelance digital marketing strategist helping businesses grow with SEO, ads, social media marketing, web design and Shopify development.</p>
+          <div class="footer-socials" aria-label="Social media">
+            <a href="https://www.instagram.com/thesafwaaan?gwpx=MThjNHVwd3FxYTdseg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg></a>
+            <span role="img" aria-label="Facebook"><svg class="facebook-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.4 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.3H7.6V13h2.7v8h3.1Z"></path></svg></span>
+            <a href="https://www.linkedin.com/in/safwan-ibn-ibrahim-87a281396" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 8.5H2.1V22h3.1V8.5ZM3.65 2A1.8 1.8 0 1 0 3.7 5.6 1.8 1.8 0 0 0 3.65 2ZM22 14.3c0-4.1-2.2-6-5.1-6-2.4 0-3.5 1.3-4.1 2.2V8.5H9.7V22h3.1v-6.7c0-1.8.3-3.6 2.6-3.6s2.3 2.1 2.3 3.7V22H22v-7.7Z"></path></svg></a>
+          </div>
+        </div>
+        <nav class="footer-column" aria-label="Explore"><h2>Explore</h2><ul><li><a href="../#home">Home</a></li><li><a href="../about-me/#about">About</a></li><li><a href="../digital-marketing-services-kannur/#services">Services</a></li><li><a href="../blogs/#articles">Blogs</a></li><li><a href="../contact/#contact">Contact</a></li></ul></nav>
+        <nav class="footer-column" aria-label="Services"><h2>Services</h2><ul><li><a href="../seo-services-kannur/">SEO Services</a></li><li><a href="../social-media-marketing-kannur/">Social Media Marketing</a></li><li><a href="../meta-ads-services-kannur/">Meta Ads</a></li><li><a href="../google-ads-services-kannur/">Google Ads</a></li><li><a href="../website-design-services-kannur/">Web Design</a></li><li><a href="../shopify-development-services-kannur/#home">Shopify Development</a></li></ul></nav>
+        <div class="footer-column"><h2>Locations</h2><ul><li><a href="../#home">Kerala, India</a></li><li><a href="../digital-marketing-strategist-dubai/#home">Dubai, UAE</a></li></ul></div>
+        <div class="footer-column"><h2>Get in touch</h2><ul><li><a href="tel:+919895325388">+91 98953 25388</a></li><li><a href="mailto:ppsafwan263@gmail.com">ppsafwan263@gmail.com</a></li><li><a href="https://wa.me/919895325388" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>Copyright &copy; 2026 &middot; Safwan PP. All rights reserved.</p><a class="footer-top-link" href="#home">Back to top &uarr;</a></div>
+    </div>
+  </footer>
+  <a class="whatsapp-float" href="https://wa.me/919895325388" target="_blank" rel="noopener noreferrer" aria-label="Chat with Safwan on WhatsApp">
+    <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 3.5a12 12 0 0 0-10.2 18.3L4.2 27.8l6.2-1.6A12 12 0 1 0 16 3.5Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"></path><path d="M12 10.2c-.4-.8-.8-.8-1.2-.8h-.9c-.4 0-.9.2-1.2.7-.4.5-1.6 1.6-1.6 3.9s1.6 4.5 1.8 4.8c.2.3 3.1 5 7.6 6.8 3.8 1.5 4.6 1.2 5.4 1.1.8-.1 2.6-1.1 3-2.2.4-1.1.4-2 .3-2.2-.1-.2-.4-.3-.9-.6l-3.1-1.5c-.4-.2-.8-.3-1.1.2-.3.5-1.2 1.5-1.5 1.8-.3.3-.6.4-1.1.1-.5-.2-2-.7-3.8-2.3-1.4-1.2-2.3-2.7-2.6-3.2-.3-.5 0-.7.2-1 .2-.2.5-.6.7-.9.2-.2.3-.6.5-.8.2-.2.1-.6 0-.8l-1.5-3.1Z" fill="currentColor" transform="translate(2 0) scale(.86)"></path></svg>
+  </a>
+  <script>
+    const menuButton = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+    const dropdownButton = document.querySelector(".nav-dropdown-toggle");
+    const dropdown = document.querySelector(".nav-dropdown");
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+      menuButton.setAttribute("aria-expanded", String(!isOpen));
+      navLinks.classList.toggle("is-open", !isOpen);
+    });
+
+    dropdownButton.addEventListener("click", () => {
+      const isOpen = dropdownButton.getAttribute("aria-expanded") === "true";
+      dropdownButton.setAttribute("aria-expanded", String(!isOpen));
+      dropdown.classList.toggle("is-open", !isOpen);
+    });
+
+    navLinks.addEventListener("click", (event) => {
+      if (event.target.closest("a")) {
+        menuButton.setAttribute("aria-expanded", "false");
+        navLinks.classList.remove("is-open");
+      }
+    });
+
+    const testimonialSlides = [...document.querySelectorAll("[data-testimonial-slide]")];
+    const testimonialDots = [...document.querySelectorAll("[data-testimonial-dot]")];
+    const testimonialCount = document.querySelector("[data-testimonial-count]");
+    let activeTestimonial = testimonialSlides.findIndex((slide) => !slide.hidden);
+
+    const showTestimonial = (index) => {
+      activeTestimonial = (index + testimonialSlides.length) % testimonialSlides.length;
+      testimonialSlides.forEach((slide, slideIndex) => {
+        slide.hidden = slideIndex !== activeTestimonial;
+      });
+      testimonialDots.forEach((dot, dotIndex) => {
+        dot.setAttribute("aria-current", String(dotIndex === activeTestimonial));
+      });
+      testimonialCount.textContent = `${String(activeTestimonial + 1).padStart(2, "0")} / ${String(testimonialSlides.length).padStart(2, "0")}`;
+    };
+
+    document.querySelector("[data-testimonial-prev]").addEventListener("click", () => showTestimonial(activeTestimonial - 1));
+    document.querySelector("[data-testimonial-next]").addEventListener("click", () => showTestimonial(activeTestimonial + 1));
+    testimonialDots.forEach((dot) => {
+      dot.addEventListener("click", () => showTestimonial(Number(dot.dataset.testimonialDot)));
+    });
+  </script>
+</body>
+</html>

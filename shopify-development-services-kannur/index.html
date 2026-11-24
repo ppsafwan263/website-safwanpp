@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Shopify developer in Kannur, Kerala. Safwan PP builds mobile-friendly stores with Indian payments, shipping setup and practical small-business support.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Shopify Developer in Kannur, Kerala | Safwan PP</title>
+  <link rel="canonical" href="https://ppsafwan.com/shopify-development-services-kannur/">
+  <meta property="og:url" content="https://ppsafwan.com/shopify-development-services-kannur/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #101114;
+      --muted: #656a73;
+      --blue: #2451e6;
+      --line: #e8e9ec;
+      --paper: #fff;
+      --soft: #f7f8fb;
+      --content: 1120px;
+      --radius: 22px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: "Raleway", sans-serif; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    img, svg { max-width: 100%; }
+    .container { width: min(var(--content), calc(100% - 48px)); margin-inline: auto; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--blue); font-size: .73rem; font-weight: 850; letter-spacing: .13em; text-transform: uppercase; }
+    .eyebrow::before { width: 20px; height: 2px; background: currentColor; content: ""; }
+    .section { padding: 92px 0; }
+    .section-heading { max-width: 720px; margin: 0 auto 42px; text-align: center; }
+    .section-heading h2 { margin: 12px 0; font-size: clamp(2rem, 4.2vw, 3.25rem); line-height: 1.08; letter-spacing: -.065em; font-weight: 850; }
+    .section-heading p { max-width: 620px; margin: 0 auto; color: var(--muted); }
+    .site-header { position: sticky; z-index: 20; top: 0; border-bottom: 1px solid rgba(232,233,236,.85); background: rgba(255,255,255,.94); backdrop-filter: blur(16px); }
+    .nav { position: relative; min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; }
+    .site-logo { display: block; width: 78px; height: auto; filter: brightness(0); }
+    .nav-links { display: flex; align-items: center; gap: 25px; color: #464a52; font-size: .82rem; font-weight: 750; }
+    .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--blue); }
+    .nav-cta { padding: 10px 16px; border: 1px solid var(--line); border-radius: 999px; font-size: .8rem; font-weight: 850; }
+    .menu-toggle { display: none; padding: 9px 12px; border: 1px solid var(--line); border-radius: 10px; background: #fff; font-weight: 800; cursor: pointer; }
+    .hero { position: relative; overflow: hidden; padding: 70px 0 58px; background-image: linear-gradient(rgba(16,17,20,.026) 1px, transparent 1px),linear-gradient(90deg,rgba(16,17,20,.026) 1px,transparent 1px); background-size: 48px 48px; }
+    .hero-grid { display: grid; grid-template-columns: 1.03fr .97fr; align-items: center; gap: 56px; }
+    .hero-copy { position: relative; z-index: 1; }
+    .hero h1 { max-width: 620px; margin: 17px 0 20px; font-size: clamp(3.2rem, 6.8vw, 5.35rem); line-height: .96; letter-spacing: -.085em; font-weight: 900; }
+    .hero h1 em { color: var(--blue); font-style: normal; }
+    .hero-copy > p { max-width: 550px; margin: 0; color: #575d67; font-size: 1.02rem; line-height: 1.8; }
+    .hero-copy > p + p { margin-top: 10px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 11px; margin-top: 25px; }
+    .button { display: inline-flex; min-height: 49px; align-items: center; justify-content: center; gap: 10px; padding: 0 19px; border: 1px solid var(--line); border-radius: 999px; background: #fff; font-size: .83rem; font-weight: 800; transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
+    .button:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(20,32,60,.1); }
+    .button-primary { border-color: var(--blue); color: #fff; background: var(--blue); }
+    .button-primary:hover { background: #193fc2; }
+    .button-arrow { display: grid; width: 29px; height: 29px; place-items: center; border-radius: 50%; color: var(--blue); background: #fff; }
+    .store-preview { position: relative; min-height: 430px; display: grid; place-items: center; }
+    .preview-window { position: relative; width: min(100%, 460px); padding: 13px; border: 1px solid #e6e8ed; border-radius: 23px; background: #fff; box-shadow: 0 25px 70px rgba(16,17,20,.13); transform: rotate(1.5deg); }
+    .preview-top { display: flex; align-items: center; gap: 6px; height: 25px; padding: 0 4px 11px; }
+    .preview-top i { width: 7px; height: 7px; border-radius: 50%; background: #d7d9de; }
+    .preview-address { width: 45%; height: 15px; margin: 0 auto; border-radius: 10px; background: #f0f1f3; }
+    .mock-store { overflow: hidden; border-radius: 14px; background: #f5f2ec; }
+    .mock-nav { display: flex; align-items: center; justify-content: space-between; min-height: 39px; padding: 0 14px; background: #fff; font-size: .52rem; font-weight: 800; letter-spacing: .09em; }
+    .mock-links { display: flex; gap: 12px; color: #656a73; font-size: .44rem; font-weight: 650; }
+    .mock-hero { position: relative; min-height: 250px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: 20px 19px; background: linear-gradient(115deg,#f0e9dd 0 51%,#e0d1bd 51%); }
+    .mock-caption { position: relative; z-index: 1; }
+    .mock-caption small { color: #6a6157; font-size: .46rem; font-weight: 800; letter-spacing: .12em; }
+    .mock-caption strong { display: block; max-width: 150px; margin: 8px 0 11px; font-size: clamp(1.15rem, 3vw, 1.8rem); line-height: .98; letter-spacing: -.07em; }
+    .mock-caption span { display: inline-block; padding: 7px 10px; color: #fff; background: #161616; font-size: .46rem; font-weight: 800; }
+    .product-shape { position: relative; width: 100%; height: 208px; }
+    .product-shape::before { position: absolute; right: 12%; bottom: 6%; width: 64%; height: 84%; border-radius: 48% 48% 18% 18%; background: linear-gradient(120deg,#bf8664,#714737 48%,#ddaf88); box-shadow: 12px 12px 24px rgba(73,48,32,.18); content: ""; transform: rotate(-7deg); }
+    .product-shape::after { position: absolute; top: 5%; right: 26%; width: 32%; height: 38%; border: 8px solid #f0e9dd; border-bottom: 0; border-radius: 50% 50% 0 0; content: ""; transform: rotate(-7deg); }
+    .preview-products { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; padding: 12px; background: #fff; }
+    .preview-product { height: 66px; border-radius: 8px; background: linear-gradient(145deg,#eee7dc,#cfbca6); }
+    .preview-product:nth-child(2) { background: linear-gradient(145deg,#e8e7e1,#b7b2a1); }
+    .preview-product:nth-child(3) { background: linear-gradient(145deg,#efe4dd,#cfaca0); }
+    .preview-float { position: absolute; right: -9px; bottom: 13px; display: flex; align-items: center; gap: 10px; padding: 13px 16px; border: 1px solid var(--line); border-radius: 15px; background: #fff; box-shadow: 0 12px 35px rgba(16,17,20,.1); transform: rotate(-2deg); }
+    .preview-check { display: grid; width: 30px; height: 30px; place-items: center; border-radius: 10px; color: #fff; background: var(--blue); font-weight: 900; }
+    .preview-float strong { display: block; font-size: .72rem; }
+    .preview-float small { display: block; color: var(--muted); font-size: .6rem; }
+    .quick-answer { position: relative; z-index: 2; display: grid; grid-template-columns: 52px 1fr; gap: 16px; margin-top: 34px; padding: 22px 25px; border: 1px solid #dfe5fb; border-radius: 18px; background: #f4f6ff; }
+    .answer-icon { display: grid; width: 46px; height: 46px; place-items: center; border-radius: 14px; color: var(--blue); background: #e4eaff; }
+    .answer-icon svg { width: 22px; }
+    .quick-answer strong { display: block; margin-bottom: 3px; font-size: .91rem; }
+    .quick-answer p { margin: 0; color: #515866; font-size: .84rem; line-height: 1.7; }
+    .feature-strip { display: grid; grid-template-columns: repeat(4,1fr); overflow: hidden; margin-top: 18px; border: 1px solid var(--line); border-radius: 19px; background: #fff; }
+    .feature { min-height: 151px; padding: 22px; transition: color .2s ease, background .2s ease, transform .2s ease; }
+    .feature + .feature { border-left: 1px solid var(--line); }
+    .feature:hover { color: #fff; background: #0c0c0e; }
+    .feature-icon { display: grid; width: 37px; height: 37px; place-items: center; border-radius: 12px; color: #fff; background: var(--blue); }
+    .feature-icon svg { width: 19px; height: 19px; }
+    .feature h3 { margin: 11px 0 3px; font-size: .94rem; letter-spacing: -.025em; }
+    .feature p { margin: 0; color: var(--muted); font-size: .75rem; line-height: 1.55; }
+    .feature:hover p { color: #c5c7ce; }
+    .intro-section { padding-top: 89px; }
+    .intro-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 70px; align-items: start; }
+    .intro-title { position: sticky; top: 110px; }
+    .intro-title h2 { margin: 12px 0; font-size: clamp(2.1rem,4vw,3.2rem); line-height: 1.05; letter-spacing: -.07em; }
+    .intro-title p, .prose p { color: var(--muted); }
+    .prose p { margin: 0 0 17px; }
+    .prose ul { margin: 0 0 24px; padding-left: 22px; color: var(--muted); }
+    .fact-table { display: grid; grid-template-columns: 1fr 1fr; margin-top: 25px; border: 1px solid var(--line); border-radius: 17px; overflow: hidden; }
+    .fact { min-height: 76px; padding: 15px 17px; background: #fff; transition: background .2s ease; }
+    .fact:hover { background: #f4f6ff; }
+    .fact:nth-child(odd) { border-right: 1px solid var(--line); }
+    .fact:nth-child(n+3) { border-top: 1px solid var(--line); }
+    .fact small { display: block; margin-bottom: 3px; color: #777d87; font-size: .65rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .fact strong { font-size: .82rem; line-height: 1.4; }
+    .services-section { background: var(--soft); }
+    .service-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 13px; }
+    .service-card { min-height: 220px; padding: 22px; border: 1px solid var(--line); border-radius: 18px; background: #fff; transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
+    .service-card:hover, .service-card:focus-within { transform: translateY(-4px); border-color: #cdd7ff; box-shadow: 0 14px 30px rgba(16,17,20,.07); }
+    .service-number { color: var(--blue); font-size: .69rem; font-weight: 900; letter-spacing: .1em; }
+    .service-card h3 { margin: 24px 0 8px; font-size: 1.02rem; letter-spacing: -.035em; }
+    .service-card p { margin: 0; color: var(--muted); font-size: .78rem; line-height: 1.65; }
+    .platform-section { padding: 80px 0; color: #fff; background: #0b0b0d; }
+    .platform-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 62px; align-items: center; }
+    .platform-copy h2 { max-width: 570px; margin: 13px 0 17px; font-size: clamp(2.2rem,4.5vw,3.45rem); line-height: 1.04; letter-spacing: -.07em; }
+    .platform-copy p { max-width: 540px; color: #c5c7ce; }
+    .platform-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .platform-item { display: flex; align-items: center; gap: 12px; min-height: 66px; padding: 14px; border: 1px solid #303034; border-radius: 14px; background: #171719; font-size: .8rem; font-weight: 750; transition: transform .2s ease, border-color .2s ease, background .2s ease; }
+    .platform-item:hover { transform: translateY(-3px); border-color: #7894ff; background: #1d1d20; }
+    .platform-item > span:first-child { display: grid; width: 29px; height: 29px; flex: 0 0 29px; place-items: center; border-radius: 9px; color: #fff; background: var(--blue); font-size: .72rem; }
+    .platform-label { display: block; }
+    .platform-label strong { display: block; margin-bottom: 2px; font-size: .8rem; }
+    .price-table { overflow: hidden; border: 1px solid var(--line); border-radius: 17px; background: #fff; }
+    .price-row { display: grid; grid-template-columns: 1fr 1.5fr .8fr; gap: 16px; padding: 17px 20px; font-size: .84rem; }
+    .price-row + .price-row { border-top: 1px solid var(--line); }
+    .price-head { color: #555b64; background: #f1f3f7; font-size: .72rem; font-weight: 850; letter-spacing: .06em; text-transform: uppercase; }
+    .price-row:not(.price-head) strong { font-size: .86rem; }
+    .price-disclaimer { margin: 14px 0 0; color: var(--muted); font-size: .82rem; }
+    .timeline-note { margin: 20px 0 0; color: var(--muted); font-size: .88rem; }
+    .process-section { background: var(--soft); }
+    .steps { display: grid; grid-template-columns: repeat(5,1fr); gap: 12px; }
+    .step { min-height: 205px; padding: 20px; border: 1px solid var(--line); border-radius: 17px; background: #fff; transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
+    .step:hover, .step:focus-within { transform: translateY(-4px); border-color: #cdd7ff; box-shadow: 0 14px 30px rgba(16,17,20,.07); }
+    .step-number { display: grid; width: 35px; height: 35px; place-items: center; border-radius: 11px; color: #fff; background: var(--blue); font-size: .76rem; font-weight: 900; }
+    .step h3 { margin: 19px 0 7px; font-size: .96rem; }
+    .step p { margin: 0; color: var(--muted); font-size: .76rem; line-height: 1.65; }
+    .industry-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; }
+    .industry { display: flex; align-items: center; gap: 11px; min-height: 61px; padding: 12px 15px; border: 1px solid var(--line); border-radius: 13px; background: #fff; font-size: .82rem; font-weight: 750; transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
+    .industry:hover { transform: translateY(-3px); border-color: #cdd7ff; box-shadow: 0 10px 24px rgba(16,17,20,.06); }
+    .industry span { color: var(--blue); font-size: 1rem; }
+    .samples-section { background: var(--soft); }
+    .sample-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 15px; }
+    .sample-card { overflow: hidden; border: 1px solid var(--line); border-radius: 19px; background: #fff; transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
+    .sample-card:hover { transform: translateY(-4px); border-color: #cdd7ff; box-shadow: 0 14px 30px rgba(16,17,20,.08); }
+    .sample-visual { position: relative; min-height: 190px; display: grid; place-items: center; overflow: hidden; }
+    .sample-visual::before { position: absolute; width: 180px; height: 180px; border-radius: 50%; background: rgba(255,255,255,.22); content: ""; transform: translate(60px,-50px); }
+    .sample-visual.fashion { background: #e5ded2; }
+    .sample-visual.jewellery { background: #d7d0c4; }
+    .sample-visual.homeware { background: #d7e0da; }
+    .sample-shape { position: relative; z-index: 1; width: 105px; height: 132px; border-radius: 48% 48% 13px 13px; background: linear-gradient(135deg,#a87859,#5c3c2d); box-shadow: 12px 16px 25px rgba(30,25,20,.2); }
+    .jewellery .sample-shape { width: 112px; height: 112px; border: 7px solid #c5a85c; border-radius: 50%; background: transparent; box-shadow: 0 12px 20px rgba(30,25,20,.17); }
+    .homeware .sample-shape { width: 112px; height: 120px; border-radius: 14px 14px 34px 34px; background: linear-gradient(135deg,#c59a6a,#886b49); }
+    .sample-copy { padding: 19px; }
+    .sample-copy h3 { margin: 0 0 5px; font-size: 1rem; }
+    .sample-copy p { margin: 0; color: var(--muted); font-size: .78rem; }
+    .sample-disclaimer { display: block; margin-top: 10px; color: #777d87; font-size: .67rem; font-style: italic; }
+    .promise-section { padding-top: 0; }
+    .promise-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 55px; align-items: start; }
+    .promise-title h2 { margin: 12px 0; font-size: clamp(2.1rem,4vw,3.1rem); line-height: 1.05; letter-spacing: -.07em; }
+    .promise-title p { color: var(--muted); }
+    .promise-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .promise { padding: 17px; border: 1px solid var(--line); border-radius: 15px; transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
+    .promise:hover { transform: translateY(-3px); border-color: #cdd7ff; box-shadow: 0 10px 24px rgba(16,17,20,.06); }
+    .promise strong { display: block; margin-bottom: 4px; font-size: .84rem; }
+    .promise p { margin: 0; color: var(--muted); font-size: .74rem; }
+    .why-section { background: #fff; }
+    .why-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; }
+    .why-card { min-height: 170px; padding: 21px; border: 1px solid var(--line); border-radius: 17px; background: #fff; transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
+    .why-card:hover { transform: translateY(-4px); border-color: #cdd7ff; box-shadow: 0 14px 30px rgba(16,17,20,.07); }
+    .why-card h3 { margin: 0 0 9px; font-size: .95rem; }
+    .why-card p { margin: 0; color: var(--muted); font-size: .8rem; }
+    .areas-section { padding-top: 0; }
+    .areas-copy { max-width: 850px; }
+    .areas-copy h2 { max-width: 700px; margin: 12px 0; font-size: clamp(2rem,4vw,3.1rem); line-height: 1.08; letter-spacing: -.065em; }
+    .areas-copy p { color: var(--muted); }
+    .offer-band { margin-top: 24px; padding: 25px; border-radius: 18px; color: #fff; background: var(--blue); }
+    .offer-band h3 { margin: 0 0 5px; font-size: 1.25rem; }
+    .offer-band p { margin: 0 0 14px; color: #e2e8ff; font-size: .84rem; }
+    .button-light { border-color: #fff; color: var(--ink); background: #fff; }
+    .faq-section { background: var(--soft); }
+    .faq-list { max-width: 850px; margin: auto; border-top: 1px solid var(--line); }
+    .faq-list details { border-bottom: 1px solid var(--line); }
+    .faq-list summary { position: relative; padding: 19px 42px 19px 0; font-size: .94rem; font-weight: 800; list-style: none; cursor: pointer; }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary::after { position: absolute; top: 17px; right: 5px; color: var(--blue); content: "+"; font-family: "Inter",sans-serif; font-size: 1.35rem; font-weight: 400; }
+    .faq-list details[open] summary::after { content: "−"; }
+    .faq-list details p { max-width: 740px; margin: -4px 0 19px; color: var(--muted); font-size: .86rem; }
+    .final-cta { padding: 80px 0; }
+    .cta-panel { position: relative; overflow: hidden; padding: 55px; border-radius: 27px; color: #fff; background: #0b0b0d; }
+    .cta-panel::after { position: absolute; top: -90px; right: -65px; width: 280px; height: 280px; border: 1px solid rgba(255,255,255,.13); border-radius: 50%; box-shadow: 0 0 0 35px rgba(255,255,255,.025),0 0 0 70px rgba(255,255,255,.02); content: ""; }
+    .cta-panel > * { position: relative; z-index: 1; }
+    .cta-panel h2 { max-width: 650px; margin: 12px 0; font-size: clamp(2.2rem,5vw,3.8rem); line-height: 1.02; letter-spacing: -.075em; }
+    .cta-panel p { max-width: 570px; color: #c5c7ce; }
+    .cta-panel .button:not(.button-primary) { color: var(--ink); }
+    .site-footer, .site-footer * { font-family: "Inter",sans-serif; }
+    .site-footer { padding: 54px 0 20px; color: #fff; background: #0b0b0d; font-size: 14px; }
+    .footer-grid { display: grid; grid-template-columns: minmax(210px,1.6fr) repeat(4,minmax(0,1fr)); gap: 35px; padding-bottom: 40px; }
+    .footer-brand .site-logo { width: 112px; filter: brightness(0) invert(1); }
+    .footer-brand p { max-width: 280px; color: #c5c7ce; line-height: 1.75; }
+    .footer-column h2 { margin: 5px 0 14px; font-size: .77rem; letter-spacing: .08em; text-transform: uppercase; }
+    .footer-column ul { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+    .footer-column a { color: #d8d9dd; transition: color .2s ease; }
+    .footer-column a:hover, .footer-top-link:hover { color: #8da5ff; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 17px; border-top: 1px solid #292a30; color: #c5c7ce; font-size: .75rem; }
+    .footer-bottom p { margin: 0; }
+    .whatsapp-float { position: fixed; z-index: 15; right: 22px; bottom: 20px; display: grid; width: 58px; height: 58px; place-items: center; border-radius: 50%; color: #fff; background: #25d366; box-shadow: 0 8px 20px rgba(0,0,0,.24); transition: transform .2s ease; }
+    .whatsapp-float:hover { transform: translateY(-3px); }
+    .whatsapp-float svg { width: 30px; height: 30px; }
+    @media (max-width: 900px) {
+      .hero-grid { gap: 25px; }
+      .service-grid { grid-template-columns: repeat(2,1fr); }
+      .steps { grid-template-columns: repeat(3,1fr); }
+      .industry-grid { grid-template-columns: repeat(3,1fr); }
+      .why-grid { grid-template-columns: repeat(2,1fr); }
+      .footer-grid { grid-template-columns: repeat(4,1fr); }
+      .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 720px) {
+      .container { width: min(100% - 36px,var(--content)); }
+      .nav { min-height: 66px; }
+      .menu-toggle { display: inline-flex; }
+      .nav-cta { display: none; }
+      .nav-links { position: absolute; top: 65px; right: 0; left: 0; display: none; align-items: stretch; gap: 0; padding: 8px 16px; border: 1px solid var(--line); border-radius: 16px; background: #fff; box-shadow: 0 18px 35px rgba(16,17,20,.1); }
+      .nav-links.is-open { display: flex; flex-direction: column; }
+      .nav-links a { padding: 12px 2px; border-bottom: 1px solid var(--line); }
+      .nav-links a:last-child { border-bottom: 0; }
+      .hero { padding: 49px 0 42px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 8px; }
+      .hero h1 { max-width: 550px; font-size: clamp(3rem,13vw,4.7rem); }
+      .hero-copy > p { font-size: .94rem; }
+      .store-preview { min-height: 350px; }
+      .preview-window { width: min(100%,440px); }
+      .mock-hero { min-height: 210px; }
+      .product-shape { height: 178px; }
+      .quick-answer { grid-template-columns: 1fr; gap: 10px; padding: 19px; }
+      .feature-strip { grid-template-columns: 1fr 1fr; }
+      .feature { min-height: 140px; padding: 17px; }
+      .feature:nth-child(3) { border-left: 0; border-top: 1px solid var(--line); }
+      .feature:nth-child(4) { border-top: 1px solid var(--line); }
+      .section { padding: 68px 0; }
+      .intro-grid, .platform-grid, .promise-grid { grid-template-columns: 1fr; gap: 28px; }
+      .intro-title { position: static; }
+      .platform-grid { gap: 25px; }
+      .steps { grid-template-columns: repeat(2,1fr); }
+      .industry-grid { grid-template-columns: repeat(2,1fr); }
+      .sample-grid { grid-template-columns: 1fr; }
+      .sample-visual { min-height: 210px; }
+      .promise-section { padding-top: 0; }
+      .areas-section { padding-top: 0; }
+      .pricing-card { grid-template-columns: 1fr; }
+      .price-row { grid-template-columns: 1fr 1.2fr .8fr; gap: 8px; padding: 14px 12px; font-size: .73rem; }
+      .why-grid { grid-template-columns: 1fr 1fr; }
+      .cta-panel { padding: 35px 25px; }
+      .footer-grid { grid-template-columns: repeat(2,1fr); gap: 26px 20px; }
+      .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 440px) {
+      .hero h1 { font-size: clamp(2.75rem,13vw,3.8rem); }
+      .hero-actions .button { width: 100%; }
+      .store-preview { min-height: 300px; }
+      .preview-float { right: 0; bottom: 3px; }
+      .mock-hero { min-height: 180px; padding: 13px; }
+      .product-shape { height: 150px; }
+      .mock-links { gap: 6px; }
+      .fact-table, .platform-list, .promise-list { grid-template-columns: 1fr; }
+      .fact:nth-child(odd) { border-right: 0; }
+      .fact:nth-child(n+2) { border-top: 1px solid var(--line); }
+      .price-head { display: none; }
+      .price-row { grid-template-columns: 1fr; gap: 4px; }
+      .price-row:not(.price-head) span { color: var(--muted); }
+      .steps, .industry-grid, .service-grid { grid-template-columns: 1fr; }
+      .step { min-height: auto; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-brand { grid-column: auto; }
+      .footer-bottom { align-items: flex-start; flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .service-card:hover, .pricing-card:hover, .step:hover, .industry:hover, .sample-card:hover, .promise:hover, .why-card:hover, .platform-item:hover { transform: none; }
+    }
+    .site-header, .site-header * { font-family: Arial, sans-serif; }
+    .site-header { position: sticky; z-index: 20; top: 0; border-bottom: 1px solid rgba(232,233,236,.85); background: rgba(255,255,255,.94); backdrop-filter: blur(16px); }
+    .site-header .nav { width: min(1120px,calc(100% - 48px)); min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .site-header .brand { display: inline-flex; align-items: center; }
+    .site-header .site-logo { display: block; width: 78px; height: auto; filter: brightness(0); }
+    .site-header .nav-links { display: flex; align-items: center; gap: 25px; color: #464a52; font-size: .82rem; font-weight: 750; }
+    .site-header .nav-links a:hover, .site-header .nav-links a[aria-current="page"] { color: var(--blue); }
+    .site-header .nav-cta { padding: 10px 16px; border: 1px solid var(--line); border-radius: 999px; font-size: .8rem; font-weight: 850; }
+    .site-header .menu-toggle { display: none; padding: 9px 12px; border: 1px solid var(--line); border-radius: 10px; background: #fff; font-weight: 800; cursor: pointer; }
+    .site-footer, .site-footer * { font-family: Arial, sans-serif; }
+    .site-footer { padding: 58px 0 20px; color: #fff; background: #0b0b0d; font-size: 16px; font-weight: 400; }
+    .site-footer > .container { width: min(1120px,calc(100% - 48px)); margin-inline: auto; }
+    .site-footer .footer-grid { display: grid; grid-template-columns: minmax(220px,1.7fr) repeat(4,minmax(0,1fr)); gap: clamp(24px,4vw,56px); padding-bottom: 48px; }
+    .site-footer .footer-brand .brand { display: inline-flex; margin-bottom: 16px; color: #fff; }
+    .site-footer .footer-brand .site-logo { width: 112px; filter: none; }
+    .site-footer .footer-brand p { max-width: 290px; margin: 0; color: #fff; font-size: 16px; line-height: 1.75; }
+    .site-footer .footer-socials { display: flex; align-items: center; gap: 22px; margin-top: 20px; }
+    .site-footer .footer-socials a, .site-footer .footer-socials span { display: grid; width: 22px; height: 22px; place-items: center; color: #fff; }
+    .site-footer .footer-socials a { transition: color .2s ease, transform .2s ease; }
+    .site-footer .footer-socials a:hover { transform: translateY(-2px); color: #fff; }
+    .site-footer .footer-socials svg { width: 20px; height: 20px; fill: none; }
+    .site-footer .footer-socials .facebook-icon, .site-footer .footer-socials a:nth-child(3) svg { fill: currentColor; }
+    .site-footer .footer-column h2 { margin: 5px 0 16px; color: #fff; font-size: 16px; font-weight: 850; letter-spacing: .04em; text-transform: uppercase; }
+    .site-footer .footer-column ul { display: grid; gap: 11px; margin: 0; padding: 0; list-style: none; }
+    .site-footer .footer-column li, .site-footer .footer-column a { color: #fff; font-size: 16px; line-height: 1.5; }
+    .site-footer .footer-column a, .site-footer .footer-top-link { transition: color .18s ease; }
+    .site-footer .footer-column a:hover, .site-footer .footer-top-link:hover { color: var(--blue); }
+    .site-footer .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 18px; border-top: 1px solid #292a30; color: #fff; font-size: 15px; }
+    .site-footer .footer-bottom p { margin: 0; }
+    .site-footer .footer-top-link { color: #fff; }
+    .whatsapp-float { position: fixed; z-index: 15; right: 22px; bottom: 20px; display: grid; width: 64px; height: 64px; place-items: center; border: 0; border-radius: 50%; color: #fff; background: #25d366; box-shadow: 0 8px 20px rgba(0,0,0,.24); transition: transform .2s ease, background .2s ease, box-shadow .2s ease; }
+    .whatsapp-float:hover { transform: translateY(-3px); background: #20bd5a; box-shadow: 0 12px 26px rgba(0,0,0,.3); }
+    .whatsapp-float svg { width: 34px; height: 34px; }
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-head { display: flex; align-items: center; gap: 3px; }
+    .nav-dropdown-toggle { display: grid; width: 23px; height: 30px; place-items: center; padding: 0; border: 0; color: inherit; background: transparent; cursor: pointer; }
+    .nav-dropdown-toggle svg { width: 12px; height: 12px; transition: transform .18s ease; }
+    .nav-dropdown:hover .nav-dropdown-toggle svg, .nav-dropdown.is-open .nav-dropdown-toggle svg { transform: rotate(180deg); }
+    .nav-dropdown::after { position: absolute; top: 100%; left: 0; width: 100%; height: 17px; content: ""; }
+    .nav-dropdown-menu { position: absolute; z-index: 22; top: calc(100% + 17px); left: -16px; display: none; width: 190px; overflow: hidden; padding: 6px; border: 1px solid var(--line); border-radius: 12px; color: var(--ink); background: #fff; box-shadow: 0 16px 36px rgba(16,17,20,.12); }
+    .nav-dropdown-menu a { display: block; padding: 12px; border-radius: 7px; color: var(--ink); font-size: .74rem; font-weight: 750; line-height: 1.4; transition: color .18s ease, background .18s ease; }
+    .nav-dropdown-menu a:hover, .nav-dropdown-menu a:focus-visible { color: var(--blue); background: #f1f4ff; }
+    .nav-dropdown:hover .nav-dropdown-menu, .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+    @media (max-width: 980px) {
+      .site-footer .footer-grid { grid-template-columns: repeat(4,minmax(0,1fr)); }
+      .site-footer .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 720px) {
+      .site-header .nav { width: min(100% - 36px,1120px); min-height: 66px; position: relative; }
+      .site-header .menu-toggle { display: inline-flex; }
+      .site-header .nav-cta { display: none; }
+      .site-header .nav-links { position: absolute; top: 65px; right: 0; left: 0; display: none; align-items: stretch; gap: 0; padding: 8px 16px; border: 1px solid var(--line); border-radius: 16px; background: #fff; box-shadow: 0 18px 35px rgba(16,17,20,.1); }
+      .site-header .nav-links.is-open { display: flex; flex-direction: column; }
+      .site-header .nav-links > a { padding: 12px 2px; border-bottom: 1px solid var(--line); }
+      .site-header .nav-links > a:last-child { border-bottom: 0; }
+      .site-footer > .container { width: min(100% - 36px,1120px); }
+      .site-footer .footer-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 30px 22px; padding-bottom: 34px; }
+      .site-footer .footer-brand { grid-column: 1 / -1; }
+      .site-header .nav-dropdown { position: relative; width: 100%; }
+      .site-header .nav-dropdown::after { display: none; }
+      .site-header .nav-dropdown-head { min-height: 45px; }
+      .site-header .nav-dropdown-head > a { flex: 1; padding: 12px 2px; }
+      .site-header .nav-dropdown-toggle { width: 42px; height: 42px; border-bottom: 1px solid var(--line); }
+      .site-header .nav-dropdown-menu { position: static; width: 100%; margin-bottom: 8px; padding: 4px; border: 1px solid var(--line); border-radius: 10px; background: #fff; box-shadow: none; }
+      .site-header .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+      .site-header .nav-dropdown-menu a { padding: 12px; border-bottom: 0; color: var(--ink); }
+    }
+    @media (max-width: 440px) {
+      .site-footer .footer-grid { grid-template-columns: 1fr; }
+      .site-footer .footer-bottom { align-items: flex-start; flex-direction: column; }
+    }
+  </style>
+  <link rel="stylesheet" href="../style.css">
+  <meta property="og:title" content="Shopify Developer in Kannur, Kerala | Safwan PP">
+  <meta property="og:description" content="Shopify developer in Kannur, Kerala. Safwan PP builds mobile-friendly stores with Indian payments, shipping setup and practical small-business support.">
+  <meta property="og:site_name" content="Safwan PP">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Shopify Developer in Kannur, Kerala | Safwan PP">
+  <meta name="twitter:description" content="Shopify developer in Kannur, Kerala. Safwan PP builds mobile-friendly stores with Indian payments, shipping setup and practical small-business support.">
+  <meta property="og:type" content="website">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="../#home" aria-label="Safwan PP home"><img class="site-logo" src="../home/safwan-logo.png" alt="Safwan" decoding="async" width="1408" height="727"></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="../#home">Home</a>
+        <a href="../about-me/">About</a>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-head">
+            <a href="../digital-marketing-services-kannur/">Services</a>
+            <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="service-submenu" aria-label="Show service links">
+              <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="m2 4.5 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </button>
+          </div>
+          <div class="nav-dropdown-menu" id="service-submenu">
+            <a href="../seo-services-kannur/">SEO Services</a>
+            <a href="../google-ads-services-kannur/">Google Ads</a>
+            <a href="../website-design-services-kannur/">Web Design</a>
+            <a href="../shopify-development-services-kannur/#home" aria-current="page">Shopify Development</a>
+            <a href="../meta-ads-services-kannur/">Meta Ads</a>
+            <a href="../social-media-marketing-kannur/">Social Media Marketing</a>
+          </div>
+        </div>
+        <a href="../blogs/">Blogs</a>
+        <a href="../contact/">Contact</a>
+      </div>
+      <a class="nav-cta" href="../contact/#contact">Let's talk <span aria-hidden="true">&#8599;</span></a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <h1>Shopify Developer in <em>Kannur, Kerala</em></h1>
+            <p>I build online stores that are easy to use and ready to sell.</p>
+            <p>Do you want to sell your products online? I can help. My name is Safwan, and I am a Shopify developer in Kannur. I build simple, fast online stores for shops and small businesses in Kannur and all over Kerala.</p>
+            <p>Your customers can visit your store on their phone, pick a product, and pay with UPI, card or cash on delivery. You can add new products yourself. No coding needed.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="../contact/#contact">Start Your Shopify Store <span class="button-arrow" aria-hidden="true">&#8599;</span></a>
+              <a class="button" href="https://wa.me/919895325388" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+            </div>
+          </div>
+          <div class="store-preview" aria-label="Illustration of a Shopify fashion store on a desktop browser">
+            <div class="preview-window">
+              <div class="preview-top" aria-hidden="true"><i></i><i></i><i></i><span class="preview-address"></span></div>
+              <div class="mock-store">
+                <div class="mock-nav"><span>YOUR BRAND</span><span class="mock-links"><span>SHOP</span><span>ABOUT</span><span>SEARCH&nbsp; BAG</span></span></div>
+                <div class="mock-hero">
+                  <div class="mock-caption"><small>MADE FOR EVERY DAY</small><strong>Find your new favourite.</strong><span>SHOP THE COLLECTION&nbsp; &#8594;</span></div>
+                  <div class="product-shape" aria-hidden="true"></div>
+                </div>
+                <div class="preview-products" aria-hidden="true"><div class="preview-product"></div><div class="preview-product"></div><div class="preview-product"></div></div>
+              </div>
+              <div class="preview-float"><span><strong>Store, ready to grow</strong><small>Designed around your brand</small></span></div>
+            </div>
+          </div>
+        </div>
+        <aside class="quick-answer" aria-label="Quick answer">
+          <span class="answer-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3.5 20 7v5.2c0 4.4-3 7.3-8 9.3-5-2-8-4.9-8-9.3V7l8-3.5Z" stroke="currentColor" stroke-width="1.7"/><path d="m8.5 12 2.2 2.2 4.8-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div><strong>Who builds Shopify stores in Kannur?</strong><p>Safwan PP is a Shopify developer based in Kannur, Kerala. He builds mobile-friendly Shopify stores for small businesses across Kerala, with UPI, Razorpay, cash on delivery and Shiprocket delivery set up. Basic stores start from ₹10,000 and are usually ready in [2–4] weeks.</p></div>
+        </aside>
+        <div class="feature-strip" aria-label="Shopify store benefits">
+          <article class="feature"><span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="6" y="2.8" width="12" height="18.4" rx="2.2" stroke="currentColor" stroke-width="1.7"/><path d="M10 18h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><h3>Works on phones</h3><p>Most people in Kerala shop on their phones. Your store will look great on every screen.</p></article>
+          <article class="feature"><span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5.5h16M4 12h16M4 18.5h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="18" cy="18.5" r="2" stroke="currentColor" stroke-width="1.6"/></svg></span><h3>Easy to manage</h3><p>Add products, change prices and see orders from one simple dashboard.</p></article>
+          <article class="feature"><span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M3 10h18M7 15h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><h3>Indian payments</h3><p>UPI, Razorpay, cards and cash on delivery.</p></article>
+          <article class="feature"><span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" stroke-width="1.7"/><path d="m16 16 4.5 4.5M8 10.8l1.8 1.8 3.8-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Ready for Google</h3><p>Clean pages so people can find your store when they search.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section intro-section">
+      <div class="container intro-grid">
+        <div class="intro-title"><h2>What is Shopify, and why do Kerala shops use it?</h2></div>
+        <div class="prose">
+          <p><strong>Shopify is a ready-made platform for running an online store.</strong> You pay Shopify a monthly fee, and it gives you the website hosting, the security and the checkout. A Shopify developer then sets it up to match your brand and your products.</p>
+          <p>Think of it like renting a ready-made shop building. The walls, the doors and the security are already there. You just need someone to set it up, paint it and put your products on the shelves.</p>
+          <p>That is my job. I take your products, your brand and your ideas, and I turn them into a working Shopify store.</p>
+          <p>Many businesses in Kannur, Kochi, Kozhikode and other parts of Kerala choose Shopify because:</p>
+          <ul>
+            <li>It is safe. Every store gets a free SSL lock, so customer details stay protected.</li>
+            <li>It is fast. Pages load quickly, even on mobile data.</li>
+            <li>It is easy. You do not need to know coding to run it every day.</li>
+            <li>It grows with you. You can start with 10 products and later have 1,000.</li>
+          </ul>
+          <div class="fact-table" aria-label="Shopify development details">
+            <div class="fact"><small>Service</small><strong>Shopify store development and design</strong></div>
+            <div class="fact"><small>Developer</small><strong>Safwan PP</strong></div>
+            <div class="fact"><small>Based in</small><strong>Kannur, Kerala, India</strong></div>
+            <div class="fact"><small>Areas served</small><strong>Kannur, Thalassery, Payyanur, Kasaragod, Kozhikode, Kochi and all of Kerala</strong></div>
+            <div class="fact"><small>Payments set up</small><strong>UPI, Razorpay, cards, net banking, cash on delivery</strong></div>
+            <div class="fact"><small>Delivery set up</small><strong>Shiprocket, to any pincode in India</strong></div>
+            <div class="fact"><small>Time to build</small><strong>[2–4] weeks for most small stores</strong></div>
+            <div class="fact"><small>Starting price</small><strong>₹10,000</strong></div>
+            <div class="fact"><small>Contact</small><strong>+91 98953 25388 (call or WhatsApp)</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services-section" id="services">
+      <div class="container">
+        <div class="section-heading"><span class="eyebrow">Shopify services</span><h2>What Shopify services do you offer in Kannur?</h2><p>I offer 8 Shopify services: store setup, website design, theme customization, product upload, Shopify SEO, app and payment setup, store redesign, and WooCommerce to Shopify migration. You can pick one service or all of them.</p></div>
+        <div class="service-grid">
+          <article class="service-card"><span class="service-number">01 / SETUP</span><h3>Shopify store setup</h3><p>I set up your new store from the start. This includes the domain name, payments, shipping, taxes and store settings. When I finish, your store is ready to take orders.</p></article>
+          <article class="service-card"><span class="service-number">02 / DESIGN</span><h3>Shopify website design</h3><p>Your store should look like <em>your</em> brand, not like everyone else's. I choose colours, fonts and layouts that match your shop. This makes customers trust you more.</p></article>
+          <article class="service-card"><span class="service-number">03 / CUSTOMIZE</span><h3>Shopify theme customization</h3><p>Already have a theme? I can change it so it fits your needs. I can move sections, add new parts and fix things that do not look right.</p></article>
+          <article class="service-card"><span class="service-number">04 / CATALOGUE</span><h3>Adding products and collections</h3><p>I upload your products with clear photos, prices and short descriptions. Then I sort them into groups, like "Men", "Women" or "New Arrivals", so shoppers find things fast.</p></article>
+          <article class="service-card"><span class="service-number">05 / VISIBILITY</span><h3>Shopify SEO for Kerala businesses</h3><p>SEO means helping Google understand your store. I write good page titles, product descriptions and image names. I also add local words like "Kannur" and "Kerala" where they make sense. This helps people near you find your shop.</p></article>
+          <article class="service-card"><span class="service-number">06 / INTEGRATIONS</span><h3>Apps and payment setup</h3><p>I connect useful apps like Razorpay for payments, Shiprocket for delivery and WhatsApp for chat. I only add apps you really need, because too many apps make a store slow.</p></article>
+          <article class="service-card"><span class="service-number">07 / IMPROVE</span><h3>Store redesign</h3><p>Is your current store old or slow? I can give it a fresh new look and make it easier to shop.</p></article>
+          <article class="service-card"><span class="service-number">08 / MIGRATE</span><h3>WooCommerce to Shopify migration</h3><p>Moving from WooCommerce or another website? I move your products, customers and orders to Shopify safely, so you do not lose anything.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="platform-section">
+      <div class="container platform-grid">
+        <div class="platform-copy"><span class="eyebrow">Built for shoppers in Kerala</span><h2>An online store made for Kerala customers</h2><p>Shoppers in Kerala like to pay and get their orders in certain ways. Your store will support all of them:</p></div>
+        <div class="platform-list">
+          <div class="platform-item"><span>01</span><span class="platform-label"><strong>UPI payments</strong>Google Pay, PhonePe and Paytm</span></div>
+          <div class="platform-item"><span>02</span><span class="platform-label"><strong>Cash on delivery (COD)</strong>Still very popular across Kerala</span></div>
+          <div class="platform-item"><span>03</span><span class="platform-label"><strong>Razorpay</strong>For cards, net banking and wallets</span></div>
+          <div class="platform-item"><span>04</span><span class="platform-label"><strong>Shiprocket delivery</strong>Send parcels to any pincode in India</span></div>
+          <div class="platform-item"><span>05</span><span class="platform-label"><strong>WhatsApp chat button</strong>So customers can ask questions before they buy</span></div>
+          <div class="platform-item"><span>06</span><span class="platform-label"><strong>Discount codes</strong>For Onam, Vishu, Eid and Christmas sales</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section-heading"><span class="eyebrow">Price</span><h2>How much does a Shopify store cost in Kannur?</h2><p>The price depends on how many products you have and how much design work you need. Here is a simple guide:</p></div>
+        <div class="price-table" role="table" aria-label="Shopify store packages">
+          <div class="price-row price-head" role="row"><strong role="columnheader">Package</strong><strong role="columnheader">Good for</strong><strong role="columnheader">Starting price</strong></div>
+          <div class="price-row" role="row"><strong role="cell">Starter Store</strong><span role="cell">Up to [20] products, ready-made theme</span><span role="cell">From ₹10,000</span></div>
+          <div class="price-row" role="row"><strong role="cell">Business Store</strong><span role="cell">Up to [100] products, custom design</span><span role="cell">From ₹15,000 to ₹20,000</span></div>
+          <div class="price-row" role="row"><strong role="cell">Custom Store</strong><span role="cell">Large stores, special features</span><span role="cell">Ask for a quote</span></div>
+        </div>
+        <p class="price-disclaimer">Shopify also charges a small monthly fee for the platform. I will explain all costs clearly before we start. No hidden charges.</p>
+      </div>
+    </section>
+
+    <section class="section process-section">
+      <div class="container">
+        <div class="section-heading"><span class="eyebrow">How I work</span><h2>How I build your Shopify store, step by step</h2></div>
+        <div class="steps">
+          <article class="step"><span class="step-number">01</span><h3>Step 1: We talk</h3><p>We meet in Kannur or talk on a call. You tell me about your business, your products and your customers.</p></article>
+          <article class="step"><span class="step-number">02</span><h3>Step 2: I plan</h3><p>I make a simple plan for your store. It shows the pages, the menu and how shoppers will move from product to checkout.</p></article>
+          <article class="step"><span class="step-number">03</span><h3>Step 3: I build</h3><p>I design the store, add your products and set up payments and delivery.</p></article>
+          <article class="step"><span class="step-number">04</span><h3>Step 4: We test</h3><p>We check everything on phones and computers. We place test orders to make sure nothing breaks.</p></article>
+          <article class="step"><span class="step-number">05</span><h3>Step 5: We launch</h3><p>Your store goes live. I show you how to add products and check orders. I am still here if you need help later.</p></article>
+        </div>
+        <p class="timeline-note"><strong>Time needed:</strong> Most small stores are ready in [2 to 4 weeks].</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading"><span class="eyebrow">Who I help</span><h2>Who can get an online store in Kannur and Kerala?</h2><p>Shopify works for almost any business that sells products. I help:</p></div>
+        <div class="industry-grid">
+          <div class="industry"><span aria-hidden="true">✳</span>Clothing and fashion shops</div><div class="industry"><span aria-hidden="true">✳</span>Jewellery and gold shops</div>
+          <div class="industry"><span aria-hidden="true">✳</span>Home decor and furniture shops</div><div class="industry"><span aria-hidden="true">✳</span>Spices, tea, coffee and Kerala food products</div>
+          <div class="industry"><span aria-hidden="true">✳</span>Beauty and skincare brands</div><div class="industry"><span aria-hidden="true">✳</span>Handloom, Kerala sarees and handicrafts</div>
+          <div class="industry"><span aria-hidden="true">✳</span>Electronics and mobile accessory shops</div><div class="industry"><span aria-hidden="true">✳</span>Bakeries and homemade food sellers</div>
+          <div class="industry"><span aria-hidden="true">✳</span>Gift shops</div><div class="industry"><span aria-hidden="true">✳</span>Kerala businesses selling to NRIs in the Gulf</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section samples-section">
+      <div class="container">
+        <div class="section-heading"><span class="eyebrow">Sample designs</span><h2>Sample Shopify store designs</h2><p>I am growing my Shopify work in Kannur, so instead of old projects, here are sample designs I made. They show how your store could look.</p></div>
+        <div class="sample-grid">
+          <article class="sample-card"><div class="sample-visual fashion"><span class="sample-shape" aria-hidden="true"></span></div><div class="sample-copy"><h3>Fashion store sample</h3><p>A clean store for a Kerala clothing brand. Big photos, easy size choice and a quick checkout.</p><small class="sample-disclaimer">Sample design, not a real client store.</small></div></article>
+          <article class="sample-card"><div class="sample-visual jewellery"><span class="sample-shape" aria-hidden="true"></span></div><div class="sample-copy"><h3>Jewellery store sample</h3><p>A rich, simple look with close-up product photos and gold-price friendly layouts.</p><small class="sample-disclaimer">Sample design, not a real client store.</small></div></article>
+          <article class="sample-card"><div class="sample-visual homeware"><span class="sample-shape" aria-hidden="true"></span></div><div class="sample-copy"><h3>Home decor store sample</h3><p>A calm, modern store where shoppers can browse by room.</p><small class="sample-disclaimer">Sample design, not a real client store.</small></div></article>
+        </div>
+        <p class="hero-actions"><a class="button button-primary" href="../contact/#contact">Ask for a quote <span class="button-arrow" aria-hidden="true">&#8599;</span></a></p>
+      </div>
+    </section>
+
+    <section class="section promise-section">
+      <div class="container promise-grid">
+        <div class="promise-title"><h2>My promise to you</h2><p>You do not need to take a risk to work with me. Here is how I keep things safe and fair:</p></div>
+        <div class="promise-list">
+          <div class="promise"><strong>You see it first.</strong><p>I show you the design before the store goes live.</p></div>
+          <div class="promise"><strong>Pay in parts.</strong><p>[50%] to start and [50%] only after you are happy.</p></div>
+          <div class="promise"><strong>We test everything.</strong><p>I place test orders, so nothing breaks on launch day.</p></div>
+          <div class="promise"><strong>You own it all.</strong><p>The store, the domain, the products and the photos are yours.</p></div>
+          <div class="promise"><strong>Free help after launch.</strong><p>[30] days of free support for small changes.</p></div>
+          <div class="promise"><strong>Clear price in writing.</strong><p>No hidden charges.</p></div>
+        </div>
+      </div>
+      <div class="container"><div class="offer-band"><h3>Early client offer</h3><p>I am taking a few new Shopify projects in Kannur and Kerala at a special price. In return, I ask for an honest review after your store goes live.</p><a class="button button-light" href="https://wa.me/919895325388" target="_blank" rel="noopener noreferrer">Ask about the offer <span aria-hidden="true">&#8599;</span></a></div></div>
+    </section>
+
+    <section class="section why-section">
+      <div class="container">
+        <div class="section-heading"><span class="eyebrow">Why choose me</span><h2>Why work with a Shopify developer in Kannur?</h2><p>When you hire someone local, you can meet face to face. You can talk in Malayalam. And you get someone who understands how people in Kerala shop.</p></div>
+        <div class="why-grid">
+          <article class="why-card"><h3>I know marketing too.</h3><p>I studied Computer Science and trained in digital marketing at HACA. So I build stores that look good <em>and</em> bring in sales.</p></article>
+          <article class="why-card"><h3>I explain things simply.</h3><p>No confusing tech talk.</p></article>
+          <article class="why-card"><h3>I am easy to reach.</h3><p>Call or WhatsApp me any time during work hours.</p></article>
+          <article class="why-card"><h3>I help after launch.</h3><p>Your store does not stop working when I finish, and neither do I.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section areas-section">
+      <div class="container areas-copy">
+        <span class="eyebrow">Areas I serve</span>
+        <h2>Shopify developer for Kannur and all of Kerala</h2>
+        <p>I am based in Kannur, so I can meet clients in Kannur town, Thalassery, Payyanur, Taliparamba, Iritty and Mattannur.</p>
+        <p>I also build Shopify stores for businesses in Kasaragod, Kozhikode, Malappuram, Thrissur, Kochi and Thiruvananthapuram. We can work together on video calls and WhatsApp. Distance is never a problem.</p>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        <div class="section-heading"><span class="eyebrow">FAQs</span><h2>Questions people ask about Shopify in Kerala</h2></div>
+        <div class="faq-list">
+          <details><summary>Do you build Shopify stores in Kannur?</summary><p>Yes. I am a Shopify developer based in Kannur. I can meet you in person or work with you online.</p></details>
+          <details><summary>Do you work with businesses outside Kannur?</summary><p>Yes. I work with shops all over Kerala, including Kochi, Kozhikode and Thrissur. I also help Kerala businesses in other parts of India and the Gulf.</p></details>
+          <details><summary>Is Shopify good for a small business in Kerala?</summary><p>Yes. Shopify is easy to run, safe and works well on phones. You can start small and grow later.</p></details>
+          <details><summary>Can my store take UPI and cash on delivery?</summary><p>Yes. I can set up UPI, Razorpay, cards, net banking and cash on delivery.</p></details>
+          <details><summary>How much does Shopify development cost in Kannur?</summary><p>A basic store starts from ₹10,000. Bigger or custom stores cost more. I will give you a clear price after we talk.</p></details>
+          <details><summary>How long does it take to build a Shopify store?</summary><p>Most small stores take [2 to 4 weeks]. Bigger stores can take longer.</p></details>
+          <details><summary>Can I add products myself after the store is ready?</summary><p>Yes. I will show you how. It is as easy as posting on Facebook.</p></details>
+          <details><summary>Can you fix or redesign my old Shopify store?</summary><p>Yes. I can make it faster, cleaner and easier for customers to use.</p></details>
+          <details><summary>Can you move your WooCommerce website to Shopify?</summary><p>Yes. I can move your products, customers and orders to Shopify safely.</p></details>
+          <details><summary>Shopify or WooCommerce: which is better?</summary><p>Shopify is easier to manage and you do not need to worry about hosting or security. WooCommerce gives more control but needs more technical work. For most small Kerala shops, Shopify is the simpler choice.</p></details>
+          <details><summary>Will my store show up on Google?</summary><p>I set up your store with good SEO basics, like titles, descriptions and fast pages. Nobody can promise the top spot on Google, but a well-built store has a much better chance.</p></details>
+          <details><summary>Do you help after the store is live?</summary><p>Yes. I offer support for updates, new products and small changes.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container">
+        <div class="cta-panel"><h2>Ready to start selling online?</h2><p>Your customers are already shopping on their phones. Let's build a Shopify store that brings them to you.</p><p>Tell me about your business and I will suggest the best plan. No pressure, no confusing words.</p><div class="hero-actions"><a class="button button-primary" href="../contact/#contact">Start Your Shopify Store <span class="button-arrow" aria-hidden="true">&#8599;</span></a><a class="button" href="https://wa.me/919895325388" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></div><p>Kannur, Kerala &nbsp; · &nbsp; +91 98953 25388</p></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="../#home" aria-label="Safwan PP home"><img class="site-logo" src="../home/safwan-logo.png" alt="Safwan" decoding="async" width="1408" height="727"></a>
+          <p>Freelance digital marketing strategist helping businesses grow with SEO, ads, social media marketing, web design and Shopify development.</p>
+          <div class="footer-socials" aria-label="Social media">
+            <a href="https://www.instagram.com/thesafwaaan?gwpx=MThjNHVwd3FxYTdseg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg>
+            </a>
+            <span role="img" aria-label="Facebook">
+              <svg class="facebook-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.4 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.3H7.6V13h2.7v8h3.1Z"></path></svg>
+            </span>
+            <a href="https://www.linkedin.com/in/safwan-ibn-ibrahim-87a281396" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 8.5H2.1V22h3.1V8.5ZM3.65 2A1.8 1.8 0 1 0 3.7 5.6 1.8 1.8 0 0 0 3.65 2ZM22 14.3c0-4.1-2.2-6-5.1-6-2.4 0-3.5 1.3-4.1 2.2V8.5H9.7V22h3.1v-6.7c0-1.8.3-3.6 2.6-3.6s2.3 2.1 2.3 3.7V22H22v-7.7Z"></path></svg>
+            </a>
+          </div>
+        </div>
+        <nav class="footer-column" aria-label="Explore">
+          <h2>Explore</h2>
+          <ul>
+            <li><a href="../#home">Home</a></li>
+            <li><a href="../about-me/#about">About</a></li>
+            <li><a href="../digital-marketing-services-kannur/#services">Services</a></li>
+            <li><a href="../blogs/#articles">Blogs</a></li>
+            <li><a href="../contact/#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-column" aria-label="Services">
+          <h2>Services</h2>
+          <ul>
+            <li><a href="../seo-services-kannur/">SEO Services</a></li>
+            <li><a href="../social-media-marketing-kannur/">Social Media Marketing</a></li>
+            <li><a href="../meta-ads-services-kannur/">Meta Ads</a></li>
+            <li><a href="../google-ads-services-kannur/">Google Ads</a></li>
+            <li><a href="../website-design-services-kannur/">Web Design</a></li>
+            <li><a href="../shopify-development-services-kannur/#home">Shopify Development</a></li>
+          </ul>
+        </nav>
+        <div class="footer-column">
+          <h2>Locations</h2>
+          <ul>
+            <li><a href="../#home">Kerala, India</a></li>
+            <li><a href="../digital-marketing-strategist-dubai/#home">Dubai, UAE</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h2>Get in touch</h2>
+          <ul>
+            <li><a href="tel:+919895325388">+91 98953 25388</a></li>
+            <li><a href="mailto:ppsafwan263@gmail.com">ppsafwan263@gmail.com</a></li>
+            <li><a href="https://wa.me/919895325388" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright &copy; 2026 &middot; Safwan PP. All rights reserved.</p>
+        <a class="footer-top-link" href="#">Back to top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+  <a class="whatsapp-float" href="https://wa.me/919895325388" target="_blank" rel="noopener noreferrer" aria-label="Chat with Safwan on WhatsApp">
+    <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 3.5a12 12 0 0 0-10.2 18.3L4.2 27.8l6.2-1.6A12 12 0 1 0 16 3.5Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"></path><path d="M12 10.2c-.4-.8-.8-.8-1.2-.8h-.9c-.4 0-.9.2-1.2.7-.4.5-1.6 1.6-1.6 3.9s1.6 4.5 1.8 4.8c.2.3 3.1 5 7.6 6.8 3.8 1.5 4.6 1.2 5.4 1.1.8-.1 2.6-1.1 3-2.2.4-1.1.4-2 .3-2.2-.1-.2-.4-.3-.9-.6l-3.1-1.5c-.4-.2-.8-.3-1.1.2-.3.5-1.2 1.5-1.5 1.8-.3.3-.6.4-1.1.1-.5-.2-2-.7-3.8-2.3-1.4-1.2-2.3-2.7-2.6-3.2-.3-.5 0-.7.2-1 .2-.2.5-.6.7-.9.2-.3.3-.5.5-.8.2-.2.1-.6 0-.8l-1.5-3.1Z" fill="currentColor" transform="translate(2 0) scale(.86)"></path></svg>
+  </a>
+  <script>
+    const menuButton = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+    menuButton.addEventListener("click", () => {
+      const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+      menuButton.setAttribute("aria-expanded", String(!isOpen));
+      navLinks.classList.toggle("is-open", !isOpen);
+    });
+    navLinks.addEventListener("click", (event) => {
+      if (event.target.closest("a")) {
+        menuButton.setAttribute("aria-expanded", "false");
+        navLinks.classList.remove("is-open");
+      }
+    });
+  </script>
+  <script>
+    (() => {
+      const dropdown = document.querySelector(".nav-dropdown");
+      const toggle = dropdown.querySelector(".nav-dropdown-toggle");
+      const nav = document.querySelector(".nav-links");
+      const menuButton = document.querySelector(".menu-toggle");
+      const setOpen = (isOpen) => {
+        toggle.setAttribute("aria-expanded", String(isOpen));
+        dropdown.classList.toggle("is-open", isOpen);
+      };
+
+      toggle.addEventListener("click", () => {
+        setOpen(toggle.getAttribute("aria-expanded") !== "true");
+      });
+      dropdown.addEventListener("pointerenter", (event) => {
+        if (event.pointerType === "mouse") setOpen(true);
+      });
+      dropdown.addEventListener("pointerleave", () => {
+        if (!dropdown.contains(document.activeElement)) setOpen(false);
+      });
+      dropdown.addEventListener("focusin", () => setOpen(true));
+      dropdown.addEventListener("focusout", (event) => {
+        if (!dropdown.contains(event.relatedTarget)) setOpen(false);
+      });
+      dropdown.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          setOpen(false);
+          toggle.focus();
+        }
+      });
+      nav.addEventListener("click", (event) => {
+        if (event.target.closest("a")) setOpen(false);
+      });
+      menuButton.addEventListener("click", () => setOpen(false));
+    })();
+  </script>
+</body>
+</html>

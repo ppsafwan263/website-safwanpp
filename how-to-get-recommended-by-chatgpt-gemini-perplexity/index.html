@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn practical Generative Engine Optimization (GEO) steps to help your business become easier for ChatGPT, Gemini and Perplexity to understand and recommend.">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Get Recommended by ChatGPT, Gemini &amp; Perplexity | Safwan PP">
+  <meta property="og:description" content="A practical 2026 guide to GEO, E-E-A-T, structured content, original data, third-party mentions and AI visibility tracking.">
+  <meta property="og:url" content="https://ppsafwan.com/how-to-get-recommended-by-chatgpt-gemini-perplexity/">
+  <title>Get Recommended by ChatGPT, Gemini &amp; Perplexity | Safwan PP</title>
+  <link rel="canonical" href="https://ppsafwan.com/how-to-get-recommended-by-chatgpt-gemini-perplexity/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #101114;
+      --muted: #656a73;
+      --blue: #2451e6;
+      --line: #e8e9ec;
+      --paper: #fff;
+      --soft: #f7f8fb;
+      --content: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: "Raleway", sans-serif; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    h1, h2, h3 { font-family: "Inter", sans-serif; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    img, svg { max-width: 100%; }
+    .container { width: min(var(--content), calc(100% - 48px)); margin-inline: auto; }
+    .site-header { position: sticky; z-index: 20; top: 0; border-bottom: 1px solid rgba(232, 233, 236, .85); background: rgba(255, 255, 255, .94); backdrop-filter: blur(16px); }
+    .nav { min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; }
+    .site-logo { display: block; width: 78px; height: auto; filter: brightness(0); }
+    .nav-links { display: flex; align-items: center; gap: 25px; color: #464a52; font-size: .82rem; font-weight: 750; }
+    .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--blue); }
+    .nav-cta { padding: 10px 16px; border: 1px solid var(--line); border-radius: 999px; font-size: .8rem; font-weight: 850; }
+    .menu-toggle { display: none; padding: 9px 12px; border: 1px solid var(--line); border-radius: 10px; background: #fff; font-weight: 800; cursor: pointer; }
+    .article-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 42px 0 56px;
+      background-image: linear-gradient(rgba(16, 17, 20, .026) 1px, transparent 1px), linear-gradient(90deg, rgba(16, 17, 20, .026) 1px, transparent 1px);
+      background-size: 48px 48px;
+      background-position: center top;
+    }
+    .breadcrumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; color: var(--muted); font-size: .77rem; font-weight: 600; }
+    .breadcrumbs a:hover { color: var(--blue); }
+    .breadcrumbs span[aria-hidden="true"] { color: #a4a8b0; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(300px, .92fr); align-items: center; gap: clamp(36px, 6vw, 76px); padding-top: 43px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--blue); font-size: .75rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .eyebrow::before { width: 20px; height: 2px; background: currentColor; content: ""; }
+    .hero-copy h1 { margin: 16px 0 17px; font-size: clamp(2.55rem, 5.2vw, 4.5rem); font-weight: 900; line-height: .99; letter-spacing: -.08em; }
+    .hero-copy > p { max-width: 660px; margin: 0; color: #555b66; font-size: 1.02rem; line-height: 1.8; }
+    .byline { display: flex; flex-wrap: wrap; gap: 8px 14px; margin-top: 20px; color: #626873; font-size: .78rem; font-weight: 650; }
+    .byline a { color: var(--blue); }
+    .hero-art { display: grid; min-height: 340px; place-items: center; }
+    .answer-card { width: min(100%, 430px); padding: 18px; border-radius: 24px; color: #fff; background: #101114; box-shadow: 0 28px 60px rgba(10, 12, 20, .18); }
+    .answer-top { display: flex; align-items: center; justify-content: space-between; padding: 0 2px 14px; color: #d7d9de; font-size: .65rem; font-weight: 750; letter-spacing: .08em; }
+    .answer-dots { display: flex; gap: 5px; }
+    .answer-dots span { width: 6px; height: 6px; border-radius: 50%; background: #696b72; }
+    .answer-prompt { margin-bottom: 9px; padding: 10px 12px; border: 1px solid #34363c; border-radius: 12px; color: #e7e8eb; font-size: .72rem; }
+    .answer-response { padding: 15px; border-radius: 14px; color: #343740; background: #fff; font-size: .76rem; line-height: 1.6; }
+    .answer-response p { margin: 0; }
+    .answer-citations { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+    .answer-citations span { padding: 5px 8px; border-radius: 999px; color: #dfe5ff; background: #292f43; font-size: .59rem; font-weight: 700; }
+    .answer-caption { margin: 10px 2px 0; color: #aeb1b9; font-size: .61rem; }
+    .article-layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); align-items: start; gap: clamp(34px, 6vw, 78px); padding-top: 56px; padding-bottom: 90px; }
+    .toc { position: sticky; top: 105px; padding: 20px 17px; border: 1px solid var(--line); border-radius: 14px; background: var(--soft); }
+    .toc h2 { margin: 0 0 12px; font-family: "Raleway", sans-serif; font-size: .78rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+    .toc ol { display: grid; gap: 9px; margin: 0; padding: 0; list-style: none; }
+    .toc a { color: #555b66; font-size: .74rem; font-weight: 600; line-height: 1.45; }
+    .toc a:hover { color: var(--blue); }
+    .article-content { min-width: 0; }
+    .article-content > p:first-child { margin-top: 0; }
+    .article-content p, .article-content li { color: #454a53; font-size: .97rem; }
+    .article-content p { margin: 0 0 18px; }
+    .article-content h2 { margin: 52px 0 15px; font-size: clamp(1.55rem, 3vw, 2.1rem); font-weight: 800; line-height: 1.2; letter-spacing: -.05em; scroll-margin-top: 100px; }
+    .article-content h2:first-child { margin-top: 0; }
+    .article-content h3 { margin: 27px 0 8px; font-size: 1.1rem; font-weight: 750; line-height: 1.3; letter-spacing: -.025em; scroll-margin-top: 100px; }
+    .article-content a:not(.button) { color: var(--blue); text-decoration: underline; text-decoration-color: rgba(36, 81, 230, .35); text-underline-offset: 3px; }
+    .article-content a:not(.button):hover { text-decoration-color: currentColor; }
+    .article-content strong { color: var(--ink); }
+    .article-content ul, .article-content ol { display: grid; gap: 10px; margin: 12px 0 22px; padding-left: 22px; }
+    .article-content li { padding-left: 3px; }
+    .callout { margin: 22px 0; padding: 18px 20px; border-left: 3px solid var(--blue); border-radius: 0 12px 12px 0; background: #f2f5ff; }
+    .callout p { margin: 0; }
+    .pillar-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 20px 0 24px; }
+    .pillar-card { padding: 17px; border: 1px solid var(--line); border-radius: 14px; background: var(--soft); }
+    .pillar-card h3 { margin: 0 0 7px; color: var(--blue); font-size: 1rem; }
+    .pillar-card p { margin: 0; font-size: .87rem; }
+    .steps { counter-reset: step; display: grid; gap: 12px; margin: 18px 0 24px; }
+    .step-card { position: relative; padding: 18px 18px 18px 62px; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
+    .step-card::before { position: absolute; top: 17px; left: 17px; display: grid; width: 31px; height: 31px; place-items: center; border-radius: 10px; color: #fff; background: var(--blue); content: counter(step, decimal-leading-zero); counter-increment: step; font-size: .65rem; font-weight: 850; }
+    .step-card h3 { margin: 0 0 7px; font-size: 1.02rem; }
+    .step-card p { margin: 0; font-size: .91rem; }
+    .step-card p + p { margin-top: 10px; }
+    .step-card ul { margin-bottom: 0; }
+    .routine-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 11px; margin: 20px 0 24px; }
+    .routine-card { padding: 16px; border-radius: 13px; color: #fff; background: #17171b; }
+    .routine-card span { display: block; margin-bottom: 6px; color: #a9bcff; font-size: .68rem; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
+    .routine-card p { margin: 0; color: #e0e1e5; font-size: .84rem; }
+    .faq-list { display: grid; gap: 10px; margin: 12px 0 22px; }
+    .faq-list details { padding: 14px 17px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+    .faq-list summary { color: var(--ink); font-size: .91rem; font-weight: 750; cursor: pointer; }
+    .faq-list details p { margin: 10px 0 0; font-size: .9rem; }
+    .cta-panel { margin: 42px 0; padding: clamp(24px, 5vw, 38px); border-radius: 20px; color: #fff; background: #101114; }
+    .cta-panel .eyebrow { color: #a9bcff; }
+    .cta-panel h2 { margin: 12px 0 10px; color: #fff; font-size: clamp(1.55rem, 3vw, 2.2rem); }
+    .cta-panel p { max-width: 650px; color: #dedfe4; }
+    .button { display: inline-flex; min-height: 46px; align-items: center; justify-content: center; gap: 10px; padding: 0 18px; border-radius: 999px; color: #17171b; background: #fff; font-size: .82rem; font-weight: 800; transition: transform .2s ease, background .2s ease; }
+    .button:hover { transform: translateY(-2px); background: #e9edff; }
+    .site-footer, .site-footer * { font-family: "Inter", sans-serif; }
+    .site-footer { padding: 58px 0 20px; color: #fff; background: #0b0b0d; font-size: 16px; }
+    .footer-grid { display: grid; grid-template-columns: minmax(220px, 1.7fr) repeat(4, minmax(0, 1fr)); gap: clamp(24px, 4vw, 56px); padding-bottom: 48px; }
+    .footer-brand .brand { display: inline-flex; margin-bottom: 16px; }
+    .footer-brand .site-logo { width: 112px; filter: none; }
+    .footer-brand p { max-width: 290px; margin: 0; color: #fff; font-size: .9rem; line-height: 1.75; }
+    .footer-column h2 { margin: 5px 0 16px; color: #fff; font-size: .88rem; font-weight: 850; letter-spacing: .04em; text-transform: uppercase; }
+    .footer-column ul { display: grid; gap: 11px; margin: 0; padding: 0; list-style: none; }
+    .footer-column li, .footer-column a { color: #d3d4d8; font-size: .84rem; line-height: 1.5; }
+    .footer-column a:hover { color: #fff; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding-top: 18px; border-top: 1px solid #29292d; color: #c9cacf; font-size: .76rem; }
+    .footer-bottom p { margin: 0; }
+    @media (max-width: 800px) {
+      .container { width: min(100% - 36px, var(--content)); }
+      .nav { min-height: 66px; }
+      .site-header .nav { width: min(100% - 36px, 1120px); }
+      .menu-toggle { display: inline-flex; }
+      .nav-cta { display: none; }
+      .nav-links { position: absolute; top: 65px; right: 18px; left: 18px; display: none; align-items: stretch; gap: 0; padding: 8px 16px; border: 1px solid var(--line); border-radius: 16px; background: #fff; box-shadow: 0 18px 35px rgba(16, 17, 20, .1); }
+      .nav-links.is-open { display: flex; flex-direction: column; }
+      .nav-links a { padding: 12px 2px; border-bottom: 1px solid var(--line); }
+      .nav-links a:last-child { border-bottom: 0; }
+      .hero-grid { grid-template-columns: 1fr; gap: 18px; padding-top: 32px; }
+      .hero-art { min-height: 285px; }
+      .article-layout { grid-template-columns: 1fr; gap: 22px; padding-top: 36px; padding-bottom: 65px; }
+      .toc { position: static; }
+      .toc ol { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 15px; }
+      .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 22px; padding-bottom: 34px; }
+      .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 520px) {
+      .container { width: min(100% - 32px, var(--content)); }
+      .site-header .nav { width: min(100% - 32px, 1120px); }
+      .article-hero { padding: 30px 0 38px; }
+      .hero-grid { padding-top: 27px; }
+      .hero-copy h1 { font-size: clamp(2.4rem, 12vw, 3.35rem); }
+      .hero-art { min-height: 255px; }
+      .toc ol, .pillar-grid, .routine-grid { grid-template-columns: 1fr; }
+      .article-content p, .article-content li { font-size: .92rem; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-brand { grid-column: auto; }
+      .footer-bottom { align-items: flex-start; flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    }
+      .site-header { position: sticky; z-index: 20; top: 0; border-bottom: 1px solid rgba(232,233,236,.85); background: rgba(255,255,255,.94); backdrop-filter: blur(16px); }
+    .site-header .nav { width: min(1120px,calc(100% - 48px)); min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .site-header .brand { display: inline-flex; align-items: center; }
+    .site-header .site-logo { display: block; width: 78px; height: auto; filter: brightness(0); }
+    .site-header .nav-links { display: flex; align-items: center; gap: 25px; color: #464a52; font-size: .82rem; font-weight: 750; }
+    .site-header .nav-links a:hover, .site-header .nav-links a[aria-current="page"] { color: var(--blue); }
+    .site-header .nav-cta { padding: 10px 16px; border: 1px solid var(--line); border-radius: 999px; font-size: .8rem; font-weight: 850; }
+    .site-header .menu-toggle { display: none; padding: 9px 12px; border: 1px solid var(--line); border-radius: 10px; background: #fff; font-weight: 800; cursor: pointer; }
+    .site-footer, .site-footer * { font-family: Arial, sans-serif; }
+    .site-footer { padding: 58px 0 20px; color: #fff; background: #0b0b0d; font-size: 16px; font-weight: 400; }
+    .site-footer .footer-grid { display: grid; grid-template-columns: minmax(220px,1.7fr) repeat(4,minmax(0,1fr)); gap: clamp(24px,4vw,56px); padding-bottom: 48px; }
+    .site-footer .footer-brand .brand { display: inline-flex; margin-bottom: 16px; color: #fff; }
+    .site-footer .footer-brand .site-logo { width: 112px; }
+    .site-footer .footer-brand p { max-width: 290px; margin: 0; color: #fff; font-size: 16px; line-height: 1.75; }
+    .site-footer .footer-socials { display: flex; align-items: center; gap: 22px; margin-top: 20px; }
+    .site-footer .footer-socials a, .site-footer .footer-socials span { display: grid; width: 22px; height: 22px; place-items: center; color: #fff; }
+    .site-footer .footer-socials a { transition: color .2s ease, transform .2s ease; }
+    .site-footer .footer-socials a:hover { transform: translateY(-2px); color: #fff; }
+    .site-footer .footer-socials svg { width: 20px; height: 20px; fill: none; }
+    .site-footer .footer-socials .facebook-icon, .site-footer .footer-socials a:nth-child(3) svg { fill: currentColor; }
+    .site-footer .footer-column h2 { margin: 5px 0 16px; color: #fff; font-size: 16px; font-weight: 850; letter-spacing: .04em; text-transform: uppercase; }
+    .site-footer .footer-column ul { display: grid; gap: 11px; margin: 0; padding: 0; list-style: none; }
+    .site-footer .footer-column li, .site-footer .footer-column a { color: #fff; font-size: 16px; line-height: 1.5; }
+    .site-footer .footer-column a, .site-footer .footer-top-link { transition: color .18s ease; }
+    .site-footer .footer-column a:hover, .site-footer .footer-top-link:hover { color: var(--blue); }
+    .site-footer .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 18px; border-top: 1px solid #292a30; color: #fff; font-size: 15px; }
+    .site-footer .footer-bottom p { margin: 0; }
+    .site-footer .footer-top-link { color: #fff; }
+    @media (max-width: 980px) {
+      .site-footer .footer-grid { grid-template-columns: repeat(4,minmax(0,1fr)); }
+      .site-footer .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 720px) {
+      .site-header .nav { width: min(100% - 36px,1120px); min-height: 66px; position: relative; }
+      .site-header .menu-toggle { display: inline-flex; }
+      .site-header .nav-cta { display: none; }
+      .site-header .nav-links { position: absolute; top: 65px; right: 0; left: 0; display: none; align-items: stretch; gap: 0; padding: 8px 16px; border: 1px solid var(--line); border-radius: 16px; background: #fff; box-shadow: 0 18px 35px rgba(16,17,20,.1); }
+      .site-header .nav-links.is-open { display: flex; flex-direction: column; }
+      .site-header .nav-links a { padding: 12px 2px; border-bottom: 1px solid var(--line); }
+      .site-header .nav-links a:last-child { border-bottom: 0; }
+      .site-footer .footer-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 30px 22px; padding-bottom: 34px; }
+      .site-footer .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 440px) {
+      .site-footer .footer-grid { grid-template-columns: 1fr; }
+      .site-footer .footer-bottom { align-items: flex-start; flex-direction: column; }
+    }
+      .site-header, .site-header * { font-family: Arial, sans-serif; }
+    .site-footer > .container { width: min(1120px,calc(100% - 48px)); margin-inline: auto; }
+    @media (max-width: 720px) { .site-footer > .container { width: min(100% - 36px,1120px); } }
+      .nav-dropdown { position: relative; }
+    .nav-dropdown-head { display: flex; align-items: center; gap: 3px; }
+    .nav-dropdown-toggle { display: grid; width: 23px; height: 30px; place-items: center; padding: 0; border: 0; color: inherit; background: transparent; cursor: pointer; }
+    .nav-dropdown-toggle svg { width: 12px; height: 12px; transition: transform .18s ease; }
+    .nav-dropdown:hover .nav-dropdown-toggle svg, .nav-dropdown.is-open .nav-dropdown-toggle svg { transform: rotate(180deg); }
+    .nav-dropdown::after { position: absolute; top: 100%; left: 0; width: 100%; height: 17px; content: ""; }
+    .nav-dropdown-menu { position: absolute; z-index: 22; top: calc(100% + 17px); left: -16px; display: none; width: 190px; overflow: hidden; padding: 6px; border: 1px solid var(--line); border-radius: 12px; color: var(--ink); background: #fff; box-shadow: 0 16px 36px rgba(16,17,20,.12); }
+    .nav-dropdown-menu a { display: block; padding: 12px; border-radius: 7px; color: var(--ink); font-size: .74rem; font-weight: 750; line-height: 1.4; transition: color .18s ease, background .18s ease; }
+    .nav-dropdown-menu a:hover, .nav-dropdown-menu a:focus-visible { color: var(--blue); background: #f1f4ff; }
+    .nav-dropdown:hover .nav-dropdown-menu, .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+    @media (max-width: 720px) {
+      .site-header .nav-dropdown { position: relative; width: 100%; }
+      .site-header .nav-dropdown::after { display: none; }
+      .site-header .nav-dropdown-head { min-height: 45px; }
+      .site-header .nav-dropdown-head > a { flex: 1; padding: 12px 2px; }
+      .site-header .nav-dropdown-toggle { width: 42px; height: 42px; border-bottom: 1px solid var(--line); }
+      .site-header .nav-dropdown-menu { position: static; width: 100%; margin-bottom: 8px; padding: 4px; border: 1px solid var(--line); border-radius: 10px; background: #fff; box-shadow: none; }
+      .site-header .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+      .site-header .nav-dropdown-menu a { padding: 12px; border-bottom: 0; color: var(--ink); }
+    }
+</style>
+  <link rel="stylesheet" href="../style.css">
+  <meta property="og:site_name" content="Safwan PP">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Get Recommended by ChatGPT, Gemini &amp; Perplexity | Safwan PP">
+  <meta name="twitter:description" content="Learn practical Generative Engine Optimization (GEO) steps to help your business become easier for ChatGPT, Gemini and Perplexity to understand and recommend.">
+</head>
+<body id="top">
+    <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="../#home" aria-label="Safwan PP home"><img class="site-logo" src="../home/safwan-logo.png" alt="Safwan" decoding="async" width="1408" height="727"></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="../#home">Home</a>
+        <a href="../about-me/">About</a>
+        <div class="nav-dropdown">
+  <div class="nav-dropdown-head">
+    <a href="../digital-marketing-services-kannur/">Services</a>
+    <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="service-submenu" aria-label="Show service links">
+      <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="m2 4.5 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+    </button>
+  </div>
+  <div class="nav-dropdown-menu" id="service-submenu">
+    <a href="../seo-services-kannur/">SEO Services</a>
+    <a href="../google-ads-services-kannur/">Google Ads</a>
+    <a href="../website-design-services-kannur/">Web Design</a>
+    <a href="../shopify-development-services-kannur/#home">Shopify Development</a>
+    <a href="../meta-ads-services-kannur/">Meta Ads</a>
+    <a href="../social-media-marketing-kannur/">Social Media Marketing</a>
+  </div>
+</div>
+        <a href="../blogs/">Blogs</a>
+        <a href="../contact/">Contact</a>
+      </div>
+      <a class="nav-cta" href="../contact/#contact">Let's talk <span aria-hidden="true">&#8599;</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="article-hero">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="../#home">Home</a><span aria-hidden="true">/</span>
+          <a href="../blogs/">Blogs</a><span aria-hidden="true">/</span>
+          <span aria-current="page">AI recommendations in 2026</span>
+        </nav>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Generative Engine Optimization · 2026 field guide</span>
+            <h1>How to Get Your Business Recommended by ChatGPT, Gemini &amp; Perplexity in 2026</h1>
+            <p>Search no longer hands people ten blue links. It can hand them one answer. Learn how to make your business easier for AI systems to understand, verify, and consider recommending.</p>
+            <div class="byline"><span>By <a href="../#home">PP Safwan</a></span><span aria-hidden="true">·</span><span>Digital Marketing Consultant, Kannur, Kerala</span><span aria-hidden="true">·</span><span>Last updated August 2026</span></div>
+          </div>
+          <div class="hero-art" role="img" aria-label="Illustrative AI answer with cited sources">
+            <div class="answer-card">
+              <div class="answer-top"><span>GENERATIVE SEARCH · ILLUSTRATION</span><span class="answer-dots" aria-hidden="true"><span></span><span></span><span></span></span></div>
+              <div class="answer-prompt">“Best digital marketing consultant in Kerala”</div>
+              <div class="answer-response">
+                <p>For businesses comparing digital marketing consultants, look for relevant local experience, clear service information, and independent reviews. Check each provider's work and fit before making a decision.</p>
+              </div>
+              <div class="answer-citations"><span>Independent reviews</span><span>Provider website</span><span>Industry sources</span></div>
+              <p class="answer-caption">Illustrative example only · Not a live AI result</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container article-layout">
+      <aside class="toc" aria-label="In this guide">
+        <h2>In this guide</h2>
+        <ol>
+          <li><a href="#introduction">Introduction: search has changed</a></li>
+          <li><a href="#why-now">Why this matters right now</a></li>
+          <li><a href="#different">What makes AI search different</a></li>
+          <li><a href="#eeat">The foundation: E-E-A-T</a></li>
+          <li><a href="#practical-steps">Practical steps to get recommended</a></li>
+          <li><a href="#routine">A simple monthly routine</a></li>
+          <li><a href="#mistakes">Common mistakes to avoid</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+          <li><a href="#final-thoughts">Final thoughts</a></li>
+        </ol>
+      </aside>
+
+      <article class="article-content">
+        <h2 id="introduction">Introduction: search has changed, and so should you</h2>
+        <p>A few years ago, ranking on Google's first page was the finish line for most businesses. That finish line has moved. Millions of people now ask ChatGPT, Gemini, or Perplexity a question and get a single, direct answer, often with no clicking, no scrolling, and no list of ten blue links to compare.</p>
+        <p>This shift has a name: Generative Engine Optimization (GEO), sometimes also called Answer Engine Optimization (AEO). Instead of trying to rank first among ten results, you're now trying to be one of the three or four sources an AI model chooses to mention by name. If your business isn't in that short list, you simply don't exist in that conversation, no matter how good your website looks.</p>
+        <p>This isn't mysterious or unfair. AI systems have clear, learnable patterns in what they choose to cite and recommend, and small and mid-sized businesses, including local businesses across Kerala and the rest of India, can compete here in ways that were much harder in classic Google SEO.</p>
+        <p>This guide walks you through what changed, why it changed, and what you can do, in plain language, to help your business become easier to discover and understand across ChatGPT, Gemini, and Perplexity in 2026.</p>
+
+        <h2 id="why-now">Why this matters right now</h2>
+        <p>Search behaviour is shifting. Many Google searches end without a click because an answer appears directly on the results page. At the same time, people use AI assistants for product questions, service questions, and "what's the best X for Y" questions that used to go straight to Google.</p>
+        <p>Here's what makes this worth paying attention to for business owners and marketers in Kerala and across India:</p>
+        <ul>
+          <li><strong>AI answers are winner-take-few.</strong> A traditional search results page may show many links. An AI answer may name only a handful of sources. Missing that shortlist can mean missing a potential customer's consideration.</li>
+          <li><strong>Recommendations can reach decision-ready people.</strong> Someone asking an assistant to compare providers may already be researching a purchase or service.</li>
+          <li><strong>Visibility can compound.</strong> Businesses that make useful, accurate information available across their site and credible third-party sources give people—and AI systems—more context to discover them.</li>
+          <li><strong>This is becoming a real discipline.</strong> Research into how brands appear in AI answers is growing. Focus on useful content and verifiable signals, rather than treating GEO as a guaranteed formula.</li>
+          <li><strong>India's digital audience is changing quickly.</strong> Consumers from Kochi to Bengaluru to Delhi have more ways to research services, including AI chat tools alongside search engines.</li>
+        </ul>
+
+        <h2 id="different">What makes AI search different from Google search</h2>
+        <p>Traditional search engines crawl and index pages, then rank them to give users links to evaluate. AI answer engines can retrieve information from selected sources, interpret it, and generate a synthesized answer in their own words, sometimes citing a handful of sources.</p>
+        <p>Your content is not only competing to rank; it also needs to be understandable, relevant, and trustworthy to a system interpreting it. If a page is vague, poorly organized, or hard to parse, it may be less useful to both readers and answer systems.</p>
+        <h3>ChatGPT</h3>
+        <p>ChatGPT can browse the live web for some questions. Clear answers and well-structured pages can make information easier to interpret, but no particular format guarantees citation.</p>
+        <h3>Perplexity</h3>
+        <p>Perplexity behaves like a research assistant: it retrieves information from multiple sources and visibly cites them. Fresh, detailed, original content can give readers useful evidence to explore.</p>
+        <h3>Gemini</h3>
+        <p>Gemini is connected to Google's broader search ecosystem. Traditional SEO fundamentals—helpful content, technical accessibility, and a usable mobile experience—remain important groundwork.</p>
+        <p>Understanding these differences can help you prioritize effort instead of trying to do everything for every platform at once.</p>
+
+        <h2 id="eeat">The foundation: E-E-A-T still runs the show</h2>
+        <p>Google's E-E-A-T framework—Experience, Expertise, Authoritativeness, and Trustworthiness—remains a useful way to think about the quality and credibility of your content. Clear evidence for these qualities can also help readers evaluate your business and your work.</p>
+        <div class="pillar-grid">
+          <section class="pillar-card">
+            <h3>Experience</h3>
+            <p>Show that real people with first-hand experience created the content. Use specific examples, before-and-after outcomes, and details grounded in work you have actually done.</p>
+          </section>
+          <section class="pillar-card">
+            <h3>Expertise</h3>
+            <p>Make the person or team behind the content clear. Author bios, professional backgrounds, certifications, and relevant experience give readers context about who is sharing the advice.</p>
+          </section>
+          <section class="pillar-card">
+            <h3>Authoritativeness</h3>
+            <p>Build a reputation over time. Credible sites linking to you, industry coverage, comparison articles, and accurate mentions across the web can help establish your business as a known entity.</p>
+          </section>
+          <section class="pillar-card">
+            <h3>Trustworthiness</h3>
+            <p>Be accurate, transparent, and consistent. Clear contact information, honest pricing, visible reviews, a secure website, and claims you can support all help people assess your business.</p>
+          </section>
+        </div>
+
+        <h2 id="practical-steps">Practical steps to get recommended by ChatGPT, Gemini &amp; Perplexity</h2>
+        <div class="steps">
+          <section class="step-card">
+            <h3>Write in an answer-first format</h3>
+            <p>For every important page or post, start each section with a direct one- or two-sentence answer to the implied question, then explain further underneath. Avoid starting paragraphs with vague pronouns like "it," "this," or "they" without context; unclear references make content harder for readers and systems to follow.</p>
+          </section>
+          <section class="step-card">
+            <h3>Structure content with headers, lists, and tables</h3>
+            <p>Organize information so readers can scan it and find an answer. Use descriptive H2 and H3 headings that match real questions, numbered steps for processes, bullet points for comparisons, and simple tables for pricing or specifications. Clear structure can reduce ambiguity.</p>
+          </section>
+          <section class="step-card">
+            <h3>Publish original data and insights</h3>
+            <p>Generic advice is easy to find everywhere. Original research—even a small customer survey, an internal case study, or a useful statistic from your own business—gives readers something distinctive to learn from and gives other sources something specific to reference.</p>
+          </section>
+          <section class="step-card">
+            <h3>Keep content fresh</h3>
+            <p>Review important pages regularly. Refresh outdated statistics and current pricing when they change, and show a "last updated" date when it helps readers understand the information's recency. A practical schedule is to revisit key pages every 60 to 90 days.</p>
+          </section>
+          <section class="step-card">
+            <h3>Add structured data (schema markup)</h3>
+            <p>Schema markup is code that describes facts about your content to search engines. JSON-LD is a commonly used format. Depending on your business and page, structured data may describe your organization, local business, products or services, or FAQs.</p>
+            <p>For businesses in Kerala or elsewhere in India, make sure LocalBusiness details such as name, location, and service area are accurate. Structured data helps describe a page; it does not guarantee a ranking or AI citation.</p>
+          </section>
+          <section class="step-card">
+            <h3>Set up an llms.txt file</h3>
+            <p>Some site owners publish an llms.txt file at their website root to point to useful pages. It is an optional emerging convention, not a required step or a proven way to secure AI citations. Prioritize accessible pages, a sitemap, and helpful content first.</p>
+          </section>
+          <section class="step-card">
+            <h3>Earn mentions on third-party sites</h3>
+            <p>Independent references can give people more context about your business. Build a genuine presence on relevant review platforms, industry blogs, news sites, directories, and comparison pages.</p>
+            <ul>
+              <li>Get listed and keep information consistent across relevant directories, including Google Business Profile and India-specific directories.</li>
+              <li>Pursue guest posts or expert quotes on respected industry sites.</li>
+              <li>Help journalists and bloggers with useful, accurate information when they cover your niche.</li>
+              <li>Participate in relevant communities where your expertise can help people.</li>
+            </ul>
+          </section>
+          <section class="step-card">
+            <h3>Manage reviews and sentiment actively</h3>
+            <p>For local recommendations, reviews can help people understand a business's reputation and customer experience. Ask customers for honest, detailed reviews without incentives, and respond to feedback promptly and professionally.</p>
+          </section>
+          <section class="step-card">
+            <h3>Don't abandon traditional SEO</h3>
+            <p>GEO does not replace SEO. Fast-loading pages, mobile-friendly design, clean site architecture, accessible content, and relevant references remain useful foundations for discovery.</p>
+          </section>
+          <section class="step-card">
+            <h3>Track your AI visibility</h3>
+            <p>Periodically ask ChatGPT, Gemini, and Perplexity realistic questions your customers might ask, such as "best [service] in [city]." Record whether your business appears and which competitors or sources are mentioned. Treat the results as directional: answers can vary by query, location, time, and platform.</p>
+          </section>
+        </div>
+
+        <h2 id="routine">A simple monthly routine</h2>
+        <p>Keep this manageable with a lightweight schedule:</p>
+        <div class="routine-grid">
+          <section class="routine-card"><span>Weekly</span><p>Ask AI assistants a handful of questions in your niche and note which sources are cited.</p></section>
+          <section class="routine-card"><span>Monthly</span><p>Review analytics for referral visits from services such as chatgpt.com, perplexity.ai, or gemini.google.com.</p></section>
+          <section class="routine-card"><span>Quarterly</span><p>Refresh your highest-value pages, update facts, and review structured data for errors.</p></section>
+        </div>
+
+        <h2 id="mistakes">Common mistakes to avoid</h2>
+        <ul>
+          <li><strong>Keyword-stuffing over clarity.</strong> Repeated keywords make content harder to read; explain the topic clearly instead.</li>
+          <li><strong>Ignoring third-party mentions.</strong> A useful website is important, but credible independent references can help establish context and reputation.</li>
+          <li><strong>Letting content go stale.</strong> Outdated pricing or statistics can mislead readers and weaken trust.</li>
+          <li><strong>Overlooking technical basics.</strong> Broken pages, inaccessible content, errors in structured data, slow load times, or poor mobile design can undermine the experience.</li>
+          <li><strong>Chasing every platform equally.</strong> Prioritize based on where your customers actually research. B2B audiences may use research-focused assistants; local customers may rely more on Google Search and Maps.</li>
+        </ul>
+
+        <h2 id="faq">Frequently asked questions</h2>
+        <div class="faq-list">
+          <details>
+            <summary>How long does it take to get cited by AI search engines?</summary>
+            <p>There is no guaranteed timeline. AI visibility can vary by platform, prompt, and location. Improve useful content and your wider online presence, then monitor results over time rather than expecting an exact number of weeks.</p>
+          </details>
+          <details>
+            <summary>Is GEO the same thing as SEO?</summary>
+            <p>No, but they overlap. SEO focuses on making pages discoverable in search results; GEO focuses on making a business and its information useful to AI-generated answers. Strong SEO fundamentals can support both.</p>
+          </details>
+          <details>
+            <summary>Do I need a developer to add schema markup or an llms.txt file?</summary>
+            <p>Not always. WordPress, Shopify, and Webflow may offer built-in settings or plugins for some structured data. An llms.txt file is a plain-text file, but it is optional. For complex sites, a developer can help implement and test changes safely.</p>
+          </details>
+          <details>
+            <summary>Which platform should I focus on first: ChatGPT, Gemini, or Perplexity?</summary>
+            <p>Start with the tools your customers are most likely to use. Research-heavy audiences may use ChatGPT or Perplexity, while local and consumer-facing audiences may find businesses through Google's search ecosystem as well as AI assistants. Ask customers how they research before choosing a priority.</p>
+          </details>
+          <details>
+            <summary>Can small businesses in Kerala or elsewhere in India compete with large brands?</summary>
+            <p>Yes. A small business can make its expertise and local relevance clear through specific, useful information and a trustworthy online presence. There is no guarantee of being recommended, but these are practical improvements within a business's control.</p>
+          </details>
+        </div>
+
+        <h2 id="final-thoughts">Final thoughts</h2>
+        <p>Getting recommended by ChatGPT, Gemini, and Perplexity in 2026 isn't about tricking an algorithm. It's about becoming a source that's genuinely easy to trust, easy to understand, and easy to verify. That means clear, well-structured content, real expertise and experience visible on the page, a footprint of credible mentions across the web, and a website that's technically clean enough for machines to read confidently.</p>
+        <p>The businesses winning in this new landscape aren't necessarily the biggest ones. They're the ones that treat AI visibility as seriously as they once treated Google rankings, and start with consistent, useful work. The steps above give you a clear, realistic starting point.</p>
+        <p>For businesses in Kerala and across India looking to put this into practice, working with a digital marketing consultant like <a href="../#home">PP Safwan</a>, who combines traditional SEO with AEO and GEO strategy, can help turn this checklist into a structured plan.</p>
+        <p><strong>PP Safwan</strong>, Digital Marketing Consultant, Kerala, India</p>
+
+        <section class="cta-panel" aria-labelledby="cta-heading">
+          <span class="eyebrow">SEO · AEO · GEO</span>
+          <h2 id="cta-heading">Make your business easier to discover</h2>
+          <p>Explore practical digital marketing support for your business in Kannur and across Kerala.</p>
+          <a class="button" href="../contact/">Get in touch <span aria-hidden="true">↗</span></a>
+          <p><a href="../#home">Visit ppsafwan.com</a> · <a href="../about-me/#about">About Safwan</a> · <a href="../blogs/#articles">More articles</a></p>
+          <p><a href="https://wa.me/+919895325388">WhatsApp</a> · <a href="https://www.instagram.com/thesafwaaan?gwpx=MThjNHVwd3FxYTdseg%3D%3D&utm_source=qr">Instagram</a> · <a href="https://www.linkedin.com/in/safwan-ibn-ibrahim-87a281396">LinkedIn</a></p>
+        </section>
+      </article>
+    </div>
+  </main>
+
+    <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="../#home" aria-label="Safwan PP home"><img class="site-logo" src="../home/safwan-logo.png" alt="Safwan" decoding="async" width="1408" height="727"></a>
+          <p>Freelance digital marketing strategist helping businesses grow with SEO, ads, social media marketing, web design and Shopify development.</p>
+          <div class="footer-socials" aria-label="Social media">
+            <a href="https://www.instagram.com/thesafwaaan?gwpx=MThjNHVwd3FxYTdseg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg>
+            </a>
+            <span role="img" aria-label="Facebook">
+              <svg class="facebook-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.4 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.3H7.6V13h2.7v8h3.1Z"></path></svg>
+            </span>
+            <a href="https://www.linkedin.com/in/safwan-ibn-ibrahim-87a281396" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 8.5H2.1V22h3.1V8.5ZM3.65 2A1.8 1.8 0 1 0 3.7 5.6 1.8 1.8 0 0 0 3.65 2ZM22 14.3c0-4.1-2.2-6-5.1-6-2.4 0-3.5 1.3-4.1 2.2V8.5H9.7V22h3.1v-6.7c0-1.8.3-3.6 2.6-3.6s2.3 2.1 2.3 3.7V22H22v-7.7Z"></path></svg>
+            </a>
+          </div>
+        </div>
+        <nav class="footer-column" aria-label="Explore">
+          <h2>Explore</h2>
+          <ul>
+            <li><a href="../#home">Home</a></li>
+            <li><a href="../about-me/#about">About</a></li>
+            <li><a href="../digital-marketing-services-kannur/#services">Services</a></li>
+            <li><a href="../blogs/#articles">Blogs</a></li>
+            <li><a href="../contact/#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-column" aria-label="Services">
+          <h2>Services</h2>
+          <ul>
+            <li><a href="../seo-services-kannur/">SEO Services</a></li>
+            <li><a href="../social-media-marketing-kannur/">Social Media Marketing</a></li>
+            <li><a href="../meta-ads-services-kannur/">Meta Ads</a></li>
+            <li><a href="../google-ads-services-kannur/">Google Ads</a></li>
+            <li><a href="../website-design-services-kannur/">Web Design</a></li>
+            <li><a href="../shopify-development-services-kannur/#home">Shopify Development</a></li>
+          </ul>
+        </nav>
+        <div class="footer-column">
+          <h2>Locations</h2>
+          <ul>
+            <li><a href="../#home">Kerala, India</a></li>
+            <li><a href="../digital-marketing-strategist-dubai/#home">Dubai, UAE</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h2>Get in touch</h2>
+          <ul>
+            <li><a href="tel:+919895325388">+91 98953 25388</a></li>
+            <li><a href="mailto:ppsafwan263@gmail.com">ppsafwan263@gmail.com</a></li>
+            <li><a href="https://wa.me/919895325388" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright &copy; 2026 &middot; Safwan PP. All rights reserved.</p>
+        <a class="footer-top-link" href="#">Back to top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector("#nav-links");
+    menuToggle.addEventListener("click", () => {
+      const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", String(!isOpen));
+      navLinks.classList.toggle("is-open", !isOpen);
+    });
+  </script>
+  <script>
+    (() => {
+      const dropdown = document.querySelector(".nav-dropdown");
+      const toggle = dropdown.querySelector(".nav-dropdown-toggle");
+      const nav = document.querySelector(".nav-links");
+      const menuButton = document.querySelector(".menu-toggle");
+      const setOpen = (isOpen) => {
+        toggle.setAttribute("aria-expanded", String(isOpen));
+        dropdown.classList.toggle("is-open", isOpen);
+      };
+
+      toggle.addEventListener("click", () => {
+        setOpen(toggle.getAttribute("aria-expanded") !== "true");
+      });
+      dropdown.addEventListener("pointerenter", (event) => {
+        if (event.pointerType === "mouse") setOpen(true);
+      });
+      dropdown.addEventListener("pointerleave", () => {
+        if (!dropdown.contains(document.activeElement)) setOpen(false);
+      });
+      dropdown.addEventListener("focusin", () => setOpen(true));
+      dropdown.addEventListener("focusout", (event) => {
+        if (!dropdown.contains(event.relatedTarget)) setOpen(false);
+      });
+      dropdown.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          setOpen(false);
+          toggle.focus();
+        }
+      });
+      nav.addEventListener("click", (event) => {
+        if (event.target.closest("a")) setOpen(false);
+      });
+      menuButton.addEventListener("click", () => setOpen(false));
+    })();
+  </script>
+</body>
+</html>

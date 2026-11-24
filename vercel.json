@@ -1,16 +1,156 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "trailingSlash": true,
   "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/about-me/index.html",
+      "destination": "/about-me/",
+      "statusCode": 301
+    },
+    {
+      "source": "/contact/contact.html",
+      "destination": "/contact/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/blog.html",
+      "destination": "/blogs/",
+      "statusCode": 301
+    },
+    {
+      "source": "/service/services.html",
+      "destination": "/digital-marketing-services-kannur/",
+      "statusCode": 301
+    },
     {
       "source": "/dubai/dubai.html",
       "destination": "/digital-marketing-strategist-dubai/",
       "statusCode": 301
-    }
-  ],
-  "rewrites": [
+    },
     {
-      "source": "/digital-marketing-strategist-dubai/",
-      "destination": "/dubai/dubai.html"
+      "source": "/seo/seo.html",
+      "destination": "/seo-services-kannur/",
+      "statusCode": 301
+    },
+    {
+      "source": "/google%20ads/google%20ads.html",
+      "destination": "/google-ads-services-kannur/",
+      "statusCode": 301
+    },
+    {
+      "source": "/meta%20ad/meta.html",
+      "destination": "/meta-ads-services-kannur/",
+      "statusCode": 301
+    },
+    {
+      "source": "/web%20design/web.html",
+      "destination": "/website-design-services-kannur/",
+      "statusCode": 301
+    },
+    {
+      "source": "/shopify/shopify.html",
+      "destination": "/shopify-development-services-kannur/",
+      "statusCode": 301
+    },
+    {
+      "source": "/social%20media%20managemnt/social%20media.html",
+      "destination": "/social-media-marketing-kannur/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog%201/blog1.html",
+      "destination": "/seo-cost-kerala/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog2/blog2.html",
+      "destination": "/local-seo-kannur-google-business-profile/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog3/blog3.html",
+      "destination": "/what-is-eeat-in-seo/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog4/blog4.html",
+      "destination": "/website-cost-kannur/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog5/blog5.html",
+      "destination": "/jio-canva-pro-offer/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog%206/blog%206.html",
+      "destination": "/get-cited-google-ai-overviews/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog7/blog7.html",
+      "destination": "/google-business-profile-kerala/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog%208/blog8.html",
+      "destination": "/impressions-but-no-clicks-seo-fixes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog%209/blog9.html",
+      "destination": "/how-to-get-recommended-by-chatgpt-gemini-perplexity/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog%2010/blog%2010.html",
+      "destination": "/how-ai-is-changing-seo-in-2026/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog11/blog11.html",
+      "destination": "/why-more-traffic-is-not-always-the-answer/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog12/blog12.html",
+      "destination": "/blog-how-ai-is-changing-digital-marketing-for-small-businesses/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog%2013/blog13.html",
+      "destination": "/how-google-ai-search-affects-seo/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog%2014/blog14.html",
+      "destination": "/google-ads-vs-meta-ads-kerala-leads/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog%2015/blog15.html",
+      "destination": "/build-personal-brand-2026/",
+      "statusCode": 301
+    },
+    {
+      "source": "/about",
+      "destination": "/about-me/",
+      "statusCode": 301
+    },
+    {
+      "source": "/about/",
+      "destination": "/about-me/",
+      "statusCode": 301
+    },
+    {
+      "source": "/about/about.html",
+      "destination": "/about-me/",
+      "statusCode": 301
     }
   ]
 }

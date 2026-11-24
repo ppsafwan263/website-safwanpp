@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact Safwan PP, a digital marketing consultant in Kannur. Get honest advice about SEO, Google Ads, Meta Ads, website design and Shopify development.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Contact Safwan PP | Digital Marketing Consultant in Kannur</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #101114;
+      --muted: #656a73;
+      --blue: #2451e6;
+      --line: #e8e9ec;
+      --paper: #fff;
+      --soft: #f6f7fa;
+      --content: 1120px;
+    }
+    * { box-sizing: border-box; font-family: "Raleway", sans-serif; }
+    h1, h2, h3 { font-family: "Inter", sans-serif; }
+    html { scroll-behavior: smooth; scroll-padding-top: 110px; }
+    section[id], [id]:target, #home, .hero, .section { scroll-margin-top: 110px; }
+    body { margin: 0; color: var(--ink); background: var(--paper); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    button, input, select, textarea { font: inherit; }
+    img, svg { max-width: 100%; }
+    .container { width: min(var(--content), calc(100% - 48px)); margin-inline: auto; }
+    .site-header { position: sticky; z-index: 20; top: 0; border-bottom: 1px solid rgba(232, 233, 236, .85); background: rgba(255, 255, 255, .94); backdrop-filter: blur(16px); }
+    .nav { min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .site-header .nav { width: min(1120px, calc(100% - 48px)); }
+    .brand { display: inline-flex; align-items: center; }
+    .site-logo { display: block; width: 78px; height: auto; }
+    .site-header .site-logo { filter: brightness(0); }
+    .nav-links { display: flex; align-items: center; gap: 25px; color: #464a52; font-size: .82rem; font-weight: 750; }
+    .nav-links a:hover, .footer-links a:hover { color: var(--blue); }
+    .nav-links a[aria-current="page"] { color: var(--blue); }
+    .nav-cta { padding: 10px 16px; border: 1px solid var(--line); border-radius: 999px; font-size: .8rem; font-weight: 850; }
+    .menu-toggle { display: none; padding: 9px 12px; border: 1px solid var(--line); border-radius: 10px; background: #fff; font-weight: 800; cursor: pointer; }
+    .button { display: inline-flex; min-height: 50px; align-items: center; justify-content: center; gap: 12px; padding: 0 20px; border: 1px solid var(--line); border-radius: 999px; background: #fff; font-size: .84rem; font-weight: 850; transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
+    .button:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(20, 32, 60, .12); }
+    .button-primary { border-color: var(--blue); color: #fff; background: var(--blue); }
+    .button-primary:hover { background: #193fc2; }
+    .button-arrow { font-size: 1.05rem; line-height: 1; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--blue); font-size: .72rem; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
+    .eyebrow::before { width: 20px; height: 2px; background: currentColor; content: ""; }
+    .hero { padding: 86px 0 76px; background-color: #fff; background-image: linear-gradient(rgba(16, 17, 20, .025) 1px, transparent 1px), linear-gradient(90deg, rgba(16, 17, 20, .025) 1px, transparent 1px); background-size: 52px 52px; }
+    .hero-layout { display: grid; grid-template-columns: minmax(0, 1fr); align-items: start; gap: 28px; }
+    .hero h1 { max-width: 1100px; margin: 22px 0 20px; font-size: clamp(2.4rem, 5vw, 4.2rem); font-weight: 900; line-height: .96; letter-spacing: -.085em; }
+    .hero h1 span { display: block; }
+    .hero-copy { max-width: 650px; margin: 0; color: #505660; font-size: clamp(1rem, 1.5vw, 1.13rem); line-height: 1.8; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+    .contact-aside { padding: 24px; border: 1px solid var(--line); border-radius: 22px; background: rgba(255, 255, 255, .94); box-shadow: 0 16px 38px rgba(16, 17, 20, .07); }
+    .contact-aside h2 { margin: 0 0 12px; font-size: 1.15rem; font-weight: 850; letter-spacing: -.04em; }
+    .contact-aside p { margin: 0; color: var(--muted); font-size: .9rem; }
+    .contact-aside strong { color: var(--ink); }
+    .section { padding: 86px 0; }
+    .section-heading { max-width: 650px; margin-bottom: 32px; }
+    .section-heading h2 { margin: 12px 0; font-size: clamp(2.2rem, 4.5vw, 3.5rem); line-height: 1.04; letter-spacing: -.075em; font-weight: 900; }
+    .section-heading p { max-width: 620px; margin: 0; color: var(--muted); }
+    .reach-section { background: #fff; }
+    .faq-section { background-color: #fff; }
+    .reach-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+    .reach-card { min-width: 0; padding: 21px; border: 1px solid var(--line); border-radius: 17px; background: #fff; }
+    .reach-card span { display: block; margin-bottom: 5px; color: var(--blue); font-size: .68rem; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
+    .reach-card strong, .reach-card a { display: block; overflow-wrap: anywhere; font-size: .95rem; font-weight: 800; }
+    .reach-card p { margin: 4px 0 0; color: var(--muted); font-size: .82rem; }
+    .reach-card a:hover { color: var(--blue); }
+    .message-section { background: #0b0b0d; color: #fff; }
+    .message-section .eyebrow { color: #8ca7ff; }
+    .message-section .section-heading p { color: #b7bac2; }
+    .message-layout { display: grid; grid-template-columns: .8fr 1.2fr; align-items: start; gap: clamp(28px, 6vw, 72px); }
+    .message-prompt { padding: 25px; border: 1px solid #303034; border-radius: 20px; background: #171719; }
+    .message-prompt h3 { margin: 0 0 8px; font-size: 1.2rem; letter-spacing: -.04em; }
+    .message-prompt p { margin: 0; color: #b7bac2; font-size: .88rem; }
+    .contact-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; padding: 26px; border: 1px solid #303034; border-radius: 20px; background: #171719; }
+    .form-field { display: grid; gap: 7px; }
+    .form-field.full, .form-submit { grid-column: 1 / -1; }
+    .form-field label { color: #e4e5e9; font-size: .74rem; font-weight: 750; }
+    .form-field input, .form-field select, .form-field textarea { width: 100%; min-height: 48px; padding: 12px 14px; border: 1px solid #414146; border-radius: 12px; outline: 0; color: #fff; background: #222225; font-size: .84rem; }
+    .form-field textarea { min-height: 120px; resize: vertical; }
+    .form-field input:focus, .form-field select:focus, .form-field textarea:focus { border-color: #829aff; box-shadow: 0 0 0 3px rgba(130, 154, 255, .15); }
+    .form-field select:invalid { color: #a4a6ad; }
+    .form-field option { color: #fff; background: #222225; }
+    .form-submit { justify-self: start; border: 0; cursor: pointer; }
+    .form-note { grid-column: 1 / -1; margin: -4px 0 0; color: #a9acb6; font-size: .74rem; }
+    .process-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; counter-reset: steps; }
+    .process-card { min-height: 205px; padding: 23px; border: 1px solid var(--line); border-radius: 18px; background: #fff; counter-increment: steps; }
+    .process-card::before { display: grid; width: 38px; height: 38px; place-items: center; margin-bottom: 24px; border-radius: 50%; color: #fff; background: var(--blue); content: counter(steps, decimal-leading-zero); font-size: .75rem; font-weight: 850; }
+    .process-card h3 { margin: 0 0 7px; font-size: 1.08rem; letter-spacing: -.035em; }
+    .process-card p { margin: 0; color: var(--muted); font-size: .88rem; line-height: 1.7; }
+    .faq-layout { display: grid; grid-template-columns: .7fr 1.3fr; align-items: start; gap: clamp(34px, 7vw, 80px); }
+    .faq-layout .section-heading { margin: 0; }
+    .faq-list details { margin-bottom: 9px; border: 1px solid var(--line); border-radius: 16px; background: #fff; }
+    .faq-list details[open] { border-color: #aab8ee; }
+    .faq-list summary { position: relative; display: flex; min-height: 62px; align-items: center; padding: 14px 58px 14px 18px; cursor: pointer; font-size: .9rem; font-weight: 800; list-style: none; }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary::after { position: absolute; top: 50%; right: 15px; display: grid; width: 30px; height: 30px; place-items: center; border-radius: 50%; color: var(--ink); background: #f1f2f4; content: "+"; font-size: 1.2rem; font-weight: 500; transform: translateY(-50%); }
+    .faq-list details[open] summary::after { color: #fff; background: var(--blue); content: "−"; }
+    .faq-list details p { margin: 0; padding: 0 18px 18px; color: var(--muted); font-size: .87rem; line-height: 1.75; }
+    .not-ready { padding: 70px 0; }
+    .not-ready h2 { margin: 10px 0 12px; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.05; letter-spacing: -.07em; }
+    .not-ready-copy { max-width: 850px; margin: 0; color: var(--muted); line-height: 1.85; }
+    .service-cards { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px; margin-top: 26px; }
+    .service-card { display: flex; min-height: 142px; flex-direction: column; justify-content: space-between; gap: 20px; padding: 18px; border: 1px solid var(--line); border-radius: 17px; background: #fff; }
+    .reach-card, .process-card, .service-card, .contact-aside, .message-prompt { transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
+    .reach-card:hover, .process-card:hover, .service-card:hover, .contact-aside:hover, .message-prompt:hover, .service-card:focus-visible { transform: translateY(-3px); border-color: rgba(36, 81, 230, .38); box-shadow: 0 12px 26px rgba(36, 81, 230, .1); }
+    .service-card strong { font-size: 1rem; font-weight: 850; letter-spacing: -.035em; }
+    .service-card span { color: var(--blue); font-size: .78rem; font-weight: 800; }
+    .related-links { margin: 24px 0 0; color: var(--muted); font-size: .9rem; line-height: 1.85; }
+    .related-links a { color: var(--blue); font-weight: 750; text-decoration: underline; text-underline-offset: 3px; }
+    .site-footer, .site-footer * { font-family: "Inter", sans-serif; }
+    .site-footer { padding: 58px 0 20px; color: #fff; background: #0b0b0d; font-size: 16px; font-weight: 400; }
+    .footer-grid { display: grid; grid-template-columns: minmax(220px, 1.7fr) repeat(4, minmax(0, 1fr)); gap: clamp(24px, 4vw, 56px); padding-bottom: 48px; }
+    .footer-brand .brand { display: inline-flex; margin-bottom: 16px; }
+    .footer-brand .site-logo { width: 112px; }
+    .footer-brand p { max-width: 290px; margin: 0; color: #fff; font-size: 16px; line-height: 1.75; }
+    .footer-column h2 { margin: 5px 0 16px; color: #fff; font-size: 16px; font-weight: 850; letter-spacing: .04em; text-transform: uppercase; }
+    .footer-column ul { display: grid; gap: 11px; margin: 0; padding: 0; list-style: none; }
+    .footer-column li, .footer-column a { color: #fff; font-size: 16px; line-height: 1.5; }
+    .footer-column a:hover, .footer-column a:focus-visible { color: #8ca7ff; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 18px; border-top: 1px solid #292a30; color: #fff; font-size: 15px; }
+    .footer-bottom p { margin: 0; }
+    .footer-top-link:hover { color: #8ca7ff; }
+    .whatsapp-float { position: fixed; z-index: 15; right: 22px; bottom: 20px; display: grid; width: 58px; height: 58px; place-items: center; border-radius: 50%; color: #fff; background: #25d366; box-shadow: 0 8px 22px rgba(0, 0, 0, .2); }
+    .whatsapp-float svg { width: 30px; height: 30px; }
+    @media (max-width: 900px) {
+      .hero-layout { grid-template-columns: 1fr; align-items: start; gap: 30px; }
+      .contact-aside { max-width: 590px; }
+      .reach-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .footer-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 680px) {
+      .container { width: min(100% - 36px, var(--content)); }
+      .site-header .nav { width: min(100% - 36px, 1120px); }
+      .nav { min-height: 66px; }
+      .menu-toggle { display: inline-flex; }
+      .nav-cta { display: none; }
+      .nav-links { position: absolute; top: 65px; right: 18px; left: 18px; display: none; align-items: stretch; gap: 0; padding: 8px 16px; border: 1px solid var(--line); border-radius: 16px; background: #fff; box-shadow: 0 18px 35px rgba(16, 17, 20, .1); }
+      .nav-links.is-open { display: flex; flex-direction: column; }
+      .nav-links a { padding: 12px 2px; border-bottom: 1px solid var(--line); }
+      .nav-links a:last-child { border-bottom: 0; }
+      .hero { padding: 64px 0 58px; }
+      .hero h1 { font-size: clamp(2.25rem, 9vw, 4.2rem); }
+      .section { padding: 68px 0; }
+      .reach-grid, .process-grid, .message-layout, .faq-layout { grid-template-columns: 1fr; }
+      .service-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .message-layout { gap: 20px; }
+      .contact-form { grid-template-columns: 1fr; padding: 21px; }
+      .form-field.full, .form-submit, .form-note { grid-column: auto; }
+      .form-submit { width: 100%; }
+      .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 22px; padding-bottom: 34px; }
+      .footer-brand { grid-column: 1 / -1; }
+      .footer-bottom { align-items: flex-start; flex-direction: column; }
+      .not-ready { padding: 56px 0; }
+      .service-card { min-height: 125px; padding: 15px; }
+    }
+    @media (max-width: 390px) {
+      .reach-grid, .footer-grid { grid-template-columns: 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    }
+      .site-header { position: sticky; z-index: 20; top: 0; border-bottom: 1px solid rgba(232,233,236,.85); background: rgba(255,255,255,.94); backdrop-filter: blur(16px); }
+    .site-header .nav { width: min(1120px,calc(100% - 48px)); min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .site-header .brand { display: inline-flex; align-items: center; }
+    .site-header .site-logo { display: block; width: 78px; height: auto; filter: brightness(0); }
+    .site-header .nav-links { display: flex; align-items: center; gap: 25px; color: #464a52; font-size: .82rem; font-weight: 750; }
+    .site-header .nav-links a:hover, .site-header .nav-links a[aria-current="page"] { color: var(--blue); }
+    .site-header .nav-cta { padding: 10px 16px; border: 1px solid var(--line); border-radius: 999px; font-size: .8rem; font-weight: 850; }
+    .site-header .menu-toggle { display: none; padding: 9px 12px; border: 1px solid var(--line); border-radius: 10px; background: #fff; font-weight: 800; cursor: pointer; }
+    .site-footer, .site-footer * { font-family: Arial, sans-serif; }
+    .site-footer { padding: 58px 0 20px; color: #fff; background: #0b0b0d; font-size: 16px; font-weight: 400; }
+    .site-footer .footer-grid { display: grid; grid-template-columns: minmax(220px,1.7fr) repeat(4,minmax(0,1fr)); gap: clamp(24px,4vw,56px); padding-bottom: 48px; }
+    .site-footer .footer-brand .brand { display: inline-flex; margin-bottom: 16px; color: #fff; }
+    .site-footer .footer-brand .site-logo { width: 112px; }
+    .site-footer .footer-brand p { max-width: 290px; margin: 0; color: #fff; font-size: 16px; line-height: 1.75; }
+    .site-footer .footer-socials { display: flex; align-items: center; gap: 22px; margin-top: 20px; }
+    .site-footer .footer-socials a, .site-footer .footer-socials span { display: grid; width: 22px; height: 22px; place-items: center; color: #fff; }
+    .site-footer .footer-socials a { transition: color .2s ease, transform .2s ease; }
+    .site-footer .footer-socials a:hover { transform: translateY(-2px); color: #fff; }
+    .site-footer .footer-socials svg { width: 20px; height: 20px; fill: none; }
+    .site-footer .footer-socials .facebook-icon, .site-footer .footer-socials a:nth-child(3) svg { fill: currentColor; }
+    .site-footer .footer-column h2 { margin: 5px 0 16px; color: #fff; font-size: 16px; font-weight: 850; letter-spacing: .04em; text-transform: uppercase; }
+    .site-footer .footer-column ul { display: grid; gap: 11px; margin: 0; padding: 0; list-style: none; }
+    .site-footer .footer-column li, .site-footer .footer-column a { color: #fff; font-size: 16px; line-height: 1.5; }
+    .site-footer .footer-column a, .site-footer .footer-top-link { transition: color .18s ease; }
+    .site-footer .footer-column a:hover, .site-footer .footer-top-link:hover { color: var(--blue); }
+    .site-footer .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 18px; border-top: 1px solid #292a30; color: #fff; font-size: 15px; }
+    .site-footer .footer-bottom p { margin: 0; }
+    .site-footer .footer-top-link { color: #fff; }
+    @media (max-width: 980px) {
+      .site-footer .footer-grid { grid-template-columns: repeat(4,minmax(0,1fr)); }
+      .site-footer .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 720px) {
+      .site-header .nav { width: min(100% - 36px,1120px); min-height: 66px; position: relative; }
+      .site-header .menu-toggle { display: inline-flex; }
+      .site-header .nav-cta { display: none; }
+      .site-header .nav-links { position: absolute; top: 65px; right: 0; left: 0; display: none; align-items: stretch; gap: 0; padding: 8px 16px; border: 1px solid var(--line); border-radius: 16px; background: #fff; box-shadow: 0 18px 35px rgba(16,17,20,.1); }
+      .site-header .nav-links.is-open { display: flex; flex-direction: column; }
+      .site-header .nav-links a { padding: 12px 2px; border-bottom: 1px solid var(--line); }
+      .site-header .nav-links a:last-child { border-bottom: 0; }
+      .site-footer .footer-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 30px 22px; padding-bottom: 34px; }
+      .site-footer .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 440px) {
+      .site-footer .footer-grid { grid-template-columns: 1fr; }
+      .site-footer .footer-bottom { align-items: flex-start; flex-direction: column; }
+    }
+      .site-header, .site-header * { font-family: Arial, sans-serif; }
+    .site-footer > .container { width: min(1120px,calc(100% - 48px)); margin-inline: auto; }
+    @media (max-width: 720px) { .site-footer > .container { width: min(100% - 36px,1120px); } }
+      .nav-dropdown { position: relative; }
+    .nav-dropdown-head { display: flex; align-items: center; gap: 3px; }
+    .nav-dropdown-toggle { display: grid; width: 23px; height: 30px; place-items: center; padding: 0; border: 0; color: inherit; background: transparent; cursor: pointer; }
+    .nav-dropdown-toggle svg { width: 12px; height: 12px; transition: transform .18s ease; }
+    .nav-dropdown:hover .nav-dropdown-toggle svg, .nav-dropdown.is-open .nav-dropdown-toggle svg { transform: rotate(180deg); }
+    .nav-dropdown::after { position: absolute; top: 100%; left: 0; width: 100%; height: 17px; content: ""; }
+    .nav-dropdown-menu { position: absolute; z-index: 22; top: calc(100% + 17px); left: -16px; display: none; width: 190px; overflow: hidden; padding: 6px; border: 1px solid var(--line); border-radius: 12px; color: var(--ink); background: #fff; box-shadow: 0 16px 36px rgba(16,17,20,.12); }
+    .nav-dropdown-menu a { display: block; padding: 12px; border-radius: 7px; color: var(--ink); font-size: .74rem; font-weight: 750; line-height: 1.4; transition: color .18s ease, background .18s ease; }
+    .nav-dropdown-menu a:hover, .nav-dropdown-menu a:focus-visible { color: var(--blue); background: #f1f4ff; }
+    .nav-dropdown:hover .nav-dropdown-menu, .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+    @media (max-width: 720px) {
+      .site-header .nav-dropdown { position: relative; width: 100%; }
+      .site-header .nav-dropdown::after { display: none; }
+      .site-header .nav-dropdown-head { min-height: 45px; }
+      .site-header .nav-dropdown-head > a { flex: 1; padding: 12px 2px; }
+      .site-header .nav-dropdown-toggle { width: 42px; height: 42px; border-bottom: 1px solid var(--line); }
+      .site-header .nav-dropdown-menu { position: static; width: 100%; margin-bottom: 8px; padding: 4px; border: 1px solid var(--line); border-radius: 10px; background: #fff; box-shadow: none; }
+      .site-header .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+      .site-header .nav-dropdown-menu a { padding: 12px; border-bottom: 0; color: var(--ink); }
+    }
+</style>
+  <link rel="stylesheet" href="../style.css">
+  <meta property="og:title" content="Contact Safwan PP | Digital Marketing Consultant in Kannur">
+  <meta property="og:description" content="Contact Safwan PP, a digital marketing consultant in Kannur. Get honest advice about SEO, Google Ads, Meta Ads, website design and Shopify development.">
+  <meta property="og:site_name" content="Safwan PP">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Contact Safwan PP | Digital Marketing Consultant in Kannur">
+  <meta name="twitter:description" content="Contact Safwan PP, a digital marketing consultant in Kannur. Get honest advice about SEO, Google Ads, Meta Ads, website design and Shopify development.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://ppsafwan.com/contact/">
+  <meta property="og:url" content="https://ppsafwan.com/contact/">
+</head>
+<body>
+    <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="../#home" aria-label="Safwan PP home"><img class="site-logo" src="../home/safwan-logo.png" alt="Safwan" decoding="async" width="1408" height="727"></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="../#home">Home</a>
+        <a href="../about-me/">About</a>
+        <div class="nav-dropdown">
+  <div class="nav-dropdown-head">
+    <a href="../digital-marketing-services-kannur/">Services</a>
+    <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="service-submenu" aria-label="Show service links">
+      <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="m2 4.5 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+    </button>
+  </div>
+  <div class="nav-dropdown-menu" id="service-submenu">
+    <a href="../seo-services-kannur/">SEO Services</a>
+    <a href="../google-ads-services-kannur/">Google Ads</a>
+    <a href="../website-design-services-kannur/">Web Design</a>
+    <a href="../shopify-development-services-kannur/#home">Shopify Development</a>
+    <a href="../meta-ads-services-kannur/">Meta Ads</a>
+    <a href="../social-media-marketing-kannur/">Social Media Marketing</a>
+  </div>
+</div>
+        <a href="../blogs/">Blogs</a>
+        <a href="../contact/">Contact</a>
+      </div>
+      <a class="nav-cta" href="../contact/#contact">Let's talk <span aria-hidden="true">&#8599;</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-layout">
+        <div>
+          <h1><span>Contact Safwan PP, Digital</span><span>Marketing Consultant in Kannur</span></h1>
+          <p class="hero-copy">I'm Safwan PP, a digital marketing consultant based in Narath, Kannur. Tell me about your business and what you want to grow. I'll reply with honest advice and a clear next step, with no pressure or jargon.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://wa.me/919895325388" target="_blank" rel="noopener noreferrer">Chat on WhatsApp <span class="button-arrow" aria-hidden="true">↗</span></a>
+            <a class="button" href="#message">Send a message</a>
+          </div>
+        </div>
+        <aside class="contact-aside">
+          <h2>Prefer a quick conversation?</h2>
+          <p>The first call is free and takes about <strong>15–20 minutes</strong>. We'll talk through your goals and what a useful next step could look like.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section reach-section" id="reach">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Get in touch</span>
+          <h2>How to reach me</h2>
+          <p>WhatsApp is the fastest way to reach me. I work with clients across Kerala and the UAE.</p>
+        </div>
+        <div class="reach-grid">
+          <div class="reach-card">
+            <span>WhatsApp · Fastest</span>
+            <a href="https://wa.me/919895325388" target="_blank" rel="noopener noreferrer">+91 98953 25388</a>
+            <p>Usually replies within a few hours during working hours.</p>
+          </div>
+          <div class="reach-card">
+            <span>Phone</span>
+            <a href="tel:+919895325388">+91 98953 25388</a>
+            <p>Call me to discuss what your business needs.</p>
+          </div>
+          <div class="reach-card">
+            <span>Email</span>
+            <a href="mailto:ppsafwan263@gmail.com">ppsafwan263@gmail.com</a>
+            <p>Form messages receive a reply within one working day.</p>
+          </div>
+          <div class="reach-card">
+            <span>Hours · IST</span>
+            <strong>Monday to Saturday<br>9:30 am – 6:30 pm</strong>
+          </div>
+          <div class="reach-card">
+            <span>Location</span>
+            <strong>Narath, Kannur, Kerala, India</strong>
+            <p>Working with clients across Kerala and the UAE.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section message-section" id="contact">
+      <div class="container message-layout">
+        <div>
+          <div class="section-heading">
+            <span class="eyebrow">Send a message</span>
+            <h2>Tell me what you want to grow</h2>
+            <p>Share a little about your business and goals. I'll get back to you with a clear next step.</p>
+          </div>
+          <div class="message-prompt">
+            <h3>No pressure. No jargon.</h3>
+            <p>Your details are only used to reply to you. No spam.</p>
+          </div>
+        </div>
+        <form class="contact-form" id="message">
+          <div class="form-field">
+            <label for="contact-name">Name *</label>
+            <input id="contact-name" name="name" autocomplete="name" required>
+          </div>
+          <div class="form-field">
+            <label for="contact-email">Email *</label>
+            <input id="contact-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="form-field">
+            <label for="contact-phone">WhatsApp / phone number</label>
+            <input id="contact-phone" name="phone" type="tel" autocomplete="tel">
+          </div>
+          <div class="form-field">
+            <label for="contact-service">Service you need</label>
+            <select id="contact-service" name="service">
+              <option value="" selected>Select a service (optional)</option>
+              <option>SEO</option>
+              <option>Google Ads</option>
+              <option>Meta Ads</option>
+              <option>Website design</option>
+              <option>Shopify store</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="form-field full">
+            <label for="contact-message">Tell me about your business and goals</label>
+            <textarea id="contact-message" name="message" rows="5" placeholder="What does your business do, and what would you like to grow?"></textarea>
+          </div>
+          <button class="button button-primary form-submit" type="submit">Send via WhatsApp <span class="button-arrow" aria-hidden="true">→</span></button>
+          <p class="form-note">Your details are only used to reply to you. No spam. Submitting opens WhatsApp with your message ready to send.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="what-happens">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">A simple process</span>
+          <h2>What happens after you get in touch</h2>
+        </div>
+        <div class="process-grid">
+          <article class="process-card">
+            <h3>You message me</h3>
+            <p>Reach out on WhatsApp or through the form and tell me a little about your business.</p>
+          </article>
+          <article class="process-card">
+            <h3>We have a short call</h3>
+            <p>We'll spend 15–20 minutes understanding your business and goals. The first call is free.</p>
+          </article>
+          <article class="process-card">
+            <h3>You get a clear plan</h3>
+            <p>I'll share my recommendation, timeline and cost. You decide what works for you, with no obligation.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="container faq-layout">
+        <div class="section-heading">
+          <span class="eyebrow">Common questions</span>
+          <h2>Questions before getting started</h2>
+          <p>Still have a question? <a href="https://wa.me/919895325388" target="_blank" rel="noopener noreferrer">Message me on WhatsApp.</a></p>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>How quickly will you reply?</summary>
+            <p>On WhatsApp, usually within a few hours during working hours. Form messages get a reply within one working day.</p>
+          </details>
+          <details>
+            <summary>Do you work with businesses outside Kannur?</summary>
+            <p>Yes. I work with clients across Kerala and in the UAE. Most of the work happens over WhatsApp and video calls.</p>
+          </details>
+          <details>
+            <summary>How much does it cost?</summary>
+            <p>It depends on what you need. After our first call I'll give you a fixed monthly price or a project quote, so there are no surprises.</p>
+          </details>
+          <details>
+            <summary>Is the first call free?</summary>
+            <p>Yes. The first call is free and there is no obligation to hire me.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="not-ready" id="services">
+      <div class="container">
+        <span class="eyebrow">Explore at your own pace</span>
+        <h2>Not ready to talk yet?</h2>
+        <p class="not-ready-copy">Explore a service to learn more:</p>
+        <div class="service-cards" aria-label="Digital marketing services">
+          <a class="service-card" href="../seo-services-kannur/"><strong>SEO</strong><span>Explore SEO →</span></a>
+          <a class="service-card" href="../digital-marketing-services-kannur/#services"><strong>Google Ads</strong><span>Explore Google Ads →</span></a>
+          <a class="service-card" href="../meta-ads-services-kannur/"><strong>Meta Ads</strong><span>Explore Meta Ads →</span></a>
+          <a class="service-card" href="../digital-marketing-services-kannur/#services"><strong>Social Media Marketing</strong><span>Explore SMM →</span></a>
+          <a class="service-card" href="../website-design-services-kannur/"><strong>Website design</strong><span>Explore website design →</span></a>
+          <a class="service-card" href="../shopify-development-services-kannur/#home"><strong>Shopify development</strong><span>Explore Shopify →</span></a>
+        </div>
+        <p class="related-links">You can also read the <a href="../blogs/#articles">blog</a>, learn more <a href="../about-me/#about">about me</a>, or see how I work as a <a href="../#home">digital marketing expert in Kannur</a>.</p>
+      </div>
+    </section>
+  </main>
+
+    <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="../#home" aria-label="Safwan PP home"><img class="site-logo" src="../home/safwan-logo.png" alt="Safwan" decoding="async" width="1408" height="727"></a>
+          <p>Freelance digital marketing strategist helping businesses grow with SEO, ads, social media marketing, web design and Shopify development.</p>
+          <div class="footer-socials" aria-label="Social media">
+            <a href="https://www.instagram.com/thesafwaaan?gwpx=MThjNHVwd3FxYTdseg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg>
+            </a>
+            <span role="img" aria-label="Facebook">
+              <svg class="facebook-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.4 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.3H7.6V13h2.7v8h3.1Z"></path></svg>
+            </span>
+            <a href="https://www.linkedin.com/in/safwan-ibn-ibrahim-87a281396" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 8.5H2.1V22h3.1V8.5ZM3.65 2A1.8 1.8 0 1 0 3.7 5.6 1.8 1.8 0 0 0 3.65 2ZM22 14.3c0-4.1-2.2-6-5.1-6-2.4 0-3.5 1.3-4.1 2.2V8.5H9.7V22h3.1v-6.7c0-1.8.3-3.6 2.6-3.6s2.3 2.1 2.3 3.7V22H22v-7.7Z"></path></svg>
+            </a>
+          </div>
+        </div>
+        <nav class="footer-column" aria-label="Explore">
+          <h2>Explore</h2>
+          <ul>
+            <li><a href="../#home">Home</a></li>
+            <li><a href="../about-me/#about">About</a></li>
+            <li><a href="../digital-marketing-services-kannur/#services">Services</a></li>
+            <li><a href="../blogs/#articles">Blogs</a></li>
+            <li><a href="../contact/#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-column" aria-label="Services">
+          <h2>Services</h2>
+          <ul>
+            <li><a href="../seo-services-kannur/">SEO Services</a></li>
+            <li><a href="../social-media-marketing-kannur/">Social Media Marketing</a></li>
+            <li><a href="../meta-ads-services-kannur/">Meta Ads</a></li>
+            <li><a href="../google-ads-services-kannur/">Google Ads</a></li>
+            <li><a href="../website-design-services-kannur/">Web Design</a></li>
+            <li><a href="../shopify-development-services-kannur/#home">Shopify Development</a></li>
+          </ul>
+        </nav>
+        <div class="footer-column">
+          <h2>Locations</h2>
+          <ul>
+            <li><a href="../#home">Kerala, India</a></li>
+            <li><a href="../digital-marketing-strategist-dubai/#home">Dubai, UAE</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h2>Get in touch</h2>
+          <ul>
+            <li><a href="tel:+919895325388">+91 98953 25388</a></li>
+            <li><a href="mailto:ppsafwan263@gmail.com">ppsafwan263@gmail.com</a></li>
+            <li><a href="https://wa.me/919895325388" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright &copy; 2026 &middot; Safwan PP. All rights reserved.</p>
+        <a class="footer-top-link" href="#">Back to top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/919895325388" target="_blank" rel="noopener noreferrer" aria-label="Chat with Safwan on WhatsApp">
+    <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 3.5a12 12 0 0 0-10.2 18.3L4.2 27.8l6.2-1.6A12 12 0 1 0 16 3.5Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"></path><path d="M12 10.2c-.4-.8-.8-.8-1.2-.8h-.9c-.4 0-.9.2-1.2.7-.4.5-1.6 1.6-1.6 3.9s1.6 4.5 1.8 4.8c.2.3 3.1 5 7.6 6.8 3.8 1.5 4.6 1.2 5.4 1.1.8-.1 2.6-1.1 3-2.2.4-1.1.4-2 .3-2.2-.1-.2-.4-.3-.9-.6l-3.1-1.5c-.4-.2-.8-.3-1.1.2-.3.5-1.2 1.5-1.5 1.8-.3.3-.6.4-1.1.1-.5-.2-2-.7-3.8-2.3-1.4-1.2-2.3-2.7-2.6-3.2-.2-.3 0-.7.2-1 .2-.2.5-.6.7-.9.2-.3.3-.5.5-.8.1-.2.1-.6 0-.8l-1.5-3.1Z" fill="currentColor" transform="translate(2 0) scale(.86)"></path></svg>
+  </a>
+
+  <script>
+    const menuButton = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+      menuButton.setAttribute("aria-expanded", String(!isOpen));
+      navLinks.classList.toggle("is-open", !isOpen);
+    });
+
+    navLinks.addEventListener("click", (event) => {
+      if (event.target.closest("a")) {
+        menuButton.setAttribute("aria-expanded", "false");
+        navLinks.classList.remove("is-open");
+      }
+    });
+
+    document.querySelector(".contact-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const values = new FormData(event.currentTarget);
+      const message = [
+        "Hi Safwan, I'd like to discuss growing my business.",
+        `Name: ${values.get("name")}`,
+        `Email: ${values.get("email")}`,
+        values.get("phone") ? `WhatsApp / phone: ${values.get("phone")}` : "",
+        values.get("service") ? `Service: ${values.get("service")}` : "",
+        values.get("message") ? `Business and goals: ${values.get("message")}` : ""
+      ].filter(Boolean).join("\n");
+      window.location.href = `https://wa.me/919895325388?text=${encodeURIComponent(message)}`;
+    });
+  </script>
+  <script>
+    (() => {
+      const dropdown = document.querySelector(".nav-dropdown");
+      const toggle = dropdown.querySelector(".nav-dropdown-toggle");
+      const nav = document.querySelector(".nav-links");
+      const menuButton = document.querySelector(".menu-toggle");
+      const setOpen = (isOpen) => {
+        toggle.setAttribute("aria-expanded", String(isOpen));
+        dropdown.classList.toggle("is-open", isOpen);
+      };
+
+      toggle.addEventListener("click", () => {
+        setOpen(toggle.getAttribute("aria-expanded") !== "true");
+      });
+      dropdown.addEventListener("pointerenter", (event) => {
+        if (event.pointerType === "mouse") setOpen(true);
+      });
+      dropdown.addEventListener("pointerleave", () => {
+        if (!dropdown.contains(document.activeElement)) setOpen(false);
+      });
+      dropdown.addEventListener("focusin", () => setOpen(true));
+      dropdown.addEventListener("focusout", (event) => {
+        if (!dropdown.contains(event.relatedTarget)) setOpen(false);
+      });
+      dropdown.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          setOpen(false);
+          toggle.focus();
+        }
+      });
+      nav.addEventListener("click", (event) => {
+        if (event.target.closest("a")) setOpen(false);
+      });
+      menuButton.addEventListener("click", () => setOpen(false));
+    })();
+  </script>
+</body>
+</html>

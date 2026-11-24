@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn why your website gets Google impressions but few clicks, how to diagnose the cause in Search Console, and nine SEO fixes that can help.">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Google Impressions, No Clicks? 9 SEO Fixes | Safwan PP">
+  <meta property="og:description" content="Nine SEO fixes that actually matter, and how to work out which one applies before you change anything.">
+  <meta property="og:url" content="https://ppsafwan.com/impressions-but-no-clicks-seo-fixes/">
+  <title>Google Impressions, No Clicks? 9 SEO Fixes | Safwan PP</title>
+  <link rel="canonical" href="https://ppsafwan.com/impressions-but-no-clicks-seo-fixes/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #101114;
+      --muted: #656a73;
+      --blue: #2451e6;
+      --line: #e8e9ec;
+      --paper: #fff;
+      --soft: #f7f8fb;
+      --content: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: "Raleway", sans-serif; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    h1, h2, h3 { font-family: "Inter", sans-serif; }
+    a { color: inherit; text-decoration: none; }
+    button, input { font: inherit; }
+    img, svg { max-width: 100%; }
+    .container { width: min(var(--content), calc(100% - 48px)); margin-inline: auto; }
+    .site-header { position: sticky; z-index: 20; top: 0; border-bottom: 1px solid rgba(232, 233, 236, .85); background: rgba(255, 255, 255, .94); backdrop-filter: blur(16px); }
+    .nav { min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; }
+    .site-logo { display: block; width: 78px; height: auto; filter: brightness(0); }
+    .nav-links { display: flex; align-items: center; gap: 25px; color: #464a52; font-size: .82rem; font-weight: 750; }
+    .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--blue); }
+    .nav-cta { padding: 10px 16px; border: 1px solid var(--line); border-radius: 999px; font-size: .8rem; font-weight: 850; }
+    .menu-toggle { display: none; padding: 9px 12px; border: 1px solid var(--line); border-radius: 10px; background: #fff; font-weight: 800; cursor: pointer; }
+    .article-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 42px 0 56px;
+      background-image: linear-gradient(rgba(16, 17, 20, .026) 1px, transparent 1px), linear-gradient(90deg, rgba(16, 17, 20, .026) 1px, transparent 1px);
+      background-size: 48px 48px;
+      background-position: center top;
+    }
+    .breadcrumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; color: var(--muted); font-size: .77rem; font-weight: 600; }
+    .breadcrumbs a:hover { color: var(--blue); }
+    .breadcrumbs span[aria-hidden="true"] { color: #a4a8b0; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(300px, .92fr); align-items: center; gap: clamp(36px, 6vw, 76px); padding-top: 43px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--blue); font-size: .75rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .eyebrow::before { width: 20px; height: 2px; background: currentColor; content: ""; }
+    .hero-copy h1 { margin: 16px 0 17px; font-size: clamp(2.55rem, 5.2vw, 4.5rem); font-weight: 900; line-height: .99; letter-spacing: -.08em; }
+    .hero-copy > p { max-width: 660px; margin: 0; color: #555b66; font-size: 1.02rem; line-height: 1.8; }
+    .byline { display: flex; flex-wrap: wrap; gap: 8px 14px; margin-top: 20px; color: #626873; font-size: .78rem; font-weight: 650; }
+    .byline a { color: var(--blue); }
+    .hero-art { display: grid; min-height: 340px; place-items: center; }
+    .search-card { width: min(100%, 430px); padding: 19px; border-radius: 24px; color: #fff; background: #101114; box-shadow: 0 28px 60px rgba(10, 12, 20, .18); }
+    .search-card-top { display: flex; align-items: center; justify-content: space-between; padding: 0 2px 16px; color: #d7d9de; font-size: .66rem; font-weight: 750; letter-spacing: .08em; }
+    .search-dots { display: flex; gap: 5px; }
+    .search-dots span { width: 6px; height: 6px; border-radius: 50%; background: #696b72; }
+    .metric-row { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+    .metric { padding: 14px; border-radius: 14px; color: #24262d; background: #fff; }
+    .metric span { display: block; color: #70747d; font-size: .65rem; font-weight: 700; }
+    .metric strong { display: block; margin-top: 2px; font-family: "Inter", sans-serif; font-size: 1.65rem; letter-spacing: -.06em; }
+    .metric.impressions strong { color: var(--blue); }
+    .metric.clicks strong { color: #c25155; }
+    .chart-label { display: flex; justify-content: space-between; margin: 16px 2px 5px; color: #aeb1b9; font-size: .62rem; }
+    .chart { display: block; width: 100%; height: 92px; }
+    .chart-line { fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .chart-line.impressions { stroke: #7692ff; }
+    .chart-line.clicks { stroke: #f29b9e; }
+    .article-layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); align-items: start; gap: clamp(34px, 6vw, 78px); padding-top: 56px; padding-bottom: 90px; }
+    .toc { position: sticky; top: 105px; padding: 20px 17px; border: 1px solid var(--line); border-radius: 14px; background: var(--soft); }
+    .toc h2 { margin: 0 0 12px; font-family: "Raleway", sans-serif; font-size: .78rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+    .toc ol { display: grid; gap: 9px; margin: 0; padding: 0; list-style: none; }
+    .toc a { color: #555b66; font-size: .74rem; font-weight: 600; line-height: 1.45; }
+    .toc a:hover { color: var(--blue); }
+    .article-content { min-width: 0; }
+    .article-content > p:first-child { margin-top: 0; }
+    .article-content p, .article-content li { color: #454a53; font-size: .97rem; }
+    .article-content p { margin: 0 0 18px; }
+    .article-content h2 { margin: 52px 0 15px; font-size: clamp(1.55rem, 3vw, 2.1rem); font-weight: 800; line-height: 1.2; letter-spacing: -.05em; scroll-margin-top: 100px; }
+    .article-content h2:first-child { margin-top: 0; }
+    .article-content h3 { margin: 27px 0 8px; font-size: 1.1rem; font-weight: 750; line-height: 1.3; letter-spacing: -.025em; scroll-margin-top: 100px; }
+    .article-content a:not(.button) { color: var(--blue); text-decoration: underline; text-decoration-color: rgba(36, 81, 230, .35); text-underline-offset: 3px; }
+    .article-content a:not(.button):hover { text-decoration-color: currentColor; }
+    .article-content strong { color: var(--ink); }
+    .article-content ul, .article-content ol { display: grid; gap: 10px; margin: 12px 0 22px; padding-left: 22px; }
+    .article-content li { padding-left: 3px; }
+    .callout { margin: 22px 0; padding: 18px 20px; border-left: 3px solid var(--blue); border-radius: 0 12px 12px 0; background: #f2f5ff; }
+    .callout p { margin: 0; }
+    .example-box { margin: 18px 0 22px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--soft); }
+    .example-box p { margin: 0; }
+    .example-box p + p { margin-top: 12px; }
+    .example-label { display: inline-block; margin-bottom: 5px; color: #777b83; font-size: .66rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
+    .data-table-wrap { overflow-x: auto; margin: 20px 0 22px; border: 1px solid var(--line); border-radius: 12px; }
+    .data-table { width: 100%; min-width: 590px; border-collapse: collapse; background: #fff; font-size: .81rem; }
+    .data-table th, .data-table td { padding: 12px 14px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    .data-table th { color: #fff; background: #17171b; font-family: "Inter", sans-serif; font-size: .73rem; font-weight: 750; }
+    .data-table td { color: #4a4e57; }
+    .data-table td:first-child { color: var(--ink); font-weight: 750; }
+    .data-table tr:last-child td { border-bottom: 0; }
+    .faq-list { display: grid; gap: 10px; margin: 12px 0 22px; }
+    .faq-list details { padding: 14px 17px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+    .faq-list summary { color: var(--ink); font-size: .91rem; font-weight: 750; cursor: pointer; }
+    .faq-list details p { margin: 10px 0 0; font-size: .9rem; }
+    .checklist { display: grid; gap: 9px; margin: 18px 0 12px; }
+    .checklist label { display: flex; align-items: flex-start; gap: 11px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 11px; color: #454a53; background: #fff; font-size: .89rem; cursor: pointer; }
+    .checklist label:has(input:checked) { border-color: #c6d1ff; color: #666d7a; background: #f4f6ff; }
+    .checklist input { width: 18px; height: 18px; flex: 0 0 18px; margin: 1px 0 0; accent-color: var(--blue); cursor: pointer; }
+    .checklist label:has(input:checked) span { text-decoration: line-through; text-decoration-color: #a5aab5; }
+    .checklist-progress { margin: 0 0 8px !important; color: #626873 !important; font-size: .75rem !important; font-weight: 700; }
+    .checklist-note { margin: 0 0 22px !important; color: #777b83 !important; font-size: .76rem !important; }
+    .cta-panel { margin: 42px 0; padding: clamp(24px, 5vw, 38px); border-radius: 20px; color: #fff; background: #101114; }
+    .cta-panel .eyebrow { color: #a9bcff; }
+    .cta-panel h2 { margin: 12px 0 10px; color: #fff; font-size: clamp(1.55rem, 3vw, 2.2rem); }
+    .cta-panel p { max-width: 650px; color: #dedfe4; }
+    .button { display: inline-flex; min-height: 46px; align-items: center; justify-content: center; gap: 10px; padding: 0 18px; border-radius: 999px; color: #17171b; background: #fff; font-size: .82rem; font-weight: 800; transition: transform .2s ease, background .2s ease; }
+    .button:hover { transform: translateY(-2px); background: #e9edff; }
+    .site-footer, .site-footer * { font-family: "Inter", sans-serif; }
+    .site-footer { padding: 58px 0 20px; color: #fff; background: #0b0b0d; font-size: 16px; }
+    .footer-grid { display: grid; grid-template-columns: minmax(220px, 1.7fr) repeat(4, minmax(0, 1fr)); gap: clamp(24px, 4vw, 56px); padding-bottom: 48px; }
+    .footer-brand .brand { display: inline-flex; margin-bottom: 16px; }
+    .footer-brand .site-logo { width: 112px; filter: none; }
+    .footer-brand p { max-width: 290px; margin: 0; color: #fff; font-size: .9rem; line-height: 1.75; }
+    .footer-column h2 { margin: 5px 0 16px; color: #fff; font-size: .88rem; font-weight: 850; letter-spacing: .04em; text-transform: uppercase; }
+    .footer-column ul { display: grid; gap: 11px; margin: 0; padding: 0; list-style: none; }
+    .footer-column li, .footer-column a { color: #d3d4d8; font-size: .84rem; line-height: 1.5; }
+    .footer-column a:hover { color: #fff; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding-top: 18px; border-top: 1px solid #29292d; color: #c9cacf; font-size: .76rem; }
+    .footer-bottom p { margin: 0; }
+    @media (max-width: 800px) {
+      .container { width: min(100% - 36px, var(--content)); }
+      .nav { min-height: 66px; }
+      .site-header .nav { width: min(100% - 36px, 1120px); }
+      .menu-toggle { display: inline-flex; }
+      .nav-cta { display: none; }
+      .nav-links { position: absolute; top: 65px; right: 18px; left: 18px; display: none; align-items: stretch; gap: 0; padding: 8px 16px; border: 1px solid var(--line); border-radius: 16px; background: #fff; box-shadow: 0 18px 35px rgba(16, 17, 20, .1); }
+      .nav-links.is-open { display: flex; flex-direction: column; }
+      .nav-links a { padding: 12px 2px; border-bottom: 1px solid var(--line); }
+      .nav-links a:last-child { border-bottom: 0; }
+      .hero-grid { grid-template-columns: 1fr; gap: 18px; padding-top: 32px; }
+      .hero-art { min-height: 285px; }
+      .article-layout { grid-template-columns: 1fr; gap: 22px; padding-top: 36px; padding-bottom: 65px; }
+      .toc { position: static; }
+      .toc ol { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 15px; }
+      .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 22px; padding-bottom: 34px; }
+      .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 520px) {
+      .container { width: min(100% - 32px, var(--content)); }
+      .site-header .nav { width: min(100% - 32px, 1120px); }
+      .article-hero { padding: 30px 0 38px; }
+      .hero-grid { padding-top: 27px; }
+      .hero-copy h1 { font-size: clamp(2.4rem, 12vw, 3.35rem); }
+      .hero-art { min-height: 255px; }
+      .toc ol { grid-template-columns: 1fr; }
+      .article-content p, .article-content li { font-size: .92rem; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-brand { grid-column: auto; }
+      .footer-bottom { align-items: flex-start; flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    }
+      .site-header { position: sticky; z-index: 20; top: 0; border-bottom: 1px solid rgba(232,233,236,.85); background: rgba(255,255,255,.94); backdrop-filter: blur(16px); }
+    .site-header .nav { width: min(1120px,calc(100% - 48px)); min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .site-header .brand { display: inline-flex; align-items: center; }
+    .site-header .site-logo { display: block; width: 78px; height: auto; filter: brightness(0); }
+    .site-header .nav-links { display: flex; align-items: center; gap: 25px; color: #464a52; font-size: .82rem; font-weight: 750; }
+    .site-header .nav-links a:hover, .site-header .nav-links a[aria-current="page"] { color: var(--blue); }
+    .site-header .nav-cta { padding: 10px 16px; border: 1px solid var(--line); border-radius: 999px; font-size: .8rem; font-weight: 850; }
+    .site-header .menu-toggle { display: none; padding: 9px 12px; border: 1px solid var(--line); border-radius: 10px; background: #fff; font-weight: 800; cursor: pointer; }
+    .site-footer, .site-footer * { font-family: Arial, sans-serif; }
+    .site-footer { padding: 58px 0 20px; color: #fff; background: #0b0b0d; font-size: 16px; font-weight: 400; }
+    .site-footer .footer-grid { display: grid; grid-template-columns: minmax(220px,1.7fr) repeat(4,minmax(0,1fr)); gap: clamp(24px,4vw,56px); padding-bottom: 48px; }
+    .site-footer .footer-brand .brand { display: inline-flex; margin-bottom: 16px; color: #fff; }
+    .site-footer .footer-brand .site-logo { width: 112px; }
+    .site-footer .footer-brand p { max-width: 290px; margin: 0; color: #fff; font-size: 16px; line-height: 1.75; }
+    .site-footer .footer-socials { display: flex; align-items: center; gap: 22px; margin-top: 20px; }
+    .site-footer .footer-socials a, .site-footer .footer-socials span { display: grid; width: 22px; height: 22px; place-items: center; color: #fff; }
+    .site-footer .footer-socials a { transition: color .2s ease, transform .2s ease; }
+    .site-footer .footer-socials a:hover { transform: translateY(-2px); color: #fff; }
+    .site-footer .footer-socials svg { width: 20px; height: 20px; fill: none; }
+    .site-footer .footer-socials .facebook-icon, .site-footer .footer-socials a:nth-child(3) svg { fill: currentColor; }
+    .site-footer .footer-column h2 { margin: 5px 0 16px; color: #fff; font-size: 16px; font-weight: 850; letter-spacing: .04em; text-transform: uppercase; }
+    .site-footer .footer-column ul { display: grid; gap: 11px; margin: 0; padding: 0; list-style: none; }
+    .site-footer .footer-column li, .site-footer .footer-column a { color: #fff; font-size: 16px; line-height: 1.5; }
+    .site-footer .footer-column a, .site-footer .footer-top-link { transition: color .18s ease; }
+    .site-footer .footer-column a:hover, .site-footer .footer-top-link:hover { color: var(--blue); }
+    .site-footer .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 18px; border-top: 1px solid #292a30; color: #fff; font-size: 15px; }
+    .site-footer .footer-bottom p { margin: 0; }
+    .site-footer .footer-top-link { color: #fff; }
+    @media (max-width: 980px) {
+      .site-footer .footer-grid { grid-template-columns: repeat(4,minmax(0,1fr)); }
+      .site-footer .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 720px) {
+      .site-header .nav { width: min(100% - 36px,1120px); min-height: 66px; position: relative; }
+      .site-header .menu-toggle { display: inline-flex; }
+      .site-header .nav-cta { display: none; }
+      .site-header .nav-links { position: absolute; top: 65px; right: 0; left: 0; display: none; align-items: stretch; gap: 0; padding: 8px 16px; border: 1px solid var(--line); border-radius: 16px; background: #fff; box-shadow: 0 18px 35px rgba(16,17,20,.1); }
+      .site-header .nav-links.is-open { display: flex; flex-direction: column; }
+      .site-header .nav-links a { padding: 12px 2px; border-bottom: 1px solid var(--line); }
+      .site-header .nav-links a:last-child { border-bottom: 0; }
+      .site-footer .footer-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 30px 22px; padding-bottom: 34px; }
+      .site-footer .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 440px) {
+      .site-footer .footer-grid { grid-template-columns: 1fr; }
+      .site-footer .footer-bottom { align-items: flex-start; flex-direction: column; }
+    }
+      .site-header, .site-header * { font-family: Arial, sans-serif; }
+    .site-footer > .container { width: min(1120px,calc(100% - 48px)); margin-inline: auto; }
+    @media (max-width: 720px) { .site-footer > .container { width: min(100% - 36px,1120px); } }
+      .nav-dropdown { position: relative; }
+    .nav-dropdown-head { display: flex; align-items: center; gap: 3px; }
+    .nav-dropdown-toggle { display: grid; width: 23px; height: 30px; place-items: center; padding: 0; border: 0; color: inherit; background: transparent; cursor: pointer; }
+    .nav-dropdown-toggle svg { width: 12px; height: 12px; transition: transform .18s ease; }
+    .nav-dropdown:hover .nav-dropdown-toggle svg, .nav-dropdown.is-open .nav-dropdown-toggle svg { transform: rotate(180deg); }
+    .nav-dropdown::after { position: absolute; top: 100%; left: 0; width: 100%; height: 17px; content: ""; }
+    .nav-dropdown-menu { position: absolute; z-index: 22; top: calc(100% + 17px); left: -16px; display: none; width: 190px; overflow: hidden; padding: 6px; border: 1px solid var(--line); border-radius: 12px; color: var(--ink); background: #fff; box-shadow: 0 16px 36px rgba(16,17,20,.12); }
+    .nav-dropdown-menu a { display: block; padding: 12px; border-radius: 7px; color: var(--ink); font-size: .74rem; font-weight: 750; line-height: 1.4; transition: color .18s ease, background .18s ease; }
+    .nav-dropdown-menu a:hover, .nav-dropdown-menu a:focus-visible { color: var(--blue); background: #f1f4ff; }
+    .nav-dropdown:hover .nav-dropdown-menu, .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+    @media (max-width: 720px) {
+      .site-header .nav-dropdown { position: relative; width: 100%; }
+      .site-header .nav-dropdown::after { display: none; }
+      .site-header .nav-dropdown-head { min-height: 45px; }
+      .site-header .nav-dropdown-head > a { flex: 1; padding: 12px 2px; }
+      .site-header .nav-dropdown-toggle { width: 42px; height: 42px; border-bottom: 1px solid var(--line); }
+      .site-header .nav-dropdown-menu { position: static; width: 100%; margin-bottom: 8px; padding: 4px; border: 1px solid var(--line); border-radius: 10px; background: #fff; box-shadow: none; }
+      .site-header .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+      .site-header .nav-dropdown-menu a { padding: 12px; border-bottom: 0; color: var(--ink); }
+    }
+</style>
+  <link rel="stylesheet" href="../style.css">
+  <meta property="og:site_name" content="Safwan PP">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Google Impressions, No Clicks? 9 SEO Fixes | Safwan PP">
+  <meta name="twitter:description" content="Learn why your website gets Google impressions but few clicks, how to diagnose the cause in Search Console, and nine SEO fixes that can help.">
+</head>
+<body id="top">
+    <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="../#home" aria-label="Safwan PP home"><img class="site-logo" src="../home/safwan-logo.png" alt="Safwan" decoding="async" width="1408" height="727"></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="../#home">Home</a>
+        <a href="../about-me/">About</a>
+        <div class="nav-dropdown">
+  <div class="nav-dropdown-head">
+    <a href="../digital-marketing-services-kannur/">Services</a>
+    <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="service-submenu" aria-label="Show service links">
+      <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="m2 4.5 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+    </button>
+  </div>
+  <div class="nav-dropdown-menu" id="service-submenu">
+    <a href="../seo-services-kannur/">SEO Services</a>
+    <a href="../google-ads-services-kannur/">Google Ads</a>
+    <a href="../website-design-services-kannur/">Web Design</a>
+    <a href="../shopify-development-services-kannur/#home">Shopify Development</a>
+    <a href="../meta-ads-services-kannur/">Meta Ads</a>
+    <a href="../social-media-marketing-kannur/">Social Media Marketing</a>
+  </div>
+</div>
+        <a href="../blogs/">Blogs</a>
+        <a href="../contact/">Contact</a>
+      </div>
+      <a class="nav-cta" href="../contact/#contact">Let's talk <span aria-hidden="true">&#8599;</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="article-hero">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="../#home">Home</a><span aria-hidden="true">/</span>
+          <a href="../blogs/">Blogs</a><span aria-hidden="true">/</span>
+          <span aria-current="page">Impressions but no clicks</span>
+        </nav>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">SEO · Search Console</span>
+            <h1>Why Your Website Gets Impressions but No Clicks</h1>
+            <p>9 SEO fixes that actually matter, and how to work out which one applies before you change anything.</p>
+            <div class="byline"><span>By <a href="../about-me/#about">Safwan PP</a></span><span aria-hidden="true">·</span><span>SEO and Search Console guide</span></div>
+          </div>
+          <div class="hero-art" role="img" aria-label="Search Console chart illustration showing rising impressions and fewer clicks">
+            <div class="search-card">
+              <div class="search-card-top"><span>GOOGLE SEARCH PERFORMANCE</span><span class="search-dots" aria-hidden="true"><span></span><span></span><span></span></span></div>
+              <div class="metric-row">
+                <div class="metric impressions"><span>Impressions</span><strong>10,000</strong></div>
+                <div class="metric clicks"><span>Clicks</span><strong>40</strong></div>
+              </div>
+              <div class="chart-label"><span>Visibility is rising</span><span>Clicks stay flat</span></div>
+              <svg class="chart" viewBox="0 0 360 92" fill="none" aria-hidden="true">
+                <path d="M4 75H356M4 48H356M4 21H356" stroke="#292b31" stroke-dasharray="3 5"/>
+                <path class="chart-line impressions" d="M6 76C38 72 49 69 75 58S111 57 135 45 172 49 198 34 232 35 257 23 293 29 318 15 344 18 356 8"/>
+                <path class="chart-line clicks" d="M6 79C42 78 53 73 77 77S117 69 137 74 174 68 198 74 233 63 257 69 298 65 318 70 344 62 356 66"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container article-layout">
+      <aside class="toc" aria-label="In this guide">
+        <h2>In this guide</h2>
+        <ol>
+          <li><a href="#meaning">What "impressions but no clicks" means</a></li>
+          <li><a href="#why-no-clicks">Why impressions don't become clicks</a></li>
+          <li><a href="#nine-fixes">9 SEO fixes that can help</a></li>
+          <li><a href="#diagnose">Diagnose it in Search Console</a></li>
+          <li><a href="#example">Example: 10,000 impressions</a></li>
+          <li><a href="#intent">Don't chase CTR without intent</a></li>
+          <li><a href="#metrics">Impressions vs. clicks vs. rankings</a></li>
+          <li><a href="#not-a-problem">When low clicks are not a problem</a></li>
+          <li><a href="#improve-ctr">Improve CTR without clickbait</a></li>
+          <li><a href="#mistakes">Common mistakes</a></li>
+          <li><a href="#checklist">A simple checklist</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ol>
+      </aside>
+
+      <article class="article-content">
+        <p>You open Google Search Console, check the Performance report, and the impressions line is climbing. That should feel like good news. Then you look at the clicks line right next to it, and it barely moves. Your page is showing up in search results thousands of times a month, and almost nobody is visiting.</p>
+        <p>That gap is confusing, and it's one of the most common questions I get asked when I sit down with a business owner to go through their Search Console data for the first time. The page is technically "ranking," so why isn't it bringing traffic?</p>
+        <p>Here's the short answer: <strong>getting impressions means Google is showing your page for certain searches, but few clicks can point to several different things: a weak ranking position, a mismatch between what the searcher wants and what your page offers, an unclear title or snippet, strong competition in the search results, or even the fact that the impressions themselves are coming from low-value queries that were never going to convert.</strong></p>
+        <p>None of those problems get fixed by guessing. Before changing a title, rewriting a meta description, or adding more content, the first job is to actually look at what's happening. That means checking query by query and position by position, and figuring out which of these issues is actually at play on that specific page. That's the process this article walks through.</p>
+
+        <h2 id="meaning">What "impressions but no clicks" actually means</h2>
+        <p>An impression is counted in Search Console when your page appears somewhere in the search results for a query, and the searcher could have seen it, even if they scrolled straight past it. A click is counted when someone actually taps through to your website.</p>
+        <p>CTR (click-through rate) is simply clicks divided by impressions. If your page shows up 1,000 times and gets 10 clicks, that's a 1% CTR.</p>
+        <p>The part people often miss is that an impression doesn't mean someone seriously considered visiting your site. If your result appeared at position 47 for a query, it was technically shown, but almost nobody scrolls that far. If it appeared at position 4 but the query itself has nothing to do with your business, you were seen by the wrong audience entirely.</p>
+        <p>This is why average position and query-level data matter as much as the raw impression and click numbers. A page ranking at position 3 for a highly relevant search and getting no clicks is a very different problem than a page ranking at position 38 for a search that barely relates to what it offers.</p>
+        <div class="callout"><p>Picture a shop with a sign facing a busy road. Thousands of cars pass it every day. That's your impressions. But if the sign is too small to read from the road, advertises the wrong product, or the shop is set back so far that people can't tell if it's even open, most of those cars will keep driving. The traffic was there. The conditions for stopping weren't.</p></div>
+
+        <h2 id="why-no-clicks">Why your website can get impressions without getting clicks</h2>
+        <p>Before jumping into fixes, it helps to understand the different reasons this happens, because the right fix depends entirely on which one applies.</p>
+        <ul>
+          <li><strong>Low ranking position.</strong> Results below position 10, and especially below position 20, get seen far less often and clicked on even less. Being "in the index" and being visible enough to earn a click are two different things.</li>
+          <li><strong>Poor search-result presentation.</strong> Even a decently ranked page can get skipped if the title reads awkwardly, the description is vague, or the URL looks messy.</li>
+          <li><strong>Wrong search intent.</strong> If your service page shows up for someone looking for general information, or your blog post shows up for someone ready to buy, the searcher will usually keep scrolling because your result doesn't match what they had in mind.</li>
+          <li><strong>Irrelevant queries.</strong> Pages sometimes pick up impressions for search terms that are only loosely connected to the actual topic. These impressions inflate the total number without representing real opportunity.</li>
+          <li><strong>Weak titles and descriptions.</strong> A title that technically contains the keyword but reads like it was written for a search engine instead of a person rarely earns a click.</li>
+          <li><strong>Strong SERP competition.</strong> If five results above yours look more specific, more trustworthy, or more directly useful, your result has to work harder to stand out.</li>
+          <li><strong>Search features.</strong> Featured snippets, People Also Ask boxes, image packs, local map results, and AI-generated overviews can all push traditional organic results further down the page, or answer the question before the user even reaches your listing.</li>
+          <li><strong>Low-value impressions.</strong> Some impressions come from searches that were never going to convert into a visit or a customer in the first place, regardless of how well-optimized the page is.</li>
+        </ul>
+        <p>Once you know which of these is happening on a specific page, the next step is applying the right fix, not all nine at once, and not randomly.</p>
+
+        <h2 id="nine-fixes">9 SEO fixes that can help turn impressions into clicks</h2>
+        <h3>1. Check the queries behind your impressions</h3>
+        <p>Before touching anything on the page, open the Performance report in Search Console, filter by that specific page, and look at the Queries tab. This tells you exactly which searches are generating those impressions.</p>
+        <p>Look for patterns: Are most impressions coming from one or two dominant queries, or spread thinly across dozens of unrelated terms? What's the average position for each query? Is there a query with decent impressions and a reasonable position, but almost no clicks, a strong signal that the title or snippet is the weak link for that particular search?</p>
+        <p>This step is the foundation for everything else. Without it, any change you make to the page is a guess rather than a decision based on what Google is actually sending it traffic for.</p>
+
+        <h3>2. Check your average position before changing your content</h3>
+        <p>Position 2 and position 12 are not the same opportunity, even if both technically count as "ranking." Results near the top of page one get seen by far more people scrolling past, simply because that's where attention naturally lands first.</p>
+        <p>If a page is sitting around position 15 to 25 for its main query, the more urgent issue is usually ranking, not the title or snippet. Rewriting a title won't do much if barely anyone scrolls far enough to see it in the first place. On the other hand, if a page already ranks in the top 5 and still isn't getting clicks, the problem is more likely to be about how the result looks or whether it matches intent, not visibility.</p>
+        <p>Checking position first helps you avoid spending time polishing a snippet for a page that needs to move up several spots before the snippet even matters.</p>
+
+        <h3>3. Rewrite titles around search intent</h3>
+        <p>A title tag's job is to tell someone, in a few words, that this result answers their specific question or covers their specific need, better and more clearly than the other nine results on the page.</p>
+        <p>A common mistake is writing a title that includes the keyword but doesn't communicate anything specific. Here are a few realistic before-and-after examples:</p>
+        <div class="example-box">
+          <span class="example-label">Digital marketing services</span>
+          <p><strong>Before:</strong> "Digital Marketing Services | Company Name"</p>
+          <p><strong>After:</strong> "SEO, Google Ads &amp; Meta Ads for Kannur Businesses"</p>
+        </div>
+        <p>The second version tells the searcher exactly what's offered and where, instead of a generic phrase that could belong to any marketing company in any city.</p>
+        <div class="example-box">
+          <span class="example-label">SEO explainer</span>
+          <p><strong>Before:</strong> "Blog | How SEO Works"</p>
+          <p><strong>After:</strong> "How SEO Actually Works: A Simple Explanation for Business Owners"</p>
+        </div>
+        <p>This version signals who the content is written for, which helps the right searcher recognize it as relevant to them specifically.</p>
+        <div class="example-box">
+          <span class="example-label">Search impressions article</span>
+          <p><strong>Before:</strong> "Website Impressions No Clicks Fix"</p>
+          <p><strong>After:</strong> "Why You're Getting Impressions but No Clicks (And What to Check First)"</p>
+        </div>
+        <p>The second title reads like something a person wrote for another person, and it matches how someone would naturally phrase the problem when searching for it.</p>
+        <p>None of these guarantee a higher CTR, that depends on the query, the competition, and the searcher's mindset at that moment. But a specific, clear title gives a result a fair chance to be chosen over a vague one.</p>
+
+        <h3>4. Improve your search snippet</h3>
+        <p>The snippet is made up of the title, the meta description, and the URL as they appear together in the search results. All three work as a set.</p>
+        <p>It's worth knowing that Google doesn't always use the meta description you write. It sometimes pulls a different piece of text from the page if it decides that text answers the specific query more directly. Writing a strong meta description improves your odds of a good snippet, but it isn't a guarantee of exactly how the result will display.</p>
+        <p>A useful meta description tells the reader what they'll get from clicking, in plain language, without repeating the title word for word. If your page addresses a specific service area, a specific question, or a specific outcome, the description is the place to say so directly.</p>
+
+        <h3>5. Make sure the page matches what people actually want</h3>
+        <p>This is where search intent mismatch shows up, and it's more common than people expect.</p>
+        <p>Someone searching <em>"SEO agency in Kannur"</em> is very likely comparing providers and looking to hire someone. Someone searching <em>"how does SEO work"</em> is looking for an explanation, not a sales pitch. If a service page tries to rank for that second search, or a blog post tries to rank for the first one, the mismatch usually shows up as impressions with low clicks, the searcher glances at the result, senses it isn't quite what they were looking for, and moves on.</p>
+        <p>Checking which type of query is driving impressions to a given page (from Fix 1) tells you whether the page's format actually matches what the searcher wants. A service page can rank for informational searches too, but usually only if some of the informational need is addressed on the page itself, not by pretending the page is something it isn't.</p>
+
+        <h3>6. Stop targeting irrelevant queries</h3>
+        <p>Sometimes a page ends up appearing for search terms that only loosely connect to its actual subject, simply because Google found some topical overlap. These impressions can look like opportunity on paper, but they rarely convert into clicks because the searcher's real need isn't being met.</p>
+        <p>To deal with this, review the query list for the page, and separate queries that reflect genuine relevance from ones that are a stretch. For the relevant ones, look at whether your headings and content clearly speak to that topic. For the irrelevant ones, there often isn't much to "fix", trying to chase every loosely related search term usually dilutes the page's focus rather than strengthening it. It's often more productive to sharpen what the page is clearly about than to try to capture every tangential search.</p>
+
+        <h3>7. Look at the SERP before assuming your page is the problem</h3>
+        <p>Before deciding your page needs work, search the actual query manually and look at what's ranking above you. Are they blog posts, service pages, product listings, videos, local map results, or forum discussions?</p>
+        <p>The type of content that dominates a search result tells you a lot about what Google, and searchers, expect for that query. If the top results are mostly long-form guides and your page is a short service description, or if the top results are local map listings and yours is a text-only blog post, the format mismatch may be working against you regardless of how well the page itself is written.</p>
+        <p>This step also shows you what a strong result looks like in that specific SERP, sometimes the more useful takeaway is realizing the competition is offering something clearer or more specific, not that your page is broken.</p>
+
+        <h3>8. Improve the actual content, not just the title</h3>
+        <p>A better title can get more people to click, but if the page underneath doesn't deliver on what the title promised, that click doesn't lead anywhere good, for the visitor or for the business.</p>
+        <p>This is the part that's easy to skip because it takes more effort than editing a title tag. It usually means giving a clearer, more complete answer to the actual question behind the search, organizing the page so someone can scan it and find what they need quickly, adding original observations instead of restating generic points, updating anything that's outdated, and backing up claims with specifics instead of vague statements.</p>
+        <p>Longer content isn't automatically better content, a page that answers the question clearly in 600 words can outperform one that pads the same answer out to 2,000. What matters is whether the page genuinely satisfies the intent behind the search.</p>
+
+        <h3>9. Improve internal linking and page relevance</h3>
+        <p>Internal links help both users and search engines understand how your pages relate to each other. When done naturally, they also help a visitor go deeper into your site instead of leaving after one page.</p>
+        <p>For example, a visitor reading a blog post about SEO impressions and clicks might naturally be interested in a page explaining broader SEO services, or a related post about how AI is changing search. Linking between related pages, like an <a href="../seo-services-kannur/">SEO services page</a> linking to a blog post on <a href="../why-more-traffic-is-not-always-the-answer/">why more traffic isn't always the answer</a>, which links back to the services page, helps both the reader and the search engine understand that these topics are connected.</p>
+        <p>The key is that the links should genuinely help someone continue learning, not exist purely to check a box. If a link doesn't make sense in context, it's better left out.</p>
+
+        <h2 id="diagnose">How to diagnose it in Google Search Console</h2>
+        <p>Here's the process I actually follow when looking at a page like this:</p>
+        <ol>
+          <li>Open Performance → Search Results in Search Console.</li>
+          <li>Filter by the specific page you're investigating, then check the Queries tab.</li>
+          <li>Compare impressions and clicks for each query, not just the page total.</li>
+          <li>Check the average position for the queries with the most impressions.</li>
+          <li>Look at individual pages separately rather than only the site-wide totals, since averages can hide real problems on specific URLs.</li>
+          <li>Identify which specific queries are generating the bulk of the impressions.</li>
+          <li>Manually search those queries yourself, ideally in an incognito window to avoid personalization skewing the results.</li>
+          <li>Compare what you find in the SERP against what your page actually offers: same format, same intent, same level of detail?</li>
+          <li>Based on everything above, decide whether the core issue is ranking, relevance, CTR, search intent, content quality, or simply strong competition, and address that specific issue rather than making a general round of changes.</li>
+        </ol>
+
+        <h2 id="example">Example: 10,000 impressions, very few clicks</h2>
+        <p>Here's a hypothetical scenario, not a real case study, to show how this process plays out.</p>
+        <p>Imagine a page has 10,000 impressions over the past three months, 40 clicks, and an average position of 14. On the surface, that CTR looks alarmingly low. But pulling the query data shows something more specific: most of the impressions come from one broad query sitting around position 22, while a smaller, more targeted query is sitting at position 6 with a much healthier click rate.</p>
+        <div class="callout"><p>In this scenario, the low overall CTR isn't really a snippet problem, it's being dragged down by a high-volume query the page isn't ranking well enough for yet. The realistic next steps would be to strengthen the content's relevance for the smaller, better-performing query where the page is already close to page one, rather than trying to fix a snippet for a query where the page is barely visible in the first place. Position and content depth, not the title tag, would be the priority here.</p></div>
+        <p>A different page with the same 10,000 impressions but an average position of 4 would point toward a completely different diagnosis, likely a snippet or intent issue rather than a ranking one.</p>
+
+        <h2 id="intent">Don't chase CTR without understanding search intent</h2>
+        <p>It's tempting to treat CTR as the metric to optimize above everything else. But a click earned through an exaggerated title, a promise the page doesn't keep, or a description that oversells what's actually there, usually does more harm than good. The visitor lands, realizes the page doesn't match what they expected, and leaves, sometimes within seconds.</p>
+        <p>A relevant click, from someone whose need genuinely matches your page, is worth more than several random clicks from people who were never a good fit. Search engines also tend to notice when visitors bounce back to the results quickly, which can work against a page over time. Setting accurate expectations in the title and description isn't just an ethical choice. It's a practical one.</p>
+
+        <h2 id="metrics">Impressions vs. clicks vs. rankings</h2>
+        <p>No single metric tells the full story on its own. Here's what each one does and doesn't tell you:</p>
+        <div class="data-table-wrap">
+          <table class="data-table">
+            <thead><tr><th>Metric</th><th>What it tells you</th><th>What it doesn't tell you</th></tr></thead>
+            <tbody>
+              <tr><td>Impressions</td><td>Google is showing your page for certain searches</td><td>Whether those searches are relevant or valuable</td></tr>
+              <tr><td>Clicks</td><td>People are choosing to visit from the search result</td><td>Whether they stayed, engaged, or converted</td></tr>
+              <tr><td>CTR</td><td>How compelling your result is relative to its position</td><td>Whether the traffic matches your business goals</td></tr>
+              <tr><td>Average position</td><td>How competitively your page ranks for a given query</td><td>Whether that query is worth ranking for</td></tr>
+              <tr><td>Conversions</td><td>Whether visitors took a meaningful action</td><td>Where in the funnel the drop-off is happening</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>A page can have excellent CTR and still bring in the wrong audience. A page can rank at position 1 and still not generate a single lead if the query itself has no commercial intent. Looking at the full picture together is what actually informs a decision.</p>
+
+        <h2 id="not-a-problem">When low clicks are not actually a problem</h2>
+        <p>Not every low-CTR page is broken, and it's worth saying that plainly.</p>
+        <p>Some queries have very low search volume to begin with, so a handful of impressions with zero clicks isn't statistically meaningful. Purely informational searches sometimes get answered directly in the search results through a featured snippet or an AI overview, meaning the searcher gets what they needed without ever clicking through, which isn't necessarily a failure on your end. Impressions from branded searches (people searching your business name directly) often behave differently from non-branded ones, since brand visibility itself has value beyond the click. And a page sitting at position 40 with low clicks isn't a CTR problem at all, it's simply not visible enough yet for CTR to be the relevant lever.</p>
+        <p>Before treating a low-CTR page as urgent, it's worth checking whether the volume, position, and query type actually make it worth prioritizing.</p>
+
+        <h2 id="improve-ctr">How to improve organic CTR without clickbait</h2>
+        <p>A few practical, sustainable habits help here: make titles specific rather than generic, so the searcher immediately understands what makes this result different from the nine others on the page. Match the format and depth of the page to what the query actually calls for. State the real benefit clearly instead of implying something bigger than what's delivered. Keep meta descriptions accurate to what's actually on the page. Avoid absolute claims or exaggerated promises that the content can't back up. Focus on relevance to the specific query rather than trying to appeal to as many searches as possible. And take the time to understand what the SERP already looks like before assuming you know what will stand out in it.</p>
+
+        <h2 id="mistakes">Common mistakes when trying to get more clicks</h2>
+        <ol>
+          <li>Stuffing keywords into titles in a way that reads unnaturally.</li>
+          <li>Using clickbait phrasing that doesn't match the actual content.</li>
+          <li>Changing titles every few days without giving Google time to reflect the change, or measuring any real impact.</li>
+          <li>Ignoring ranking position and focusing only on the snippet.</li>
+          <li>Ignoring search intent and optimizing purely around keyword presence.</li>
+          <li>Looking only at site-wide CTR instead of page- and query-level data.</li>
+          <li>Focusing on impressions as a success metric on their own.</li>
+          <li>Creating unnecessary new pages instead of strengthening existing ones.</li>
+          <li>Copying competitor titles almost word for word.</li>
+          <li>Making changes without tracking whether they actually moved the numbers afterward.</li>
+        </ol>
+
+        <h2 id="checklist">A simple checklist</h2>
+        <p>Save this and work through it page by page. Checks are just for you, nothing is sent anywhere, and it resets if you clear your browser data.</p>
+        <div class="checklist" aria-label="SEO diagnosis checklist">
+          <label><input type="checkbox" data-checklist-item="queries"><span>Check which queries are driving impressions</span></label>
+          <label><input type="checkbox" data-checklist-item="position"><span>Check the average position for those queries</span></label>
+          <label><input type="checkbox" data-checklist-item="query-ctr"><span>Check the CTR at the query level, not just page level</span></label>
+          <label><input type="checkbox" data-checklist-item="intent"><span>Confirm the search intent behind the top queries</span></label>
+          <label><input type="checkbox" data-checklist-item="title"><span>Review the title for clarity and specificity</span></label>
+          <label><input type="checkbox" data-checklist-item="description"><span>Review the meta description for accuracy</span></label>
+          <label><input type="checkbox" data-checklist-item="serp"><span>Search the query manually and study the SERP</span></label>
+          <label><input type="checkbox" data-checklist-item="format"><span>Check whether the page format matches what's ranking</span></label>
+          <label><input type="checkbox" data-checklist-item="content"><span>Improve the actual content, not just the title</span></label>
+          <label><input type="checkbox" data-checklist-item="links"><span>Strengthen relevant internal links</span></label>
+          <label><input type="checkbox" data-checklist-item="measure"><span>Give the change time, then measure the result</span></label>
+        </div>
+        <p class="checklist-progress" aria-live="polite"></p>
+        <p class="checklist-note">Your checklist is saved only in this browser on this device. Nothing is sent to a server.</p>
+
+        <h2 id="faq">Frequently asked questions</h2>
+        <div class="faq-list">
+          <details>
+            <summary>Why am I getting impressions but no clicks?</summary>
+            <p>It usually comes down to one or more of these: low ranking position, a title or description that doesn't stand out, a mismatch between what the page offers and what the searcher wants, strong competition in that particular search result, or impressions coming from low-value or loosely related queries. Checking query-level data in Search Console is the fastest way to narrow down which one applies to your page.</p>
+          </details>
+          <details>
+            <summary>Is a low CTR always bad for SEO?</summary>
+            <p>Not always. A low CTR on a page ranking at position 30 isn't unusual, since very few people scroll that far. A low CTR on a page ranking at position 3 is more worth investigating. Context (mainly position and query intent) matters more than the raw CTR number by itself.</p>
+          </details>
+          <details>
+            <summary>How do I increase clicks from Google Search?</summary>
+            <p>Start by understanding which queries and positions are involved, then work on the specific issue that applies, whether that's improving ranking through better content and relevance, rewriting the title and description to be clearer, or better matching the page to search intent. There's no single universal fix that works for every page.</p>
+          </details>
+          <details>
+            <summary>What is a good CTR for SEO?</summary>
+            <p>This depends heavily on ranking position, query type, and whether search features like featured snippets are present on that result. A "good" CTR at position 1 looks very different from a "good" CTR at position 8, so there isn't one number that applies everywhere.</p>
+          </details>
+          <details>
+            <summary>Why is my page getting impressions for irrelevant keywords?</summary>
+            <p>Google sometimes finds partial topical overlap between your content and a search query, even when the match isn't strong. Reviewing your query list and focusing your page more clearly around its core topic can help reduce this over time, though some irrelevant impressions are normal and not worth chasing.</p>
+          </details>
+          <details>
+            <summary>Should I change my title if my CTR is low?</summary>
+            <p>Only after checking the ranking position and query intent first. If the page ranks poorly, a new title likely won't move much. If it ranks well but still underperforms on clicks, the title and description are a reasonable place to start.</p>
+          </details>
+          <details>
+            <summary>Does average position affect clicks?</summary>
+            <p>Yes, significantly. Results near the top of page one are seen and clicked far more often than results further down, simply because of where attention naturally goes when scanning a results page.</p>
+          </details>
+          <details>
+            <summary>Can Google rewrite my meta description?</summary>
+            <p>Yes. Google sometimes generates its own snippet text from the page content if it decides that better answers the specific query. Writing a clear, accurate meta description improves your chances of it being used, but isn't guaranteed to appear exactly as written every time.</p>
+          </details>
+          <details>
+            <summary>How often should I check Search Console?</summary>
+            <p>Checking in every few weeks is usually enough to catch meaningful trends without reacting to short-term noise. SEO changes take time to show their full effect, so daily checking often leads to premature conclusions.</p>
+          </details>
+          <details>
+            <summary>Can improving CTR increase rankings?</summary>
+            <p>This is debated, and there's no confirmed guarantee that CTR directly influences rankings. What's clearer is that a better CTR brings more visitors to a page that's already ranking, which is valuable on its own regardless of any indirect ranking effect.</p>
+          </details>
+        </div>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>Impressions are evidence that your page is visible, they're not evidence that it's working. Getting from "Google shows this page" to "people actually visit and get value from it" means understanding why the page is appearing for the queries it's appearing for, whether those queries match what the page delivers, where it sits in the rankings, how the result looks next to its competition, and whether the resulting traffic actually supports what the business needs.</p>
+        <p>If you're staring at a Search Console report right now wondering why the impressions keep climbing while the clicks stay flat, the most useful next step isn't to rewrite the title and hope. It's to open the Queries tab for that page, go through it one query at a time, and use the actual data to figure out which of the issues covered here applies to your situation. That's the same process I go through with any website before touching a single line of copy, and it's usually where the real answer turns up.</p>
+        <p>Written by Safwan PP, a digital marketing strategist based in Kannur who works through Search Console data like this for client websites.</p>
+
+        <section class="cta-panel" aria-labelledby="cta-heading">
+          <span class="eyebrow">Make your search traffic count</span>
+          <h2 id="cta-heading">Find out what's holding your pages back</h2>
+          <p>Get practical SEO support based on your search data, your audience, and the goals of your business.</p>
+          <a class="button" href="../contact/">Book a free strategy call <span aria-hidden="true">↗</span></a>
+          <p><a class="button" href="../seo-services-kannur/">Explore SEO services <span aria-hidden="true">→</span></a></p>
+          <p><a href="../#home">ppsafwan.com</a> · <a href="../about-me/#about">About</a> · <a href="../blogs/#articles">More articles</a></p>
+          <p><a href="https://www.instagram.com/thesafwaaan?gwpx=MThjNHVwd3FxYTdseg%3D%3D&utm_source=qr">Instagram</a> · <a href="https://www.linkedin.com/in/safwan-ibn-ibrahim-87a281396?utm_source=share_via&utm_content=profile&utm_medium=member_ios">LinkedIn</a> · <a href="https://wa.me/+919895325388">WhatsApp</a></p>
+        </section>
+      </article>
+    </div>
+  </main>
+
+    <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="../#home" aria-label="Safwan PP home"><img class="site-logo" src="../home/safwan-logo.png" alt="Safwan" decoding="async" width="1408" height="727"></a>
+          <p>Freelance digital marketing strategist helping businesses grow with SEO, ads, social media marketing, web design and Shopify development.</p>
+          <div class="footer-socials" aria-label="Social media">
+            <a href="https://www.instagram.com/thesafwaaan?gwpx=MThjNHVwd3FxYTdseg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg>
+            </a>
+            <span role="img" aria-label="Facebook">
+              <svg class="facebook-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.4 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.3H7.6V13h2.7v8h3.1Z"></path></svg>
+            </span>
+            <a href="https://www.linkedin.com/in/safwan-ibn-ibrahim-87a281396" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 8.5H2.1V22h3.1V8.5ZM3.65 2A1.8 1.8 0 1 0 3.7 5.6 1.8 1.8 0 0 0 3.65 2ZM22 14.3c0-4.1-2.2-6-5.1-6-2.4 0-3.5 1.3-4.1 2.2V8.5H9.7V22h3.1v-6.7c0-1.8.3-3.6 2.6-3.6s2.3 2.1 2.3 3.7V22H22v-7.7Z"></path></svg>
+            </a>
+          </div>
+        </div>
+        <nav class="footer-column" aria-label="Explore">
+          <h2>Explore</h2>
+          <ul>
+            <li><a href="../#home">Home</a></li>
+            <li><a href="../about-me/#about">About</a></li>
+            <li><a href="../digital-marketing-services-kannur/#services">Services</a></li>
+            <li><a href="../blogs/#articles">Blogs</a></li>
+            <li><a href="../contact/#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-column" aria-label="Services">
+          <h2>Services</h2>
+          <ul>
+            <li><a href="../seo-services-kannur/">SEO Services</a></li>
+            <li><a href="../social-media-marketing-kannur/">Social Media Marketing</a></li>
+            <li><a href="../meta-ads-services-kannur/">Meta Ads</a></li>
+            <li><a href="../google-ads-services-kannur/">Google Ads</a></li>
+            <li><a href="../website-design-services-kannur/">Web Design</a></li>
+            <li><a href="../shopify-development-services-kannur/#home">Shopify Development</a></li>
+          </ul>
+        </nav>
+        <div class="footer-column">
+          <h2>Locations</h2>
+          <ul>
+            <li><a href="../#home">Kerala, India</a></li>
+            <li><a href="../digital-marketing-strategist-dubai/#home">Dubai, UAE</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h2>Get in touch</h2>
+          <ul>
+            <li><a href="tel:+919895325388">+91 98953 25388</a></li>
+            <li><a href="mailto:ppsafwan263@gmail.com">ppsafwan263@gmail.com</a></li>
+            <li><a href="https://wa.me/919895325388" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright &copy; 2026 &middot; Safwan PP. All rights reserved.</p>
+        <a class="footer-top-link" href="#">Back to top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector("#nav-links");
+    menuToggle.addEventListener("click", () => {
+      const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", String(!isOpen));
+      navLinks.classList.toggle("is-open", !isOpen);
+    });
+
+    const checklistKey = "seo-impressions-checklist-v1";
+    const checklistItems = [...document.querySelectorAll("[data-checklist-item]")];
+    const checklistProgress = document.querySelector(".checklist-progress");
+    const savedChecklist = JSON.parse(localStorage.getItem(checklistKey) || "{}");
+    const updateChecklist = () => {
+      const completed = checklistItems.filter(item => item.checked).length;
+      checklistProgress.textContent = `${completed} of ${checklistItems.length} checks complete`;
+    };
+
+    checklistItems.forEach(item => {
+      item.checked = savedChecklist[item.dataset.checklistItem] === true;
+      item.addEventListener("change", () => {
+        const state = Object.fromEntries(checklistItems.map(check => [check.dataset.checklistItem, check.checked]));
+        localStorage.setItem(checklistKey, JSON.stringify(state));
+        updateChecklist();
+      });
+    });
+    updateChecklist();
+  </script>
+  <script>
+    (() => {
+      const dropdown = document.querySelector(".nav-dropdown");
+      const toggle = dropdown.querySelector(".nav-dropdown-toggle");
+      const nav = document.querySelector(".nav-links");
+      const menuButton = document.querySelector(".menu-toggle");
+      const setOpen = (isOpen) => {
+        toggle.setAttribute("aria-expanded", String(isOpen));
+        dropdown.classList.toggle("is-open", isOpen);
+      };
+
+      toggle.addEventListener("click", () => {
+        setOpen(toggle.getAttribute("aria-expanded") !== "true");
+      });
+      dropdown.addEventListener("pointerenter", (event) => {
+        if (event.pointerType === "mouse") setOpen(true);
+      });
+      dropdown.addEventListener("pointerleave", () => {
+        if (!dropdown.contains(document.activeElement)) setOpen(false);
+      });
+      dropdown.addEventListener("focusin", () => setOpen(true));
+      dropdown.addEventListener("focusout", (event) => {
+        if (!dropdown.contains(event.relatedTarget)) setOpen(false);
+      });
+      dropdown.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          setOpen(false);
+          toggle.focus();
+        }
+      });
+      nav.addEventListener("click", (event) => {
+        if (event.target.closest("a")) setOpen(false);
+      });
+      menuButton.addEventListener("click", () => setOpen(false));
+    })();
+  </script>
+</body>
+</html>

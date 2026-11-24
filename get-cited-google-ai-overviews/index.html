@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Google now shows AI Overview source links higher and more often. Learn five practical ways to improve your chances of being cited.">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Get Cited in Google AI Overviews: 5 Practical Tips | Safwan PP">
+  <meta property="og:description" content="Five practical ways to help your business become a cited source in Google AI Overviews and AI Mode.">
+  <meta property="og:url" content="https://ppsafwan.com/get-cited-google-ai-overviews/">
+  <title>Get Cited in Google AI Overviews: 5 Practical Tips | Safwan PP</title>
+  <link rel="canonical" href="https://ppsafwan.com/get-cited-google-ai-overviews/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #101114;
+      --muted: #656a73;
+      --blue: #2451e6;
+      --line: #e8e9ec;
+      --paper: #fff;
+      --soft: #f7f8fb;
+      --content: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: "Raleway", sans-serif; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    h1, h2, h3 { font-family: "Inter", sans-serif; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    img, svg { max-width: 100%; }
+    .container { width: min(var(--content), calc(100% - 48px)); margin-inline: auto; }
+    .site-header { position: sticky; z-index: 20; top: 0; border-bottom: 1px solid rgba(232, 233, 236, .85); background: rgba(255, 255, 255, .94); backdrop-filter: blur(16px); }
+    .nav { min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; }
+    .site-logo { display: block; width: 78px; height: auto; filter: brightness(0); }
+    .nav-links { display: flex; align-items: center; gap: 25px; color: #464a52; font-size: .82rem; font-weight: 750; }
+    .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--blue); }
+    .nav-cta { padding: 10px 16px; border: 1px solid var(--line); border-radius: 999px; font-size: .8rem; font-weight: 850; }
+    .menu-toggle { display: none; padding: 9px 12px; border: 1px solid var(--line); border-radius: 10px; background: #fff; font-weight: 800; cursor: pointer; }
+    .article-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 42px 0 56px;
+      background-image: linear-gradient(rgba(16, 17, 20, .026) 1px, transparent 1px), linear-gradient(90deg, rgba(16, 17, 20, .026) 1px, transparent 1px);
+      background-size: 48px 48px;
+      background-position: center top;
+    }
+    .breadcrumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; color: var(--muted); font-size: .77rem; font-weight: 600; }
+    .breadcrumbs a:hover { color: var(--blue); }
+    .breadcrumbs span[aria-hidden="true"] { color: #a4a8b0; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(300px, .92fr); align-items: center; gap: clamp(36px, 6vw, 76px); padding-top: 43px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--blue); font-size: .75rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .eyebrow::before { width: 20px; height: 2px; background: currentColor; content: ""; }
+    .hero-copy h1 { margin: 16px 0 17px; font-size: clamp(2.55rem, 5.2vw, 4.5rem); font-weight: 900; line-height: .99; letter-spacing: -.08em; }
+    .hero-copy > p { max-width: 660px; margin: 0; color: #555b66; font-size: 1.02rem; line-height: 1.8; }
+    .byline { display: flex; flex-wrap: wrap; gap: 8px 14px; margin-top: 20px; color: #626873; font-size: .78rem; font-weight: 650; }
+    .byline a { color: var(--blue); }
+    .hero-art { display: grid; min-height: 340px; place-items: center; }
+    .overview-card { width: min(100%, 430px); padding: 18px; border-radius: 24px; color: #fff; background: #101114; box-shadow: 0 28px 60px rgba(10, 12, 20, .18); }
+    .overview-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 1px 2px 14px; color: #d7d9de; font-size: .67rem; font-weight: 700; }
+    .overview-dots { display: flex; gap: 5px; }
+    .overview-dots span { width: 6px; height: 6px; border-radius: 50%; background: #696b72; }
+    .overview-answer { padding: 16px; border-radius: 16px; color: #30323a; background: #fff; font-size: .82rem; line-height: 1.65; }
+    .overview-answer p { margin: 0; }
+    .overview-answer a { color: var(--blue); font-weight: 750; text-decoration: underline; text-underline-offset: 3px; }
+    .overview-link { display: flex; align-items: center; gap: 9px; margin-top: 10px; padding: 12px; border: 1px solid #34363c; border-radius: 12px; color: #eef0f5; font-size: .72rem; }
+    .overview-link span { display: grid; width: 28px; height: 28px; flex: 0 0 28px; place-items: center; border-radius: 8px; color: #fff; background: var(--blue); font-weight: 800; }
+    .overview-link small { display: block; color: #9da1aa; font-size: .6rem; }
+    .article-layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); align-items: start; gap: clamp(34px, 6vw, 78px); padding-top: 56px; padding-bottom: 90px; }
+    .toc { position: sticky; top: 105px; padding: 20px 17px; border: 1px solid var(--line); border-radius: 14px; background: var(--soft); }
+    .toc h2 { margin: 0 0 12px; font-family: "Raleway", sans-serif; font-size: .78rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+    .toc ol { display: grid; gap: 9px; margin: 0; padding: 0; list-style: none; }
+    .toc a { color: #555b66; font-size: .74rem; font-weight: 600; line-height: 1.45; }
+    .toc a:hover { color: var(--blue); }
+    .article-content { min-width: 0; }
+    .article-content > p:first-child { margin-top: 0; }
+    .article-content p, .article-content li { color: #454a53; font-size: .97rem; }
+    .article-content p { margin: 0 0 18px; }
+    .article-content h2 { margin: 52px 0 15px; font-size: clamp(1.55rem, 3vw, 2.1rem); font-weight: 800; line-height: 1.2; letter-spacing: -.05em; scroll-margin-top: 100px; }
+    .article-content h2:first-child { margin-top: 0; }
+    .article-content h3 { margin: 27px 0 8px; font-size: 1.1rem; font-weight: 750; line-height: 1.3; letter-spacing: -.025em; scroll-margin-top: 100px; }
+    .article-content a:not(.button) { color: var(--blue); text-decoration: underline; text-decoration-color: rgba(36, 81, 230, .35); text-underline-offset: 3px; }
+    .article-content a:not(.button):hover { text-decoration-color: currentColor; }
+    .article-content strong { color: var(--ink); }
+    .article-content ul, .article-content ol { display: grid; gap: 10px; margin: 12px 0 22px; padding-left: 22px; }
+    .article-content li { padding-left: 3px; }
+    .callout { margin: 22px 0; padding: 18px 20px; border-left: 3px solid var(--blue); border-radius: 0 12px 12px 0; background: #f2f5ff; }
+    .callout p { margin: 0; }
+    .stat-card { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 16px; margin: 20px 0 24px; padding: 20px; border: 1px solid var(--line); border-radius: 16px; background: var(--soft); }
+    .stat-card strong { color: var(--blue); font-family: "Inter", sans-serif; font-size: clamp(2.4rem, 7vw, 3.8rem); line-height: 1; letter-spacing: -.08em; }
+    .stat-card p { margin: 0; font-size: .86rem; }
+    .example-box { margin: 20px 0; padding: 18px 20px; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
+    .example-box p { margin: 0; }
+    .example-box p + p { margin-top: 12px; }
+    .example-label { display: inline-block; margin-bottom: 7px; color: #747984; font-size: .66rem; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
+    .example-label.strong { color: var(--blue); }
+    .fix-list { counter-reset: fix; display: grid; gap: 12px; margin: 18px 0 22px; padding: 0; list-style: none; }
+    .fix-list li { position: relative; min-height: 58px; padding: 13px 15px 13px 55px; border: 1px solid var(--line); border-radius: 13px; background: var(--soft); }
+    .fix-list li::before { position: absolute; top: 12px; left: 14px; display: grid; width: 28px; height: 28px; place-items: center; border-radius: 9px; color: #fff; background: var(--blue); content: counter(fix); counter-increment: fix; font-size: .78rem; font-weight: 850; }
+    .faq-list { display: grid; gap: 10px; margin: 12px 0 22px; }
+    .faq-list details { padding: 14px 17px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+    .faq-list summary { color: var(--ink); font-size: .91rem; font-weight: 750; cursor: pointer; }
+    .faq-list details p { margin: 10px 0 0; font-size: .9rem; }
+    .cta-panel { margin: 42px 0; padding: clamp(24px, 5vw, 38px); border-radius: 20px; color: #fff; background: #101114; }
+    .cta-panel .eyebrow { color: #a9bcff; }
+    .cta-panel h2 { margin: 12px 0 10px; color: #fff; font-size: clamp(1.55rem, 3vw, 2.2rem); }
+    .cta-panel p { max-width: 650px; color: #dedfe4; }
+    .button { display: inline-flex; min-height: 46px; align-items: center; justify-content: center; gap: 10px; padding: 0 18px; border-radius: 999px; color: #17171b; background: #fff; font-size: .82rem; font-weight: 800; transition: transform .2s ease, background .2s ease; }
+    .button:hover { transform: translateY(-2px); background: #e9edff; }
+    .site-footer, .site-footer * { font-family: "Inter", sans-serif; }
+    .site-footer { padding: 58px 0 20px; color: #fff; background: #0b0b0d; font-size: 16px; }
+    .footer-grid { display: grid; grid-template-columns: minmax(220px, 1.7fr) repeat(4, minmax(0, 1fr)); gap: clamp(24px, 4vw, 56px); padding-bottom: 48px; }
+    .footer-brand .brand { display: inline-flex; margin-bottom: 16px; }
+    .footer-brand .site-logo { width: 112px; filter: none; }
+    .footer-brand p { max-width: 290px; margin: 0; color: #fff; font-size: .9rem; line-height: 1.75; }
+    .footer-column h2 { margin: 5px 0 16px; color: #fff; font-size: .88rem; font-weight: 850; letter-spacing: .04em; text-transform: uppercase; }
+    .footer-column ul { display: grid; gap: 11px; margin: 0; padding: 0; list-style: none; }
+    .footer-column li, .footer-column a { color: #d3d4d8; font-size: .84rem; line-height: 1.5; }
+    .footer-column a:hover { color: #fff; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding-top: 18px; border-top: 1px solid #29292d; color: #c9cacf; font-size: .76rem; }
+    .footer-bottom p { margin: 0; }
+    @media (max-width: 800px) {
+      .container { width: min(100% - 36px, var(--content)); }
+      .nav { min-height: 66px; }
+      .site-header .nav { width: min(100% - 36px, 1120px); }
+      .menu-toggle { display: inline-flex; }
+      .nav-cta { display: none; }
+      .nav-links { position: absolute; top: 65px; right: 18px; left: 18px; display: none; align-items: stretch; gap: 0; padding: 8px 16px; border: 1px solid var(--line); border-radius: 16px; background: #fff; box-shadow: 0 18px 35px rgba(16, 17, 20, .1); }
+      .nav-links.is-open { display: flex; flex-direction: column; }
+      .nav-links a { padding: 12px 2px; border-bottom: 1px solid var(--line); }
+      .nav-links a:last-child { border-bottom: 0; }
+      .hero-grid { grid-template-columns: 1fr; gap: 18px; padding-top: 32px; }
+      .hero-art { min-height: 285px; }
+      .article-layout { grid-template-columns: 1fr; gap: 22px; padding-top: 36px; padding-bottom: 65px; }
+      .toc { position: static; }
+      .toc ol { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 15px; }
+      .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 22px; padding-bottom: 34px; }
+      .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 520px) {
+      .container { width: min(100% - 32px, var(--content)); }
+      .site-header .nav { width: min(100% - 32px, 1120px); }
+      .article-hero { padding: 30px 0 38px; }
+      .hero-grid { padding-top: 27px; }
+      .hero-copy h1 { font-size: clamp(2.4rem, 12vw, 3.35rem); }
+      .hero-art { min-height: 255px; }
+      .toc ol { grid-template-columns: 1fr; }
+      .stat-card { grid-template-columns: 1fr; }
+      .article-content p, .article-content li { font-size: .92rem; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-brand { grid-column: auto; }
+      .footer-bottom { align-items: flex-start; flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    }
+      .site-header { position: sticky; z-index: 20; top: 0; border-bottom: 1px solid rgba(232,233,236,.85); background: rgba(255,255,255,.94); backdrop-filter: blur(16px); }
+    .site-header .nav { width: min(1120px,calc(100% - 48px)); min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .site-header .brand { display: inline-flex; align-items: center; }
+    .site-header .site-logo { display: block; width: 78px; height: auto; filter: brightness(0); }
+    .site-header .nav-links { display: flex; align-items: center; gap: 25px; color: #464a52; font-size: .82rem; font-weight: 750; }
+    .site-header .nav-links a:hover, .site-header .nav-links a[aria-current="page"] { color: var(--blue); }
+    .site-header .nav-cta { padding: 10px 16px; border: 1px solid var(--line); border-radius: 999px; font-size: .8rem; font-weight: 850; }
+    .site-header .menu-toggle { display: none; padding: 9px 12px; border: 1px solid var(--line); border-radius: 10px; background: #fff; font-weight: 800; cursor: pointer; }
+    .site-footer, .site-footer * { font-family: Arial, sans-serif; }
+    .site-footer { padding: 58px 0 20px; color: #fff; background: #0b0b0d; font-size: 16px; font-weight: 400; }
+    .site-footer .footer-grid { display: grid; grid-template-columns: minmax(220px,1.7fr) repeat(4,minmax(0,1fr)); gap: clamp(24px,4vw,56px); padding-bottom: 48px; }
+    .site-footer .footer-brand .brand { display: inline-flex; margin-bottom: 16px; color: #fff; }
+    .site-footer .footer-brand .site-logo { width: 112px; }
+    .site-footer .footer-brand p { max-width: 290px; margin: 0; color: #fff; font-size: 16px; line-height: 1.75; }
+    .site-footer .footer-socials { display: flex; align-items: center; gap: 22px; margin-top: 20px; }
+    .site-footer .footer-socials a, .site-footer .footer-socials span { display: grid; width: 22px; height: 22px; place-items: center; color: #fff; }
+    .site-footer .footer-socials a { transition: color .2s ease, transform .2s ease; }
+    .site-footer .footer-socials a:hover { transform: translateY(-2px); color: #fff; }
+    .site-footer .footer-socials svg { width: 20px; height: 20px; fill: none; }
+    .site-footer .footer-socials .facebook-icon, .site-footer .footer-socials a:nth-child(3) svg { fill: currentColor; }
+    .site-footer .footer-column h2 { margin: 5px 0 16px; color: #fff; font-size: 16px; font-weight: 850; letter-spacing: .04em; text-transform: uppercase; }
+    .site-footer .footer-column ul { display: grid; gap: 11px; margin: 0; padding: 0; list-style: none; }
+    .site-footer .footer-column li, .site-footer .footer-column a { color: #fff; font-size: 16px; line-height: 1.5; }
+    .site-footer .footer-column a, .site-footer .footer-top-link { transition: color .18s ease; }
+    .site-footer .footer-column a:hover, .site-footer .footer-top-link:hover { color: var(--blue); }
+    .site-footer .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 18px; border-top: 1px solid #292a30; color: #fff; font-size: 15px; }
+    .site-footer .footer-bottom p { margin: 0; }
+    .site-footer .footer-top-link { color: #fff; }
+    @media (max-width: 980px) {
+      .site-footer .footer-grid { grid-template-columns: repeat(4,minmax(0,1fr)); }
+      .site-footer .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 720px) {
+      .site-header .nav { width: min(100% - 36px,1120px); min-height: 66px; position: relative; }
+      .site-header .menu-toggle { display: inline-flex; }
+      .site-header .nav-cta { display: none; }
+      .site-header .nav-links { position: absolute; top: 65px; right: 0; left: 0; display: none; align-items: stretch; gap: 0; padding: 8px 16px; border: 1px solid var(--line); border-radius: 16px; background: #fff; box-shadow: 0 18px 35px rgba(16,17,20,.1); }
+      .site-header .nav-links.is-open { display: flex; flex-direction: column; }
+      .site-header .nav-links a { padding: 12px 2px; border-bottom: 1px solid var(--line); }
+      .site-header .nav-links a:last-child { border-bottom: 0; }
+      .site-footer .footer-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 30px 22px; padding-bottom: 34px; }
+      .site-footer .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 440px) {
+      .site-footer .footer-grid { grid-template-columns: 1fr; }
+      .site-footer .footer-bottom { align-items: flex-start; flex-direction: column; }
+    }
+      .site-header, .site-header * { font-family: Arial, sans-serif; }
+    .site-footer > .container { width: min(1120px,calc(100% - 48px)); margin-inline: auto; }
+    @media (max-width: 720px) { .site-footer > .container { width: min(100% - 36px,1120px); } }
+      .nav-dropdown { position: relative; }
+    .nav-dropdown-head { display: flex; align-items: center; gap: 3px; }
+    .nav-dropdown-toggle { display: grid; width: 23px; height: 30px; place-items: center; padding: 0; border: 0; color: inherit; background: transparent; cursor: pointer; }
+    .nav-dropdown-toggle svg { width: 12px; height: 12px; transition: transform .18s ease; }
+    .nav-dropdown:hover .nav-dropdown-toggle svg, .nav-dropdown.is-open .nav-dropdown-toggle svg { transform: rotate(180deg); }
+    .nav-dropdown::after { position: absolute; top: 100%; left: 0; width: 100%; height: 17px; content: ""; }
+    .nav-dropdown-menu { position: absolute; z-index: 22; top: calc(100% + 17px); left: -16px; display: none; width: 190px; overflow: hidden; padding: 6px; border: 1px solid var(--line); border-radius: 12px; color: var(--ink); background: #fff; box-shadow: 0 16px 36px rgba(16,17,20,.12); }
+    .nav-dropdown-menu a { display: block; padding: 12px; border-radius: 7px; color: var(--ink); font-size: .74rem; font-weight: 750; line-height: 1.4; transition: color .18s ease, background .18s ease; }
+    .nav-dropdown-menu a:hover, .nav-dropdown-menu a:focus-visible { color: var(--blue); background: #f1f4ff; }
+    .nav-dropdown:hover .nav-dropdown-menu, .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+    @media (max-width: 720px) {
+      .site-header .nav-dropdown { position: relative; width: 100%; }
+      .site-header .nav-dropdown::after { display: none; }
+      .site-header .nav-dropdown-head { min-height: 45px; }
+      .site-header .nav-dropdown-head > a { flex: 1; padding: 12px 2px; }
+      .site-header .nav-dropdown-toggle { width: 42px; height: 42px; border-bottom: 1px solid var(--line); }
+      .site-header .nav-dropdown-menu { position: static; width: 100%; margin-bottom: 8px; padding: 4px; border: 1px solid var(--line); border-radius: 10px; background: #fff; box-shadow: none; }
+      .site-header .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+      .site-header .nav-dropdown-menu a { padding: 12px; border-bottom: 0; color: var(--ink); }
+    }
+</style>
+  <link rel="stylesheet" href="../style.css">
+  <meta property="og:site_name" content="Safwan PP">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Get Cited in Google AI Overviews: 5 Practical Tips | Safwan PP">
+  <meta name="twitter:description" content="Google now shows AI Overview source links higher and more often. Learn five practical ways to improve your chances of being cited.">
+</head>
+<body id="top">
+    <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="../#home" aria-label="Safwan PP home"><img class="site-logo" src="../home/safwan-logo.png" alt="Safwan" decoding="async" width="1408" height="727"></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="../#home">Home</a>
+        <a href="../about-me/">About</a>
+        <div class="nav-dropdown">
+  <div class="nav-dropdown-head">
+    <a href="../digital-marketing-services-kannur/">Services</a>
+    <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="service-submenu" aria-label="Show service links">
+      <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="m2 4.5 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+    </button>
+  </div>
+  <div class="nav-dropdown-menu" id="service-submenu">
+    <a href="../seo-services-kannur/">SEO Services</a>
+    <a href="../google-ads-services-kannur/">Google Ads</a>
+    <a href="../website-design-services-kannur/">Web Design</a>
+    <a href="../shopify-development-services-kannur/#home">Shopify Development</a>
+    <a href="../meta-ads-services-kannur/">Meta Ads</a>
+    <a href="../social-media-marketing-kannur/">Social Media Marketing</a>
+  </div>
+</div>
+        <a href="../blogs/">Blogs</a>
+        <a href="../contact/">Contact</a>
+      </div>
+      <a class="nav-cta" href="../contact/#contact">Let's talk <span aria-hidden="true">&#8599;</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="article-hero">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="../#home">Home</a><span aria-hidden="true">/</span>
+          <a href="../blogs/">Blogs</a><span aria-hidden="true">/</span>
+          <span aria-current="page">Google AI Overview citations</span>
+        </nav>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">SEO · AI Search · October 2026</span>
+            <h1>How to Get Cited in Google AI Overviews Now That Source Links Sit Higher</h1>
+            <p>Google is moving inline source links higher in AI Overviews and AI Mode, putting cited businesses closer to the answer. Here are five practical ways to make your site easier to understand, trust and cite.</p>
+            <div class="byline"><span>By <a href="../about-me/#about">Safwan PP</a></span><span aria-hidden="true">·</span><span>October 2026</span><span aria-hidden="true">·</span><span>8 min read</span></div>
+          </div>
+          <div class="hero-art" role="img" aria-label="Illustration of an AI Overview answer with a source link beside it">
+            <div class="overview-card">
+              <div class="overview-top"><span>AI OVERVIEW</span><span class="overview-dots" aria-hidden="true"><span></span><span></span><span></span></span></div>
+              <div class="overview-answer">
+                <p>Looking for a local business? Compare trusted options, check recent reviews, and confirm the service fits your needs. <a href="#recognise">How to choose a local business</a></p>
+              </div>
+              <div class="overview-link"><span aria-hidden="true">↗</span><div><small>SOURCE · LOCAL GUIDE</small>Read the full answer from a trusted business</div></div>
+              <div class="overview-link"><span aria-hidden="true">↗</span><div><small>SOURCE · EXPERT ADVICE</small>See practical tips and original data</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container article-layout">
+      <aside class="toc" aria-label="In this guide">
+        <h2>In this guide</h2>
+        <ol>
+          <li><a href="#what-changed">What did Google actually change on October 15?</a></li>
+          <li><a href="#why-it-matters">Why a higher link matters more for a small business</a></li>
+          <li><a href="#page-one">Do you need to rank on page one to get cited?</a></li>
+          <li><a href="#first-two-lines">Put the answer in the first two lines of every section</a></li>
+          <li><a href="#recognise">Make your business easy for Google to recognise</a></li>
+          <li><a href="#unique-number">Give Google a number nobody else has</a></li>
+          <li><a href="#mentions">Get mentioned on sites Google already trusts</a></li>
+          <li><a href="#tracking">How to check if AI Overviews are citing you</a></li>
+          <li><a href="#faq">Quick answers about AI Overview citations</a></li>
+          <li><a href="#start">Start with these five fixes this week</a></li>
+        </ol>
+      </aside>
+
+      <article class="article-content">
+        <p>On October 15, 2026, Google changed where your website can appear inside its AI answers. Hema Budaraju, Google's vice president of product management, shared the update on the company blog. Inline source links will now show up higher in AI Overviews and AI Mode and more often.</p>
+        <p>For a business owner, that is a big shift. The link to your site may now sit in the first lines a searcher reads, not at the bottom.</p>
+        <p>This post follows up on my earlier guide on <a href="../how-google-ai-search-affects-seo/">how Google's AI search is transforming SEO</a>. Below, you'll see exactly what changed and five practical fixes that raise your chances of being the cited source.</p>
+
+        <h2 id="what-changed">What did Google actually change on October 15?</h2>
+        <p>Inline links are the small clickable links attached to words or phrases inside an AI answer. Google says these links have already become far more common over the past year. The new update pushes them higher up in responses, and more frequently.</p>
+        <h3>Better links at the end of answers</h3>
+        <p>The "Dive Deeper" area now gets image thumbnails and a more clickable design.</p>
+        <h3>A test for official sites</h3>
+        <p>Some answers will show a section at the very top listing the one or two official sites a person needs to finish a task. Each link comes with a short note on why it helps.</p>
+        <h3>More carousels and preferred sources</h3>
+        <p>These are expanding to more countries and languages, and Google says Preferred Sources usage has grown seven times since launch.</p>
+        <div class="callout"><p><strong>What Google didn't share matters too.</strong> No click-through numbers came with the update, so nobody outside Google knows yet how much traffic these links send.</p></div>
+
+        <h2 id="why-it-matters">Why a higher link matters more for a small business</h2>
+        <p>Picture someone in Kannur searching for a bridal jewellery shop. The AI Overview writes a short answer and names two or three shops. Before this update, the links to those shops often sat at the end of the answer.</p>
+        <p>Many people never scrolled that far. Now the link is more likely to appear beside the shop's name, right where the reader is already looking.</p>
+        <p>Being named helps even when nobody clicks. Setproduct, a design blog that tracked 29 of its own citations, saw more people searching its brand name afterwards. That kind of recall is hard to buy with ads.</p>
+        <p>There's a catch, though. Since Google shares no click data for these links, you will need to track results yourself. The <a href="#tracking">last section of this post</a> shows you how.</p>
+
+        <h2 id="page-one">Do you need to rank on page one to get cited?</h2>
+        <p>Mostly yes, although the data isn't fully settled.</p>
+        <div class="stat-card"><strong>76%</strong><p>of cited pages ranked in Google's top 10, according to an Ahrefs study of 1.9 million AI Overview citations.</p></div>
+        <p>Some 2026 studies claim the opposite, saying most citations come from outside the top 10. Treat page one as your safest starting point, not a strict rule.</p>
+        <p>One requirement is not up for debate. AI Overviews pull from Google's normal search index, so your page must be indexed and allowed to show a snippet. A page that is blocked or never indexed can't be cited at all.</p>
+        <p>Google's own May 2026 guidance also says AI Overviews don't need an llms.txt file or any special schema. If someone sells you a secret AI overview trick, walk away. Good SEO is still the foundation.</p>
+
+        <h2 id="first-two-lines">Put the answer in the first two lines of every section</h2>
+        <p>AI Overviews lift short, self-contained passages, not whole articles. The easiest win is a 40 to 70-word answer at the top of each section, written before any background.</p>
+        <p>Here's how that looks on a made-up driving school fees page.</p>
+        <div class="example-box">
+          <span class="example-label">Weak opening</span>
+          <p>"Learning to drive is an exciting step in life, and choosing the right school depends on many factors every learner should consider."</p>
+          <span class="example-label strong">Stronger opening</span>
+          <p>"A full car driving course at our Kannur school costs ₹6,500 and takes about four weeks. The fee covers 20 practice sessions, learner's licence help, and booking your final test."</p>
+        </div>
+        <p>That second version answers the question in its first sentence. Google can quote it without needing anything else from the page.</p>
+        <p>Headings matter just as much. Type your main service into Google and look at the "People also ask" box. Those questions, written the way people actually type them, make the best headings.</p>
+        <p>Write with confidence too. Research by Contently found cited text was almost twice as likely to use definitive language. Keep one idea per paragraph so each one can stand alone.</p>
+
+        <h2 id="recognise">Make your business easy for Google to recognise</h2>
+        <p>Google prefers to cite businesses it can clearly identify. Mismatched or missing details make that harder.</p>
+        <h3>Complete your Google Business Profile</h3>
+        <p>Fill in your exact business name, one address, one phone number, real opening hours, and the right categories. For local searches, AI answers lean heavily on this profile.</p>
+        <h3>Keep your details identical everywhere</h3>
+        <p>Your website, Instagram page, Justdial listing, and Google profile should show the same name, address, and phone number, character for character. Even two different phone numbers on one website can create doubt.</p>
+        <h3>Add structured data</h3>
+        <p>Structured data helps Google read these facts cleanly. It isn't required, but the LocalBusiness schema on your homepage spells out your name, address, phone, and logo. On WordPress, plugins like Rank Math or Yoast can add it without code.</p>
+        <h3>Put a real name on your content</h3>
+        <p>A blog signed by "Admin" tells Google nothing about who wrote it. Create an author page with your photo, background, and LinkedIn link, then add Person schema to it.</p>
+
+        <h2 id="unique-number">Give Google a number nobody else has</h2>
+        <p>Generic advice is everywhere, so AI Overviews look for something extra. Every one of Setproduct's 29 cited articles included at least one data point from its own work. Pages with no original numbers were rarely picked.</p>
+        <p>Small businesses hold more of this data than they think. Here are a few ideas:</p>
+        <ul>
+          <li>A tour company can share its average rating from the last 100 trips.</li>
+          <li>A clothing store can state its exact delivery time across Kannur and Kasaragod.</li>
+          <li>A clinic can publish its average weekday waiting time.</li>
+        </ul>
+        <p>Swap vague words for exact ones wherever you can. "Many happy clients" says nothing, while "212 clients since 2023" gives Google something to quote.</p>
+
+        <h2 id="mentions">Get mentioned on sites Google already trusts</h2>
+        <p>What others say about your business often carries more weight than what you say yourself. When several trusted sites agree on who you are, Google feels safer citing you.</p>
+        <p>Ask happy customers for Google reviews every month, not in one big burst. Recent reviews count, and reviews that name the actual service give Google real words to use. A line like "They fixed our website speed in a week" helps far more than "good service".</p>
+        <p>Look for honest mentions beyond your own site. Local news pages, trade associations, partner listings, and business directories all count. LinkedIn articles get indexed and cited too, so posting there helps your name travel further.</p>
+        <p>If you publish articles regularly, also look at Google's Preferred Sources feature. Google's documentation says a site must first be included in its generative AI search features to qualify.</p>
+
+        <h2 id="tracking">How to check if AI Overviews are citing you</h2>
+        <p>No single button shows all your AI citations yet. A simple monthly routine works well enough.</p>
+        <ol>
+          <li>List the 10 searches that matter most to your business, like "SEO services in Kannur."</li>
+          <li>Search each one in an incognito window on the first Monday of every month.</li>
+          <li>Note in a sheet whether an AI overview appears, whether you're cited, and who is cited instead.</li>
+          <li>Compare month to month, then fix pages that rank but still don't get cited.</li>
+        </ol>
+        <p>Google Search Console helps here too. Its generative AI reports, launched on June 3, 2026, count your impressions in AI Overviews and AI Mode. They don't show clicks yet, so pair them with Google Analytics. If impressions rise but clicks stay flat, these <a href="../impressions-but-no-clicks-seo-fixes/">nine SEO fixes for impressions without clicks</a> will help.</p>
+        <div class="callout"><p><strong>One warning before you read those reports.</strong> Moving a link higher inside an answer doesn't change the position number Search Console reports. Your link may earn more attention without the report showing it.</p></div>
+
+        <h2 id="faq">Quick answers about AI Overview citations</h2>
+        <div class="faq-list">
+          <details>
+            <summary>Can I pay to appear in an AI Overview?</summary>
+            <p>No. There is no paid placement for organic AI Overview citations. Focus on useful content, sound technical SEO, and trustworthy information about your business.</p>
+          </details>
+          <details>
+            <summary>How long does it take to get cited?</summary>
+            <p>There is no guaranteed timeline. Google has to index and understand your pages, and citations can change with each search and update. Check your priority searches monthly rather than expecting an instant result.</p>
+          </details>
+          <details>
+            <summary>Does this update help small websites?</summary>
+            <p>It can. A smaller site with a clear, useful answer and credible first-hand information can be worth citing. Make sure your pages are indexed and your business details are consistent.</p>
+          </details>
+        </div>
+
+        <h2 id="start">Start with these five fixes this week</h2>
+        <p>Google's October update gives cited sources a better spot on the page. To become one of them:</p>
+        <ol class="fix-list">
+          <li>Answer questions in your first two lines.</li>
+          <li>Keep business details identical everywhere.</li>
+          <li>Share numbers only you have.</li>
+          <li>Earn mentions on trusted sites.</li>
+          <li>Check your citations monthly.</li>
+        </ol>
+        <p>None of this needs a new website; just steady work on the pages you already have.</p>
+
+        <section class="cta-panel" aria-labelledby="cta-heading">
+          <span class="eyebrow">Make your next move</span>
+          <h2 id="cta-heading">Find the pages closest to being cited</h2>
+          <p>Book a free strategy call and we'll review your site together.</p>
+          <a class="button" href="../contact/">Book a free strategy call <span aria-hidden="true">↗</span></a>
+          <p><a class="button" href="../seo-services-kannur/">See how I handle SEO for Kannur businesses <span aria-hidden="true">→</span></a></p>
+        </section>
+      </article>
+    </div>
+  </main>
+
+    <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="../#home" aria-label="Safwan PP home"><img class="site-logo" src="../home/safwan-logo.png" alt="Safwan" decoding="async" width="1408" height="727"></a>
+          <p>Freelance digital marketing strategist helping businesses grow with SEO, ads, social media marketing, web design and Shopify development.</p>
+          <div class="footer-socials" aria-label="Social media">
+            <a href="https://www.instagram.com/thesafwaaan?gwpx=MThjNHVwd3FxYTdseg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg>
+            </a>
+            <span role="img" aria-label="Facebook">
+              <svg class="facebook-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.4 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.3H7.6V13h2.7v8h3.1Z"></path></svg>
+            </span>
+            <a href="https://www.linkedin.com/in/safwan-ibn-ibrahim-87a281396" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 8.5H2.1V22h3.1V8.5ZM3.65 2A1.8 1.8 0 1 0 3.7 5.6 1.8 1.8 0 0 0 3.65 2ZM22 14.3c0-4.1-2.2-6-5.1-6-2.4 0-3.5 1.3-4.1 2.2V8.5H9.7V22h3.1v-6.7c0-1.8.3-3.6 2.6-3.6s2.3 2.1 2.3 3.7V22H22v-7.7Z"></path></svg>
+            </a>
+          </div>
+        </div>
+        <nav class="footer-column" aria-label="Explore">
+          <h2>Explore</h2>
+          <ul>
+            <li><a href="../#home">Home</a></li>
+            <li><a href="../about-me/#about">About</a></li>
+            <li><a href="../digital-marketing-services-kannur/#services">Services</a></li>
+            <li><a href="../blogs/#articles">Blogs</a></li>
+            <li><a href="../contact/#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-column" aria-label="Services">
+          <h2>Services</h2>
+          <ul>
+            <li><a href="../seo-services-kannur/">SEO Services</a></li>
+            <li><a href="../social-media-marketing-kannur/">Social Media Marketing</a></li>
+            <li><a href="../meta-ads-services-kannur/">Meta Ads</a></li>
+            <li><a href="../google-ads-services-kannur/">Google Ads</a></li>
+            <li><a href="../website-design-services-kannur/">Web Design</a></li>
+            <li><a href="../shopify-development-services-kannur/#home">Shopify Development</a></li>
+          </ul>
+        </nav>
+        <div class="footer-column">
+          <h2>Locations</h2>
+          <ul>
+            <li><a href="../#home">Kerala, India</a></li>
+            <li><a href="../digital-marketing-strategist-dubai/#home">Dubai, UAE</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h2>Get in touch</h2>
+          <ul>
+            <li><a href="tel:+919895325388">+91 98953 25388</a></li>
+            <li><a href="mailto:ppsafwan263@gmail.com">ppsafwan263@gmail.com</a></li>
+            <li><a href="https://wa.me/919895325388" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright &copy; 2026 &middot; Safwan PP. All rights reserved.</p>
+        <a class="footer-top-link" href="#">Back to top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector("#nav-links");
+    menuToggle.addEventListener("click", () => {
+      const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", String(!isOpen));
+      navLinks.classList.toggle("is-open", !isOpen);
+    });
+  </script>
+  <script>
+    (() => {
+      const dropdown = document.querySelector(".nav-dropdown");
+      const toggle = dropdown.querySelector(".nav-dropdown-toggle");
+      const nav = document.querySelector(".nav-links");
+      const menuButton = document.querySelector(".menu-toggle");
+      const setOpen = (isOpen) => {
+        toggle.setAttribute("aria-expanded", String(isOpen));
+        dropdown.classList.toggle("is-open", isOpen);
+      };
+
+      toggle.addEventListener("click", () => {
+        setOpen(toggle.getAttribute("aria-expanded") !== "true");
+      });
+      dropdown.addEventListener("pointerenter", (event) => {
+        if (event.pointerType === "mouse") setOpen(true);
+      });
+      dropdown.addEventListener("pointerleave", () => {
+        if (!dropdown.contains(document.activeElement)) setOpen(false);
+      });
+      dropdown.addEventListener("focusin", () => setOpen(true));
+      dropdown.addEventListener("focusout", (event) => {
+        if (!dropdown.contains(event.relatedTarget)) setOpen(false);
+      });
+      dropdown.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          setOpen(false);
+          toggle.focus();
+        }
+      });
+      nav.addEventListener("click", (event) => {
+        if (event.target.closest("a")) setOpen(false);
+      });
+      menuButton.addEventListener("click", () => setOpen(false));
+    })();
+  </script>
+</body>
+</html>

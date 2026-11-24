@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A practical guide to local SEO in Kannur: set up and verify your Google Business Profile, improve it honestly, and track local results.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Local SEO in Kannur: Google Business Profile Guide | Safwan PP</title>
+  <link rel="canonical" href="https://ppsafwan.com/local-seo-kannur-google-business-profile/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #101114;
+      --muted: #656a73;
+      --blue: #2451e6;
+      --line: #e8e9ec;
+      --paper: #fff;
+      --soft: #f7f8fb;
+      --content: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: "Raleway", sans-serif; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    h1, h2, h3 { font-family: "Inter", sans-serif; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    img, svg { max-width: 100%; }
+    .container { width: min(var(--content), calc(100% - 48px)); margin-inline: auto; }
+    .site-header { position: sticky; z-index: 20; top: 0; border-bottom: 1px solid rgba(232, 233, 236, .85); background: rgba(255, 255, 255, .94); backdrop-filter: blur(16px); }
+    .nav { min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; }
+    .site-logo { display: block; width: 78px; height: auto; filter: brightness(0); }
+    .nav-links { display: flex; align-items: center; gap: 25px; color: #464a52; font-size: .82rem; font-weight: 750; }
+    .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--blue); }
+    .nav-cta { padding: 10px 16px; border: 1px solid var(--line); border-radius: 999px; font-size: .8rem; font-weight: 850; }
+    .menu-toggle { display: none; padding: 9px 12px; border: 1px solid var(--line); border-radius: 10px; background: #fff; font-weight: 800; cursor: pointer; }
+    .article-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 46px 0 58px;
+      background-image: linear-gradient(rgba(16, 17, 20, .026) 1px, transparent 1px), linear-gradient(90deg, rgba(16, 17, 20, .026) 1px, transparent 1px);
+      background-size: 48px 48px;
+      background-position: center top;
+    }
+    .breadcrumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; color: var(--muted); font-size: .77rem; font-weight: 600; }
+    .breadcrumbs a:hover { color: var(--blue); }
+    .breadcrumbs span[aria-hidden="true"] { color: #a4a8b0; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(300px, .9fr); align-items: center; gap: clamp(36px, 6vw, 76px); padding-top: 46px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--blue); font-size: .75rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .eyebrow::before { width: 20px; height: 2px; background: currentColor; content: ""; }
+    .hero-copy h1 { margin: 16px 0 17px; font-size: clamp(2.6rem, 5.3vw, 4.65rem); font-weight: 900; line-height: .99; letter-spacing: -.08em; }
+    .hero-copy h1 em { color: var(--blue); font-style: normal; }
+    .hero-copy > p { max-width: 620px; margin: 0; color: #555b66; font-size: 1.02rem; line-height: 1.8; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 23px; }
+    .button { display: inline-flex; min-height: 46px; align-items: center; justify-content: center; gap: 8px; padding: 0 18px; border: 1px solid var(--line); border-radius: 999px; background: #fff; font-size: .8rem; font-weight: 800; transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
+    .button:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(20, 32, 60, .1); }
+    .button-primary { border-color: var(--blue); color: #fff; background: var(--blue); }
+    .button-primary:hover { background: #193fc2; }
+    .article-meta { display: flex; flex-wrap: wrap; gap: 9px 18px; margin-top: 20px; color: var(--muted); font-size: .76rem; font-weight: 650; }
+    .hero-art { display: grid; min-height: 350px; place-items: center; }
+    .maps-panel { width: min(100%, 410px); padding: 17px; border-radius: 24px; color: #fff; background: #0c0c0e; box-shadow: 0 28px 60px rgba(10, 12, 20, .18); }
+    .maps-search { display: flex; align-items: center; gap: 10px; padding: 12px 14px; border: 1px solid #343438; border-radius: 999px; color: #f3f4f6; background: #19191b; font-size: .75rem; }
+    .maps-search svg { width: 16px; flex: 0 0 16px; color: #c5c6ca; }
+    .maps-label { margin: 15px 4px 9px; color: #d3d5da; font-size: .62rem; font-weight: 800; letter-spacing: .09em; }
+    .maps-result { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 82px; padding: 14px; border-radius: 15px; color: var(--ink); background: #fff; }
+    .maps-result small { display: block; color: #777b83; font-size: .63rem; }
+    .maps-result strong { display: block; margin-top: 3px; font-size: .87rem; line-height: 1.35; }
+    .map-pin { display: grid; width: 42px; height: 42px; flex: 0 0 42px; place-items: center; border-radius: 13px; color: #fff; background: var(--blue); font-size: 1.15rem; }
+    .map-badge { margin-top: 10px; padding: 15px 16px; border-radius: 15px; background: var(--blue); }
+    .map-badge small { display: block; font-size: .58rem; font-weight: 800; letter-spacing: .08em; }
+    .map-badge strong { display: block; margin-top: 3px; font-family: "Inter", sans-serif; font-size: 1.5rem; letter-spacing: -.04em; }
+    .map-badge p { margin: 3px 0 0; color: #e9edff; font-size: .72rem; }
+    .article-layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); align-items: start; gap: clamp(34px, 6vw, 78px); padding-top: 56px; padding-bottom: 90px; }
+    .toc { position: sticky; top: 105px; padding: 20px 17px; border: 1px solid var(--line); border-radius: 14px; background: var(--soft); }
+    .toc h2 { margin: 0 0 12px; font-size: .78rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+    .toc ol { display: grid; gap: 9px; margin: 0; padding: 0; list-style: none; }
+    .toc a { color: #555b66; font-size: .74rem; font-weight: 600; line-height: 1.45; }
+    .toc a:hover { color: var(--blue); }
+    .article-content { min-width: 0; }
+    .article-content > p:first-child { margin-top: 0; }
+    .article-content p, .article-content li { color: #454a53; font-size: .97rem; }
+    .article-content p { margin: 0 0 18px; }
+    .article-content h2 { margin: 52px 0 15px; font-size: clamp(1.55rem, 3vw, 2.1rem); font-weight: 800; line-height: 1.2; letter-spacing: -.05em; scroll-margin-top: 100px; }
+    .article-content h3 { margin: 27px 0 8px; font-size: 1.1rem; font-weight: 750; line-height: 1.3; letter-spacing: -.025em; scroll-margin-top: 100px; }
+    .article-content a:not(.button) { color: var(--blue); text-decoration: underline; text-decoration-color: rgba(36, 81, 230, .35); text-underline-offset: 3px; }
+    .article-content a:not(.button):hover { text-decoration-color: currentColor; }
+    .article-content strong { color: var(--ink); }
+    .data-table-wrap { overflow-x: auto; margin: 20px 0 22px; border: 1px solid var(--line); border-radius: 12px; }
+    .data-table { width: 100%; min-width: 580px; border-collapse: collapse; background: #fff; font-size: .81rem; }
+    .data-table th, .data-table td { padding: 12px 14px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    .data-table th { color: #fff; background: #17171b; font-family: "Inter", sans-serif; font-size: .73rem; font-weight: 750; }
+    .data-table td { color: #4a4e57; }
+    .data-table td:first-child { color: var(--ink); font-weight: 750; }
+    .data-table tr:last-child td { border-bottom: 0; }
+    .field-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 20px 0 24px; }
+    .field-card { padding: 17px; border: 1px solid var(--line); border-radius: 14px; background: var(--soft); }
+    .field-card h3 { margin: 0 0 6px; font-size: .97rem; }
+    .field-card p { margin: 0; font-size: .85rem; line-height: 1.65; }
+    .article-content ul, .article-content ol { display: grid; gap: 11px; margin: 12px 0 22px; padding-left: 22px; }
+    .article-content li { padding-left: 3px; }
+    .faq-list { display: grid; gap: 10px; margin-top: 20px; }
+    .faq-list details { padding: 16px 18px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+    .faq-list summary { color: var(--ink); font-family: "Inter", sans-serif; font-size: .92rem; font-weight: 700; cursor: pointer; }
+    .faq-list details p { margin: 12px 0 0; font-size: .89rem; }
+    .cta-panel { margin: 42px 0; padding: clamp(24px, 5vw, 38px); border-radius: 20px; color: #fff; background: #101114; }
+    .cta-panel .eyebrow { color: #a9bcff; }
+    .cta-panel h2 { margin: 12px 0 10px; color: #fff; font-size: clamp(1.55rem, 3vw, 2.2rem); }
+    .cta-panel p { max-width: 650px; color: #dedfe4; }
+    .cta-panel .button { border-color: #fff; color: #17171b; background: #fff; }
+    .cta-panel .button:hover { background: #e9edff; }
+    .site-footer, .site-footer * { font-family: "Inter", sans-serif; }
+    .site-footer { padding: 58px 0 20px; color: #fff; background: #0b0b0d; font-size: 16px; }
+    .footer-grid { display: grid; grid-template-columns: minmax(220px, 1.7fr) repeat(4, minmax(0, 1fr)); gap: clamp(24px, 4vw, 56px); padding-bottom: 48px; }
+    .footer-brand .brand { display: inline-flex; margin-bottom: 16px; }
+    .footer-brand .site-logo { width: 112px; filter: none; }
+    .footer-brand p { max-width: 290px; margin: 0; color: #fff; font-size: .9rem; line-height: 1.75; }
+    .footer-column h2 { margin: 5px 0 16px; color: #fff; font-size: .88rem; font-weight: 850; letter-spacing: .04em; text-transform: uppercase; }
+    .footer-column ul { display: grid; gap: 11px; margin: 0; padding: 0; list-style: none; }
+    .footer-column li, .footer-column a { color: #d3d4d8; font-size: .84rem; line-height: 1.5; }
+    .footer-column a:hover { color: #fff; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding-top: 18px; border-top: 1px solid #29292d; color: #c9cacf; font-size: .76rem; }
+    .footer-bottom p { margin: 0; }
+    @media (max-width: 800px) {
+      .container { width: min(100% - 36px, var(--content)); }
+      .nav { min-height: 66px; }
+      .site-header .nav { width: min(100% - 36px, 1120px); }
+      .menu-toggle { display: inline-flex; }
+      .nav-cta { display: none; }
+      .nav-links { position: absolute; top: 65px; right: 18px; left: 18px; display: none; align-items: stretch; gap: 0; padding: 8px 16px; border: 1px solid var(--line); border-radius: 16px; background: #fff; box-shadow: 0 18px 35px rgba(16, 17, 20, .1); }
+      .nav-links.is-open { display: flex; flex-direction: column; }
+      .nav-links a { padding: 12px 2px; border-bottom: 1px solid var(--line); }
+      .nav-links a:last-child { border-bottom: 0; }
+      .hero-grid { grid-template-columns: 1fr; gap: 18px; padding-top: 34px; }
+      .hero-copy h1 { max-width: 680px; }
+      .hero-art { min-height: 300px; }
+      .article-layout { grid-template-columns: 1fr; gap: 22px; padding-top: 36px; padding-bottom: 65px; }
+      .toc { position: static; }
+      .toc ol { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 15px; }
+      .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 22px; padding-bottom: 34px; }
+      .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 520px) {
+      .container { width: min(100% - 32px, var(--content)); }
+      .site-header .nav { width: min(100% - 32px, 1120px); }
+      .article-hero { padding: 30px 0 38px; }
+      .hero-grid { padding-top: 29px; }
+      .hero-copy h1 { font-size: clamp(2.45rem, 12vw, 3.4rem); }
+      .hero-art { min-height: 270px; }
+      .field-grid { grid-template-columns: 1fr; }
+      .toc ol { grid-template-columns: 1fr; }
+      .article-content p, .article-content li { font-size: .92rem; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-brand { grid-column: auto; }
+      .footer-bottom { align-items: flex-start; flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    }
+      .site-header { position: sticky; z-index: 20; top: 0; border-bottom: 1px solid rgba(232,233,236,.85); background: rgba(255,255,255,.94); backdrop-filter: blur(16px); }
+    .site-header .nav { width: min(1120px,calc(100% - 48px)); min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .site-header .brand { display: inline-flex; align-items: center; }
+    .site-header .site-logo { display: block; width: 78px; height: auto; filter: brightness(0); }
+    .site-header .nav-links { display: flex; align-items: center; gap: 25px; color: #464a52; font-size: .82rem; font-weight: 750; }
+    .site-header .nav-links a:hover, .site-header .nav-links a[aria-current="page"] { color: var(--blue); }
+    .site-header .nav-cta { padding: 10px 16px; border: 1px solid var(--line); border-radius: 999px; font-size: .8rem; font-weight: 850; }
+    .site-header .menu-toggle { display: none; padding: 9px 12px; border: 1px solid var(--line); border-radius: 10px; background: #fff; font-weight: 800; cursor: pointer; }
+    .site-footer, .site-footer * { font-family: Arial, sans-serif; }
+    .site-footer { padding: 58px 0 20px; color: #fff; background: #0b0b0d; font-size: 16px; font-weight: 400; }
+    .site-footer .footer-grid { display: grid; grid-template-columns: minmax(220px,1.7fr) repeat(4,minmax(0,1fr)); gap: clamp(24px,4vw,56px); padding-bottom: 48px; }
+    .site-footer .footer-brand .brand { display: inline-flex; margin-bottom: 16px; color: #fff; }
+    .site-footer .footer-brand .site-logo { width: 112px; }
+    .site-footer .footer-brand p { max-width: 290px; margin: 0; color: #fff; font-size: 16px; line-height: 1.75; }
+    .site-footer .footer-socials { display: flex; align-items: center; gap: 22px; margin-top: 20px; }
+    .site-footer .footer-socials a, .site-footer .footer-socials span { display: grid; width: 22px; height: 22px; place-items: center; color: #fff; }
+    .site-footer .footer-socials a { transition: color .2s ease, transform .2s ease; }
+    .site-footer .footer-socials a:hover { transform: translateY(-2px); color: #fff; }
+    .site-footer .footer-socials svg { width: 20px; height: 20px; fill: none; }
+    .site-footer .footer-socials .facebook-icon, .site-footer .footer-socials a:nth-child(3) svg { fill: currentColor; }
+    .site-footer .footer-column h2 { margin: 5px 0 16px; color: #fff; font-size: 16px; font-weight: 850; letter-spacing: .04em; text-transform: uppercase; }
+    .site-footer .footer-column ul { display: grid; gap: 11px; margin: 0; padding: 0; list-style: none; }
+    .site-footer .footer-column li, .site-footer .footer-column a { color: #fff; font-size: 16px; line-height: 1.5; }
+    .site-footer .footer-column a, .site-footer .footer-top-link { transition: color .18s ease; }
+    .site-footer .footer-column a:hover, .site-footer .footer-top-link:hover { color: var(--blue); }
+    .site-footer .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 18px; border-top: 1px solid #292a30; color: #fff; font-size: 15px; }
+    .site-footer .footer-bottom p { margin: 0; }
+    .site-footer .footer-top-link { color: #fff; }
+    @media (max-width: 980px) {
+      .site-footer .footer-grid { grid-template-columns: repeat(4,minmax(0,1fr)); }
+      .site-footer .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 720px) {
+      .site-header .nav { width: min(100% - 36px,1120px); min-height: 66px; position: relative; }
+      .site-header .menu-toggle { display: inline-flex; }
+      .site-header .nav-cta { display: none; }
+      .site-header .nav-links { position: absolute; top: 65px; right: 0; left: 0; display: none; align-items: stretch; gap: 0; padding: 8px 16px; border: 1px solid var(--line); border-radius: 16px; background: #fff; box-shadow: 0 18px 35px rgba(16,17,20,.1); }
+      .site-header .nav-links.is-open { display: flex; flex-direction: column; }
+      .site-header .nav-links a { padding: 12px 2px; border-bottom: 1px solid var(--line); }
+      .site-header .nav-links a:last-child { border-bottom: 0; }
+      .site-footer .footer-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 30px 22px; padding-bottom: 34px; }
+      .site-footer .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 440px) {
+      .site-footer .footer-grid { grid-template-columns: 1fr; }
+      .site-footer .footer-bottom { align-items: flex-start; flex-direction: column; }
+    }
+      .site-header, .site-header * { font-family: Arial, sans-serif; }
+    .site-footer > .container { width: min(1120px,calc(100% - 48px)); margin-inline: auto; }
+    @media (max-width: 720px) { .site-footer > .container { width: min(100% - 36px,1120px); } }
+      .nav-dropdown { position: relative; }
+    .nav-dropdown-head { display: flex; align-items: center; gap: 3px; }
+    .nav-dropdown-toggle { display: grid; width: 23px; height: 30px; place-items: center; padding: 0; border: 0; color: inherit; background: transparent; cursor: pointer; }
+    .nav-dropdown-toggle svg { width: 12px; height: 12px; transition: transform .18s ease; }
+    .nav-dropdown:hover .nav-dropdown-toggle svg, .nav-dropdown.is-open .nav-dropdown-toggle svg { transform: rotate(180deg); }
+    .nav-dropdown::after { position: absolute; top: 100%; left: 0; width: 100%; height: 17px; content: ""; }
+    .nav-dropdown-menu { position: absolute; z-index: 22; top: calc(100% + 17px); left: -16px; display: none; width: 190px; overflow: hidden; padding: 6px; border: 1px solid var(--line); border-radius: 12px; color: var(--ink); background: #fff; box-shadow: 0 16px 36px rgba(16,17,20,.12); }
+    .nav-dropdown-menu a { display: block; padding: 12px; border-radius: 7px; color: var(--ink); font-size: .74rem; font-weight: 750; line-height: 1.4; transition: color .18s ease, background .18s ease; }
+    .nav-dropdown-menu a:hover, .nav-dropdown-menu a:focus-visible { color: var(--blue); background: #f1f4ff; }
+    .nav-dropdown:hover .nav-dropdown-menu, .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+    @media (max-width: 720px) {
+      .site-header .nav-dropdown { position: relative; width: 100%; }
+      .site-header .nav-dropdown::after { display: none; }
+      .site-header .nav-dropdown-head { min-height: 45px; }
+      .site-header .nav-dropdown-head > a { flex: 1; padding: 12px 2px; }
+      .site-header .nav-dropdown-toggle { width: 42px; height: 42px; border-bottom: 1px solid var(--line); }
+      .site-header .nav-dropdown-menu { position: static; width: 100%; margin-bottom: 8px; padding: 4px; border: 1px solid var(--line); border-radius: 10px; background: #fff; box-shadow: none; }
+      .site-header .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+      .site-header .nav-dropdown-menu a { padding: 12px; border-bottom: 0; color: var(--ink); }
+    }
+</style>
+  <link rel="stylesheet" href="../style.css">
+  <meta property="og:title" content="Local SEO in Kannur: Google Business Profile Guide | Safwan PP">
+  <meta property="og:description" content="A practical guide to local SEO in Kannur: set up and verify your Google Business Profile, improve it honestly, and track local results.">
+  <meta property="og:site_name" content="Safwan PP">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Local SEO in Kannur: Google Business Profile Guide | Safwan PP">
+  <meta name="twitter:description" content="A practical guide to local SEO in Kannur: set up and verify your Google Business Profile, improve it honestly, and track local results.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://ppsafwan.com/local-seo-kannur-google-business-profile/">
+</head>
+<body id="top">
+    <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="../#home" aria-label="Safwan PP home"><img class="site-logo" src="../home/safwan-logo.png" alt="Safwan" decoding="async" width="1408" height="727"></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="../#home">Home</a>
+        <a href="../about-me/">About</a>
+        <div class="nav-dropdown">
+  <div class="nav-dropdown-head">
+    <a href="../digital-marketing-services-kannur/">Services</a>
+    <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="service-submenu" aria-label="Show service links">
+      <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="m2 4.5 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+    </button>
+  </div>
+  <div class="nav-dropdown-menu" id="service-submenu">
+    <a href="../seo-services-kannur/">SEO Services</a>
+    <a href="../google-ads-services-kannur/">Google Ads</a>
+    <a href="../website-design-services-kannur/">Web Design</a>
+    <a href="../shopify-development-services-kannur/#home">Shopify Development</a>
+    <a href="../meta-ads-services-kannur/">Meta Ads</a>
+    <a href="../social-media-marketing-kannur/">Social Media Marketing</a>
+  </div>
+</div>
+        <a href="../blogs/">Blogs</a>
+        <a href="../contact/">Contact</a>
+      </div>
+      <a class="nav-cta" href="../contact/#contact">Let's talk <span aria-hidden="true">&#8599;</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="article-hero">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="../#home">Home</a><span aria-hidden="true">/</span>
+          <a href="../blogs/">Blogs</a><span aria-hidden="true">/</span>
+          <span aria-current="page">Local SEO in Kannur</span>
+        </nav>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Local SEO · Kannur</span>
+            <h1>How to Do Local SEO in <em>Kannur</em> With Your Google Business Profile</h1>
+            <p>Google says there is no way to request or pay for a better local ranking. Your ranking depends on how complete, accurate, and trusted your business profile looks. This guide shows how to set it up, verify it, fill it in, collect reviews honestly, and track results.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="https://wa.me/919895325388" target="_blank" rel="noopener noreferrer">Book a free strategy session <span aria-hidden="true">↗</span></a>
+              <a class="button" href="#setup">Jump to setup <span aria-hidden="true">↓</span></a>
+            </div>
+            <div class="article-meta">
+              <span>By Safwan PP</span>
+              <span><time datetime="2026-11-02">November 2, 2026</time></span>
+              <span>10 min read</span>
+            </div>
+          </div>
+          <div class="hero-art" role="img" aria-label="Illustration of a verified and complete local business profile appearing in Kannur search results">
+            <div class="maps-panel">
+              <div class="maps-search">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+                <span>cake shop near me, Kannur</span>
+              </div>
+              <div class="maps-label">SEARCH RESULTS · KANNUR</div>
+              <div class="maps-result">
+                <div><small>Google Maps · Verified</small><strong>Your business, verified and complete</strong></div>
+                <span class="map-pin" aria-hidden="true">⌖</span>
+              </div>
+              <div class="map-badge"><small>BUSINESS PROFILE</small><strong>Complete</strong><p>Accurate details · Genuine reviews · Local visibility</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container article-layout">
+      <aside class="toc" aria-label="On this page">
+        <h2>On this page</h2>
+        <ol>
+          <li><a href="#what">What local SEO means</a></li>
+          <li><a href="#rank">How Google decides who ranks</a></li>
+          <li><a href="#setup">Set up and verify</a></li>
+          <li><a href="#fill">Fill in your profile</a></li>
+          <li><a href="#reviews">Google reviews</a></li>
+          <li><a href="#website">Your website</a></li>
+          <li><a href="#track">Check it is working</a></li>
+          <li><a href="#mistakes">Mistakes to avoid</a></li>
+          <li><a href="#ai">Local SEO and AI search</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ol>
+      </aside>
+
+      <article class="article-content">
+        <h2 id="what">What local SEO means for a Kannur business</h2>
+        <p>The aim of local SEO is to help nearby customers find your business on Google. It covers the map results people see when they search for things like “bakery near me” or “dentist in Kannur”. Those map results appear separately from the normal web links.</p>
+        <p>Local SEO for small businesses in Kerala starts with one free tool, the Google Business Profile. Google used to call it Google My Business, and many owners still use that name. Both names mean the same profile, which shows your address, hours, reviews, and photos.</p>
+        <p>Here is a made-up example. A bakery near Kannur town has a complete, verified profile. When someone searches “cake shop near me”, Google has plenty of accurate detail to match against that search. A bakery with an empty profile gives Google very little to work with.</p>
+        <p>Your business qualifies if customers visit you or if you travel to them. Google’s guidelines set out the eligibility rules.</p>
+
+        <h2 id="rank">How Google decides who ranks on Google Maps in Kannur</h2>
+        <p>Google ranks local results using three main factors. Its help page names them as relevance, distance, and prominence.</p>
+        <p>Relevance measures how well your profile matches what someone searched for. Distance looks at how far you are from the searcher or from the place named in the search. Prominence reflects how well known your business is, based on things like reviews and links from other websites.</p>
+        <p>Google keeps the details of its algorithm confidential, so nobody outside Google knows how much each factor counts.</p>
+        <div class="data-table-wrap">
+          <table class="data-table">
+            <thead><tr><th>Factor</th><th>What it means</th><th>What you can do</th></tr></thead>
+            <tbody>
+              <tr><td>Relevance</td><td>How well your profile matches the search</td><td>Fill in every detail and choose the right category.</td></tr>
+              <tr><td>Distance</td><td>How far are you from the searcher?</td><td>Keep your address accurate, since you cannot move customers.</td></tr>
+              <tr><td>Prominence</td><td>How well known your business is</td><td>Earn honest reviews and useful links from other sites.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>You cannot move your shop closer to every customer. You can improve the other two factors, and that is where your effort should go. Paid ads are a separate route, and my <a href="../digital-marketing-services-kannur/#services">Google Ads services in Kannur</a> page explains how they differ.</p>
+
+        <h2 id="setup">How to set up and verify your Google Business Profile in Kannur</h2>
+        <p>Start by checking whether your business already has a profile. Search for your business name and city while signed in to your Google account. Sometimes a listing already exists and only needs claiming. If it does not exist, add it.</p>
+        <p>Next comes verification, which you need before you can edit details or reply to customers. Google decides which methods you see, and you cannot change them. Options can include a phone call or text, an email, a live video call, or a postcard. If video verification is offered, Google recommends it.</p>
+        <ol>
+          <li>Postcards take patience. Codes usually arrive within 14 days and expire after 30 days.</li>
+          <li>Do not edit your business name, address, or category while you wait, because that makes the code useless. Requesting a second code also cancels the first.</li>
+          <li>Never share your code with anyone. Google says it will never ask for it, not even for the person who manages your profile.</li>
+          <li>After you submit the code, Google reviews your details for up to five business days. Verifying your website through Google Search Console can sometimes verify the profile instantly.</li>
+        </ol>
+        <h3>Shopfront or service-area business</h3>
+        <p>A shopfront is a place customers can visit. Google expects permanent signage with your business name at that address. A service-area business travels to customers, like a plumber or a home tutor. It gets one profile and should hide a home address. Virtual offices and mailbox addresses do not qualify.</p>
+
+        <h2 id="fill">How to fill in your profile so Google understands your business</h2>
+        <p>Google says businesses with complete and accurate information are more likely to show up in local results. Work through each field below.</p>
+        <div class="field-grid">
+          <section class="field-card"><h3>Business name</h3><p>Use your real business name, exactly as it appears on your signboard, website, and bills. Google does not allow taglines, hours, phone numbers, or service and location details in the name. Extra words can lead to suspension. For a made-up example, enter “Malabar Sweets”, not “Malabar Sweets Best Cake Shop Kannur.”</p></section>
+          <section class="field-card"><h3>Category</h3><p>Pick the fewest categories that describe your core business, and make them as specific as you can. Google suggests testing each one with “this business is a”, not “this business has a”. For a bakery, choose Bakery. Adding a category for every cake you sell misses the point.</p></section>
+          <section class="field-card"><h3>Address, hours, phone, and website</h3><p>Enter the real address customers can visit, your regular opening hours, and a phone number your business controls. Google prefers a local number over a central call-centre line when possible. Add your website if you have one.</p></section>
+          <section class="field-card"><h3>Description</h3><p>Describe your services, products, and history honestly. Google does not allow links or sale prices in this field, so leave out lines like “Everything on sale today.”</p></section>
+          <section class="field-card"><h3>Photos</h3><p>Google lists photos and videos among its tips for improving local ranking. Use real images of your shop, your team, and your work.</p></section>
+        </div>
+        <p>Here is a quick checklist to compare against your own profile.</p>
+        <div class="data-table-wrap">
+          <table class="data-table">
+            <thead><tr><th>Field</th><th>What to enter</th></tr></thead>
+            <tbody>
+              <tr><td>Name</td><td>Your real business name only</td></tr>
+              <tr><td>Category</td><td>The fewest, most specific categories</td></tr>
+              <tr><td>Address</td><td>A real location customers can visit, or a hidden address if you travel to customers</td></tr>
+              <tr><td>Hours</td><td>Your regular opening hours</td></tr>
+              <tr><td>Phone</td><td>A number your business controls</td></tr>
+              <tr><td>Description</td><td>Honest services and history, with no links or sale prices</td></tr>
+              <tr><td>Photos</td><td>Real images of your shop, team, and work</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="reviews">How to get and handle Google reviews the right way</h2>
+        <p>Google ties prominence partly to reviews. Its ranking page says more reviews and positive ratings can help your local ranking. It gives no minimum number, so ignore any claim about a magic review count.</p>
+        <p>Ask real customers for honest feedback. Send a Google review link or show a QR code at your counter. Asking soon after a sale is common advice, because the experience is still fresh.</p>
+        <p>Never offer discounts or gifts in return for reviews. Google treats incentivised reviews as fake content and strictly prohibits them.</p>
+        <p>Reply to reviews where you have something useful to say. Keep your replies free of offers. For a negative review, thank the customer, explain what you can do, and invite them to continue by phone or email. Google notes that a mix of positive and negative reviews can look more trustworthy.</p>
+
+        <h2 id="website">How your website supports your local ranking</h2>
+        <p>Prominence also draws on links from other websites, so your site plays a part. Keep its details matching your profile. If your profile shows a Kannur address and phone number, your website should show the same ones.</p>
+        <p>Write a clear page for each main service. Each page should describe that service in unique words, not the same text with a new town name swapped in. This is practitioner advice and not a Google rule. My <a href="../seo-services-kannur/">SEO services in Kannur</a> page follows this idea, with one service tied to one place.</p>
+        <p>Google lists a great page experience among its standard SEO advice, so test your site in PageSpeed Insights. Google’s current responsiveness measure is Interaction to Next Paint. A good score means at least 75 per cent of visits respond within 200 milliseconds, according to web.dev. Older guides still mention First Input Delay, which INP replaced in March 2024.</p>
+        <p>If your site gets impressions but few clicks, read my guide on <a href="../impressions-but-no-clicks-seo-fixes/">why a site gets impressions but no clicks</a>.</p>
+
+        <h2 id="track">How to check whether it is working</h2>
+        <p>Open the performance report in your business profile. It shows views, calls, direction requests, website clicks, and messages, though only the ones that apply to your business. The data is available only for verified profiles, and search terms update at the start of each month, says Google’s performance help page.</p>
+        <p>SEO usually takes around 3 to 6 months to show strong results. That is a typical estimate and not a Google figure. Nobody can honestly guarantee a ranking, so be wary of anyone who does.</p>
+
+        <h2 id="mistakes">Mistakes that can get a profile suspended or ignored</h2>
+        <p>These errors come straight from Google’s guidelines, and each one is easy to avoid.</p>
+        <div class="data-table-wrap">
+          <table class="data-table">
+            <thead><tr><th>Mistake</th><th>What Google expects instead</th></tr></thead>
+            <tbody>
+              <tr><td>Adding keywords or the city to the business name</td><td>The real name from your signboard</td></tr>
+              <tr><td>Using a virtual office or mailbox address</td><td>A real location customers can visit, or a hidden address if you travel to customers</td></tr>
+              <tr><td>Creating several profiles for one location</td><td>One profile per location</td></tr>
+              <tr><td>Offering gifts or discounts for reviews</td><td>Honest reviews with no incentive</td></tr>
+              <tr><td>Adding links or sale prices to the description</td><td>A plain, honest description</td></tr>
+              <tr><td>Choosing many categories as keywords</td><td>The fewest, most specific categories</td></tr>
+              <tr><td>Sharing your verification code</td><td>Keep the code private</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="ai">Local SEO and AI search</h2>
+        <p>Google says there are no extra requirements or special optimisations for AI Overviews or AI Mode, and no special schema is needed. A page only needs to be indexed and eligible to show a snippet. Google also advises keeping your business profile information up to date. So the work in this guide already counts. To go deeper, read <a href="../how-google-ai-search-affects-seo/">how Google’s AI search affects SEO</a>.</p>
+
+        <h2 id="faq">Frequently asked questions</h2>
+        <div class="faq-list">
+          <details>
+            <summary>Can I pay Google to rank higher on the map?</summary>
+            <p>No. Google says there is no way to request or pay for a better local ranking. Focus on an accurate, complete profile and genuine prominence instead.</p>
+          </details>
+          <details>
+            <summary>How long does verification take?</summary>
+            <p>It depends on the verification method Google offers. Postcard codes usually arrive within 14 days and expire after 30 days. After submitting a code, Google may review your details for up to five business days.</p>
+          </details>
+          <details>
+            <summary>Can I use my home address?</summary>
+            <p>If customers visit you, your business needs to meet Google's shopfront requirements, including permanent signage. If you travel to customers, use a service-area profile and hide your home address. Virtual offices and mailbox addresses do not qualify.</p>
+          </details>
+          <details>
+            <summary>How many reviews do I need?</summary>
+            <p>Google gives no minimum number. Ask real customers for honest reviews, and never offer gifts or discounts in exchange.</p>
+          </details>
+          <details>
+            <summary>What is the difference between local SEO and a Google Business Profile?</summary>
+            <p>Local SEO is the work that helps nearby customers find your business in search and map results. A Google Business Profile is one free tool within that broader work.</p>
+          </details>
+        </div>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>Local SEO in Kannur comes down to five jobs. Claim and verify your profile. Fill in every field honestly. Collect genuine reviews. Keep your website details matching. Check your performance report every month.</p>
+        <section class="cta-panel" aria-labelledby="pick-task">
+          <span class="eyebrow">Pick one task today</span>
+          <h2 id="pick-task">Start with your business profile</h2>
+          <p>Compare your profile with the checklist above and fix the biggest gap first. If you would like help, book a free strategy session.</p>
+          <a class="button" href="https://wa.me/919895325388" target="_blank" rel="noopener noreferrer">Book a free strategy session ↗</a>
+        </section>
+      </article>
+    </div>
+  </main>
+
+    <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="../#home" aria-label="Safwan PP home"><img class="site-logo" src="../home/safwan-logo.png" alt="Safwan" decoding="async" width="1408" height="727"></a>
+          <p>Freelance digital marketing strategist helping businesses grow with SEO, ads, social media marketing, web design and Shopify development.</p>
+          <div class="footer-socials" aria-label="Social media">
+            <a href="https://www.instagram.com/thesafwaaan?gwpx=MThjNHVwd3FxYTdseg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg>
+            </a>
+            <span role="img" aria-label="Facebook">
+              <svg class="facebook-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.4 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.3H7.6V13h2.7v8h3.1Z"></path></svg>
+            </span>
+            <a href="https://www.linkedin.com/in/safwan-ibn-ibrahim-87a281396" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 8.5H2.1V22h3.1V8.5ZM3.65 2A1.8 1.8 0 1 0 3.7 5.6 1.8 1.8 0 0 0 3.65 2ZM22 14.3c0-4.1-2.2-6-5.1-6-2.4 0-3.5 1.3-4.1 2.2V8.5H9.7V22h3.1v-6.7c0-1.8.3-3.6 2.6-3.6s2.3 2.1 2.3 3.7V22H22v-7.7Z"></path></svg>
+            </a>
+          </div>
+        </div>
+        <nav class="footer-column" aria-label="Explore">
+          <h2>Explore</h2>
+          <ul>
+            <li><a href="../#home">Home</a></li>
+            <li><a href="../about-me/#about">About</a></li>
+            <li><a href="../digital-marketing-services-kannur/#services">Services</a></li>
+            <li><a href="../blogs/#articles">Blogs</a></li>
+            <li><a href="../contact/#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-column" aria-label="Services">
+          <h2>Services</h2>
+          <ul>
+            <li><a href="../seo-services-kannur/">SEO Services</a></li>
+            <li><a href="../social-media-marketing-kannur/">Social Media Marketing</a></li>
+            <li><a href="../meta-ads-services-kannur/">Meta Ads</a></li>
+            <li><a href="../google-ads-services-kannur/">Google Ads</a></li>
+            <li><a href="../website-design-services-kannur/">Web Design</a></li>
+            <li><a href="../shopify-development-services-kannur/#home">Shopify Development</a></li>
+          </ul>
+        </nav>
+        <div class="footer-column">
+          <h2>Locations</h2>
+          <ul>
+            <li><a href="../#home">Kerala, India</a></li>
+            <li><a href="../digital-marketing-strategist-dubai/#home">Dubai, UAE</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h2>Get in touch</h2>
+          <ul>
+            <li><a href="tel:+919895325388">+91 98953 25388</a></li>
+            <li><a href="mailto:ppsafwan263@gmail.com">ppsafwan263@gmail.com</a></li>
+            <li><a href="https://wa.me/919895325388" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright &copy; 2026 &middot; Safwan PP. All rights reserved.</p>
+        <a class="footer-top-link" href="#">Back to top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector("#nav-links");
+    menuToggle.addEventListener("click", () => {
+      const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", String(!isOpen));
+      navLinks.classList.toggle("is-open", !isOpen);
+    });
+  </script>
+  <script>
+    (() => {
+      const dropdown = document.querySelector(".nav-dropdown");
+      const toggle = dropdown.querySelector(".nav-dropdown-toggle");
+      const nav = document.querySelector(".nav-links");
+      const menuButton = document.querySelector(".menu-toggle");
+      const setOpen = (isOpen) => {
+        toggle.setAttribute("aria-expanded", String(isOpen));
+        dropdown.classList.toggle("is-open", isOpen);
+      };
+
+      toggle.addEventListener("click", () => {
+        setOpen(toggle.getAttribute("aria-expanded") !== "true");
+      });
+      dropdown.addEventListener("pointerenter", (event) => {
+        if (event.pointerType === "mouse") setOpen(true);
+      });
+      dropdown.addEventListener("pointerleave", () => {
+        if (!dropdown.contains(document.activeElement)) setOpen(false);
+      });
+      dropdown.addEventListener("focusin", () => setOpen(true));
+      dropdown.addEventListener("focusout", (event) => {
+        if (!dropdown.contains(event.relatedTarget)) setOpen(false);
+      });
+      dropdown.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          setOpen(false);
+          toggle.focus();
+        }
+      });
+      nav.addEventListener("click", (event) => {
+        if (event.target.closest("a")) setOpen(false);
+      });
+      menuButton.addEventListener("click", () => setOpen(false));
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn what E-E-A-T means for SEO, how your website affects trust and authority, and how to check your site using a practical checklist.">
+  <meta name="theme-color" content="#ffffff">
+  <title>What Is E-E-A-T in SEO? A Practical Guide | Safwan PP</title>
+  <link rel="canonical" href="https://ppsafwan.com/what-is-eeat-in-seo/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #101114;
+      --muted: #656a73;
+      --blue: #2451e6;
+      --line: #e8e9ec;
+      --paper: #fff;
+      --soft: #f7f8fb;
+      --content: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: "Raleway", sans-serif; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    h1, h2, h3 { font-family: "Inter", sans-serif; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    img, svg { max-width: 100%; }
+    .container { width: min(var(--content), calc(100% - 48px)); margin-inline: auto; }
+    .site-header { position: sticky; z-index: 20; top: 0; border-bottom: 1px solid rgba(232, 233, 236, .85); background: rgba(255, 255, 255, .94); backdrop-filter: blur(16px); }
+    .nav { min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; }
+    .site-logo { display: block; width: 78px; height: auto; filter: brightness(0); }
+    .nav-links { display: flex; align-items: center; gap: 25px; color: #464a52; font-size: .82rem; font-weight: 750; }
+    .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--blue); }
+    .nav-cta { padding: 10px 16px; border: 1px solid var(--line); border-radius: 999px; font-size: .8rem; font-weight: 850; }
+    .menu-toggle { display: none; padding: 9px 12px; border: 1px solid var(--line); border-radius: 10px; background: #fff; font-weight: 800; cursor: pointer; }
+    .article-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 46px 0 58px;
+      background-image: linear-gradient(rgba(16, 17, 20, .026) 1px, transparent 1px), linear-gradient(90deg, rgba(16, 17, 20, .026) 1px, transparent 1px);
+      background-size: 48px 48px;
+      background-position: center top;
+    }
+    .breadcrumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; color: var(--muted); font-size: .77rem; font-weight: 600; }
+    .breadcrumbs a:hover { color: var(--blue); }
+    .breadcrumbs span[aria-hidden="true"] { color: #a4a8b0; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(300px, .9fr); align-items: center; gap: clamp(36px, 6vw, 76px); padding-top: 46px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--blue); font-size: .75rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .eyebrow::before { width: 20px; height: 2px; background: currentColor; content: ""; }
+    .hero-copy h1 { margin: 16px 0 17px; font-size: clamp(2.6rem, 5.3vw, 4.65rem); font-weight: 900; line-height: .99; letter-spacing: -.08em; }
+    .hero-copy h1 em { color: var(--blue); font-style: normal; }
+    .hero-copy > p { max-width: 660px; margin: 0; color: #555b66; font-size: 1.02rem; line-height: 1.8; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 23px; }
+    .button { display: inline-flex; min-height: 46px; align-items: center; justify-content: center; gap: 8px; padding: 0 18px; border: 1px solid var(--line); border-radius: 999px; background: #fff; font-size: .8rem; font-weight: 800; transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
+    .button:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(20, 32, 60, .1); }
+    .button-primary { border-color: var(--blue); color: #fff; background: var(--blue); }
+    .button-primary:hover { background: #193fc2; }
+    .article-meta { display: flex; flex-wrap: wrap; gap: 9px 18px; margin-top: 20px; color: var(--muted); font-size: .76rem; font-weight: 650; }
+    .hero-art { display: grid; min-height: 340px; place-items: center; }
+    .trust-panel { width: min(100%, 410px); padding: 18px; border-radius: 24px; color: #fff; background: #0c0c0e; box-shadow: 0 28px 60px rgba(10, 12, 20, .18); }
+    .trust-search { display: flex; align-items: center; gap: 10px; padding: 12px 14px; border: 1px solid #343438; border-radius: 999px; color: #f3f4f6; background: #19191b; font-size: .75rem; }
+    .trust-search svg { width: 16px; flex: 0 0 16px; color: #c5c6ca; }
+    .trust-label { margin: 15px 4px 9px; color: #d3d5da; font-size: .62rem; font-weight: 800; letter-spacing: .09em; }
+    .trust-result { padding: 15px; border-radius: 15px; color: var(--ink); background: #fff; }
+    .trust-result small { display: block; color: #777b83; font-size: .63rem; }
+    .trust-result strong { display: block; margin-top: 5px; font-size: .91rem; line-height: 1.4; }
+    .trust-points { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 9px; }
+    .trust-points span { padding: 11px 9px; border-radius: 10px; color: #fff; background: var(--blue); font-size: .7rem; font-weight: 750; text-align: center; }
+    .quick-answer { max-width: 790px; margin: 30px 0 0; padding: 19px 22px; border: 1px solid #e6e9f2; border-left: 3px solid var(--blue); border-radius: 0 14px 14px 0; background: rgba(255, 255, 255, .94); box-shadow: 0 12px 30px rgba(16, 17, 20, .04); }
+    .quick-answer strong { display: block; margin-bottom: 3px; color: var(--blue); font-family: "Inter", sans-serif; font-size: .74rem; letter-spacing: .07em; text-transform: uppercase; }
+    .quick-answer p { margin: 0; color: #454a53; font-size: .9rem; }
+    .article-layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); align-items: start; gap: clamp(34px, 6vw, 78px); padding-top: 56px; padding-bottom: 90px; }
+    .toc { position: sticky; top: 105px; padding: 20px 17px; border: 1px solid var(--line); border-radius: 14px; background: var(--soft); }
+    .toc h2 { margin: 0 0 12px; font-size: .78rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+    .toc ol { display: grid; gap: 9px; margin: 0; padding: 0; list-style: none; }
+    .toc a { color: #555b66; font-size: .74rem; font-weight: 600; line-height: 1.45; }
+    .toc a:hover { color: var(--blue); }
+    .article-content { min-width: 0; }
+    .article-content > p:first-child { margin-top: 0; }
+    .article-content p, .article-content li { color: #454a53; font-size: .97rem; }
+    .article-content p { margin: 0 0 18px; }
+    .article-content h2 { margin: 52px 0 15px; font-size: clamp(1.55rem, 3vw, 2.1rem); font-weight: 800; line-height: 1.2; letter-spacing: -.05em; scroll-margin-top: 100px; }
+    .article-content h3 { margin: 27px 0 8px; font-size: 1.1rem; font-weight: 750; line-height: 1.3; letter-spacing: -.025em; scroll-margin-top: 100px; }
+    .article-content a:not(.button) { color: var(--blue); text-decoration: underline; text-decoration-color: rgba(36, 81, 230, .35); text-underline-offset: 3px; }
+    .article-content a:not(.button):hover { text-decoration-color: currentColor; }
+    .article-content strong { color: var(--ink); }
+    .data-table-wrap { overflow-x: auto; margin: 20px 0 22px; border: 1px solid var(--line); border-radius: 12px; }
+    .data-table { width: 100%; min-width: 580px; border-collapse: collapse; background: #fff; font-size: .81rem; }
+    .data-table th, .data-table td { padding: 12px 14px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    .data-table th { color: #fff; background: #17171b; font-family: "Inter", sans-serif; font-size: .73rem; font-weight: 750; }
+    .data-table td { color: #4a4e57; }
+    .data-table td:first-child { color: var(--ink); font-weight: 750; }
+    .data-table tr:last-child td { border-bottom: 0; }
+    .four-parts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 20px 0 24px; }
+    .part-card { padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: var(--soft); }
+    .part-card h3 { margin: 0 0 7px; color: var(--blue); font-size: 1rem; }
+    .part-card p { margin: 0 0 10px; font-size: .88rem; line-height: 1.65; }
+    .part-card p:last-child { margin-bottom: 0; }
+    .article-content ul, .article-content ol { display: grid; gap: 10px; margin: 12px 0 22px; padding-left: 22px; }
+    .article-content li { padding-left: 3px; }
+    .faq-list { display: grid; gap: 10px; margin-top: 20px; }
+    .faq-list details { padding: 16px 18px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+    .faq-list summary { color: var(--ink); font-family: "Inter", sans-serif; font-size: .92rem; font-weight: 700; cursor: pointer; }
+    .faq-list details p { margin: 12px 0 0; font-size: .89rem; }
+    .cta-panel { margin: 42px 0; padding: clamp(24px, 5vw, 38px); border-radius: 20px; color: #fff; background: #101114; }
+    .cta-panel .eyebrow { color: #a9bcff; }
+    .cta-panel h2 { margin: 12px 0 10px; color: #fff; font-size: clamp(1.55rem, 3vw, 2.2rem); }
+    .cta-panel p { max-width: 650px; color: #dedfe4; }
+    .cta-panel .button { border-color: #fff; color: #17171b; background: #fff; }
+    .cta-panel .button:hover { background: #e9edff; }
+    .site-footer, .site-footer * { font-family: "Inter", sans-serif; }
+    .site-footer { padding: 58px 0 20px; color: #fff; background: #0b0b0d; font-size: 16px; }
+    .footer-grid { display: grid; grid-template-columns: minmax(220px, 1.7fr) repeat(4, minmax(0, 1fr)); gap: clamp(24px, 4vw, 56px); padding-bottom: 48px; }
+    .footer-brand .brand { display: inline-flex; margin-bottom: 16px; }
+    .footer-brand .site-logo { width: 112px; filter: none; }
+    .footer-brand p { max-width: 290px; margin: 0; color: #fff; font-size: .9rem; line-height: 1.75; }
+    .footer-column h2 { margin: 5px 0 16px; color: #fff; font-size: .88rem; font-weight: 850; letter-spacing: .04em; text-transform: uppercase; }
+    .footer-column ul { display: grid; gap: 11px; margin: 0; padding: 0; list-style: none; }
+    .footer-column li, .footer-column a { color: #d3d4d8; font-size: .84rem; line-height: 1.5; }
+    .footer-column a:hover { color: #fff; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding-top: 18px; border-top: 1px solid #29292d; color: #c9cacf; font-size: .76rem; }
+    .footer-bottom p { margin: 0; }
+    @media (max-width: 800px) {
+      .container { width: min(100% - 36px, var(--content)); }
+      .nav { min-height: 66px; }
+      .site-header .nav { width: min(100% - 36px, 1120px); }
+      .menu-toggle { display: inline-flex; }
+      .nav-cta { display: none; }
+      .nav-links { position: absolute; top: 65px; right: 18px; left: 18px; display: none; align-items: stretch; gap: 0; padding: 8px 16px; border: 1px solid var(--line); border-radius: 16px; background: #fff; box-shadow: 0 18px 35px rgba(16, 17, 20, .1); }
+      .nav-links.is-open { display: flex; flex-direction: column; }
+      .nav-links a { padding: 12px 2px; border-bottom: 1px solid var(--line); }
+      .nav-links a:last-child { border-bottom: 0; }
+      .hero-grid { grid-template-columns: 1fr; gap: 18px; padding-top: 34px; }
+      .hero-copy h1 { max-width: 700px; }
+      .hero-art { min-height: 295px; }
+      .article-layout { grid-template-columns: 1fr; gap: 22px; padding-top: 36px; padding-bottom: 65px; }
+      .toc { position: static; }
+      .toc ol { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 15px; }
+      .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 22px; padding-bottom: 34px; }
+      .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 520px) {
+      .container { width: min(100% - 32px, var(--content)); }
+      .site-header .nav { width: min(100% - 32px, 1120px); }
+      .article-hero { padding: 30px 0 38px; }
+      .hero-grid { padding-top: 29px; }
+      .hero-copy h1 { font-size: clamp(2.45rem, 12vw, 3.4rem); }
+      .hero-art { min-height: 265px; }
+      .four-parts { grid-template-columns: 1fr; }
+      .toc ol { grid-template-columns: 1fr; }
+      .article-content p, .article-content li { font-size: .92rem; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-brand { grid-column: auto; }
+      .footer-bottom { align-items: flex-start; flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    }
+      .site-header { position: sticky; z-index: 20; top: 0; border-bottom: 1px solid rgba(232,233,236,.85); background: rgba(255,255,255,.94); backdrop-filter: blur(16px); }
+    .site-header .nav { width: min(1120px,calc(100% - 48px)); min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .site-header .brand { display: inline-flex; align-items: center; }
+    .site-header .site-logo { display: block; width: 78px; height: auto; filter: brightness(0); }
+    .site-header .nav-links { display: flex; align-items: center; gap: 25px; color: #464a52; font-size: .82rem; font-weight: 750; }
+    .site-header .nav-links a:hover, .site-header .nav-links a[aria-current="page"] { color: var(--blue); }
+    .site-header .nav-cta { padding: 10px 16px; border: 1px solid var(--line); border-radius: 999px; font-size: .8rem; font-weight: 850; }
+    .site-header .menu-toggle { display: none; padding: 9px 12px; border: 1px solid var(--line); border-radius: 10px; background: #fff; font-weight: 800; cursor: pointer; }
+    .site-footer, .site-footer * { font-family: Arial, sans-serif; }
+    .site-footer { padding: 58px 0 20px; color: #fff; background: #0b0b0d; font-size: 16px; font-weight: 400; }
+    .site-footer .footer-grid { display: grid; grid-template-columns: minmax(220px,1.7fr) repeat(4,minmax(0,1fr)); gap: clamp(24px,4vw,56px); padding-bottom: 48px; }
+    .site-footer .footer-brand .brand { display: inline-flex; margin-bottom: 16px; color: #fff; }
+    .site-footer .footer-brand .site-logo { width: 112px; }
+    .site-footer .footer-brand p { max-width: 290px; margin: 0; color: #fff; font-size: 16px; line-height: 1.75; }
+    .site-footer .footer-socials { display: flex; align-items: center; gap: 22px; margin-top: 20px; }
+    .site-footer .footer-socials a, .site-footer .footer-socials span { display: grid; width: 22px; height: 22px; place-items: center; color: #fff; }
+    .site-footer .footer-socials a { transition: color .2s ease, transform .2s ease; }
+    .site-footer .footer-socials a:hover { transform: translateY(-2px); color: #fff; }
+    .site-footer .footer-socials svg { width: 20px; height: 20px; fill: none; }
+    .site-footer .footer-socials .facebook-icon, .site-footer .footer-socials a:nth-child(3) svg { fill: currentColor; }
+    .site-footer .footer-column h2 { margin: 5px 0 16px; color: #fff; font-size: 16px; font-weight: 850; letter-spacing: .04em; text-transform: uppercase; }
+    .site-footer .footer-column ul { display: grid; gap: 11px; margin: 0; padding: 0; list-style: none; }
+    .site-footer .footer-column li, .site-footer .footer-column a { color: #fff; font-size: 16px; line-height: 1.5; }
+    .site-footer .footer-column a, .site-footer .footer-top-link { transition: color .18s ease; }
+    .site-footer .footer-column a:hover, .site-footer .footer-top-link:hover { color: var(--blue); }
+    .site-footer .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 18px; border-top: 1px solid #292a30; color: #fff; font-size: 15px; }
+    .site-footer .footer-bottom p { margin: 0; }
+    .site-footer .footer-top-link { color: #fff; }
+    @media (max-width: 980px) {
+      .site-footer .footer-grid { grid-template-columns: repeat(4,minmax(0,1fr)); }
+      .site-footer .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 720px) {
+      .site-header .nav { width: min(100% - 36px,1120px); min-height: 66px; position: relative; }
+      .site-header .menu-toggle { display: inline-flex; }
+      .site-header .nav-cta { display: none; }
+      .site-header .nav-links { position: absolute; top: 65px; right: 0; left: 0; display: none; align-items: stretch; gap: 0; padding: 8px 16px; border: 1px solid var(--line); border-radius: 16px; background: #fff; box-shadow: 0 18px 35px rgba(16,17,20,.1); }
+      .site-header .nav-links.is-open { display: flex; flex-direction: column; }
+      .site-header .nav-links a { padding: 12px 2px; border-bottom: 1px solid var(--line); }
+      .site-header .nav-links a:last-child { border-bottom: 0; }
+      .site-footer .footer-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 30px 22px; padding-bottom: 34px; }
+      .site-footer .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 440px) {
+      .site-footer .footer-grid { grid-template-columns: 1fr; }
+      .site-footer .footer-bottom { align-items: flex-start; flex-direction: column; }
+    }
+      .site-header, .site-header * { font-family: Arial, sans-serif; }
+    .site-footer > .container { width: min(1120px,calc(100% - 48px)); margin-inline: auto; }
+    @media (max-width: 720px) { .site-footer > .container { width: min(100% - 36px,1120px); } }
+      .nav-dropdown { position: relative; }
+    .nav-dropdown-head { display: flex; align-items: center; gap: 3px; }
+    .nav-dropdown-toggle { display: grid; width: 23px; height: 30px; place-items: center; padding: 0; border: 0; color: inherit; background: transparent; cursor: pointer; }
+    .nav-dropdown-toggle svg { width: 12px; height: 12px; transition: transform .18s ease; }
+    .nav-dropdown:hover .nav-dropdown-toggle svg, .nav-dropdown.is-open .nav-dropdown-toggle svg { transform: rotate(180deg); }
+    .nav-dropdown::after { position: absolute; top: 100%; left: 0; width: 100%; height: 17px; content: ""; }
+    .nav-dropdown-menu { position: absolute; z-index: 22; top: calc(100% + 17px); left: -16px; display: none; width: 190px; overflow: hidden; padding: 6px; border: 1px solid var(--line); border-radius: 12px; color: var(--ink); background: #fff; box-shadow: 0 16px 36px rgba(16,17,20,.12); }
+    .nav-dropdown-menu a { display: block; padding: 12px; border-radius: 7px; color: var(--ink); font-size: .74rem; font-weight: 750; line-height: 1.4; transition: color .18s ease, background .18s ease; }
+    .nav-dropdown-menu a:hover, .nav-dropdown-menu a:focus-visible { color: var(--blue); background: #f1f4ff; }
+    .nav-dropdown:hover .nav-dropdown-menu, .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+    @media (max-width: 720px) {
+      .site-header .nav-dropdown { position: relative; width: 100%; }
+      .site-header .nav-dropdown::after { display: none; }
+      .site-header .nav-dropdown-head { min-height: 45px; }
+      .site-header .nav-dropdown-head > a { flex: 1; padding: 12px 2px; }
+      .site-header .nav-dropdown-toggle { width: 42px; height: 42px; border-bottom: 1px solid var(--line); }
+      .site-header .nav-dropdown-menu { position: static; width: 100%; margin-bottom: 8px; padding: 4px; border: 1px solid var(--line); border-radius: 10px; background: #fff; box-shadow: none; }
+      .site-header .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+      .site-header .nav-dropdown-menu a { padding: 12px; border-bottom: 0; color: var(--ink); }
+    }
+</style>
+  <link rel="stylesheet" href="../style.css">
+  <meta property="og:title" content="What Is E-E-A-T in SEO? A Practical Guide | Safwan PP">
+  <meta property="og:description" content="Learn what E-E-A-T means for SEO, how your website affects trust and authority, and how to check your site using a practical checklist.">
+  <meta property="og:site_name" content="Safwan PP">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="What Is E-E-A-T in SEO? A Practical Guide | Safwan PP">
+  <meta name="twitter:description" content="Learn what E-E-A-T means for SEO, how your website affects trust and authority, and how to check your site using a practical checklist.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://ppsafwan.com/what-is-eeat-in-seo/">
+</head>
+<body id="top">
+    <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="../#home" aria-label="Safwan PP home"><img class="site-logo" src="../home/safwan-logo.png" alt="Safwan" decoding="async" width="1408" height="727"></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="../#home">Home</a>
+        <a href="../about-me/">About</a>
+        <div class="nav-dropdown">
+  <div class="nav-dropdown-head">
+    <a href="../digital-marketing-services-kannur/">Services</a>
+    <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="service-submenu" aria-label="Show service links">
+      <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="m2 4.5 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+    </button>
+  </div>
+  <div class="nav-dropdown-menu" id="service-submenu">
+    <a href="../seo-services-kannur/">SEO Services</a>
+    <a href="../google-ads-services-kannur/">Google Ads</a>
+    <a href="../website-design-services-kannur/">Web Design</a>
+    <a href="../shopify-development-services-kannur/#home">Shopify Development</a>
+    <a href="../meta-ads-services-kannur/">Meta Ads</a>
+    <a href="../social-media-marketing-kannur/">Social Media Marketing</a>
+  </div>
+</div>
+        <a href="../blogs/">Blogs</a>
+        <a href="../contact/">Contact</a>
+      </div>
+      <a class="nav-cta" href="../contact/#contact">Let's talk <span aria-hidden="true">&#8599;</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="article-hero">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="../#home">Home</a><span aria-hidden="true">/</span>
+          <a href="../blogs/">Blogs</a><span aria-hidden="true">/</span>
+          <span aria-current="page">E-E-A-T in SEO</span>
+        </nav>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">SEO · E-E-A-T guide</span>
+            <h1>What Is E-E-A-T in SEO, and How Does Your Website <em>Affect It?</em></h1>
+            <p>Picture two plumbers in the same town. Both have a website with the same services and almost the same prices. The first site shows the owner’s name, real photos of finished jobs and 40 Google reviews. The second uses stock photos and a contact form with no name on it. Which one would you call? Most people pick the first one without thinking twice.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="https://wa.me/919895325388" target="_blank" rel="noopener noreferrer">WhatsApp me <span aria-hidden="true">↗</span></a>
+              <a class="button" href="../digital-marketing-services-kannur/#services">View services</a>
+              <a class="button" href="../#home">Back to home</a>
+            </div>
+            <div class="article-meta">
+              <span>By Safwan PP</span>
+              <span><time datetime="2026-10-30">October 30, 2026</time></span>
+              <span>12 min read</span>
+            </div>
+          </div>
+          <div class="hero-art" role="img" aria-label="Illustration of the four E-E-A-T qualities: experience, expertise, authoritativeness and trust">
+            <div class="trust-panel">
+              <div class="trust-search">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+                <span>Is this website trustworthy?</span>
+              </div>
+              <div class="trust-label">HELPFUL CONTENT · REAL PEOPLE</div>
+              <div class="trust-result"><small>QUICK ANSWER · E-E-A-T</small><strong>Experience, Expertise, Authoritativeness and Trust</strong></div>
+              <div class="trust-points"><span>Experience</span><span>Expertise</span><span>Authority</span><span>Trust</span></div>
+            </div>
+          </div>
+        </div>
+        <aside class="quick-answer">
+          <strong>Quick answer · E-E-A-T</strong>
+          <p>E-E-A-T stands for <b>Experience, Expertise, Authoritativeness and Trust</b>. Google uses these four ideas to judge whether a page is helpful and safe to show people. In short, it asks whether real, skilled and respected people made the content and whether visitors can rely on it.</p>
+        </aside>
+      </div>
+    </section>
+
+    <div class="container article-layout">
+      <aside class="toc" aria-label="On this page">
+        <h2>On this page</h2>
+        <ol>
+          <li><a href="#meaning">What E-E-A-T means</a></li>
+          <li><a href="#four-parts">The four parts</a></li>
+          <li><a href="#ranking-factor">Is it a ranking factor?</a></li>
+          <li><a href="#trust-ymyl">Trust and YMYL</a></li>
+          <li><a href="#website-signals">How your website affects it</a></li>
+          <li><a href="#site-types">Different website types</a></li>
+          <li><a href="#site-audit">A real website check</a></li>
+          <li><a href="#free-check">Check your site for free</a></li>
+          <li><a href="#checklist">Quick checklist</a></li>
+          <li><a href="#faqs">FAQs</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ol>
+      </aside>
+
+      <article class="article-content">
+        <p>Google asks a very similar question about every website, and the answer has a name: E-E-A-T. In this guide, I’ll explain what it means in plain words, which parts of your website affect it, and how to check your own site for free. I’ll also run the same check on my own website, <a href="../#home">ppsafwan.com</a>, so you can see what it looks like on a real site.</p>
+
+        <h2 id="meaning">What Is E-E-A-T in SEO</h2>
+        <p>E-E-A-T stands for Experience, Expertise, Authoritativeness and Trust. Google uses these four ideas to judge whether a page is helpful and safe to show people. In short, it asks whether real, skilled and respected people made the content and whether visitors can rely on it.</p>
+        <p>Here’s what each word means in one line:</p>
+        <ul>
+          <li><strong>Experience.</strong> You’ve actually done or used what you’re writing about.</li>
+          <li><strong>Expertise.</strong> You know the subject well.</li>
+          <li><strong>Authoritativeness.</strong> Other people see you as a go-to source.</li>
+          <li><strong>Trust.</strong> People can rely on you and feel safe on your site.</li>
+        </ul>
+        <p>Think about choosing a doctor. You want someone who has treated patients, trained properly, has a good name in town and makes you feel safe. Google looks for the same things in a website.</p>
+        <p>The idea first appeared as E-A-T. In December 2022, Google added the extra “E” for Experience.</p>
+
+        <h2 id="four-parts">The Four Parts of E-E-A-T Explained in Simple Words</h2>
+        <section class="four-parts" aria-label="The four parts of E-E-A-T">
+          <div class="part-card"><h3>Experience Means You Have Actually Done It</h3><p>Imagine two reviews of the same pair of running shoes. One repeats what the box says. The other says the shoes felt tight for the first week and still looked new after months of daily runs. The second review clearly comes from someone who wore them.</p><p>That’s experience. It shows up as your own photos, screenshots of real results and small details only a real user would know.</p><p>Experience matters more now because AI tools can write about anything. They can’t go for a run, stay in a hotel or finish a client project. Your real stories are hard to copy.</p></div>
+          <div class="part-card"><h3>Expertise Means You Know the Subject Well</h3><p>Expertise can be formal or practical. A doctor has formal expertise from years of training. A baker who has made wedding cakes for 10 years has practical expertise.</p><p>Some topics need the formal kind. Advice about medicine, money or the law should come from qualified people. Hobby and lifestyle topics can rely on practical skills.</p><p>On a page, expertise shows through the author’s name, a short bio, relevant certifications and clear, accurate explanations.</p></div>
+          <div class="part-card"><h3>Authoritativeness Means Others See You as a Trusted Source</h3><p>Authority is your reputation. It comes from what other people say about you, not what you say about yourself.</p><p>Signals include links from respected websites, mentions in news or blogs, Google reviews and recommendations in online communities.</p><p>Think of a small café that gets featured by a popular food blogger. Nothing about the café changed, but more people now trust it because someone respected and vouched for it.</p></div>
+          <div class="part-card"><h3>Trust Means People Feel Safe Using Your Website</h3><p>Trust covers honesty, accuracy and safety. Visitors want to know who runs the site, how to reach them and whether the information is true.</p><p>Basic signs include real contact details, a secure “https” address, clear prices or policies and no misleading claims. Google treats this part as the most important of the four, which we’ll look at next.</p></div>
+        </section>
+
+        <h2 id="ranking-factor">Where E-E-A-T Comes From and Is It a Ranking Factor</h2>
+        <p>E-E-A-T comes from a document called the Search Quality Rater Guidelines. It’s a handbook Google gives to thousands of human reviewers, called quality raters. They look at real search results and score how helpful and trustworthy the pages are. The current version was published in September 2025.</p>
+        <p>Here’s the part many people get wrong. Raters don’t change your rankings. Google says their ratings help it test and improve search, but they don’t directly decide where any page ranks.</p>
+        <p>So is E-E-A-T a ranking factor? Not as a single factor or score. There’s no E-E-A-T number inside Google, and no tool can give you an official one. Instead, it describes the qualities Google’s systems are built to reward. The signals that show E-E-A-T, like reviews, links and clear authorship, can still affect how well your site does.</p>
+
+        <h2 id="trust-ymyl">Why Trust Matters Most and What YMYL Means</h2>
+        <p>Google’s guidelines put Trust at the centre of E-E-A-T. Experience, expertise and authority all support it. If a page can’t be trusted, the other three don’t save it. A brilliant article on a site that tricks visitors is still a bad result.</p>
+        <p>Some topics need more trust than others. Google calls them YMYL, short for “Your Money or Your Life”. These are topics that could affect someone’s health, money, safety or big life decisions.</p>
+        <div class="data-table-wrap">
+          <table class="data-table">
+            <thead><tr><th>YMYL (needs very strong E-E-A-T)</th><th>Not YMYL (normal standards)</th></tr></thead>
+            <tbody><tr><td>Advice on managing diabetes</td><td>A review of a board game</td></tr><tr><td>How to invest your savings</td><td>Ideas for a birthday party</td></tr><tr><td>Steps to file for divorce</td><td>Best hiking trails nearby</td></tr></tbody>
+          </table>
+        </div>
+        <p>If you run a clinic, a finance service, a law firm or a real estate business, your site needs stronger signals than a hobby blog.</p>
+
+        <h2 id="website-signals">How Your Website Affects E-E-A-T</h2>
+        <h3>Your About Page Tells Google Who Is Behind the Site</h3>
+        <p>Google’s raters are told to check what a website says about itself. The About page is usually the first stop.</p>
+        <p>A good About page includes your real name, a photo, your background, your skills and certifications, who you’ve worked with and where you’re based.</p>
+        <p>On my own site, the About page and homepage show my BSc in Computer Science, my digital marketing training at HACA, my Google Ads and HubSpot SEO certifications and the brands I’ve worked with. Each of those is a small piece of proof for expertise and experience. If you’re a freelancer, <a href="../build-personal-brand-2026/">my guide to building a personal brand</a> goes deeper on this.</p>
+
+        <h3>Author Names and Bios Show Real People Wrote the Content</h3>
+        <p>A blog post signed “admin” tells readers nothing. A post with a name, photo and short bio tells them a real person stands behind it.</p>
+        <p>A good author bio fits in three lines. It includes your name, what you do, your years of experience and a link to your LinkedIn profile.</p>
+        <p>You can also add author schema markup. This is a small piece of code that tells Google who wrote the page, in a format that reads easily.</p>
+
+        <h3>Real Examples and Results Prove Experience</h3>
+        <p>“We get great results” is a claim. A screenshot showing enquiries going up after a change is proof.</p>
+        <p>Case studies, before-and-after screenshots, original photos and short project stories all count. Even one honest example beats a page of promises.</p>
+
+        <h3>Reviews and Mentions Build Authority</h3>
+        <p>Google reviews, testimonials and mentions on other websites are proof from other people. They carry more weight than anything you write about yourself.</p>
+        <p>Ask happy clients for a review right after you finish their project, when they’re most pleased. Reply to every review, including bad ones. A calm, helpful reply to a complaint often builds more trust than a perfect five stars.</p>
+        <p>My homepage shows testimonials with the full names of the people who gave them and links to their websites. That makes them easy for anyone to check.</p>
+
+        <h3>Basic Trust Signals Every Site Needs</h3>
+        <p>Some things won’t make you stand out, but missing them looks suspicious. Every site needs a secure “https” address, a contact page with a phone number and email, and a privacy policy. Online stores also need clear shipping and return policies.</p>
+        <p>Would you buy from a shop with no return policy? Probably not.</p>
+        <p>Speed and mobile design matter too. A slow or broken site makes visitors leave before they read a word. If your pages show up in Google but nobody clicks, <a href="../impressions-but-no-clicks-seo-fixes/">my guide on why your website gets impressions but no clicks</a> covers the common fixes.</p>
+
+        <h2 id="site-types">What E-E-A-T Looks Like for Different Types of Websites</h2>
+        <div class="data-table-wrap">
+          <table class="data-table">
+            <thead><tr><th>Website type</th><th>Main signals</th><th>Quick win</th><th>Common mistake</th></tr></thead>
+            <tbody>
+              <tr><td>Local business</td><td>Google Business Profile, reviews, same address everywhere</td><td>Ask your last 10 customers for a review.</td><td>Different phone numbers on different sites</td></tr>
+              <tr><td>Blog</td><td>Author bio, firsthand stories, cited sources</td><td>Add your name and photo to every post.</td><td>Rewriting other blogs with nothing new</td></tr>
+              <tr><td>Online store</td><td>Clear policies, real product photos, customer reviews</td><td>Add a visible returns page</td><td>Using only stock photos</td></tr>
+              <tr><td>Service provider or freelancer</td><td>Portfolio, case studies, certifications, personal about page</td><td>Turn one project into a short case study.</td><td>A vague About page full of buzzwords</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>Does AI-written content hurt E-E-A-T?</h3>
+        <p>Not by itself. Google has said it rewards high-quality content, however it’s produced. The problem is using AI to churn out pages mainly to game search rankings, which breaks Google’s spam policies.</p>
+        <p>The real risk is that mass-produced AI articles usually have no real experience in them. They sound the same as a thousand other pages.</p>
+        <p>If you use AI, treat it as a helper, not the author. Add your own examples, check every fact and put your name on the final version. I explain more in my posts on <a href="../how-google-ai-search-affects-seo/">how Google’s AI search is changing SEO</a> and <a href="../blog-how-ai-is-changing-digital-marketing-for-small-businesses/">how AI is changing digital marketing for small businesses</a>.</p>
+
+        <h2 id="site-audit">A Real E-E-A-T Check of ppsafwan.com</h2>
+        <p>Advice is easier to trust when the person giving it follows it. So here’s an honest look at my own website.</p>
+        <h3>What’s working</h3>
+        <ul>
+          <li>My name, photo and background appear on the homepage and About page.</li>
+          <li>Certifications from Google and HubSpot are shown as images, not just mentioned.</li>
+          <li>Client brands and named testimonials appear on the homepage.</li>
+          <li>Phone, email, WhatsApp and location are easy to find.</li>
+        </ul>
+        <h3>What I’m improving</h3>
+        <ul>
+          <li>The homepage lists numbers like 50+ projects and 1,000+ leads. Short case studies would show where those numbers come from.</li>
+          <li>Blog posts would benefit from an author box and a clear “last updated” date.</li>
+          <li>Linking to my Google reviews would let visitors see feedback I don’t control.</li>
+        </ul>
+        <p>Listing my own gaps is part of the point. Being open about what’s missing is itself a trust signal.</p>
+
+        <h2 id="free-check">How to Check Your Website’s E-E-A-T Without Paid Tools</h2>
+        <ol>
+          <li>Search your brand or name on Google. Look at what a stranger would find, including reviews and other sites that mention you.</li>
+          <li>Open your site on your phone as a first-time visitor. Ask yourself whether you’d trust it within 10 seconds.</li>
+          <li>Compare your details. Your name, address and phone number should match on your website, Google Business Profile and social profiles.</li>
+          <li>Read your last 10 reviews. Check that you’ve replied to each one.</li>
+          <li>Open one blog post. You should be able to see who wrote it, when it was updated and where the facts came from.</li>
+        </ol>
+
+        <h2 id="checklist">Quick E-E-A-T Checklist for Your Website</h2>
+        <div class="four-parts">
+          <section class="part-card"><h3>Experience</h3><ul><li>Your own photos or screenshots on key pages</li><li>At least one real case study or project story</li></ul></section>
+          <section class="part-card"><h3>Expertise</h3><ul><li>Author name and bio on every post</li><li>Certifications or qualifications on display</li></ul></section>
+          <section class="part-card"><h3>Authoritativeness</h3><ul><li>Reviews on Google or other platforms</li><li>Mentions or links from other websites</li></ul></section>
+          <section class="part-card"><h3>Trust</h3><ul><li>Secure the https address and a privacy policy</li><li>Contact details that match everywhere</li><li>No claims you can’t back up</li></ul></section>
+        </div>
+        <p>Save or screenshot this list and run through it every few months.</p>
+
+        <h2 id="faqs">Frequently Asked Questions About E-E-A-T</h2>
+        <div class="faq-list">
+          <details><summary>What does E-E-A-T stand for?</summary><p>Experience, Expertise, Authoritativeness and Trust. It describes the qualities Google looks for when judging whether content is helpful and reliable.</p></details>
+          <details><summary>Is E-E-A-T a Google ranking factor?</summary><p>Not as one single factor. It guides how Google’s raters judge quality, and their feedback helps Google improve its systems. The signals behind it, like reviews and clear authorship, can still affect your results.</p></details>
+          <details><summary>How long does it take to improve E-E-A-T?</summary><p>Usually months, not days. Adding an author bio takes minutes, but reputation grows slowly as reviews, links and mentions build up.</p></details>
+          <details><summary>Does E-E-A-T matter for small businesses?</summary><p>Yes. Small businesses can show real faces, real reviews and real work. Those are exactly the signals E-E-A-T rewards, and they can’t be faked.</p></details>
+          <details><summary>Can a one-person business build strong E-E-A-T?</summary><p>Yes. You are the expert, the author and the brand. Put your name on your work, show real projects, collect reviews and keep your details the same everywhere.</p></details>
+        </div>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>E-E-A-T comes down to proving four things. You’ve done the work, you know the subject, others vouch for you, and people are safe on your site. Trust ties them all together.</p>
+        <p>You don’t need a big team to get there. Small, honest improvements add up over time.</p>
+        <section class="cta-panel" aria-labelledby="cta-title">
+          <span class="eyebrow">Take the next step</span>
+          <h2 id="cta-title">Want to know how your own site measures up?</h2>
+          <p>Message me on WhatsApp for a free E-E-A-T check, or take a look at my SEO services.</p>
+          <div class="hero-actions">
+            <a class="button" href="https://wa.me/919895325388" target="_blank" rel="noopener noreferrer">Message me on WhatsApp ↗</a>
+            <a class="button" href="../digital-marketing-services-kannur/#services">Explore SEO services</a>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+    <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="../#home" aria-label="Safwan PP home"><img class="site-logo" src="../home/safwan-logo.png" alt="Safwan" decoding="async" width="1408" height="727"></a>
+          <p>Freelance digital marketing strategist helping businesses grow with SEO, ads, social media marketing, web design and Shopify development.</p>
+          <div class="footer-socials" aria-label="Social media">
+            <a href="https://www.instagram.com/thesafwaaan?gwpx=MThjNHVwd3FxYTdseg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg>
+            </a>
+            <span role="img" aria-label="Facebook">
+              <svg class="facebook-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.4 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.3H7.6V13h2.7v8h3.1Z"></path></svg>
+            </span>
+            <a href="https://www.linkedin.com/in/safwan-ibn-ibrahim-87a281396" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 8.5H2.1V22h3.1V8.5ZM3.65 2A1.8 1.8 0 1 0 3.7 5.6 1.8 1.8 0 0 0 3.65 2ZM22 14.3c0-4.1-2.2-6-5.1-6-2.4 0-3.5 1.3-4.1 2.2V8.5H9.7V22h3.1v-6.7c0-1.8.3-3.6 2.6-3.6s2.3 2.1 2.3 3.7V22H22v-7.7Z"></path></svg>
+            </a>
+          </div>
+        </div>
+        <nav class="footer-column" aria-label="Explore">
+          <h2>Explore</h2>
+          <ul>
+            <li><a href="../#home">Home</a></li>
+            <li><a href="../about-me/#about">About</a></li>
+            <li><a href="../digital-marketing-services-kannur/#services">Services</a></li>
+            <li><a href="../blogs/#articles">Blogs</a></li>
+            <li><a href="../contact/#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-column" aria-label="Services">
+          <h2>Services</h2>
+          <ul>
+            <li><a href="../seo-services-kannur/">SEO Services</a></li>
+            <li><a href="../social-media-marketing-kannur/">Social Media Marketing</a></li>
+            <li><a href="../meta-ads-services-kannur/">Meta Ads</a></li>
+            <li><a href="../google-ads-services-kannur/">Google Ads</a></li>
+            <li><a href="../website-design-services-kannur/">Web Design</a></li>
+            <li><a href="../shopify-development-services-kannur/#home">Shopify Development</a></li>
+          </ul>
+        </nav>
+        <div class="footer-column">
+          <h2>Locations</h2>
+          <ul>
+            <li><a href="../#home">Kerala, India</a></li>
+            <li><a href="../digital-marketing-strategist-dubai/#home">Dubai, UAE</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h2>Get in touch</h2>
+          <ul>
+            <li><a href="tel:+919895325388">+91 98953 25388</a></li>
+            <li><a href="mailto:ppsafwan263@gmail.com">ppsafwan263@gmail.com</a></li>
+            <li><a href="https://wa.me/919895325388" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright &copy; 2026 &middot; Safwan PP. All rights reserved.</p>
+        <a class="footer-top-link" href="#">Back to top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector("#nav-links");
+    menuToggle.addEventListener("click", () => {
+      const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", String(!isOpen));
+      navLinks.classList.toggle("is-open", !isOpen);
+    });
+  </script>
+  <script>
+    (() => {
+      const dropdown = document.querySelector(".nav-dropdown");
+      const toggle = dropdown.querySelector(".nav-dropdown-toggle");
+      const nav = document.querySelector(".nav-links");
+      const menuButton = document.querySelector(".menu-toggle");
+      const setOpen = (isOpen) => {
+        toggle.setAttribute("aria-expanded", String(isOpen));
+        dropdown.classList.toggle("is-open", isOpen);
+      };
+
+      toggle.addEventListener("click", () => {
+        setOpen(toggle.getAttribute("aria-expanded") !== "true");
+      });
+      dropdown.addEventListener("pointerenter", (event) => {
+        if (event.pointerType === "mouse") setOpen(true);
+      });
+      dropdown.addEventListener("pointerleave", () => {
+        if (!dropdown.contains(document.activeElement)) setOpen(false);
+      });
+      dropdown.addEventListener("focusin", () => setOpen(true));
+      dropdown.addEventListener("focusout", (event) => {
+        if (!dropdown.contains(event.relatedTarget)) setOpen(false);
+      });
+      dropdown.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          setOpen(false);
+          toggle.focus();
+        }
+      });
+      nav.addEventListener("click", (event) => {
+        if (event.target.closest("a")) setOpen(false);
+      });
+      menuButton.addEventListener("click", () => setOpen(false));
+    })();
+  </script>
+</body>
+</html>

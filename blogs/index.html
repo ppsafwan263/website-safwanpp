@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Notes, ideas and practical digital marketing lessons from Safwan PP, a digital marketing consultant in Kannur.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Digital Marketing Blog | Safwan PP, Kannur</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #17171b;
+      --muted: #656a73;
+      --blue: #2451e6;
+      --line: #e8e9ec;
+      --paper: #fff;
+      --soft: #f4f6fb;
+      --content: 1120px;
+    }
+    * { box-sizing: border-box; font-family: "Raleway", sans-serif; }
+    h1, h2, h3 { font-family: "Inter", sans-serif; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body { margin: 0; color: var(--ink); background: var(--paper); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    button, input { font: inherit; }
+    img, svg { max-width: 100%; }
+    .container { width: min(var(--content), calc(100% - 48px)); margin-inline: auto; }
+    .site-header { position: sticky; z-index: 20; top: 0; border-bottom: 1px solid rgba(232, 233, 236, .85); background: rgba(255, 255, 255, .94); backdrop-filter: blur(16px); }
+    .nav { min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .site-header .nav { width: min(1120px, calc(100% - 48px)); }
+    .brand { display: inline-flex; align-items: center; }
+    .site-logo { display: block; width: 78px; height: auto; }
+    .site-header .site-logo { filter: brightness(0); }
+    .nav-links { display: flex; align-items: center; gap: 25px; color: #464a52; font-size: .82rem; font-weight: 750; }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-links a[aria-current="page"] { color: var(--blue); }
+    .nav-cta { padding: 10px 16px; border: 1px solid var(--line); border-radius: 999px; font-size: .8rem; font-weight: 850; }
+    .menu-toggle { display: none; padding: 9px 12px; border: 1px solid var(--line); border-radius: 10px; background: #fff; font-weight: 800; cursor: pointer; }
+    .blog-main { max-width: 1120px; padding-top: 58px; padding-bottom: 86px; }
+    .blog-intro { max-width: 760px; }
+    .blog-intro h1 { max-width: 740px; margin: 0; font-size: clamp(2.6rem, 5.2vw, 4.35rem); font-weight: 750; line-height: 1.04; letter-spacing: -.065em; }
+    .blog-intro p { margin: 13px 0 0; color: var(--muted); font-size: .95rem; }
+    .search-form { display: flex; max-width: 520px; gap: 9px; margin-top: 24px; }
+    .search-box { display: flex; min-width: 0; flex: 1; align-items: center; gap: 9px; padding: 0 12px; border: 1px solid var(--line); border-radius: 9px; background: #fff; }
+    .search-box svg { width: 16px; height: 16px; flex: 0 0 auto; color: var(--muted); }
+    .search-box input { width: 100%; min-height: 44px; border: 0; outline: 0; color: var(--ink); background: transparent; font-size: .82rem; }
+    .search-box:focus-within { border-color: #9aaeff; box-shadow: 0 0 0 3px rgba(36, 81, 230, .09); }
+    .search-button { min-width: 78px; padding: 0 16px; border: 0; border-radius: 9px; color: #fff; background: var(--ink); font-size: .78rem; font-weight: 750; cursor: pointer; transition: background .2s ease, transform .2s ease; }
+    .search-button:hover { transform: translateY(-1px); background: var(--blue); }
+    .category-filters { display: flex; flex-wrap: wrap; gap: 7px; margin: 24px 0 30px; }
+    .filter-chip { min-height: 34px; padding: 0 13px; border: 1px solid #dedfe3; border-radius: 999px; color: var(--ink); background: #fff; font-size: .72rem; font-weight: 650; cursor: pointer; transition: color .18s ease, border-color .18s ease, background .18s ease; }
+    .filter-chip:hover { border-color: var(--ink); }
+    .filter-chip[aria-pressed="true"] { border-color: var(--ink); color: #fff; background: var(--ink); }
+    .posts-section { padding-top: 18px; border-top: 1px solid #f0f0f1; }
+    .posts-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+    .posts-heading h2 { margin: 0; font-size: 1.2rem; font-weight: 700; letter-spacing: -.025em; }
+    .results-count { color: var(--muted); font-size: .75rem; }
+    .post-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+    .post-card { min-width: 0; overflow: hidden; border: 1px solid #e8eaf1; border-radius: 14px; background: var(--soft); transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
+    .post-card:hover, .post-card:focus-within { transform: translateY(-3px); border-color: rgba(36, 81, 230, .32); box-shadow: 0 12px 26px rgba(36, 81, 230, .09); }
+    .post-visual { display: grid; aspect-ratio: 1.62 / 1; place-items: center; margin: 7px 7px 0; overflow: hidden; border-radius: 10px; background: #e2e7f5; }
+    .post-visual span { color: rgba(36, 81, 230, .82); font-family: "Inter", sans-serif; font-size: clamp(3rem, 7vw, 5.6rem); font-weight: 800; letter-spacing: -.1em; }
+    .post-card:nth-child(3n + 2) .post-visual { background: #e9e7f5; }
+    .post-card:nth-child(3n) .post-visual { background: #e7edf0; }
+    .post-body { min-height: 152px; padding: 12px 13px 14px; }
+    .post-category { display: inline-block; margin-bottom: 5px; color: var(--blue); font-size: .68rem; font-weight: 750; }
+    .post-body h3 { margin: 0; font-size: 1rem; font-weight: 650; line-height: 1.35; letter-spacing: -.025em; }
+    .post-body p { margin: 7px 0 0; color: #555b66; font-size: .78rem; line-height: 1.55; }
+    .post-meta { margin-top: 10px; color: #70747d; font-size: .68rem; }
+    .post-title-link { transition: color .18s ease; }
+    .post-title-link:hover, .post-title-link:focus-visible { color: var(--blue); }
+    .empty-state { display: none; padding: 38px 16px; color: var(--muted); text-align: center; }
+    .newsletter { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 28px; margin-top: 46px; padding: 32px 36px; border-radius: 18px; color: #fff; background: #17171b; }
+    .newsletter h2 { max-width: 360px; margin: 0; font-size: clamp(1.6rem, 3vw, 2rem); font-weight: 750; line-height: 1.12; letter-spacing: -.04em; }
+    .newsletter p { margin: 8px 0 0; color: #d1d1d5; font-size: .82rem; }
+    .newsletter-form { display: flex; gap: 8px; }
+    .newsletter-form input { width: 100%; min-width: 0; min-height: 42px; padding: 0 12px; border: 1px solid #34343b; border-radius: 8px; outline: 0; color: #fff; background: #222228; font-size: .78rem; }
+    .newsletter-form input:focus { border-color: #8ca7ff; }
+    .newsletter-form button { min-height: 42px; padding: 0 15px; border: 0; border-radius: 8px; color: #17171b; background: #fff; font-size: .75rem; font-weight: 750; cursor: pointer; }
+    .newsletter-form button:hover { color: #fff; background: var(--blue); }
+    .newsletter-note { grid-column: 2; margin: -20px 0 0 !important; color: #a9acb6 !important; font-size: .68rem !important; }
+    .site-footer, .site-footer * { font-family: "Inter", sans-serif; }
+    .site-footer { padding: 58px 0 20px; color: #fff; background: #0b0b0d; font-size: 16px; font-weight: 400; }
+    .footer-grid { display: grid; grid-template-columns: minmax(220px, 1.7fr) repeat(4, minmax(0, 1fr)); gap: clamp(24px, 4vw, 56px); padding-bottom: 48px; }
+    .footer-brand .brand { display: inline-flex; margin-bottom: 16px; }
+    .footer-brand .site-logo { width: 112px; }
+    .footer-brand p { max-width: 290px; margin: 0; color: #fff; font-size: 16px; line-height: 1.75; }
+    .footer-column h2 { margin: 5px 0 16px; color: #fff; font-size: 16px; font-weight: 850; letter-spacing: .04em; text-transform: uppercase; }
+    .footer-column ul { display: grid; gap: 11px; margin: 0; padding: 0; list-style: none; }
+    .footer-column li, .footer-column a { color: #fff; font-size: 16px; line-height: 1.5; }
+    .footer-column a:hover, .footer-column a:focus-visible { color: #8ca7ff; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 18px; border-top: 1px solid #292a30; color: #fff; font-size: 15px; }
+    .footer-bottom p { margin: 0; }
+    .footer-top-link:hover { color: #8ca7ff; }
+    @media (max-width: 1100px) {
+      .footer-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 900px) {
+      .post-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 680px) {
+      .container { width: min(100% - 36px, var(--content)); }
+      .site-header .nav { width: min(100% - 36px, 1120px); }
+      .nav { min-height: 66px; }
+      .menu-toggle { display: inline-flex; }
+      .nav-cta { display: none; }
+      .nav-links { position: absolute; top: 65px; right: 18px; left: 18px; display: none; align-items: stretch; gap: 0; padding: 8px 16px; border: 1px solid var(--line); border-radius: 16px; background: #fff; box-shadow: 0 18px 35px rgba(16, 17, 20, .1); }
+      .nav-links.is-open { display: flex; flex-direction: column; }
+      .nav-links a { padding: 12px 2px; border-bottom: 1px solid var(--line); }
+      .nav-links a:last-child { border-bottom: 0; }
+      .blog-main { padding-top: 44px; padding-bottom: 64px; }
+      .blog-intro h1 { font-size: clamp(2.4rem, 10vw, 3.4rem); }
+      .search-form { gap: 7px; }
+      .search-button { min-width: 70px; padding-inline: 12px; }
+      .category-filters { gap: 6px; margin-bottom: 24px; }
+      .filter-chip { min-height: 32px; padding-inline: 11px; font-size: .68rem; }
+      .post-grid { gap: 11px; }
+      .post-body { min-height: 175px; padding: 10px; }
+      .post-body h3 { font-size: .9rem; }
+      .post-body p { font-size: .74rem; }
+      .post-meta { font-size: .64rem; }
+      .newsletter { grid-template-columns: 1fr; gap: 18px; margin-top: 34px; padding: 26px 22px; }
+      .newsletter-note { grid-column: 1; margin: -10px 0 0 !important; }
+      .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 22px; padding-bottom: 34px; }
+      .footer-brand { grid-column: 1 / -1; }
+      .footer-bottom { align-items: flex-start; flex-direction: column; }
+    }
+    @media (max-width: 420px) {
+      .post-grid { grid-template-columns: 1fr; }
+      .post-body { min-height: 145px; padding: 13px; }
+      .post-body h3 { font-size: 1rem; }
+      .post-visual { aspect-ratio: 1.8 / 1; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    }
+      .site-header { position: sticky; z-index: 20; top: 0; border-bottom: 1px solid rgba(232,233,236,.85); background: rgba(255,255,255,.94); backdrop-filter: blur(16px); }
+    .site-header .nav { width: min(1120px,calc(100% - 48px)); min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .site-header .brand { display: inline-flex; align-items: center; }
+    .site-header .site-logo { display: block; width: 78px; height: auto; filter: brightness(0); }
+    .site-header .nav-links { display: flex; align-items: center; gap: 25px; color: #464a52; font-size: .82rem; font-weight: 750; }
+    .site-header .nav-links a:hover, .site-header .nav-links a[aria-current="page"] { color: var(--blue); }
+    .site-header .nav-cta { padding: 10px 16px; border: 1px solid var(--line); border-radius: 999px; font-size: .8rem; font-weight: 850; }
+    .site-header .menu-toggle { display: none; padding: 9px 12px; border: 1px solid var(--line); border-radius: 10px; background: #fff; font-weight: 800; cursor: pointer; }
+    .site-footer, .site-footer * { font-family: Arial, sans-serif; }
+    .site-footer { padding: 58px 0 20px; color: #fff; background: #0b0b0d; font-size: 16px; font-weight: 400; }
+    .site-footer .footer-grid { display: grid; grid-template-columns: minmax(220px,1.7fr) repeat(4,minmax(0,1fr)); gap: clamp(24px,4vw,56px); padding-bottom: 48px; }
+    .site-footer .footer-brand .brand { display: inline-flex; margin-bottom: 16px; color: #fff; }
+    .site-footer .footer-brand .site-logo { width: 112px; }
+    .site-footer .footer-brand p { max-width: 290px; margin: 0; color: #fff; font-size: 16px; line-height: 1.75; }
+    .site-footer .footer-socials { display: flex; align-items: center; gap: 22px; margin-top: 20px; }
+    .site-footer .footer-socials a, .site-footer .footer-socials span { display: grid; width: 22px; height: 22px; place-items: center; color: #fff; }
+    .site-footer .footer-socials a { transition: color .2s ease, transform .2s ease; }
+    .site-footer .footer-socials a:hover { transform: translateY(-2px); color: #fff; }
+    .site-footer .footer-socials svg { width: 20px; height: 20px; fill: none; }
+    .site-footer .footer-socials .facebook-icon, .site-footer .footer-socials a:nth-child(3) svg { fill: currentColor; }
+    .site-footer .footer-column h2 { margin: 5px 0 16px; color: #fff; font-size: 16px; font-weight: 850; letter-spacing: .04em; text-transform: uppercase; }
+    .site-footer .footer-column ul { display: grid; gap: 11px; margin: 0; padding: 0; list-style: none; }
+    .site-footer .footer-column li, .site-footer .footer-column a { color: #fff; font-size: 16px; line-height: 1.5; }
+    .site-footer .footer-column a, .site-footer .footer-top-link { transition: color .18s ease; }
+    .site-footer .footer-column a:hover, .site-footer .footer-top-link:hover { color: var(--blue); }
+    .site-footer .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 18px; border-top: 1px solid #292a30; color: #fff; font-size: 15px; }
+    .site-footer .footer-bottom p { margin: 0; }
+    .site-footer .footer-top-link { color: #fff; }
+    @media (max-width: 980px) {
+      .site-footer .footer-grid { grid-template-columns: repeat(4,minmax(0,1fr)); }
+      .site-footer .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 720px) {
+      .site-header .nav { width: min(100% - 36px,1120px); min-height: 66px; position: relative; }
+      .site-header .menu-toggle { display: inline-flex; }
+      .site-header .nav-cta { display: none; }
+      .site-header .nav-links { position: absolute; top: 65px; right: 0; left: 0; display: none; align-items: stretch; gap: 0; padding: 8px 16px; border: 1px solid var(--line); border-radius: 16px; background: #fff; box-shadow: 0 18px 35px rgba(16,17,20,.1); }
+      .site-header .nav-links.is-open { display: flex; flex-direction: column; }
+      .site-header .nav-links a { padding: 12px 2px; border-bottom: 1px solid var(--line); }
+      .site-header .nav-links a:last-child { border-bottom: 0; }
+      .site-footer .footer-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 30px 22px; padding-bottom: 34px; }
+      .site-footer .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 440px) {
+      .site-footer .footer-grid { grid-template-columns: 1fr; }
+      .site-footer .footer-bottom { align-items: flex-start; flex-direction: column; }
+    }
+      .site-header, .site-header * { font-family: Arial, sans-serif; }
+    .site-footer > .container { width: min(1120px,calc(100% - 48px)); margin-inline: auto; }
+    @media (max-width: 720px) { .site-footer > .container { width: min(100% - 36px,1120px); } }
+      .nav-dropdown { position: relative; }
+    .nav-dropdown-head { display: flex; align-items: center; gap: 3px; }
+    .nav-dropdown-toggle { display: grid; width: 23px; height: 30px; place-items: center; padding: 0; border: 0; color: inherit; background: transparent; cursor: pointer; }
+    .nav-dropdown-toggle svg { width: 12px; height: 12px; transition: transform .18s ease; }
+    .nav-dropdown:hover .nav-dropdown-toggle svg, .nav-dropdown.is-open .nav-dropdown-toggle svg { transform: rotate(180deg); }
+    .nav-dropdown::after { position: absolute; top: 100%; left: 0; width: 100%; height: 17px; content: ""; }
+    .nav-dropdown-menu { position: absolute; z-index: 22; top: calc(100% + 17px); left: -16px; display: none; width: 190px; overflow: hidden; padding: 6px; border: 1px solid var(--line); border-radius: 12px; color: var(--ink); background: #fff; box-shadow: 0 16px 36px rgba(16,17,20,.12); }
+    .nav-dropdown-menu a { display: block; padding: 12px; border-radius: 7px; color: var(--ink); font-size: .74rem; font-weight: 750; line-height: 1.4; transition: color .18s ease, background .18s ease; }
+    .nav-dropdown-menu a:hover, .nav-dropdown-menu a:focus-visible { color: var(--blue); background: #f1f4ff; }
+    .nav-dropdown:hover .nav-dropdown-menu, .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+    @media (max-width: 720px) {
+      .site-header .nav-dropdown { position: relative; width: 100%; }
+      .site-header .nav-dropdown::after { display: none; }
+      .site-header .nav-dropdown-head { min-height: 45px; }
+      .site-header .nav-dropdown-head > a { flex: 1; padding: 12px 2px; }
+      .site-header .nav-dropdown-toggle { width: 42px; height: 42px; border-bottom: 1px solid var(--line); }
+      .site-header .nav-dropdown-menu { position: static; width: 100%; margin-bottom: 8px; padding: 4px; border: 1px solid var(--line); border-radius: 10px; background: #fff; box-shadow: none; }
+      .site-header .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
+      .site-header .nav-dropdown-menu a { padding: 12px; border-bottom: 0; color: var(--ink); }
+    }
+</style>
+  <link rel="stylesheet" href="../style.css">
+  <meta property="og:title" content="Digital Marketing Blog | Safwan PP, Kannur">
+  <meta property="og:description" content="Notes, ideas and practical digital marketing lessons from Safwan PP, a digital marketing consultant in Kannur.">
+  <meta property="og:site_name" content="Safwan PP">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Digital Marketing Blog | Safwan PP, Kannur">
+  <meta name="twitter:description" content="Notes, ideas and practical digital marketing lessons from Safwan PP, a digital marketing consultant in Kannur.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://ppsafwan.com/blogs/">
+  <meta property="og:url" content="https://ppsafwan.com/blogs/">
+</head>
+<body>
+    <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="../#home" aria-label="Safwan PP home"><img class="site-logo" src="../home/safwan-logo.png" alt="Safwan" decoding="async" width="1408" height="727"></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="../#home">Home</a>
+        <a href="../about-me/">About</a>
+        <div class="nav-dropdown">
+  <div class="nav-dropdown-head">
+    <a href="../digital-marketing-services-kannur/">Services</a>
+    <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="service-submenu" aria-label="Show service links">
+      <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="m2 4.5 4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+    </button>
+  </div>
+  <div class="nav-dropdown-menu" id="service-submenu">
+    <a href="../seo-services-kannur/">SEO Services</a>
+    <a href="../google-ads-services-kannur/">Google Ads</a>
+    <a href="../website-design-services-kannur/">Web Design</a>
+    <a href="../shopify-development-services-kannur/#home">Shopify Development</a>
+    <a href="../meta-ads-services-kannur/">Meta Ads</a>
+    <a href="../social-media-marketing-kannur/">Social Media Marketing</a>
+  </div>
+</div>
+        <a href="../blogs/">Blogs</a>
+        <a href="../contact/">Contact</a>
+      </div>
+      <a class="nav-cta" href="../contact/#contact">Let's talk <span aria-hidden="true">&#8599;</span></a>
+    </nav>
+  </header>
+
+  <main class="container blog-main" id="home">
+    <section class="blog-intro" aria-labelledby="blog-title">
+      <h1 id="blog-title">Notes, ideas and<br>lessons from the work.</h1>
+      <p>Practical digital marketing ideas for businesses ready to grow.</p>
+      <form class="search-form" id="search-form" role="search">
+        <label class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" stroke-width="1.7"></circle><path d="m16 16 4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"></path></svg>
+          <input id="article-search" type="search" placeholder="Search articles" aria-label="Search articles">
+        </label>
+        <button class="search-button" type="submit">Search</button>
+      </form>
+      <div class="category-filters" aria-label="Filter articles by topic">
+        <button class="filter-chip" type="button" data-filter="all" aria-pressed="true">All posts</button>
+        <button class="filter-chip" type="button" data-filter="SEO" aria-pressed="false">SEO</button>
+        <button class="filter-chip" type="button" data-filter="SMM" aria-pressed="false">SMM</button>
+        <button class="filter-chip" type="button" data-filter="Web Design" aria-pressed="false">Web Design</button>
+        <button class="filter-chip" type="button" data-filter="Google Ads" aria-pressed="false">Google Ads</button>
+        <button class="filter-chip" type="button" data-filter="Meta Ads" aria-pressed="false">Meta Ads</button>
+        <button class="filter-chip" type="button" data-filter="Digital Marketing" aria-pressed="false">Digital Marketing</button>
+      </div>
+    </section>
+
+    <section class="posts-section" id="articles" aria-labelledby="posts-title">
+      <div class="posts-heading">
+        <h2 id="posts-title">Latest posts</h2>
+        <span class="results-count" id="results-count" aria-live="polite"></span>
+      </div>
+      <div class="post-grid" id="post-grid">
+        <article class="post-card" data-categories="SEO" data-search="seo cost kerala pricing price guide 2026 monthly">
+          <div class="post-visual" aria-hidden="true"><span>01</span></div>
+          <div class="post-body">
+            <span class="post-category">SEO</span>
+            <h3><a class="post-title-link" href="../seo-cost-kerala/">How Much Does SEO Cost in Kerala? A Clear Price Guide for 2026</a></h3>
+            <p>Understand what SEO pricing can include and how to compare proposals.</p>
+            <div class="post-meta"><time datetime="2026-11-04">November 4, 2026</time></div>
+          </div>
+        </article>
+        <article class="post-card" data-categories="SEO" data-search="local seo kannur google business profile local search ranking">
+          <div class="post-visual" aria-hidden="true"><span>02</span></div>
+          <div class="post-body">
+            <span class="post-category">SEO</span>
+            <h3><a class="post-title-link" href="../local-seo-kannur-google-business-profile/">How to Do Local SEO in Kannur With Your Google Business Profile</a></h3>
+            <p>Practical ways to improve your local presence and business profile.</p>
+            <div class="post-meta"><time datetime="2026-11-02">November 2, 2026</time></div>
+          </div>
+        </article>
+        <article class="post-card" data-categories="SEO" data-search="eeat experience expertise authoritativeness trust seo website">
+          <div class="post-visual" aria-hidden="true"><span>03</span></div>
+          <div class="post-body">
+            <span class="post-category">SEO</span>
+            <h3><a class="post-title-link" href="../what-is-eeat-in-seo/">What Is E-E-A-T in SEO, and How Does Your Website Affect It?</a></h3>
+            <p>Learn what experience, expertise and trust mean for your website content.</p>
+            <div class="post-meta"><time datetime="2026-10-30">October 30, 2026</time></div>
+          </div>
+        </article>
+        <article class="post-card" data-categories="Web Design" data-search="website cost kannur web design price breakdown 2026">
+          <div class="post-visual" aria-hidden="true"><span>04</span></div>
+          <div class="post-body">
+            <span class="post-category">Web Design</span>
+            <h3><a class="post-title-link" href="../website-cost-kannur/">How Much Does a Website Cost in Kannur? A Clear Price Breakdown for 2026</a></h3>
+            <p>Explore common website project costs and what can affect the final quote.</p>
+            <div class="post-meta"><time datetime="2026-10-27">October 27, 2026</time></div>
+          </div>
+        </article>
+        <article class="post-card" data-categories="SMM" data-search="jio canva pro offer free eligibility how to claim 2026">
+          <div class="post-visual" aria-hidden="true"><span>05</span></div>
+          <div class="post-body">
+            <span class="post-category">SMM</span>
+            <h3><a class="post-title-link" href="../jio-canva-pro-offer/">Jio Canva Pro Offer 2026: Get Canva Pro Free for 1 Year, Eligibility &amp; How to Claim</a></h3>
+            <p>Check the offer details, eligibility and steps before you try to claim it.</p>
+            <div class="post-meta"><time datetime="2026-10-24">October 24, 2026</time></div>
+          </div>
+        </article>
+        <article class="post-card" data-categories="SEO" data-search="google ai overviews citations source links search seo">
+          <div class="post-visual" aria-hidden="true"><span>06</span></div>
+          <div class="post-body">
+            <span class="post-category">SEO</span>
+            <h3><a class="post-title-link" href="../get-cited-google-ai-overviews/">How to Get Cited in Google AI Overviews Now That Source Links Sit Higher</a></h3>
+            <p>Ideas for making helpful, credible pages easier for search systems to reference.</p>
+            <div class="post-meta"><time datetime="2026-10-19">October 19, 2026</time></div>
+          </div>
+        </article>
+        <article class="post-card" data-categories="SEO" data-search="google business profile set up verify kerala business">
+          <div class="post-visual" aria-hidden="true"><span>07</span></div>
+          <div class="post-body">
+            <span class="post-category">SEO</span>
+            <h3><a class="post-title-link" href="../google-business-profile-kerala/">How to Set Up and Verify a Google Business Profile for Your Kerala Business</a></h3>
+            <p>A walkthrough of setting up a profile so local customers can find you.</p>
+            <div class="post-meta"><time datetime="2026-10-09">October 9, 2026</time></div>
+          </div>
+        </article>
+        <article class="post-card" data-categories="SEO|Web Design" data-search="website impressions no clicks seo fixes search console">
+          <div class="post-visual" aria-hidden="true"><span>08</span></div>
+          <div class="post-body">
+            <span class="post-category">SEO</span>
+            <h3><a class="post-title-link" href="../impressions-but-no-clicks-seo-fixes/">Why Your Website Gets Impressions but No Clicks</a></h3>
+            <p>Diagnose low clicks in Search Console and find the right SEO fix for each page.</p>
+            <div class="post-meta"><time datetime="2026-09-16">September 16, 2026</time></div>
+          </div>
+        </article>
+        <article class="post-card" data-categories="SEO" data-search="business recommended chatgpt gemini perplexity generative engine optimization 2026">
+          <div class="post-visual" aria-hidden="true"><span>09</span></div>
+          <div class="post-body">
+            <span class="post-category">SEO</span>
+            <h3><a class="post-title-link" href="../how-to-get-recommended-by-chatgpt-gemini-perplexity/">How to Get Your Business Recommended by ChatGPT, Gemini &amp; Perplexity in 2026</a></h3>
+            <p>Explore how clear, credible online information can support AI discovery.</p>
+            <div class="post-meta"><time datetime="2026-08-14">August 14, 2026</time></div>
+          </div>
+        </article>
+        <article class="post-card" data-categories="SEO" data-search="ai changing seo 2026 trends strategies best practices">
+          <div class="post-visual" aria-hidden="true"><span>10</span></div>
+          <div class="post-body">
+            <span class="post-category">SEO</span>
+            <h3><a class="post-title-link" href="../how-ai-is-changing-seo-in-2026/">How AI Is Changing SEO in 2026: Trends, Strategies &amp; Best Practices</a></h3>
+            <p>A guide to current AI search changes and practical SEO considerations.</p>
+            <div class="post-meta"><time datetime="2026-08-06">August 6, 2026</time></div>
+          </div>
+        </article>
+        <article class="post-card" data-categories="Digital Marketing|Web Design|Google Ads" data-search="get more website enquiries without increasing ad spend conversion landing page">
+          <div class="post-visual" aria-hidden="true"><span>11</span></div>
+          <div class="post-body">
+            <span class="post-category">Digital Marketing</span>
+            <h3><a class="post-title-link" href="../why-more-traffic-is-not-always-the-answer/">How to Get More Website Enquiries Without Increasing Ad Spend</a></h3>
+            <p>Improve how your site turns existing visitors into customer enquiries.</p>
+            <div class="post-meta"><time datetime="2026-06-24">June 24, 2026</time></div>
+          </div>
+        </article>
+        <article class="post-card" data-categories="Digital Marketing|SMM" data-search="artificial intelligence ai digital marketing small businesses online">
+          <div class="post-visual" aria-hidden="true"><span>12</span></div>
+          <div class="post-body">
+            <span class="post-category">Digital Marketing</span>
+            <h3><a class="post-title-link" href="../blog-how-ai-is-changing-digital-marketing-for-small-businesses/">How AI Is Changing Digital Marketing for Small Businesses</a></h3>
+            <p>Consider practical ways small businesses can use AI in their marketing.</p>
+            <div class="post-meta"><time datetime="2026-06-04">June 4, 2026</time></div>
+          </div>
+        </article>
+        <article class="post-card" data-categories="SEO" data-search="google ai search transforming seo business rankings search engine">
+          <div class="post-visual" aria-hidden="true"><span>13</span></div>
+          <div class="post-body">
+            <span class="post-category">SEO</span>
+            <h3><a class="post-title-link" href="../how-google-ai-search-affects-seo/">How Google’s AI Search Is Transforming SEO And What Every Business Must Do Now</a></h3>
+            <p>What AI-powered search changes could mean for businesses and their websites.</p>
+            <div class="post-meta"><time datetime="2026-06-04">June 4, 2026</time></div>
+          </div>
+        </article>
+        <article class="post-card" data-categories="Google Ads|Meta Ads" data-search="google ads vs meta ads better leads kerala paid advertising">
+          <div class="post-visual" aria-hidden="true"><span>14</span></div>
+          <div class="post-body">
+            <span class="post-category">Google Ads · Meta Ads</span>
+            <h3><a class="post-title-link" href="../google-ads-vs-meta-ads-kerala-leads/">Google Ads vs Meta Ads: Which Gives Better Leads in Kerala? (2026)</a></h3>
+            <p>Compare the two ad platforms and consider which fits your campaign goals.</p>
+            <div class="post-meta"><time datetime="2026-06-03">June 3, 2026</time></div>
+          </div>
+        </article>
+        <article class="post-card" data-categories="SMM" data-search="build powerful personal brand business marketing freelancers social media">
+          <div class="post-visual" aria-hidden="true"><span>15</span></div>
+          <div class="post-body">
+            <span class="post-category">SMM</span>
+            <h3><a class="post-title-link" href="../build-personal-brand-2026/">How to Build a Personal Brand as a Business &amp; Marketing Freelancer</a></h3>
+            <p>Build a consistent personal brand that clearly communicates your work.</p>
+            <div class="post-meta"><time datetime="2026-05-20">May 20, 2026</time></div>
+          </div>
+        </article>
+      </div>
+      <p class="empty-state" id="empty-state">No posts match that search. Try another keyword or topic.</p>
+    </section>
+
+    <section class="newsletter" aria-labelledby="newsletter-title">
+      <div>
+        <h2 id="newsletter-title">Get new posts in your inbox.</h2>
+        <p>Occasional notes on digital marketing. No spam, unsubscribe anytime.</p>
+      </div>
+      <form class="newsletter-form" id="newsletter-form">
+        <input type="email" name="email" autocomplete="email" placeholder="you@example.com" aria-label="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="newsletter-note">Subscribe opens an email to request updates.</p>
+    </section>
+  </main>
+
+    <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="../#home" aria-label="Safwan PP home"><img class="site-logo" src="../home/safwan-logo.png" alt="Safwan" decoding="async" width="1408" height="727"></a>
+          <p>Freelance digital marketing strategist helping businesses grow with SEO, ads, social media marketing, web design and Shopify development.</p>
+          <div class="footer-socials" aria-label="Social media">
+            <a href="https://www.instagram.com/thesafwaaan?gwpx=MThjNHVwd3FxYTdseg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg>
+            </a>
+            <span role="img" aria-label="Facebook">
+              <svg class="facebook-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.4 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.3H7.6V13h2.7v8h3.1Z"></path></svg>
+            </span>
+            <a href="https://www.linkedin.com/in/safwan-ibn-ibrahim-87a281396" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 8.5H2.1V22h3.1V8.5ZM3.65 2A1.8 1.8 0 1 0 3.7 5.6 1.8 1.8 0 0 0 3.65 2ZM22 14.3c0-4.1-2.2-6-5.1-6-2.4 0-3.5 1.3-4.1 2.2V8.5H9.7V22h3.1v-6.7c0-1.8.3-3.6 2.6-3.6s2.3 2.1 2.3 3.7V22H22v-7.7Z"></path></svg>
+            </a>
+          </div>
+        </div>
+        <nav class="footer-column" aria-label="Explore">
+          <h2>Explore</h2>
+          <ul>
+            <li><a href="../#home">Home</a></li>
+            <li><a href="../about-me/#about">About</a></li>
+            <li><a href="../digital-marketing-services-kannur/#services">Services</a></li>
+            <li><a href="../blogs/#articles">Blogs</a></li>
+            <li><a href="../contact/#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-column" aria-label="Services">
+          <h2>Services</h2>
+          <ul>
+            <li><a href="../seo-services-kannur/">SEO Services</a></li>
+            <li><a href="../social-media-marketing-kannur/">Social Media Marketing</a></li>
+            <li><a href="../meta-ads-services-kannur/">Meta Ads</a></li>
+            <li><a href="../google-ads-services-kannur/">Google Ads</a></li>
+            <li><a href="../website-design-services-kannur/">Web Design</a></li>
+            <li><a href="../shopify-development-services-kannur/#home">Shopify Development</a></li>
+          </ul>
+        </nav>
+        <div class="footer-column">
+          <h2>Locations</h2>
+          <ul>
+            <li><a href="../#home">Kerala, India</a></li>
+            <li><a href="../digital-marketing-strategist-dubai/#home">Dubai, UAE</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h2>Get in touch</h2>
+          <ul>
+            <li><a href="tel:+919895325388">+91 98953 25388</a></li>
+            <li><a href="mailto:ppsafwan263@gmail.com">ppsafwan263@gmail.com</a></li>
+            <li><a href="https://wa.me/919895325388" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright &copy; 2026 &middot; Safwan PP. All rights reserved.</p>
+        <a class="footer-top-link" href="#">Back to top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector("#nav-links");
+    menuButton.addEventListener("click", () => {
+      const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+      menuButton.setAttribute("aria-expanded", String(!isOpen));
+      navLinks.classList.toggle("is-open", !isOpen);
+    });
+    navLinks.addEventListener("click", (event) => {
+      if (event.target.closest("a")) {
+        menuButton.setAttribute("aria-expanded", "false");
+        navLinks.classList.remove("is-open");
+      }
+    });
+
+    const filterButtons = [...document.querySelectorAll(".filter-chip")];
+    const postCards = [...document.querySelectorAll(".post-card")];
+    const searchInput = document.querySelector("#article-search");
+    const resultsCount = document.querySelector("#results-count");
+    const emptyState = document.querySelector("#empty-state");
+    let activeCategory = "all";
+
+    function updatePosts() {
+      const query = searchInput.value.trim().toLowerCase();
+      let visibleCount = 0;
+      postCards.forEach((card) => {
+        const categories = card.dataset.categories.split("|");
+        const matchesCategory = activeCategory === "all" || categories.includes(activeCategory);
+        const matchesSearch = !query || card.dataset.search.toLowerCase().includes(query) || card.querySelector("h3").textContent.toLowerCase().includes(query);
+        const isVisible = matchesCategory && matchesSearch;
+        card.hidden = !isVisible;
+        if (isVisible) visibleCount += 1;
+      });
+      resultsCount.textContent = `${visibleCount} ${visibleCount === 1 ? "post" : "posts"}`;
+      emptyState.style.display = visibleCount ? "none" : "block";
+    }
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        activeCategory = button.dataset.filter;
+        filterButtons.forEach((filter) => filter.setAttribute("aria-pressed", String(filter === button)));
+        updatePosts();
+      });
+    });
+
+    document.querySelector("#search-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      updatePosts();
+    });
+    searchInput.addEventListener("input", updatePosts);
+
+    document.querySelector("#newsletter-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const email = new FormData(event.currentTarget).get("email");
+      const subject = encodeURIComponent("Blog updates subscription request");
+      const body = encodeURIComponent(`Please add ${email} to the blog updates list.`);
+      window.location.href = `mailto:ppsafwan263@gmail.com?subject=${subject}&body=${body}`;
+    });
+
+    updatePosts();
+  </script>
+  <script>
+    (() => {
+      const dropdown = document.querySelector(".nav-dropdown");
+      const toggle = dropdown.querySelector(".nav-dropdown-toggle");
+      const nav = document.querySelector(".nav-links");
+      const menuButton = document.querySelector(".menu-toggle");
+      const setOpen = (isOpen) => {
+        toggle.setAttribute("aria-expanded", String(isOpen));
+        dropdown.classList.toggle("is-open", isOpen);
+      };
+
+      toggle.addEventListener("click", () => {
+        setOpen(toggle.getAttribute("aria-expanded") !== "true");
+      });
+      dropdown.addEventListener("pointerenter", (event) => {
+        if (event.pointerType === "mouse") setOpen(true);
+      });
+      dropdown.addEventListener("pointerleave", () => {
+        if (!dropdown.contains(document.activeElement)) setOpen(false);
+      });
+      dropdown.addEventListener("focusin", () => setOpen(true));
+      dropdown.addEventListener("focusout", (event) => {
+        if (!dropdown.contains(event.relatedTarget)) setOpen(false);
+      });
+      dropdown.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          setOpen(false);
+          toggle.focus();
+        }
+      });
+      nav.addEventListener("click", (event) => {
+        if (event.target.closest("a")) setOpen(false);
+      });
+      menuButton.addEventListener("click", () => setOpen(false));
+    })();
+  </script>
+</body>
+</html>
