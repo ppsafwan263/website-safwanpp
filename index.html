@@ -270,10 +270,10 @@
     .blog-track { display: flex; gap: 18px; }
     .blog-card { display: flex; min-width: 0; flex: 0 0 calc((100% - 36px) / 3); flex-direction: column; overflow: hidden; border: 1px solid var(--line); border-radius: 22px; background: #fff; }
     .blog-card { scroll-snap-align: start; }
-    .blog-card-visual { display: flex; min-height: 212px; align-items: flex-end; justify-content: flex-end; padding: 0 18px 4px; background: #0c0c0e; color: #fff; }
+    .blog-card-visual { display: flex; min-height: 212px; align-items: center; justify-content: center; padding: 24px; background: #0c0c0e; color: #fff; text-align: center; }
     .blog-card[data-tone="blue"] .blog-card-visual { background: var(--blue); }
     .blog-card[data-tone="light"] .blog-card-visual { background: #f1f1f1; color: #101114; }
-    .blog-card-visual span { font-size: clamp(4.5rem, 8vw, 6.4rem); line-height: .95; letter-spacing: -.09em; font-weight: 900; }
+    .blog-card-visual > span { max-width: 440px; font-size: clamp(1.05rem, 1.65vw, 1.35rem); line-height: 1.25; letter-spacing: -.035em; font-weight: 850; }
     .blog-card-body { display: flex; min-height: 148px; flex: 1; flex-direction: column; align-items: flex-start; padding: 16px 19px 19px; }
     .blog-card h3 { margin: 0 0 16px; font-size: 1.02rem; line-height: 1.4; letter-spacing: -.035em; }
     .blog-card-link { display: inline-flex; align-items: center; gap: 8px; margin-top: auto; color: var(--ink); font-size: .78rem; font-weight: 800; }
@@ -508,7 +508,7 @@
       .blog-track { gap: 14px; }
       .blog-card { flex-basis: 100%; }
       .blog-card-visual { min-height: 185px; }
-      .blog-card-visual span { font-size: 5.2rem; }
+      .blog-card-visual > span { font-size: 1.2rem; }
       .blog-card-body { min-height: 142px; }
     }
     @media (prefers-reduced-motion: reduce) {
@@ -1160,35 +1160,35 @@
         <div class="blog-carousel" aria-label="Featured blog articles">
           <div class="blog-track">
             <article class="blog-card" data-tone="dark">
-              <div class="blog-card-visual" aria-hidden="true"><span>01</span></div>
+              <div class="blog-card-visual" aria-hidden="true"><span>How AI Is Changing Digital Marketing for Small Businesses</span></div>
               <div class="blog-card-body"><h3>How AI Is Changing Digital Marketing for Small Businesses</h3><a class="blog-card-link" href="blogs/">Browse blog <span aria-hidden="true">↗</span></a></div>
             </article>
             <article class="blog-card" data-tone="blue">
-              <div class="blog-card-visual" aria-hidden="true"><span>02</span></div>
+              <div class="blog-card-visual" aria-hidden="true"><span>How Google’s AI Search Is Transforming SEO And What Every Business Must Do Now</span></div>
               <div class="blog-card-body"><h3>How Google’s AI Search Is Transforming SEO And What Every Business Must Do Now</h3><a class="blog-card-link" href="blogs/">Browse blog <span aria-hidden="true">↗</span></a></div>
             </article>
             <article class="blog-card" data-tone="light">
-              <div class="blog-card-visual" aria-hidden="true"><span>03</span></div>
+              <div class="blog-card-visual" aria-hidden="true"><span>Google Ads vs Meta Ads: Which Gives Better Leads in Kerala?</span></div>
               <div class="blog-card-body"><h3>GOOGLE ADS VS META ADS! Which Gives Better Leads in Kerala?</h3><a class="blog-card-link" href="blogs/">Browse blog <span aria-hidden="true">↗</span></a></div>
             </article>
             <article class="blog-card" data-tone="dark">
-              <div class="blog-card-visual" aria-hidden="true"><span>04</span></div>
+              <div class="blog-card-visual" aria-hidden="true"><span>How to Build a Powerful Personal Brand for Business &amp; Marketing Freelancers</span></div>
               <div class="blog-card-body"><h3>How To Build A Powerful Personal Brand For Business &amp; Marketing Freelancers</h3><a class="blog-card-link" href="blogs/">Browse blog <span aria-hidden="true">↗</span></a></div>
             </article>
             <article class="blog-card" data-tone="blue">
-              <div class="blog-card-visual" aria-hidden="true"><span>05</span></div>
+              <div class="blog-card-visual" aria-hidden="true"><span>How to Get More Website Enquiries Without Increasing Ad Spend</span></div>
               <div class="blog-card-body"><h3>How To Get More Website Enquiries Without Increasing Ad Spend</h3><a class="blog-card-link" href="blogs/">Browse blog <span aria-hidden="true">↗</span></a></div>
             </article>
             <article class="blog-card" data-tone="light">
-              <div class="blog-card-visual" aria-hidden="true"><span>06</span></div>
+              <div class="blog-card-visual" aria-hidden="true"><span>Why Your Website Gets Impressions but No Clicks: 9 SEO Fixes That Actually Matter</span></div>
               <div class="blog-card-body"><h3>Why Your Website Gets Impressions but No Clicks: 9 SEO Fixes That Actually Matter</h3><a class="blog-card-link" href="blogs/">Browse blog <span aria-hidden="true">↗</span></a></div>
             </article>
             <article class="blog-card" data-tone="dark">
-              <div class="blog-card-visual" aria-hidden="true"><span>07</span></div>
+              <div class="blog-card-visual" aria-hidden="true"><span>How to Get Cited in Google AI Overviews Now That Source Links Sit Higher</span></div>
               <div class="blog-card-body"><h3>How to Get Cited in Google AI Overviews Now That Source Links Sit Higher</h3><a class="blog-card-link" href="get-cited-google-ai-overviews/">Read article <span aria-hidden="true">↗</span></a></div>
             </article>
             <article class="blog-card" data-tone="blue">
-              <div class="blog-card-visual" aria-hidden="true"><span>08</span></div>
+              <div class="blog-card-visual" aria-hidden="true"><span>How to Set Up and Verify a Google Business Profile for Your Kerala Business</span></div>
               <div class="blog-card-body"><h3>How to Set Up and Verify a Google Business Profile for Your Kerala Business</h3><a class="blog-card-link" href="google-business-profile-kerala/">Read article <span aria-hidden="true">↗</span></a></div>
             </article>
           </div>
